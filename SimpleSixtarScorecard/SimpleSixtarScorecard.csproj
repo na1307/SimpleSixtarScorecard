@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <UseWindowsForms>true</UseWindowsForms>
+  </PropertyGroup>
+  <ItemGroup>
+    <Using Include="Bluehill" />
+    <Using Include="Bluehill.ErrDialogForms" Static="true" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="songdata.schema.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="JsonSchema.Net" Version="6.0.4" />
+    <PackageReference Include="Bluehill.Forms" Version="0.2.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="songdata.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+</Project>

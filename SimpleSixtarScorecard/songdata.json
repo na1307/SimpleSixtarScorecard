@@ -1,0 +1,3148 @@
+[
+  {
+    "id": "startingpoint",
+    "name": "Staring Point",
+    "composer": "LucaProject",
+    "difficultys": {
+      "comet": 1,
+      "nova": 4,
+      "supernova": 7,
+      "quasar": 10
+    },
+    "difficultyl": {
+      "comet": 1,
+      "nova": 4,
+      "supernova": 7,
+      "quasar": 10
+    }
+  },
+  {
+    "id": "staydance",
+    "name": "Stay, Dance (feat. Renko)",
+    "composer": "Studio 3Tone",
+    "difficultys": {
+      "comet": 1,
+      "nova": 4,
+      "supernova": 7,
+      "quasar": 11
+    },
+    "difficultyl": {
+      "comet": 1,
+      "nova": 5,
+      "supernova": 7,
+      "quasar": 11
+    }
+  },
+  {
+    "id": "coastral",
+    "name": "Coastral",
+    "composer": "Sound Souler",
+    "difficultys": {
+      "comet": 1,
+      "nova": 5,
+      "supernova": 8,
+      "quasar": 12
+    },
+    "difficultyl": {
+      "comet": 1,
+      "nova": 5,
+      "supernova": 8,
+      "quasar": 12
+    }
+  },
+  {
+    "id": "lifeispiano",
+    "name": "Life is PIANO",
+    "composer": "Junk",
+    "difficultys": {
+      "comet": 1,
+      "nova": 5,
+      "supernova": 10,
+      "quasar": 12
+    },
+    "difficultyl": {
+      "comet": 1,
+      "nova": 5,
+      "supernova": 10,
+      "quasar": 12,
+      "starlight": 14
+    }
+  },
+  {
+    "id": "pasteloid",
+    "name": "Pasteloid",
+    "composer": "Sound Souler",
+    "difficultys": {
+      "comet": 2,
+      "nova": 6,
+      "supernova": 8,
+      "quasar": 11
+    },
+    "difficultyl": {
+      "comet": 2,
+      "nova": 6,
+      "supernova": 8,
+      "quasar": 11
+    }
+  },
+  {
+    "id": "raindrops",
+    "name": "Raindrops (feat. 倉先)",
+    "composer": "ag",
+    "difficultys": {
+      "comet": 2,
+      "nova": 4,
+      "supernova": 7,
+      "quasar": 10
+    },
+    "difficultyl": {
+      "comet": 2,
+      "nova": 4,
+      "supernova": 8,
+      "quasar": 10,
+      "starlight": 12
+    }
+  },
+  {
+    "id": "tsukitoai",
+    "name": "つきとあい (feat. TooMits)",
+    "composer": "7OAST",
+    "difficultys": {
+      "comet": 2,
+      "nova": 4,
+      "supernova": 7,
+      "quasar": 11
+    },
+    "difficultyl": {
+      "comet": 2,
+      "nova": 4,
+      "supernova": 7,
+      "quasar": 10
+    }
+  },
+  {
+    "id": "shirube",
+    "name": "シルベ -Mage's Dawn Ver.-",
+    "composer": "WHITEFISTS & Islet",
+    "difficultys": {
+      "comet": 2,
+      "nova": 4,
+      "supernova": 7,
+      "quasar": 10
+    },
+    "difficultyl": {
+      "comet": 2,
+      "nova": 4,
+      "supernova": 7,
+      "quasar": 10
+    }
+  },
+  {
+    "id": "ladyandlazy",
+    "name": "Lady and Lazy",
+    "composer": "yomoha",
+    "difficultys": {
+      "comet": 2,
+      "nova": 5,
+      "supernova": 8,
+      "quasar": 12,
+      "starlight": 14
+    },
+    "difficultyl": {
+      "comet": 2,
+      "nova": 5,
+      "supernova": 8,
+      "quasar": 12
+    }
+  },
+  {
+    "id": "mobilys",
+    "name": "MOBILYS",
+    "composer": "Dachs",
+    "difficultys": {
+      "comet": 2,
+      "nova": 6,
+      "supernova": 8,
+      "quasar": 11
+    },
+    "difficultyl": {
+      "comet": 2,
+      "nova": 6,
+      "supernova": 8,
+      "quasar": 11
+    }
+  },
+  {
+    "id": "neosblade",
+    "name": "NeosbladE",
+    "composer": "KARUT",
+    "difficultys": {
+      "comet": 4,
+      "nova": 6,
+      "supernova": 9,
+      "quasar": 13
+    },
+    "difficultyl": {
+      "comet": 4,
+      "nova": 6,
+      "supernova": 9,
+      "quasar": 13
+    }
+  },
+  {
+    "id": "nighttheater",
+    "name": "NightTheater",
+    "composer": "わかどり",
+    "difficultys": {
+      "comet": 2,
+      "nova": 5,
+      "supernova": 9,
+      "quasar": 12
+    },
+    "difficultyl": {
+      "comet": 2,
+      "nova": 5,
+      "supernova": 9,
+      "quasar": 12,
+      "starlight": 14
+    }
+  },
+  {
+    "id": "nightfall",
+    "name": "Nightfall",
+    "composer": "Yunosuke",
+    "difficultys": {
+      "comet": 3,
+      "nova": 7,
+      "supernova": 10,
+      "quasar": 13
+    },
+    "difficultyl": {
+      "comet": 3,
+      "nova": 7,
+      "supernova": 10,
+      "quasar": 13
+    }
+  },
+  {
+    "id": "violetism",
+    "name": "Violetism",
+    "composer": "Sound Souler",
+    "difficultys": {
+      "comet": 3,
+      "nova": 6,
+      "supernova": 8,
+      "quasar": 12
+    },
+    "difficultyl": {
+      "comet": 3,
+      "nova": 6,
+      "supernova": 8,
+      "quasar": 12
+    }
+  },
+  {
+    "id": "voiden",
+    "name": "Voiden",
+    "composer": "Frontbox",
+    "difficultys": {
+      "comet": 3,
+      "nova": 5,
+      "supernova": 8,
+      "quasar": 12
+    },
+    "difficultyl": {
+      "comet": 3,
+      "nova": 5,
+      "supernova": 8,
+      "quasar": 12
+    }
+  },
+  {
+    "id": "cosmicrailroad",
+    "name": "CO5M1C R4ILR0AD",
+    "composer": "kanone",
+    "difficultys": {
+      "comet": 3,
+      "nova": 6,
+      "supernova": 9,
+      "quasar": 13,
+      "starlight": 15
+    },
+    "difficultyl": {
+      "comet": 3,
+      "nova": 5,
+      "supernova": 9,
+      "quasar": 13
+    }
+  },
+  {
+    "id": "keepon",
+    "name": "Keep On!",
+    "composer": "雨漏りP",
+    "difficultys": {
+      "comet": 4,
+      "nova": 6,
+      "supernova": 9,
+      "quasar": 13
+    },
+    "difficultyl": {
+      "comet": 4,
+      "nova": 6,
+      "supernova": 10,
+      "quasar": 13
+    }
+  },
+  {
+    "id": "nulctrl",
+    "name": "NULCTRL",
+    "composer": "Silentroom",
+    "difficultys": {
+      "comet": 3,
+      "nova": 5,
+      "supernova": 8,
+      "quasar": 11
+    },
+    "difficultyl": {
+      "comet": 3,
+      "nova": 6,
+      "supernova": 8,
+      "quasar": 11
+    }
+  },
+  {
+    "id": "ukiyoe",
+    "name": "浮世絵横丁 (Ukiyoe Yokochou)",
+    "composer": "魔界都市ニイガタ (黄泉路テヂーモ x dawn-system x かゆき)",
+    "difficultys": {
+      "comet": 3,
+      "nova": 6,
+      "supernova": 9,
+      "quasar": 13
+    },
+    "difficultyl": {
+      "comet": 4,
+      "nova": 6,
+      "supernova": 10,
+      "quasar": 13,
+      "starlight": 16
+    }
+  },
+  {
+    "id": "milk",
+    "name": "MilK",
+    "composer": "モリモリあつし",
+    "difficultys": {
+      "comet": 2,
+      "nova": 5,
+      "supernova": 8,
+      "quasar": 12
+    },
+    "difficultyl": {
+      "comet": 1,
+      "nova": 5,
+      "supernova": 7,
+      "quasar": 12
+    }
+  },
+  {
+    "id": "emomomo",
+    "name": "EMOMOMO",
+    "composer": "Ras",
+    "difficultys": {
+      "comet": 2,
+      "nova": 5,
+      "supernova": 8,
+      "quasar": 12
+    },
+    "difficultyl": {
+      "comet": 2,
+      "nova": 5,
+      "supernova": 8,
+      "quasar": 12
+    }
+  },
+  {
+    "id": "playingwithruby",
+    "name": "Playing with Ruby",
+    "composer": "NIWASHI",
+    "difficultys": {
+      "comet": 3,
+      "nova": 6,
+      "supernova": 10,
+      "quasar": 13
+    },
+    "difficultyl": {
+      "comet": 3,
+      "nova": 6,
+      "supernova": 10,
+      "quasar": 13,
+      "starlight": 16
+    }
+  },
+  {
+    "id": "brainpower",
+    "name": "Brain Power",
+    "composer": "NOMA",
+    "difficultys": {
+      "comet": 3,
+      "nova": 6,
+      "supernova": 9,
+      "quasar": 14
+    },
+    "difficultyl": {
+      "comet": 3,
+      "nova": 6,
+      "supernova": 9,
+      "quasar": 13
+    }
+  },
+  {
+    "id": "sunkenmemory",
+    "name": "Sunken Memory",
+    "composer": "Exsy",
+    "difficultys": {
+      "comet": 4,
+      "nova": 6,
+      "supernova": 9,
+      "quasar": 12
+    },
+    "difficultyl": {
+      "comet": 3,
+      "nova": 6,
+      "supernova": 9,
+      "quasar": 12
+    }
+  },
+  {
+    "id": "goodtek",
+    "name": "GOODTEK",
+    "composer": "EBIMAYO",
+    "difficultys": {
+      "comet": 3,
+      "nova": 7,
+      "supernova": 10,
+      "quasar": 13,
+      "starlight": 16
+    },
+    "difficultyl": {
+      "comet": 3,
+      "nova": 7,
+      "supernova": 10,
+      "quasar": 13
+    }
+  },
+  {
+    "id": "brainpowerremix",
+    "name": "Brain Power ~Cranky Remix~",
+    "composer": "NOMA (Remix. cranky)",
+    "difficultys": {
+      "comet": 3,
+      "nova": 6,
+      "supernova": 9,
+      "quasar": 13
+    },
+    "difficultyl": {
+      "comet": 3,
+      "nova": 6,
+      "supernova": 9,
+      "quasar": 13
+    }
+  },
+  {
+    "id": "moonlightdance",
+    "name": "MOON LIGHT DANCE",
+    "composer": "TatshMusicCircle",
+    "difficultys": {
+      "comet": 3,
+      "nova": 6,
+      "supernova": 9,
+      "quasar": 12
+    },
+    "difficultyl": {
+      "comet": 3,
+      "nova": 6,
+      "supernova": 9,
+      "quasar": 12
+    }
+  },
+  {
+    "id": "marisa",
+    "name": "魔理沙は大変なものを盗んでいきました (Marisa Stole the Precious Thing)",
+    "composer": "ARM+夕野ヨシミ (IOSYS) feat. 藤咲かりん",
+    "difficultys": {
+      "comet": 2,
+      "nova": 6,
+      "supernova": 11,
+      "quasar": 13
+    },
+    "difficultyl": {
+      "comet": 2,
+      "nova": 6,
+      "supernova": 11,
+      "quasar": 13
+    }
+  },
+  {
+    "id": "conflict",
+    "name": "conflict",
+    "composer": "siromaru + cranky",
+    "difficultys": {
+      "comet": 3,
+      "nova": 6,
+      "supernova": 11,
+      "quasar": 14
+    },
+    "difficultyl": {
+      "comet": 3,
+      "nova": 6,
+      "supernova": 10,
+      "quasar": 14,
+      "starlight": 16
+    }
+  },
+  {
+    "id": "conflictremix",
+    "name": "conflict -NOMA CONCEIVER REMIX-",
+    "composer": "siromaru + cranky (Remix. NOMA)",
+    "difficultys": {
+      "comet": 4,
+      "nova": 7,
+      "supernova": 10,
+      "quasar": 14
+    },
+    "difficultyl": {
+      "comet": 4,
+      "nova": 7,
+      "supernova": 10,
+      "quasar": 14
+    }
+  },
+  {
+    "id": "azureeyez",
+    "name": "Azure Eyez",
+    "composer": "KARUT",
+    "difficultys": {
+      "comet": 2,
+      "nova": 5,
+      "supernova": 8,
+      "quasar": 11
+    },
+    "difficultyl": {
+      "comet": 2,
+      "nova": 5,
+      "supernova": 8,
+      "quasar": 10
+    }
+  },
+  {
+    "id": "novatail",
+    "name": "Novatail",
+    "composer": "Sound Souler",
+    "difficultys": {
+      "comet": 2,
+      "nova": 6,
+      "supernova": 9,
+      "quasar": 13,
+      "starlight": 15
+    },
+    "difficultyl": {
+      "comet": 2,
+      "nova": 6,
+      "supernova": 8,
+      "quasar": 14
+    }
+  },
+  {
+    "id": "yume",
+    "name": "夢／あるいは在りし日の",
+    "composer": "Nego_tiator",
+    "difficultys": {
+      "comet": 3,
+      "nova": 5,
+      "supernova": 9,
+      "quasar": 12,
+      "starlight": 15
+    },
+    "difficultyl": {
+      "comet": 3,
+      "nova": 5,
+      "supernova": 9,
+      "quasar": 12
+    }
+  },
+  {
+    "id": "nataliacode",
+    "name": "Natalia:Code",
+    "composer": "WHITEFISTS",
+    "difficultys": {
+      "comet": 4,
+      "nova": 7,
+      "supernova": 10,
+      "quasar": 13,
+      "starlight": 15
+    },
+    "difficultyl": {
+      "comet": 4,
+      "nova": 7,
+      "supernova": 10,
+      "quasar": 13
+    }
+  },
+  {
+    "id": "strangebar",
+    "name": "Strange Bar",
+    "composer": "Laur",
+    "difficultys": {
+      "comet": 2,
+      "nova": 5,
+      "supernova": 8,
+      "quasar": 13
+    },
+    "difficultyl": {
+      "comet": 2,
+      "nova": 5,
+      "supernova": 8,
+      "quasar": 11
+    }
+  },
+  {
+    "id": "retrocolorstage",
+    "name": "Retro Color Stage",
+    "composer": "yomoha",
+    "difficultys": {
+      "comet": 3,
+      "nova": 6,
+      "supernova": 9,
+      "quasar": 12
+    },
+    "difficultyl": {
+      "comet": 3,
+      "nova": 6,
+      "supernova": 9,
+      "quasar": 13
+    }
+  },
+  {
+    "id": "asteroidsdream",
+    "name": "Asteroid's Dream",
+    "composer": "brz1128",
+    "difficultys": {
+      "comet": 4,
+      "nova": 7,
+      "supernova": 10,
+      "quasar": 12
+    },
+    "difficultyl": {
+      "comet": 3,
+      "nova": 6,
+      "supernova": 10,
+      "quasar": 12,
+      "starlight": 15
+    }
+  },
+  {
+    "id": "sazanka",
+    "name": "Sazanka",
+    "composer": "Yunosuke",
+    "difficultys": {
+      "comet": 1,
+      "nova": 4,
+      "supernova": 7,
+      "quasar": 10
+    },
+    "difficultyl": {
+      "comet": 1,
+      "nova": 4,
+      "supernova": 7,
+      "quasar": 11
+    }
+  },
+  {
+    "id": "neosbladeremix",
+    "name": "NeosbladE ~X-mas Remix~",
+    "composer": "KARUT (Remix. yomoha)",
+    "difficultys": {
+      "comet": 4,
+      "nova": 7,
+      "supernova": 9,
+      "quasar": 13
+    },
+    "difficultyl": {
+      "comet": 4,
+      "nova": 7,
+      "supernova": 9,
+      "quasar": 13
+    }
+  },
+  {
+    "id": "cirno",
+    "name": "チルノのパーフェクトさんすう教室 (Cirno's Perfect Math Class)",
+    "composer": "ARM+夕野ヨシミ (IOSYS) feat. miko",
+    "difficultys": {
+      "comet": 2,
+      "nova": 6,
+      "supernova": 11,
+      "quasar": 13
+    },
+    "difficultyl": {
+      "comet": 2,
+      "nova": 5,
+      "supernova": 8,
+      "quasar": 11,
+      "starlight": 15
+    }
+  },
+  {
+    "id": "cybersparks",
+    "name": "CYBER Sparks",
+    "composer": "TatshMusicCircle",
+    "difficultys": {
+      "comet": 3,
+      "nova": 5,
+      "supernova": 8,
+      "quasar": 13
+    },
+    "difficultyl": {
+      "comet": 3,
+      "nova": 5,
+      "supernova": 9,
+      "quasar": 13,
+      "starlight": 15
+    }
+  },
+  {
+    "id": "pavedgarden",
+    "name": "Paved Garden",
+    "composer": "ginkiha",
+    "difficultys": {
+      "comet": 2,
+      "nova": 5,
+      "supernova": 8,
+      "quasar": 12
+    },
+    "difficultyl": {
+      "comet": 2,
+      "nova": 6,
+      "supernova": 8,
+      "quasar": 11
+    }
+  },
+  {
+    "id": "popsequence",
+    "name": "POP SEQUENCE",
+    "composer": "Hommarju",
+    "difficultys": {
+      "comet": 1,
+      "nova": 4,
+      "supernova": 8,
+      "quasar": 10
+    },
+    "difficultyl": {
+      "comet": 1,
+      "nova": 4,
+      "supernova": 8,
+      "quasar": 10
+    }
+  },
+  {
+    "id": "slapstick",
+    "name": "Slapstick Parfait",
+    "composer": "t+pazolite",
+    "difficultys": {
+      "comet": 3,
+      "nova": 6,
+      "supernova": 11,
+      "quasar": 13
+    },
+    "difficultyl": {
+      "comet": 3,
+      "nova": 5,
+      "supernova": 10,
+      "quasar": 13
+    }
+  },
+  {
+    "id": "crossingdelta",
+    "name": "CROSSING DELTA",
+    "composer": "t+pazolite×Hommarju×ginkiha",
+    "difficultys": {
+      "comet": 2,
+      "nova": 6,
+      "supernova": 11,
+      "quasar": 14
+    },
+    "difficultyl": {
+      "comet": 2,
+      "nova": 7,
+      "supernova": 10,
+      "quasar": 14
+    }
+  },
+  {
+    "id": "moonlightdancefull",
+    "name": "MOON LIGHT DANCE -full song-",
+    "composer": "TatshMusicCircle",
+    "difficultys": {
+      "quasar": 12,
+      "starlight": 15
+    },
+    "difficultyl": {
+      "quasar": 11
+    }
+  },
+  {
+    "id": "readytoflight",
+    "name": "Ready to Flight",
+    "composer": "yomoha",
+    "difficultys": {
+      "comet": 4,
+      "nova": 6,
+      "supernova": 10,
+      "quasar": 14
+    },
+    "difficultyl": {
+      "comet": 4,
+      "nova": 7,
+      "supernova": 10,
+      "quasar": 13,
+      "starlight": 16
+    }
+  },
+  {
+    "id": "shadowcall",
+    "name": "Shadow Call (feat. Sennzai)",
+    "composer": "WHITEFISTS",
+    "difficultys": {
+      "comet": 3,
+      "nova": 5,
+      "supernova": 8,
+      "quasar": 12
+    },
+    "difficultyl": {
+      "comet": 3,
+      "nova": 5,
+      "supernova": 8,
+      "quasar": 11
+    }
+  },
+  {
+    "id": "intoafrenzy",
+    "name": "Into a Frenzy",
+    "composer": "Masahiro \"Godspeed\" Aoki",
+    "difficultys": {
+      "comet": 4,
+      "nova": 7,
+      "supernova": 11,
+      "quasar": 14
+    },
+    "difficultyl": {
+      "comet": 4,
+      "nova": 7,
+      "supernova": 11,
+      "quasar": 13
+    }
+  },
+  {
+    "id": "aquastars",
+    "name": "Aqua Stars",
+    "composer": "Sound Souler",
+    "difficultys": {
+      "comet": 3,
+      "nova": 5,
+      "supernova": 8,
+      "quasar": 12,
+      "starlight": 15
+    },
+    "difficultyl": {
+      "comet": 2,
+      "nova": 5,
+      "supernova": 7,
+      "quasar": 12
+    }
+  },
+  {
+    "id": "shiningaquarius",
+    "name": "Shining Aquarius",
+    "composer": "KARUT",
+    "difficultys": {
+      "comet": 4,
+      "nova": 7,
+      "supernova": 10,
+      "quasar": 13
+    },
+    "difficultyl": {
+      "comet": 3,
+      "nova": 6,
+      "supernova": 10,
+      "quasar": 13,
+      "starlight": 15
+    }
+  },
+  {
+    "id": "submarinelog",
+    "name": "Submarine Log",
+    "composer": "yomoha",
+    "difficultys": {
+      "comet": 4,
+      "nova": 7,
+      "supernova": 11,
+      "quasar": 14,
+      "starlight": 17
+    },
+    "difficultyl": {
+      "comet": 4,
+      "nova": 6,
+      "supernova": 1,
+      "quasar": 13
+    }
+  },
+  {
+    "id": "crystal",
+    "name": "Crystal",
+    "composer": "WyvernP",
+    "difficultys": {
+      "comet": 2,
+      "nova": 5,
+      "supernova": 9,
+      "quasar": 12
+    },
+    "difficultyl": {
+      "comet": 2,
+      "nova": 5,
+      "supernova": 9,
+      "quasar": 12
+    }
+  },
+  {
+    "id": "dement",
+    "name": "Dement ~After Legend~",
+    "composer": "Cosmograph",
+    "difficultys": {
+      "comet": 4,
+      "nova": 7,
+      "supernova": 10,
+      "quasar": 14
+    },
+    "difficultyl": {
+      "comet": 4,
+      "nova": 7,
+      "supernova": 10,
+      "quasar": 14
+    }
+  },
+  {
+    "id": "basshouserave",
+    "name": "BASS, HOUSE, RAVE",
+    "composer": "yomoha",
+    "difficultys": {
+      "comet": 1,
+      "nova": 6,
+      "supernova": 9,
+      "quasar": 12,
+      "starlight": 14
+    },
+    "difficultyl": {
+      "comet": 2,
+      "nova": 6,
+      "supernova": 8,
+      "quasar": 12
+    }
+  },
+  {
+    "id": "marisstella",
+    "name": "Maris Stella",
+    "composer": "iTIC",
+    "difficultys": {
+      "comet": 2,
+      "nova": 6,
+      "supernova": 8,
+      "quasar": 12
+    },
+    "difficultyl": {
+      "comet": 2,
+      "nova": 6,
+      "supernova": 8,
+      "quasar": 11
+    }
+  },
+  {
+    "id": "snowwolf",
+    "name": "Snow Wolf",
+    "composer": "tokiwa",
+    "difficultys": {
+      "comet": 2,
+      "nova": 5,
+      "supernova": 9,
+      "quasar": 12,
+      "starlight": 14
+    },
+    "difficultyl": {
+      "comet": 3,
+      "nova": 5,
+      "supernova": 9,
+      "quasar": 11
+    }
+  },
+  {
+    "id": "winningwave",
+    "name": "Winning Wave",
+    "composer": "Sound Souler",
+    "difficultys": {
+      "comet": 2,
+      "nova": 6,
+      "supernova": 8,
+      "quasar": 12
+    },
+    "difficultyl": {
+      "comet": 2,
+      "nova": 6,
+      "supernova": 8,
+      "quasar": 12
+    }
+  },
+  {
+    "id": "fullcolorcocktail",
+    "name": "Full Color Cocktail",
+    "composer": "yomoha",
+    "difficultys": {
+      "comet": 2,
+      "nova": 5,
+      "supernova": 9,
+      "quasar": 12
+    },
+    "difficultyl": {
+      "comet": 2,
+      "nova": 5,
+      "supernova": 9,
+      "quasar": 12
+    }
+  },
+  {
+    "id": "languageofdawn",
+    "name": "暁の言葉 (Language of Dawn)",
+    "composer": "7OAST",
+    "difficultys": {
+      "comet": 2,
+      "nova": 5,
+      "supernova": 7,
+      "quasar": 10
+    },
+    "difficultyl": {
+      "comet": 1,
+      "nova": 5,
+      "supernova": 7,
+      "quasar": 10
+    }
+  },
+  {
+    "id": "spacecarousel",
+    "name": "Space Carousel",
+    "composer": "yomoha",
+    "difficultys": {
+      "comet": 2,
+      "nova": 4,
+      "supernova": 7,
+      "quasar": 11
+    },
+    "difficultyl": {
+      "comet": 1,
+      "nova": 4,
+      "supernova": 7,
+      "quasar": 10
+    }
+  },
+  {
+    "id": "ginsekai",
+    "name": "銀世廻 (Ginsekai)",
+    "composer": "Halv",
+    "difficultys": {
+      "comet": 4,
+      "nova": 7,
+      "supernova": 9,
+      "quasar": 13
+    },
+    "difficultyl": {
+      "comet": 4,
+      "nova": 7,
+      "supernova": 9,
+      "quasar": 12
+    }
+  },
+  {
+    "id": "pearlystars",
+    "name": "Pearly Stars",
+    "composer": "Sound Souler",
+    "difficultys": {
+      "comet": 3,
+      "nova": 7,
+      "supernova": 10,
+      "quasar": 13
+    },
+    "difficultyl": {
+      "comet": 3,
+      "nova": 6,
+      "supernova": 10,
+      "quasar": 14,
+      "starlight": 16
+    }
+  },
+  {
+    "id": "warning",
+    "name": "WARNING×WARNING×WARNING",
+    "composer": "暁Records",
+    "difficultys": {
+      "comet": 3,
+      "nova": 5,
+      "supernova": 8,
+      "quasar": 12
+    },
+    "difficultyl": {
+      "comet": 3,
+      "nova": 5,
+      "supernova": 8,
+      "quasar": 11
+    }
+  },
+  {
+    "id": "shiawase",
+    "name": "シアワセエゴイスト (The Happy Egoist)",
+    "composer": "森羅万象",
+    "difficultys": {
+      "comet": 2,
+      "nova": 6,
+      "supernova": 9,
+      "quasar": 12
+    },
+    "difficultyl": {
+      "comet": 2,
+      "nova": 6,
+      "supernova": 9,
+      "quasar": 12
+    }
+  },
+  {
+    "id": "aquamarine",
+    "name": "Aquamarine",
+    "composer": "WyvernP",
+    "difficultys": {
+      "comet": 2,
+      "nova": 5,
+      "supernova": 8,
+      "quasar": 11
+    },
+    "difficultyl": {
+      "comet": 2,
+      "nova": 5,
+      "supernova": 8,
+      "quasar": 10
+    }
+  },
+  {
+    "id": "onewaydrive",
+    "name": "One Way Drive",
+    "composer": "KARUT",
+    "difficultys": {
+      "comet": 3,
+      "nova": 6,
+      "supernova": 8,
+      "quasar": 12
+    },
+    "difficultyl": {
+      "comet": 3,
+      "nova": 5,
+      "supernova": 8,
+      "quasar": 12
+    }
+  },
+  {
+    "id": "influx",
+    "name": "Influx",
+    "composer": "TQ☆",
+    "difficultys": {
+      "comet": 3,
+      "nova": 7,
+      "supernova": 10,
+      "quasar": 14,
+      "starlight": 16
+    },
+    "difficultyl": {
+      "comet": 3,
+      "nova": 7,
+      "supernova": 9,
+      "quasar": 14
+    }
+  },
+  {
+    "id": "esmatrix",
+    "name": "ENERGY SYNERGY MATRIX",
+    "composer": "Tanchiky",
+    "difficultys": {
+      "comet": 2,
+      "nova": 6,
+      "supernova": 9,
+      "quasar": 13
+    },
+    "difficultyl": {
+      "comet": 2,
+      "nova": 6,
+      "supernova": 9,
+      "quasar": 13
+    }
+  },
+  {
+    "id": "raintain",
+    "name": "Raintain",
+    "composer": "Sound Souler",
+    "difficultys": {
+      "comet": 4,
+      "nova": 6,
+      "supernova": 9,
+      "quasar": 13
+    },
+    "difficultyl": {
+      "comet": 3,
+      "nova": 6,
+      "supernova": 9,
+      "quasar": 12
+    }
+  },
+  {
+    "id": "routeout",
+    "name": "Routeout",
+    "composer": "Sound Souler",
+    "difficultys": {
+      "comet": 1,
+      "nova": 4,
+      "supernova": 7,
+      "quasar": 11
+    },
+    "difficultyl": {
+      "comet": 2,
+      "nova": 4,
+      "supernova": 7,
+      "quasar": 10
+    }
+  },
+  {
+    "id": "414perspeed",
+    "name": "414 PER SPEED",
+    "composer": "Sound Souler",
+    "difficultys": {
+      "comet": 3,
+      "nova": 7,
+      "supernova": 11,
+      "quasar": 15
+    },
+    "difficultyl": {
+      "comet": 3,
+      "nova": 7,
+      "supernova": 11,
+      "quasar": 15
+    }
+  },
+  {
+    "id": "414perspeedremix",
+    "name": "414 PER SPEED (yomoha Remix)",
+    "composer": "Sound Souler (Remix. yomoha)",
+    "difficultys": {
+      "comet": 3,
+      "nova": 6,
+      "supernova": 8,
+      "quasar": 13
+    },
+    "difficultyl": {
+      "comet": 3,
+      "nova": 6,
+      "supernova": 8,
+      "quasar": 13
+    }
+  },
+  {
+    "id": "tourmaline",
+    "name": "Tourmaline",
+    "composer": "WyvernP",
+    "difficultys": {
+      "comet": 2,
+      "nova": 5,
+      "supernova": 8,
+      "quasar": 12
+    },
+    "difficultyl": {
+      "comet": 1,
+      "nova": 5,
+      "supernova": 8,
+      "quasar": 11
+    }
+  },
+  {
+    "id": "wolfsbane",
+    "name": "Wolfsbane",
+    "composer": "LucaProject",
+    "difficultys": {
+      "comet": 3,
+      "nova": 6,
+      "supernova": 10,
+      "quasar": 13
+    },
+    "difficultyl": {
+      "comet": 3,
+      "nova": 6,
+      "supernova": 10,
+      "quasar": 13
+    }
+  },
+  {
+    "id": "eranthis",
+    "name": "Eranthis",
+    "composer": "LucaProject",
+    "difficultys": {
+      "comet": 2,
+      "nova": 5,
+      "supernova": 8,
+      "quasar": 12
+    },
+    "difficultyl": {
+      "comet": 2,
+      "nova": 5,
+      "supernova": 8,
+      "quasar": 11
+    }
+  },
+  {
+    "id": "maidenapricot",
+    "name": "Maiden+Apricot",
+    "composer": "seatrus",
+    "difficultys": {
+      "comet": 4,
+      "nova": 6,
+      "supernova": 9,
+      "quasar": 12
+    },
+    "difficultyl": {
+      "comet": 4,
+      "nova": 6,
+      "supernova": 9,
+      "quasar": 12
+    }
+  },
+  {
+    "id": "thecherry",
+    "name": "終桜散華 (The cherry blossoms wither and the petals fall)",
+    "composer": "tokiwa",
+    "difficultys": {
+      "comet": 3,
+      "nova": 5,
+      "supernova": 8,
+      "quasar": 12
+    },
+    "difficultyl": {
+      "comet": 3,
+      "nova": 5,
+      "supernova": 8,
+      "quasar": 12
+    }
+  },
+  {
+    "id": "xakuro",
+    "name": "Xakuro",
+    "composer": "Halv",
+    "difficultys": {
+      "comet": 4,
+      "nova": 7,
+      "supernova": 10,
+      "quasar": 12
+    },
+    "difficultyl": {
+      "comet": 4,
+      "nova": 7,
+      "supernova": 10,
+      "quasar": 12
+    }
+  },
+  {
+    "id": "secretmirage",
+    "name": "secret:mirage",
+    "composer": "かゆき",
+    "difficultys": {
+      "comet": 3,
+      "nova": 6,
+      "supernova": 9,
+      "quasar": 13
+    },
+    "difficultyl": {
+      "comet": 3,
+      "nova": 6,
+      "supernova": 9,
+      "quasar": 13
+    }
+  },
+  {
+    "id": "redrose",
+    "name": "Red Rose",
+    "composer": "yomoha",
+    "difficultys": {
+      "comet": 4,
+      "nova": 7,
+      "supernova": 10,
+      "quasar": 13
+    },
+    "difficultyl": {
+      "comet": 4,
+      "nova": 6,
+      "supernova": 10,
+      "quasar": 14
+    }
+  },
+  {
+    "id": "heavenlystars",
+    "name": "Heavenly Stars",
+    "composer": "yomoha",
+    "difficultys": {
+      "comet": 3,
+      "nova": 6,
+      "supernova": 9,
+      "quasar": 13
+    },
+    "difficultyl": {
+      "comet": 3,
+      "nova": 6,
+      "supernova": 9,
+      "quasar": 13
+    }
+  },
+  {
+    "id": "flowerofdestiny",
+    "name": "Flower of Destiny",
+    "composer": "Sound Souler",
+    "difficultys": {
+      "comet": 2,
+      "nova": 5,
+      "supernova": 9,
+      "quasar": 13
+    },
+    "difficultyl": {
+      "comet": 2,
+      "nova": 5,
+      "supernova": 9,
+      "quasar": 12
+    }
+  },
+  {
+    "id": "stargateextreme",
+    "name": "STARGATE EXTREME",
+    "composer": "KARUT",
+    "difficultys": {
+      "comet": 3,
+      "nova": 7,
+      "supernova": 11,
+      "quasar": 14
+    },
+    "difficultyl": {
+      "comet": 3,
+      "nova": 7,
+      "supernova": 11,
+      "quasar": 14
+    }
+  },
+  {
+    "id": "kakitsubata",
+    "name": "燕子花 -Kakitsubata-",
+    "composer": "polysha vs. モリモリあつし",
+    "difficultys": {
+      "comet": 4,
+      "nova": 6,
+      "supernova": 10,
+      "quasar": 15,
+      "starlight": 17
+    },
+    "difficultyl": {
+      "comet": 4,
+      "nova": 6,
+      "supernova": 10,
+      "quasar": 14
+    }
+  },
+  {
+    "id": "kawaakari",
+    "name": "カワアカリ (feat. neur6sia) (Blurry River (feat. neur6sia))",
+    "composer": "7OAST",
+    "difficultys": {
+      "comet": 1,
+      "nova": 5,
+      "supernova": 8,
+      "quasar": 11
+    },
+    "difficultyl": {
+      "comet": 1,
+      "nova": 5,
+      "supernova": 8,
+      "quasar": 11
+    }
+  },
+  {
+    "id": "twinkleraindrop",
+    "name": "Twinkle rain drop",
+    "composer": "キリケン",
+    "difficultys": {
+      "comet": 3,
+      "nova": 5,
+      "supernova": 8,
+      "quasar": 12
+    },
+    "difficultyl": {
+      "comet": 3,
+      "nova": 5,
+      "supernova": 7,
+      "quasar": 10
+    }
+  },
+  {
+    "id": "koibyou",
+    "name": "恋病 (TV Size) (Lovesickness (TV Size))",
+    "composer": "Street",
+    "difficultys": {
+      "comet": 2,
+      "nova": 5,
+      "supernova": 9,
+      "quasar": 13
+    },
+    "difficultyl": {
+      "comet": 2,
+      "nova": 5,
+      "supernova": 9,
+      "quasar": 12
+    }
+  },
+  {
+    "id": "crossingdeltaremix",
+    "name": "CROSSING DELTA (yomoha flip)",
+    "composer": "t+pazolite×Hommarju×ginkiha (Remix. yomoha)",
+    "difficultys": {
+      "comet": 4,
+      "nova": 7,
+      "supernova": 10,
+      "quasar": 14
+    },
+    "difficultyl": {
+      "comet": 4,
+      "nova": 7,
+      "supernova": 10,
+      "quasar": 13
+    }
+  },
+  {
+    "id": "novatailremix",
+    "name": "Novatail (seatrus Luminous Remix)",
+    "composer": "Sound Souler (Remix. seatrus)",
+    "difficultys": {
+      "comet": 3,
+      "nova": 7,
+      "supernova": 10,
+      "quasar": 14
+    },
+    "difficultyl": {
+      "comet": 3,
+      "nova": 7,
+      "supernova": 10,
+      "quasar": 14
+    }
+  },
+  {
+    "id": "harunohime",
+    "name": "春の姫 (Princess of Spring)",
+    "composer": "yomoha",
+    "difficultys": {
+      "comet": 2,
+      "nova": 5,
+      "supernova": 8,
+      "quasar": 11
+    },
+    "difficultyl": {
+      "comet": 1,
+      "nova": 5,
+      "supernova": 8,
+      "quasar": 10
+    }
+  },
+  {
+    "id": "andromeda01",
+    "name": "Andromeda 01",
+    "composer": "Sound Souler",
+    "difficultys": {
+      "comet": 1,
+      "nova": 6,
+      "supernova": 9,
+      "quasar": 13,
+      "starlight": 16
+    },
+    "difficultyl": {
+      "comet": 3,
+      "nova": 6,
+      "supernova": 9,
+      "quasar": 14,
+      "starlight": 16
+    }
+  },
+  {
+    "id": "9876734123",
+    "name": "9876734123",
+    "composer": "Silentroom",
+    "difficultys": {
+      "comet": 4,
+      "nova": 7,
+      "supernova": 10,
+      "quasar": 14,
+      "starlight": 16
+    },
+    "difficultyl": {
+      "comet": 4,
+      "nova": 7,
+      "supernova": 10,
+      "quasar": 13
+    }
+  },
+  {
+    "id": "pupa",
+    "name": "PUPA",
+    "composer": "モリモリあつし\t",
+    "difficultys": {
+      "comet": 4,
+      "nova": 7,
+      "supernova": 11,
+      "quasar": 15,
+      "starlight": 17
+    },
+    "difficultyl": {
+      "comet": 4,
+      "nova": 7,
+      "supernova": 11,
+      "quasar": 15
+    }
+  },
+  {
+    "id": "kasumisou",
+    "name": "カスミソウ (Gypsophila)",
+    "composer": "yomoha",
+    "difficultys": {
+      "comet": 2,
+      "nova": 4,
+      "supernova": 7,
+      "quasar": 11
+    },
+    "difficultyl": {
+      "comet": 2,
+      "nova": 4,
+      "supernova": 7,
+      "quasar": 10
+    }
+  },
+  {
+    "id": "vintagefairies",
+    "name": "Vintage Fairies",
+    "composer": "systile",
+    "difficultys": {
+      "comet": 2,
+      "nova": 5,
+      "supernova": 8,
+      "quasar": 12
+    },
+    "difficultyl": {
+      "comet": 2,
+      "nova": 5,
+      "supernova": 8,
+      "quasar": 12
+    }
+  },
+  {
+    "id": "tekketsumajyo",
+    "name": "鉄血魔女 (Iron Blooded Witch)",
+    "composer": "yomoha",
+    "difficultys": {
+      "comet": 3,
+      "nova": 6,
+      "supernova": 11,
+      "quasar": 14,
+      "starlight": 17
+    },
+    "difficultyl": {
+      "comet": 3,
+      "nova": 6,
+      "supernova": 11,
+      "quasar": 13,
+      "starlight": 17
+    }
+  },
+  {
+    "id": "outofsense",
+    "name": "Out of Sense",
+    "composer": "Sound Souler",
+    "difficultys": {
+      "comet": 2,
+      "nova": 6,
+      "supernova": 9,
+      "quasar": 13
+    },
+    "difficultyl": {
+      "comet": 2,
+      "nova": 6,
+      "supernova": 9,
+      "quasar": 13
+    }
+  },
+  {
+    "id": "soundchimera",
+    "name": "Sound Chimera",
+    "composer": "Laur",
+    "difficultys": {
+      "comet": 4,
+      "nova": 7,
+      "supernova": 11,
+      "quasar": 15
+    },
+    "difficultyl": {
+      "comet": 4,
+      "nova": 7,
+      "supernova": 11,
+      "quasar": 15,
+      "starlight": 17
+    }
+  },
+  {
+    "id": "satorithewitch",
+    "name": "Satori the Witch",
+    "composer": "yomoha",
+    "difficultys": {
+      "comet": 2,
+      "nova": 5,
+      "supernova": 8,
+      "quasar": 10
+    },
+    "difficultyl": {
+      "comet": 2,
+      "nova": 5,
+      "supernova": 8,
+      "quasar": 11
+    }
+  },
+  {
+    "id": "gensouno",
+    "name": "幻想のサテライト (Fantasy Satellite)",
+    "composer": "豚乙女",
+    "difficultys": {
+      "comet": 2,
+      "nova": 6,
+      "supernova": 9,
+      "quasar": 11
+    },
+    "difficultyl": {
+      "comet": 2,
+      "nova": 6,
+      "supernova": 9,
+      "quasar": 11
+    }
+  },
+  {
+    "id": "itazura",
+    "name": "悪戯センセーション (Mischievous Sensation)",
+    "composer": "森羅万象",
+    "difficultys": {
+      "comet": 2,
+      "nova": 5,
+      "supernova": 8,
+      "quasar": 11
+    },
+    "difficultyl": {
+      "comet": 2,
+      "nova": 5,
+      "supernova": 8,
+      "quasar": 11
+    }
+  },
+  {
+    "id": "hakanakimono",
+    "name": "儚きもの人間 (Hakanakimono Ningen)",
+    "composer": "豚乙女",
+    "difficultys": {
+      "comet": 3,
+      "nova": 5,
+      "supernova": 7,
+      "quasar": 12
+    },
+    "difficultyl": {
+      "comet": 3,
+      "nova": 5,
+      "supernova": 7,
+      "quasar": 12
+    }
+  },
+  {
+    "id": "zenryoku",
+    "name": "全力ハッピーライフ (Full power Happy life)",
+    "composer": "森羅万象",
+    "difficultys": {
+      "comet": 2,
+      "nova": 5,
+      "supernova": 8,
+      "quasar": 12
+    },
+    "difficultyl": {
+      "comet": 2,
+      "nova": 5,
+      "supernova": 8,
+      "quasar": 12
+    }
+  },
+  {
+    "id": "dwarfs",
+    "name": "進め！イッスン軍団 (Rebellion of the Dwarfs)",
+    "composer": "yoa(dawn-system)",
+    "difficultys": {
+      "comet": 4,
+      "nova": 7,
+      "supernova": 10,
+      "quasar": 13
+    },
+    "difficultyl": {
+      "comet": 4,
+      "nova": 7,
+      "supernova": 10,
+      "quasar": 13
+    }
+  },
+  {
+    "id": "shootingstar",
+    "name": "Shooting Star feat. Risa Yuzuki",
+    "composer": "uma vs. モリモリあつし",
+    "difficultys": {
+      "comet": 3,
+      "nova": 6,
+      "supernova": 9,
+      "quasar": 13
+    },
+    "difficultyl": {
+      "comet": 3,
+      "nova": 6,
+      "supernova": 9,
+      "quasar": 13
+    }
+  },
+  {
+    "id": "udongein",
+    "name": "患部で止まってすぐ溶ける～狂気の優曇華院 (Kanbu de Tomatte Sugu Tokeru~ Kyouki no Udongein)",
+    "composer": "IOSYS",
+    "difficultys": {
+      "nova": 5,
+      "supernova": 8,
+      "quasar": 13
+    },
+    "difficultyl": {
+      "nova": 5,
+      "supernova": 8,
+      "quasar": 14
+    }
+  },
+  {
+    "id": "venten",
+    "name": "VENTEN",
+    "composer": "暁Records",
+    "difficultys": {
+      "comet": 3,
+      "nova": 7,
+      "supernova": 10,
+      "quasar": 14
+    },
+    "difficultyl": {
+      "comet": 3,
+      "nova": 7,
+      "supernova": 10,
+      "quasar": 14
+    }
+  },
+  {
+    "id": "calamityfortune",
+    "name": "Calamity Fortune",
+    "composer": "LeaF",
+    "difficultys": {
+      "comet": 4,
+      "nova": 7,
+      "supernova": 11,
+      "quasar": 15
+    },
+    "difficultyl": {
+      "comet": 4,
+      "nova": 7,
+      "supernova": 11,
+      "quasar": 15
+    }
+  },
+  {
+    "id": "themoonrabbit",
+    "name": "The Moon Rabbit",
+    "composer": "yomoha",
+    "difficultys": {
+      "comet": 3,
+      "nova": 6,
+      "supernova": 8,
+      "quasar": 14
+    },
+    "difficultyl": {
+      "comet": 3,
+      "nova": 6,
+      "supernova": 9,
+      "quasar": 13
+    }
+  },
+  {
+    "id": "grayroad",
+    "name": "グレーロード",
+    "composer": "Noa",
+    "difficultys": {
+      "comet": 1,
+      "nova": 5,
+      "supernova": 8,
+      "quasar": 10
+    },
+    "difficultyl": {
+      "comet": 3,
+      "nova": 5,
+      "supernova": 8,
+      "quasar": 10
+    }
+  },
+  {
+    "id": "noisepollution",
+    "name": "소음공해 (Noise Pollution)",
+    "composer": "WyvernP (Guitar. BlueArpeggio)",
+    "difficultys": {
+      "comet": 2,
+      "nova": 5,
+      "supernova": 8,
+      "quasar": 12
+    },
+    "difficultyl": {
+      "comet": 2,
+      "nova": 5,
+      "supernova": 8,
+      "quasar": 12
+    }
+  },
+  {
+    "id": "inamour",
+    "name": "în amour",
+    "composer": "ZxNX",
+    "difficultys": {
+      "comet": 2,
+      "nova": 5,
+      "supernova": 9,
+      "quasar": 12
+    },
+    "difficultyl": {
+      "comet": 2,
+      "nova": 5,
+      "supernova": 9,
+      "quasar": 12
+    }
+  },
+  {
+    "id": "siorai",
+    "name": "Síoraí",
+    "composer": "KθZyo",
+    "difficultys": {
+      "comet": 2,
+      "nova": 5,
+      "supernova": 8,
+      "quasar": 12
+    },
+    "difficultyl": {
+      "comet": 2,
+      "nova": 5,
+      "supernova": 8,
+      "quasar": 13
+    }
+  },
+  {
+    "id": "ginsekainihitori",
+    "name": "銀世界にひとり (Alone in Silver World)",
+    "composer": "後藤 feat. nayuta",
+    "difficultys": {
+      "comet": 3,
+      "nova": 6,
+      "supernova": 9,
+      "quasar": 13
+    },
+    "difficultyl": {
+      "comet": 1,
+      "nova": 6,
+      "supernova": 8,
+      "quasar": 12
+    }
+  },
+  {
+    "id": "aloneinstarlight",
+    "name": "Alone in Starlight",
+    "composer": "Palami",
+    "difficultys": {
+      "comet": 4,
+      "nova": 7,
+      "supernova": 9,
+      "quasar": 13
+    },
+    "difficultyl": {
+      "comet": 4,
+      "nova": 7,
+      "supernova": 9,
+      "quasar": 14
+    }
+  },
+  {
+    "id": "mangobingsu",
+    "name": "Mango Bingsu",
+    "composer": "Palami",
+    "difficultys": {
+      "comet": 3,
+      "nova": 5,
+      "supernova": 11,
+      "quasar": 14
+    },
+    "difficultyl": {
+      "comet": 3,
+      "nova": 5,
+      "supernova": 9,
+      "quasar": 12,
+      "starlight": 14
+    }
+  },
+  {
+    "id": "stellarmemoria",
+    "name": "StellaR-MemoriA",
+    "composer": "Raphiiel",
+    "difficultys": {
+      "comet": 4,
+      "nova": 7,
+      "supernova": 11,
+      "quasar": 14
+    },
+    "difficultyl": {
+      "comet": 4,
+      "nova": 7,
+      "supernova": 11,
+      "quasar": 14
+    }
+  },
+  {
+    "id": "lustroustravel",
+    "name": "Lustroustravel",
+    "composer": "大豆使徒(打打だいず+seatrus)",
+    "difficultys": {
+      "comet": 3,
+      "nova": 6,
+      "supernova": 10,
+      "quasar": 14
+    },
+    "difficultyl": {
+      "comet": 3,
+      "nova": 6,
+      "supernova": 9,
+      "quasar": 14
+    }
+  },
+  {
+    "id": "starrider",
+    "name": "Star rider",
+    "composer": "Essbee",
+    "difficultys": {
+      "comet": 3,
+      "nova": 7,
+      "supernova": 10,
+      "quasar": 15
+    },
+    "difficultyl": {
+      "comet": 3,
+      "nova": 7,
+      "supernova": 10,
+      "quasar": 15,
+      "starlight": 16
+    }
+  },
+  {
+    "id": "infinity",
+    "name": "Infinity",
+    "composer": "PIKASONIC",
+    "difficultys": {
+      "comet": 3,
+      "nova": 5,
+      "supernova": 8,
+      "quasar": 12
+    },
+    "difficultyl": {
+      "comet": 3,
+      "nova": 5,
+      "supernova": 8,
+      "quasar": 12
+    }
+  },
+  {
+    "id": "replayandaction",
+    "name": "Replay & Action",
+    "composer": "KARUT",
+    "difficultys": {
+      "comet": 2,
+      "nova": 7,
+      "supernova": 9,
+      "quasar": 13
+    },
+    "difficultyl": {
+      "comet": 2,
+      "nova": 5,
+      "supernova": 8,
+      "quasar": 13
+    }
+  },
+  {
+    "id": "alliwant",
+    "name": "All I want",
+    "composer": "awfuless",
+    "difficultys": {
+      "comet": 3,
+      "nova": 6,
+      "supernova": 9,
+      "quasar": 14
+    },
+    "difficultyl": {
+      "comet": 3,
+      "nova": 6,
+      "supernova": 9,
+      "quasar": 14
+    }
+  },
+  {
+    "id": "tsubakinohana",
+    "name": "椿の花 (Camellia)",
+    "composer": "yomoha",
+    "difficultys": {
+      "comet": 2,
+      "nova": 4,
+      "supernova": 8,
+      "quasar": 11
+    },
+    "difficultyl": {
+      "comet": 2,
+      "nova": 5,
+      "supernova": 8,
+      "quasar": 11
+    }
+  },
+  {
+    "id": "lustroustravelremix",
+    "name": "Lustroustravel (X-mas Remix)",
+    "composer": "大豆使徒(打打だいず+seatrus) (Remix. yomoha)",
+    "difficultys": {
+      "comet": 3,
+      "nova": 7,
+      "supernova": 10,
+      "quasar": 14
+    },
+    "difficultyl": {
+      "comet": 3,
+      "nova": 7,
+      "supernova": 10,
+      "quasar": 15
+    }
+  },
+  {
+    "id": "paperbutterfly",
+    "name": "Paper Butterfly",
+    "composer": "banibini",
+    "difficultys": {
+      "comet": 3,
+      "nova": 6,
+      "supernova": 9,
+      "quasar": 14
+    },
+    "difficultyl": {
+      "comet": 3,
+      "nova": 6,
+      "supernova": 9,
+      "quasar": 14
+    }
+  },
+  {
+    "id": "introspect",
+    "name": "Introspect",
+    "composer": "Lokan",
+    "difficultys": {
+      "comet": 3,
+      "nova": 6,
+      "supernova": 9,
+      "quasar": 13
+    },
+    "difficultyl": {
+      "comet": 3,
+      "nova": 6,
+      "supernova": 9,
+      "quasar": 12
+    }
+  },
+  {
+    "id": "andromeda02",
+    "name": "Andromeda 02",
+    "composer": "Sound Souler",
+    "difficultys": {
+      "comet": 4,
+      "nova": 7,
+      "supernova": 11,
+      "quasar": 15,
+      "starlight": 17
+    },
+    "difficultyl": {
+      "comet": 4,
+      "nova": 7,
+      "supernova": 11,
+      "quasar": 15,
+      "starlight": 17
+    }
+  },
+  {
+    "id": "tabinotobira",
+    "name": "旅の扉 (The Door of a Journey)",
+    "composer": "Seffyna (w/ 7OAST, ESAI)",
+    "difficultys": {
+      "comet": 2,
+      "nova": 5,
+      "supernova": 9,
+      "quasar": 12
+    },
+    "difficultyl": {
+      "comet": 2,
+      "nova": 5,
+      "supernova": 10,
+      "quasar": 12
+    }
+  },
+  {
+    "id": "daydream",
+    "name": "Daydream",
+    "composer": "RiraN",
+    "difficultys": {
+      "comet": 4,
+      "nova": 6,
+      "supernova": 9,
+      "quasar": 13
+    },
+    "difficultyl": {
+      "comet": 4,
+      "nova": 6,
+      "supernova": 9,
+      "quasar": 13
+    }
+  },
+  {
+    "id": "moonandback",
+    "name": "Moon And Back",
+    "composer": "RiraN",
+    "difficultys": {
+      "comet": 3,
+      "nova": 5,
+      "supernova": 8,
+      "quasar": 12
+    },
+    "difficultyl": {
+      "comet": 3,
+      "nova": 6,
+      "supernova": 10,
+      "quasar": 14
+    }
+  },
+  {
+    "id": "daydreamremix",
+    "name": "Daydream (KARUT Remix)",
+    "composer": "RiraN (Remix. KARUT)",
+    "difficultys": {
+      "comet": 4,
+      "nova": 7,
+      "supernova": 10,
+      "quasar": 14
+    },
+    "difficultyl": {
+      "comet": 4,
+      "nova": 7,
+      "supernova": 10,
+      "quasar": 15
+    }
+  },
+  {
+    "id": "flowergarden",
+    "name": "Flower Garden",
+    "composer": "STELLAR (Arr. STELLAR, N4ML)",
+    "difficultys": {
+      "comet": 1,
+      "nova": 4,
+      "supernova": 7,
+      "quasar": 10
+    },
+    "difficultyl": {
+      "comet": 1,
+      "nova": 4,
+      "supernova": 7,
+      "quasar": 10
+    }
+  },
+  {
+    "id": "dreamstar",
+    "name": "Dream Star",
+    "composer": "STELLAR",
+    "difficultys": {
+      "comet": 1,
+      "nova": 4,
+      "supernova": 7,
+      "quasar": 10
+    },
+    "difficultyl": {
+      "comet": 1,
+      "nova": 4,
+      "supernova": 7,
+      "quasar": 10
+    }
+  },
+  {
+    "id": "iloveme",
+    "name": "I Love Me",
+    "composer": "litmus*",
+    "difficultys": {
+      "comet": 1,
+      "nova": 5,
+      "supernova": 8,
+      "quasar": 11
+    },
+    "difficultyl": {
+      "comet": 1,
+      "nova": 5,
+      "supernova": 8,
+      "quasar": 11
+    }
+  },
+  {
+    "id": "someonesb",
+    "name": "사무치는 누군가의 위로 (Scatter One's Consolation)",
+    "composer": "litmus*",
+    "difficultys": {
+      "comet": 2,
+      "nova": 5,
+      "supernova": 8,
+      "quasar": 11
+    },
+    "difficultyl": {
+      "comet": 2,
+      "nova": 5,
+      "supernova": 8,
+      "quasar": 10
+    }
+  },
+  {
+    "id": "crimeworld",
+    "name": "죄인과 세계의 마침표 (Come to an End)",
+    "composer": "139cm (Arr. STELLAR)",
+    "difficultys": {
+      "comet": 2,
+      "nova": 6,
+      "supernova": 8,
+      "quasar": 11
+    },
+    "difficultyl": {
+      "comet": 2,
+      "nova": 6,
+      "supernova": 9,
+      "quasar": 12
+    }
+  },
+  {
+    "id": "cosmictelepathy",
+    "name": "코스믹 텔레파시 (Cosmic Telepathy)",
+    "composer": "N4ML",
+    "difficultys": {
+      "comet": 3,
+      "nova": 6,
+      "supernova": 8,
+      "quasar": 12
+    },
+    "difficultyl": {
+      "comet": 3,
+      "nova": 6,
+      "supernova": 8,
+      "quasar": 12
+    }
+  },
+  {
+    "id": "emoticone",
+    "name": ":하트: :돋보기: :무지개: :오리: :별: (:heart: :mag: :rainbow: :​duck: :sparkles:)",
+    "composer": "139cm",
+    "difficultys": {
+      "comet": 2,
+      "nova": 5,
+      "supernova": 9,
+      "quasar": 13
+    },
+    "difficultyl": {
+      "comet": 2,
+      "nova": 5,
+      "supernova": 9,
+      "quasar": 13
+    }
+  },
+  {
+    "id": "lovethismemory",
+    "name": "Love this memory",
+    "composer": "139cm",
+    "difficultys": {
+      "comet": 3,
+      "nova": 6,
+      "supernova": 10,
+      "quasar": 13
+    },
+    "difficultyl": {
+      "comet": 4,
+      "nova": 6,
+      "supernova": 9,
+      "quasar": 13
+    }
+  },
+  {
+    "id": "firstlovesound",
+    "name": "첫사랑의 시작 소리 (First love begins)",
+    "composer": "STELLAR",
+    "difficultys": {
+      "comet": 4,
+      "nova": 7,
+      "supernova": 10,
+      "quasar": 14
+    },
+    "difficultyl": {
+      "comet": 4,
+      "nova": 7,
+      "supernova": 10,
+      "quasar": 14
+    }
+  },
+  {
+    "id": "disallowed",
+    "name": "Disallowed",
+    "composer": "BlueArpeggio",
+    "difficultys": {
+      "comet": 4,
+      "nova": 7,
+      "supernova": 11,
+      "quasar": 15
+    },
+    "difficultyl": {
+      "comet": 3,
+      "nova": 7,
+      "supernova": 11,
+      "quasar": 15
+    }
+  },
+  {
+    "id": "marionnette",
+    "name": "Marion:nette",
+    "composer": "Sound Souler",
+    "difficultys": {
+      "comet": 3,
+      "nova": 6,
+      "supernova": 10,
+      "quasar": 13
+    },
+    "difficultyl": {
+      "comet": 3,
+      "nova": 6,
+      "supernova": 10,
+      "quasar": 13
+    }
+  },
+  {
+    "id": "madengine",
+    "name": "MAD ENGINE",
+    "composer": "yomoha",
+    "difficultys": {
+      "comet": 4,
+      "nova": 8,
+      "supernova": 12,
+      "quasar": 15
+    },
+    "difficultyl": {
+      "comet": 5,
+      "nova": 7,
+      "supernova": 11,
+      "quasar": 15
+    }
+  },
+  {
+    "id": "sakurafubuki",
+    "name": "Sakura Fubuki",
+    "composer": "Street",
+    "difficultys": {
+      "comet": 3,
+      "nova": 5,
+      "supernova": 9,
+      "quasar": 13
+    },
+    "difficultyl": {
+      "comet": 3,
+      "nova": 5,
+      "supernova": 10,
+      "quasar": 13
+    }
+  },
+  {
+    "id": "karmanations",
+    "name": "KARMANATIONS",
+    "composer": "暁Records",
+    "difficultys": {
+      "comet": 2,
+      "nova": 5,
+      "supernova": 10,
+      "quasar": 14
+    },
+    "difficultyl": {
+      "comet": 2,
+      "nova": 5,
+      "supernova": 10,
+      "quasar": 14
+    }
+  },
+  {
+    "id": "starlightnightmare",
+    "name": "Starlight Nightmare",
+    "composer": "Sound Souler",
+    "difficultys": {
+      "comet": 2,
+      "nova": 5,
+      "supernova": 8,
+      "quasar": 12,
+      "starlight": 16
+    },
+    "difficultyl": {
+      "comet": 2,
+      "nova": 5,
+      "supernova": 9,
+      "quasar": 12,
+      "starlight": 15
+    }
+  },
+  {
+    "id": "banshun",
+    "name": "晩春。",
+    "composer": "yomoha",
+    "difficultys": {
+      "comet": 2,
+      "nova": 5,
+      "supernova": 8,
+      "quasar": 11
+    },
+    "difficultyl": {
+      "comet": 2,
+      "nova": 4,
+      "supernova": 8,
+      "quasar": 12
+    }
+  },
+  {
+    "id": "noiseremix",
+    "name": "소음공해 (yomoha Remix) (Noise Pollution (yomoha Remix))",
+    "composer": "yomoha",
+    "difficultys": {
+      "comet": 1,
+      "nova": 4,
+      "supernova": 8,
+      "quasar": 12
+    },
+    "difficultyl": {
+      "comet": 1,
+      "nova": 4,
+      "supernova": 7,
+      "quasar": 12
+    }
+  },
+  {
+    "id": "wonderpropose",
+    "name": "Wonder♡Propose",
+    "composer": "yomoha",
+    "difficultys": {
+      "comet": 2,
+      "nova": 5,
+      "supernova": 8,
+      "quasar": 12
+    },
+    "difficultyl": {
+      "comet": 2,
+      "nova": 5,
+      "supernova": 8,
+      "quasar": 12
+    }
+  },
+  {
+    "id": "swingwith",
+    "name": "Swing with Boogieman",
+    "composer": "yomoha",
+    "difficultys": {
+      "comet": 4,
+      "nova": 6,
+      "supernova": 10,
+      "quasar": 13
+    },
+    "difficultyl": {
+      "comet": 4,
+      "nova": 6,
+      "supernova": 10,
+      "quasar": 13
+    }
+  },
+  {
+    "id": "badkidbad",
+    "name": "Bad kid Bad",
+    "composer": "banibini",
+    "difficultys": {
+      "comet": 3,
+      "nova": 6,
+      "supernova": 9,
+      "quasar": 13
+    },
+    "difficultyl": {
+      "comet": 3,
+      "nova": 5,
+      "supernova": 9,
+      "quasar": 14
+    }
+  },
+  {
+    "id": "melonbread",
+    "name": "Melonbread",
+    "composer": "yomoha",
+    "difficultys": {
+      "comet": 2,
+      "nova": 5,
+      "supernova": 9,
+      "quasar": 14
+    },
+    "difficultyl": {
+      "comet": 2,
+      "nova": 5,
+      "supernova": 9,
+      "quasar": 14
+    }
+  },
+  {
+    "id": "ohanami",
+    "name": "お花見",
+    "composer": "yomoha",
+    "difficultys": {
+      "comet": 4,
+      "nova": 8,
+      "supernova": 10,
+      "quasar": 14
+    },
+    "difficultyl": {
+      "comet": 4,
+      "nova": 6,
+      "supernova": 10,
+      "quasar": 15
+    }
+  },
+  {
+    "id": "bloomed",
+    "name": "Bloomed",
+    "composer": "yomoha",
+    "difficultys": {
+      "comet": 4,
+      "nova": 7,
+      "supernova": 11,
+      "quasar": 15
+    },
+    "difficultyl": {
+      "comet": 4,
+      "nova": 7,
+      "supernova": 11,
+      "quasar": 15
+    }
+  },
+  {
+    "id": "sixtartales",
+    "name": "SixtarTales (Voc. 景山梨彩)",
+    "composer": "Sound Souler",
+    "difficultys": {
+      "comet": 1,
+      "nova": 5,
+      "supernova": 8,
+      "quasar": 12
+    },
+    "difficultyl": {
+      "comet": 1,
+      "nova": 4,
+      "supernova": 8,
+      "quasar": 12
+    }
+  },
+  {
+    "id": "letyoudive",
+    "name": "Let you DIVE!",
+    "composer": "HARDCORE TANO*C & エリザベス (CV:大西沙織)",
+    "difficultys": {
+      "comet": 2,
+      "nova": 5,
+      "supernova": 9,
+      "quasar": 12
+    },
+    "difficultyl": {
+      "comet": 2,
+      "nova": 5,
+      "supernova": 9,
+      "quasar": 12
+    }
+  },
+  {
+    "id": "chariot",
+    "name": "Chariot",
+    "composer": "USAO",
+    "difficultys": {
+      "comet": 3,
+      "nova": 6,
+      "supernova": 9,
+      "quasar": 13
+    },
+    "difficultyl": {
+      "comet": 3,
+      "nova": 6,
+      "supernova": 10,
+      "quasar": 13
+    }
+  },
+  {
+    "id": "onomatopairing",
+    "name": "ONOMATO Pairing!!!",
+    "composer": "t+pazolite feat. ななひら",
+    "difficultys": {
+      "comet": 3,
+      "nova": 5,
+      "supernova": 8,
+      "quasar": 13
+    },
+    "difficultyl": {
+      "comet": 3,
+      "nova": 5,
+      "supernova": 8,
+      "quasar": 13
+    }
+  },
+  {
+    "id": "withu",
+    "name": "with U",
+    "composer": "t+pazolite & Massive New Krew feat. リリィ (CV:青木志貴)",
+    "difficultys": {
+      "comet": 2,
+      "nova": 7,
+      "supernova": 10,
+      "quasar": 14
+    },
+    "difficultyl": {
+      "comet": 2,
+      "nova": 7,
+      "supernova": 10,
+      "quasar": 14,
+      "starlight": 16
+    }
+  },
+  {
+    "id": "ouverture",
+    "name": "Ouvertüre",
+    "composer": "USAO & DJ Genki feat. ルーン (CV:河瀬茉希)",
+    "difficultys": {
+      "comet": 3,
+      "nova": 6,
+      "supernova": 11,
+      "quasar": 14
+    },
+    "difficultyl": {
+      "comet": 3,
+      "nova": 6,
+      "supernova": 11,
+      "quasar": 14
+    }
+  },
+  {
+    "id": "dualbreakerxx",
+    "name": "DUAL BREAKER XX",
+    "composer": "Srav3R vs Getty",
+    "difficultys": {
+      "comet": 4,
+      "nova": 7,
+      "supernova": 10,
+      "quasar": 14
+    },
+    "difficultyl": {
+      "comet": 4,
+      "nova": 7,
+      "supernova": 10,
+      "quasar": 14
+    }
+  },
+  {
+    "id": "invisiblefrenzy",
+    "name": "Invisible Frenzy",
+    "composer": "Kobaryo",
+    "difficultys": {
+      "comet": 5,
+      "nova": 7,
+      "supernova": 11,
+      "quasar": 15,
+      "starlight": 17
+    },
+    "difficultyl": {
+      "comet": 5,
+      "nova": 7,
+      "supernova": 11,
+      "quasar": 15
+    }
+  },
+  {
+    "id": "ephmr",
+    "name": "EPHMR",
+    "composer": "aran",
+    "difficultys": {
+      "comet": 4,
+      "nova": 6,
+      "supernova": 10,
+      "quasar": 14
+    },
+    "difficultyl": {
+      "comet": 4,
+      "nova": 6,
+      "supernova": 10,
+      "quasar": 14
+    }
+  },
+  {
+    "id": "spectrum",
+    "name": "SPECTRUM",
+    "composer": "Essbee",
+    "difficultys": {
+      "comet": 3,
+      "nova": 5,
+      "supernova": 8,
+      "quasar": 12
+    },
+    "difficultyl": {
+      "comet": 3,
+      "nova": 5,
+      "supernova": 8,
+      "quasar": 12
+    }
+  },
+  {
+    "id": "slecta",
+    "name": "SLECTA",
+    "composer": "mybear",
+    "difficultys": {
+      "comet": 2,
+      "nova": 5,
+      "supernova": 7,
+      "quasar": 13
+    },
+    "difficultyl": {
+      "comet": 2,
+      "nova": 5,
+      "supernova": 7,
+      "quasar": 12
+    }
+  },
+  {
+    "id": "lepetitprincess",
+    "name": "Le Petit Princess",
+    "composer": "Plastic Fruits",
+    "difficultys": {
+      "comet": 2,
+      "nova": 5,
+      "supernova": 8,
+      "quasar": 13
+    },
+    "difficultyl": {
+      "comet": 2,
+      "nova": 5,
+      "supernova": 8,
+      "quasar": 13
+    }
+  },
+  {
+    "id": "diosa",
+    "name": "Diosa Maquinaria",
+    "composer": "MASEraaaN",
+    "difficultys": {
+      "comet": 4,
+      "nova": 6,
+      "supernova": 9,
+      "quasar": 13
+    },
+    "difficultyl": {
+      "comet": 4,
+      "nova": 6,
+      "supernova": 9,
+      "quasar": 13
+    }
+  },
+  {
+    "id": "sanity",
+    "name": "Sanity",
+    "composer": "K-forest",
+    "difficultys": {
+      "comet": 3,
+      "nova": 6,
+      "supernova": 10,
+      "quasar": 14
+    },
+    "difficultyl": {
+      "comet": 3,
+      "nova": 6,
+      "supernova": 9,
+      "quasar": 12
+    }
+  },
+  {
+    "id": "omoide",
+    "name": "OMOIDE",
+    "composer": "Essbee",
+    "difficultys": {
+      "comet": 3,
+      "nova": 7,
+      "supernova": 9,
+      "quasar": 14
+    },
+    "difficultyl": {
+      "comet": 3,
+      "nova": 7,
+      "supernova": 10,
+      "quasar": 14
+    }
+  },
+  {
+    "id": "bossfire",
+    "name": "Bossfire",
+    "composer": "Roy Mikelate feat. ATAS",
+    "difficultys": {
+      "comet": 4,
+      "nova": 7,
+      "supernova": 11,
+      "quasar": 15
+    },
+    "difficultyl": {
+      "comet": 4,
+      "nova": 7,
+      "supernova": 11,
+      "quasar": 15
+    }
+  },
+  {
+    "id": "supanova",
+    "name": "SUPANOVA",
+    "composer": "FRAKTAL",
+    "difficultys": {
+      "comet": 1,
+      "nova": 4,
+      "supernova": 7,
+      "quasar": 11
+    },
+    "difficultyl": {
+      "comet": 1,
+      "nova": 4,
+      "supernova": 7,
+      "quasar": 11
+    }
+  },
+  {
+    "id": "3yearcat",
+    "name": "영원★세살 고양이 (eternal★3.Y.O)",
+    "composer": "Rabbit House",
+    "difficultys": {
+      "comet": 2,
+      "nova": 5,
+      "supernova": 8,
+      "quasar": 12
+    },
+    "difficultyl": {
+      "comet": 2,
+      "nova": 5,
+      "supernova": 8,
+      "quasar": 12
+    }
+  },
+  {
+    "id": "lostmymind",
+    "name": "Lost My Mind",
+    "composer": "PIKASONIC",
+    "difficultys": {
+      "comet": 2,
+      "nova": 5,
+      "supernova": 8,
+      "quasar": 11
+    },
+    "difficultyl": {
+      "comet": 2,
+      "nova": 5,
+      "supernova": 8,
+      "quasar": 10
+    }
+  },
+  {
+    "id": "async",
+    "name": "async",
+    "composer": "kolaa",
+    "difficultys": {
+      "comet": 3,
+      "nova": 6,
+      "supernova": 9,
+      "quasar": 12,
+      "starlight": 15
+    },
+    "difficultyl": {
+      "comet": 3,
+      "nova": 6,
+      "supernova": 9,
+      "quasar": 12
+    }
+  },
+  {
+    "id": "beforeitends",
+    "name": "Before it Ends",
+    "composer": "BilliumMoto",
+    "difficultys": {
+      "comet": 3,
+      "nova": 6,
+      "supernova": 10,
+      "quasar": 13
+    },
+    "difficultyl": {
+      "comet": 3,
+      "nova": 6,
+      "supernova": 10,
+      "quasar": 13
+    }
+  },
+  {
+    "id": "sense",
+    "name": "Sense",
+    "composer": "BilliumMoto x Silentroom",
+    "difficultys": {
+      "comet": 4,
+      "nova": 7,
+      "supernova": 9,
+      "quasar": 13
+    },
+    "difficultyl": {
+      "comet": 1,
+      "nova": 5,
+      "supernova": 12,
+      "quasar": 13,
+      "starlight": 17
+    }
+  },
+  {
+    "id": "theladywith",
+    "name": "The Lady with a Monocle",
+    "composer": "polysha",
+    "difficultys": {
+      "comet": 3,
+      "nova": 7,
+      "supernova": 10,
+      "quasar": 14
+    },
+    "difficultyl": {
+      "comet": 4,
+      "nova": 7,
+      "supernova": 10,
+      "quasar": 14
+    }
+  },
+  {
+    "id": "alicein",
+    "name": "Alice in Misanthrope -厭世アリス-",
+    "composer": "LeaF",
+    "difficultys": {
+      "comet": 4,
+      "nova": 6,
+      "supernova": 11,
+      "quasar": 14,
+      "starlight": 16
+    },
+    "difficultyl": {
+      "comet": 4,
+      "nova": 7,
+      "supernova": 11,
+      "quasar": 15
+    }
+  },
+  {
+    "id": "antinomicqueen",
+    "name": "Antinomic Queen",
+    "composer": "polysha",
+    "difficultys": {
+      "comet": 4,
+      "nova": 7,
+      "supernova": 11,
+      "quasar": 15
+    },
+    "difficultyl": {
+      "comet": 3,
+      "nova": 6,
+      "supernova": 11,
+      "quasar": 15
+    }
+  },
+  {
+    "id": "gigantomakhia",
+    "name": "GigantomakhiA",
+    "composer": "cosMo vs モリモリあつし",
+    "difficultys": {
+      "comet": 5,
+      "nova": 8,
+      "supernova": 12,
+      "quasar": 15
+    },
+    "difficultyl": {
+      "comet": 5,
+      "nova": 8,
+      "supernova": 12,
+      "quasar": 15
+    }
+  },
+  {
+    "id": "zantetsuken",
+    "name": "斬鉄剣 (Zantetsuken)",
+    "composer": "黒沢ダイスケ feat.よしださくら",
+    "difficultys": {
+      "comet": 4,
+      "nova": 7,
+      "supernova": 10,
+      "quasar": 15
+    },
+    "difficultyl": {
+      "comet": 4,
+      "nova": 7,
+      "supernova": 10,
+      "quasar": 14
+    }
+  },
+  {
+    "id": "startingpointremix",
+    "name": "Starting Point (yomoha Jazz Arrange)",
+    "composer": "LucaProject (Remix. yomoha)",
+    "difficultys": {
+      "comet": 1,
+      "nova": 4,
+      "supernova": 7,
+      "quasar": 11
+    },
+    "difficultyl": {
+      "comet": 1,
+      "nova": 4,
+      "supernova": 7,
+      "quasar": 10
+    }
+  }
+]
