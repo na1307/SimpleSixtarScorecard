@@ -12,7 +12,7 @@
         "id": {
           "type": "string"
         },
-        "name": {
+        "title": {
           "type": "string"
         },
         "composer": {
@@ -27,7 +27,7 @@
       },
       "required": [
         "id",
-        "name",
+        "title",
         "composer",
         "difficultys",
         "difficultyl"

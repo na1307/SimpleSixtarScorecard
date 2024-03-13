@@ -27,14 +27,14 @@ partial class FormMain {
         label1 = new Label();
         button1 = new Button();
         dataGridView1 = new DataGridView();
-        nameColumn = new DataGridViewTextBoxColumn();
-        composerColumn = new DataGridViewTextBoxColumn();
-        solarQuasarColumn = new DataGridViewTextBoxColumn();
-        lunarQuasarColumn = new DataGridViewTextBoxColumn();
         label2 = new Label();
         panel1 = new Panel();
         textBox1 = new TextBox();
         label3 = new Label();
+        nameColumn = new DataGridViewTextBoxColumn();
+        composerColumn = new DataGridViewTextBoxColumn();
+        solarQuasarColumn = new DataGridViewTextBoxColumn();
+        lunarQuasarColumn = new DataGridViewTextBoxColumn();
         ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
         SuspendLayout();
         // 
@@ -77,38 +77,6 @@ partial class FormMain {
         dataGridView1.TabIndex = 2;
         dataGridView1.SelectionChanged += DataGridView1_SelectionChanged;
         // 
-        // nameColumn
-        // 
-        nameColumn.DataPropertyName = "Name";
-        nameColumn.HeaderText = "이름";
-        nameColumn.Name = "nameColumn";
-        nameColumn.ReadOnly = true;
-        nameColumn.Width = 235;
-        // 
-        // composerColumn
-        // 
-        composerColumn.DataPropertyName = "Composer";
-        composerColumn.HeaderText = "작곡가";
-        composerColumn.Name = "composerColumn";
-        composerColumn.ReadOnly = true;
-        composerColumn.Width = 235;
-        // 
-        // solarQuasarColumn
-        // 
-        solarQuasarColumn.DataPropertyName = "SolarQuasar";
-        solarQuasarColumn.HeaderText = "솔라 퀘이사 난이도";
-        solarQuasarColumn.Name = "solarQuasarColumn";
-        solarQuasarColumn.ReadOnly = true;
-        solarQuasarColumn.Width = 135;
-        // 
-        // lunarQuasarColumn
-        // 
-        lunarQuasarColumn.DataPropertyName = "LunarQuasar";
-        lunarQuasarColumn.HeaderText = "루나 퀘이사 난이도";
-        lunarQuasarColumn.Name = "lunarQuasarColumn";
-        lunarQuasarColumn.ReadOnly = true;
-        lunarQuasarColumn.Width = 135;
-        // 
         // label2
         // 
         label2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
@@ -145,6 +113,38 @@ partial class FormMain {
         label3.TabIndex = 7;
         label3.Text = "검색:";
         // 
+        // nameColumn
+        // 
+        nameColumn.DataPropertyName = "Title";
+        nameColumn.HeaderText = "제목";
+        nameColumn.Name = "nameColumn";
+        nameColumn.ReadOnly = true;
+        nameColumn.Width = 235;
+        // 
+        // composerColumn
+        // 
+        composerColumn.DataPropertyName = "Composer";
+        composerColumn.HeaderText = "작곡가";
+        composerColumn.Name = "composerColumn";
+        composerColumn.ReadOnly = true;
+        composerColumn.Width = 235;
+        // 
+        // solarQuasarColumn
+        // 
+        solarQuasarColumn.DataPropertyName = "SolarQuasar";
+        solarQuasarColumn.HeaderText = "솔라 퀘이사 난이도";
+        solarQuasarColumn.Name = "solarQuasarColumn";
+        solarQuasarColumn.ReadOnly = true;
+        solarQuasarColumn.Width = 135;
+        // 
+        // lunarQuasarColumn
+        // 
+        lunarQuasarColumn.DataPropertyName = "LunarQuasar";
+        lunarQuasarColumn.HeaderText = "루나 퀘이사 난이도";
+        lunarQuasarColumn.Name = "lunarQuasarColumn";
+        lunarQuasarColumn.ReadOnly = true;
+        lunarQuasarColumn.Width = 135;
+        // 
         // FormMain
         // 
         AutoScaleDimensions = new SizeF(7F, 15F);
@@ -169,12 +169,12 @@ partial class FormMain {
     private Label label1;
     private Button button1;
     private DataGridView dataGridView1;
-    private DataGridViewTextBoxColumn nameColumn;
-    private DataGridViewTextBoxColumn composerColumn;
-    private DataGridViewTextBoxColumn solarQuasarColumn;
-    private DataGridViewTextBoxColumn lunarQuasarColumn;
     private Label label2;
     private Panel panel1;
     private TextBox textBox1;
     private Label label3;
+    private DataGridViewTextBoxColumn nameColumn;
+    private DataGridViewTextBoxColumn composerColumn;
+    private DataGridViewTextBoxColumn solarQuasarColumn;
+    private DataGridViewTextBoxColumn lunarQuasarColumn;
 }

@@ -46,7 +46,7 @@ public partial class FormMain : Form {
     private void textBox1_TextChanged(object sender, EventArgs e) {
         songs = !string.IsNullOrWhiteSpace(textBox1.Text)
            // 문자열 검색
-           ? Song.SongList.Where(song => song.Name.Contains(textBox1.Text.Trim(), StringComparison.OrdinalIgnoreCase) || song.Composer.Contains(textBox1.Text.Trim(), StringComparison.OrdinalIgnoreCase)).ToArray()
+           ? Song.SongList.Where(song => song.Title.Contains(textBox1.Text.Trim(), StringComparison.OrdinalIgnoreCase) || song.Composer.Contains(textBox1.Text.Trim(), StringComparison.OrdinalIgnoreCase)).ToArray()
            : Song.SongList;
 
         dataGridView1.DataSource = songs;

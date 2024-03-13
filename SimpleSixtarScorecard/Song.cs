@@ -5,12 +5,12 @@ namespace SimpleSixtarScorecard;
 
 public sealed record class Song(
     [property: JsonPropertyName(Song.IdPropertyName)] string Id,
-    [property: JsonPropertyName(Song.NamePropertyName)] string Name,
+    [property: JsonPropertyName(Song.TitlePropertyName)] string Title,
     [property: JsonPropertyName(Song.ComposerPropertyName)] string Composer,
     [property: JsonPropertyName(Song.DifficultySolarPropertyName)] DifficultyObject DifficultySolar,
     [property: JsonPropertyName(Song.DifficultyLunarPropertyName)] DifficultyObject DifficultyLunar) {
     public const string IdPropertyName = "id";
-    public const string NamePropertyName = "name";
+    public const string TitlePropertyName = "title";
     public const string ComposerPropertyName = "composer";
     public const string DifficultySolarPropertyName = "difficultys";
     public const string DifficultyLunarPropertyName = "difficultyl";
