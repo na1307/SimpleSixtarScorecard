@@ -33,6 +33,8 @@ partial class FormMain {
         lunarQuasarColumn = new DataGridViewTextBoxColumn();
         label2 = new Label();
         panel1 = new Panel();
+        textBox1 = new TextBox();
+        label3 = new Label();
         ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
         SuspendLayout();
         // 
@@ -109,10 +111,10 @@ partial class FormMain {
         // 
         // label2
         // 
-        label2.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-        label2.Location = new Point(12, 40);
+        label2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+        label2.Location = new Point(697, 40);
         label2.Name = "label2";
-        label2.Size = new Size(760, 23);
+        label2.Size = new Size(75, 23);
         label2.TabIndex = 4;
         label2.TextAlign = ContentAlignment.MiddleRight;
         // 
@@ -124,11 +126,32 @@ partial class FormMain {
         panel1.Size = new Size(760, 252);
         panel1.TabIndex = 5;
         // 
+        // textBox1
+        // 
+        textBox1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+        textBox1.Location = new Point(441, 40);
+        textBox1.Name = "textBox1";
+        textBox1.Size = new Size(250, 23);
+        textBox1.TabIndex = 6;
+        textBox1.TextChanged += textBox1_TextChanged;
+        // 
+        // label3
+        // 
+        label3.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+        label3.AutoSize = true;
+        label3.Location = new Point(401, 43);
+        label3.Name = "label3";
+        label3.Size = new Size(34, 15);
+        label3.TabIndex = 7;
+        label3.Text = "검색:";
+        // 
         // FormMain
         // 
         AutoScaleDimensions = new SizeF(7F, 15F);
         AutoScaleMode = AutoScaleMode.Font;
         ClientSize = new Size(784, 761);
+        Controls.Add(label3);
+        Controls.Add(textBox1);
         Controls.Add(panel1);
         Controls.Add(label2);
         Controls.Add(dataGridView1);
@@ -138,6 +161,7 @@ partial class FormMain {
         StartPosition = FormStartPosition.CenterScreen;
         ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
         ResumeLayout(false);
+        PerformLayout();
     }
 
     #endregion
@@ -151,4 +175,6 @@ partial class FormMain {
     private DataGridViewTextBoxColumn lunarQuasarColumn;
     private Label label2;
     private Panel panel1;
+    private TextBox textBox1;
+    private Label label3;
 }

@@ -1,14 +1,16 @@
 namespace SimpleSixtarScorecard;
 
 public partial class FormMain : Form {
+    private Song[] songs = Song.SongList;
+
     public FormMain() {
         InitializeComponent();
         label1.Text = Profile.Instance.UserName + " ´Ô";
 
         // °î µ¥ÀÌÅÍ °¡Á®¿À±â
         dataGridView1.AutoGenerateColumns = false;
-        dataGridView1.DataSource = Song.SongList;
-        label2.Text = "ÃÑ " + Song.SongList.Length.ToString() + "°î";
+        dataGridView1.DataSource = songs;
+        label2.Text = "ÃÑ " + songs.Length.ToString() + "°î";
     }
 
     private void button1_Click(object sender, EventArgs e) {
@@ -25,16 +27,29 @@ public partial class FormMain : Form {
         int index;
 
         try {
+            // ¼±ÅÃµÈ °î ÀÎµ¦½º
             index = dataGridView1.SelectedRows[0].Index;
         } catch (ArgumentOutOfRangeException) {
-            // Æû ÃÊ±âÈ­ °úÁ¤
+            // ¼±ÅÃµÈ °îÀÌ ¾øÀ¸¸é ºñÈ°¼ºÈ­
+            panel1.Visible = false;
             return;
         }
 
+        panel1.Visible = true;
         panel1.Controls.Clear();
 
         if (index != -1) {
-            panel1.Controls.Add(new EditControl(Song.SongList[index]));
+            panel1.Controls.Add(new EditControl(songs[index]));
         }
+    }
+
+    private void textBox1_TextChanged(object sender, EventArgs e) {
+        songs = !string.IsNullOrWhiteSpace(textBox1.Text)
+           // ¹®ÀÚ¿­ °Ë»ö
+           ? Song.SongList.Where(song => song.Name.Contains(textBox1.Text.Trim(), StringComparison.OrdinalIgnoreCase) || song.Composer.Contains(textBox1.Text.Trim(), StringComparison.OrdinalIgnoreCase)).ToArray()
+           : Song.SongList;
+
+        dataGridView1.DataSource = songs;
+        label2.Text = "ÃÑ " + songs.Length.ToString() + "°î";
     }
 }
