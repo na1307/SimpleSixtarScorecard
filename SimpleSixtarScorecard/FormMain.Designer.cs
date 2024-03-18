@@ -119,7 +119,7 @@ partial class FormMain {
         nameColumn.HeaderText = "제목";
         nameColumn.Name = "nameColumn";
         nameColumn.ReadOnly = true;
-        nameColumn.Width = 235;
+        nameColumn.Width = 230;
         // 
         // composerColumn
         // 
@@ -127,7 +127,7 @@ partial class FormMain {
         composerColumn.HeaderText = "작곡가";
         composerColumn.Name = "composerColumn";
         composerColumn.ReadOnly = true;
-        composerColumn.Width = 235;
+        composerColumn.Width = 230;
         // 
         // solarQuasarColumn
         // 
@@ -135,7 +135,7 @@ partial class FormMain {
         solarQuasarColumn.HeaderText = "솔라 퀘이사 난이도";
         solarQuasarColumn.Name = "solarQuasarColumn";
         solarQuasarColumn.ReadOnly = true;
-        solarQuasarColumn.Width = 135;
+        solarQuasarColumn.Width = 140;
         // 
         // lunarQuasarColumn
         // 
@@ -143,7 +143,7 @@ partial class FormMain {
         lunarQuasarColumn.HeaderText = "루나 퀘이사 난이도";
         lunarQuasarColumn.Name = "lunarQuasarColumn";
         lunarQuasarColumn.ReadOnly = true;
-        lunarQuasarColumn.Width = 135;
+        lunarQuasarColumn.Width = 140;
         // 
         // FormMain
         // 

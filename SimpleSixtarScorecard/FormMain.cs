@@ -1,7 +1,8 @@
 namespace SimpleSixtarScorecard;
 
 public partial class FormMain : Form {
-    private Song[] songs = Song.SongList;
+    private static readonly SortableBindingList<Song> staticSongs = new(Song.SongList);
+    private SortableBindingList<Song> songs = staticSongs;
 
     public FormMain() {
         InitializeComponent();
@@ -10,7 +11,7 @@ public partial class FormMain : Form {
         // °î µ¥ÀÌÅÍ °¡Á®¿À±â
         dataGridView1.AutoGenerateColumns = false;
         dataGridView1.DataSource = songs;
-        label2.Text = "ÃÑ " + songs.Length.ToString() + "°î";
+        label2.Text = "ÃÑ " + songs.Count.ToString() + "°î";
     }
 
     private void button1_Click(object sender, EventArgs e) {
@@ -46,10 +47,10 @@ public partial class FormMain : Form {
     private void textBox1_TextChanged(object sender, EventArgs e) {
         songs = !string.IsNullOrWhiteSpace(textBox1.Text)
            // ¹®ÀÚ¿­ °Ë»ö
-           ? Song.SongList.Where(song => song.Title.Contains(textBox1.Text.Trim(), StringComparison.OrdinalIgnoreCase) || song.Composer.Contains(textBox1.Text.Trim(), StringComparison.OrdinalIgnoreCase)).ToArray()
-           : Song.SongList;
+           ? new SortableBindingList<Song>(Song.SongList.Where(song => song.Title.Contains(textBox1.Text.Trim(), StringComparison.OrdinalIgnoreCase) || song.Composer.Contains(textBox1.Text.Trim(), StringComparison.OrdinalIgnoreCase)).ToArray())
+           : staticSongs;
 
         dataGridView1.DataSource = songs;
-        label2.Text = "ÃÑ " + songs.Length.ToString() + "°î";
+        label2.Text = "ÃÑ " + songs.Count.ToString() + "°î";
     }
 }
