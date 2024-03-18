@@ -3,6 +3,8 @@
     "id": "startingpoint",
     "title": "Starting Point",
     "composer": "LucaProject",
+    "dlc": "base",
+    "category": "original",
     "difficultys": {
       "comet": 1,
       "nova": 4,
@@ -20,6 +22,8 @@
     "id": "staydance",
     "title": "Stay, Dance (feat. Renko)",
     "composer": "Studio 3Tone",
+    "dlc": "base",
+    "category": "variety",
     "difficultys": {
       "comet": 1,
       "nova": 4,
@@ -37,6 +41,8 @@
     "id": "coastral",
     "title": "Coastral",
     "composer": "Sound Souler",
+    "dlc": "base",
+    "category": "variety",
     "difficultys": {
       "comet": 1,
       "nova": 5,
@@ -54,6 +60,8 @@
     "id": "lifeispiano",
     "title": "Life is PIANO",
     "composer": "Junk",
+    "dlc": "base",
+    "category": "variety",
     "difficultys": {
       "comet": 1,
       "nova": 5,
@@ -72,6 +80,8 @@
     "id": "pasteloid",
     "title": "Pasteloid",
     "composer": "Sound Souler",
+    "dlc": "base",
+    "category": "original",
     "difficultys": {
       "comet": 2,
       "nova": 6,
@@ -89,6 +99,8 @@
     "id": "raindrops",
     "title": "Raindrops (feat. 倉先)",
     "composer": "ag",
+    "dlc": "base",
+    "category": "variety",
     "difficultys": {
       "comet": 2,
       "nova": 4,
@@ -107,6 +119,8 @@
     "id": "tsukitoai",
     "title": "つきとあい (feat. TooMits)",
     "composer": "7OAST",
+    "dlc": "base",
+    "category": "variety",
     "difficultys": {
       "comet": 2,
       "nova": 4,
@@ -124,6 +138,8 @@
     "id": "shirube",
     "title": "シルベ -Mage's Dawn Ver.-",
     "composer": "WHITEFISTS & Islet",
+    "dlc": "base",
+    "category": "variety",
     "difficultys": {
       "comet": 2,
       "nova": 4,
@@ -141,6 +157,8 @@
     "id": "ladyandlazy",
     "title": "Lady and Lazy",
     "composer": "yomoha",
+    "dlc": "base",
+    "category": "original",
     "difficultys": {
       "comet": 2,
       "nova": 5,
@@ -159,6 +177,8 @@
     "id": "mobilys",
     "title": "MOBILYS",
     "composer": "Dachs",
+    "dlc": "base",
+    "category": "variety",
     "difficultys": {
       "comet": 2,
       "nova": 6,
@@ -176,6 +196,8 @@
     "id": "neosblade",
     "title": "NeosbladE",
     "composer": "KARUT",
+    "dlc": "base",
+    "category": "original",
     "difficultys": {
       "comet": 4,
       "nova": 6,
@@ -193,6 +215,8 @@
     "id": "nighttheater",
     "title": "NightTheater",
     "composer": "わかどり",
+    "dlc": "base",
+    "category": "variety",
     "difficultys": {
       "comet": 2,
       "nova": 5,
@@ -211,6 +235,8 @@
     "id": "nightfall",
     "title": "Nightfall",
     "composer": "Yunosuke",
+    "dlc": "base",
+    "category": "variety",
     "difficultys": {
       "comet": 3,
       "nova": 7,
@@ -228,6 +254,8 @@
     "id": "violetism",
     "title": "Violetism",
     "composer": "Sound Souler",
+    "dlc": "base",
+    "category": "original",
     "difficultys": {
       "comet": 3,
       "nova": 6,
@@ -245,6 +273,8 @@
     "id": "voiden",
     "title": "Voiden",
     "composer": "Frontbox",
+    "dlc": "base",
+    "category": "original",
     "difficultys": {
       "comet": 3,
       "nova": 5,
@@ -262,6 +292,8 @@
     "id": "cosmicrailroad",
     "title": "CO5M1C R4ILR0AD",
     "composer": "kanone",
+    "dlc": "base",
+    "category": "variety",
     "difficultys": {
       "comet": 3,
       "nova": 6,
@@ -280,6 +312,8 @@
     "id": "keepon",
     "title": "Keep On!",
     "composer": "雨漏りP",
+    "dlc": "base",
+    "category": "variety",
     "difficultys": {
       "comet": 4,
       "nova": 6,
@@ -297,6 +331,8 @@
     "id": "nulctrl",
     "title": "NULCTRL",
     "composer": "Silentroom",
+    "dlc": "base",
+    "category": "variety",
     "difficultys": {
       "comet": 3,
       "nova": 5,
@@ -314,6 +350,8 @@
     "id": "ukiyoe",
     "title": "浮世絵横丁 (Ukiyoe Yokochou)",
     "composer": "魔界都市ニイガタ (黄泉路テヂーモ x dawn-system x かゆき)",
+    "dlc": "base",
+    "category": "variety",
     "difficultys": {
       "comet": 3,
       "nova": 6,
@@ -332,6 +370,8 @@
     "id": "milk",
     "title": "MilK",
     "composer": "モリモリあつし",
+    "dlc": "base",
+    "category": "variety",
     "difficultys": {
       "comet": 2,
       "nova": 5,
@@ -349,6 +389,8 @@
     "id": "emomomo",
     "title": "EMOMOMO",
     "composer": "Ras",
+    "dlc": "base",
+    "category": "variety",
     "difficultys": {
       "comet": 2,
       "nova": 5,
@@ -366,6 +408,8 @@
     "id": "playingwithruby",
     "title": "Playing with Ruby",
     "composer": "NIWASHI",
+    "dlc": "base",
+    "category": "variety",
     "difficultys": {
       "comet": 3,
       "nova": 6,
@@ -384,6 +428,8 @@
     "id": "brainpower",
     "title": "Brain Power",
     "composer": "NOMA",
+    "dlc": "base",
+    "category": "variety",
     "difficultys": {
       "comet": 3,
       "nova": 6,
@@ -401,6 +447,8 @@
     "id": "sunkenmemory",
     "title": "Sunken Memory",
     "composer": "Exsy",
+    "dlc": "base",
+    "category": "variety",
     "difficultys": {
       "comet": 4,
       "nova": 6,
@@ -418,6 +466,8 @@
     "id": "goodtek",
     "title": "GOODTEK",
     "composer": "EBIMAYO",
+    "dlc": "base",
+    "category": "variety",
     "difficultys": {
       "comet": 3,
       "nova": 7,
@@ -436,6 +486,8 @@
     "id": "brainpowerremix",
     "title": "Brain Power ~Cranky Remix~",
     "composer": "NOMA (Remix. cranky)",
+    "dlc": "base",
+    "category": "remix",
     "difficultys": {
       "comet": 3,
       "nova": 6,
@@ -453,6 +505,8 @@
     "id": "moonlightdance",
     "title": "MOON LIGHT DANCE",
     "composer": "TatshMusicCircle",
+    "dlc": "base",
+    "category": "touhou",
     "difficultys": {
       "comet": 3,
       "nova": 6,
@@ -470,6 +524,8 @@
     "id": "marisa",
     "title": "魔理沙は大変なものを盗んでいきました (Marisa Stole the Precious Thing)",
     "composer": "ARM+夕野ヨシミ (IOSYS) feat. 藤咲かりん",
+    "dlc": "base",
+    "category": "touhou",
     "difficultys": {
       "comet": 2,
       "nova": 6,
@@ -487,6 +543,8 @@
     "id": "conflict",
     "title": "conflict",
     "composer": "siromaru + cranky",
+    "dlc": "base",
+    "category": "variety",
     "difficultys": {
       "comet": 3,
       "nova": 6,
@@ -505,6 +563,8 @@
     "id": "conflictremix",
     "title": "conflict -NOMA CONCEIVER REMIX-",
     "composer": "siromaru + cranky (Remix. NOMA)",
+    "dlc": "base",
+    "category": "remix",
     "difficultys": {
       "comet": 4,
       "nova": 7,
@@ -522,6 +582,8 @@
     "id": "azureeyez",
     "title": "Azure Eyez",
     "composer": "KARUT",
+    "dlc": "base",
+    "category": "original",
     "difficultys": {
       "comet": 2,
       "nova": 5,
@@ -539,6 +601,8 @@
     "id": "novatail",
     "title": "Novatail",
     "composer": "Sound Souler",
+    "dlc": "base",
+    "category": "variety",
     "difficultys": {
       "comet": 2,
       "nova": 6,
@@ -557,6 +621,8 @@
     "id": "yume",
     "title": "夢／あるいは在りし日の",
     "composer": "Nego_tiator",
+    "dlc": "base",
+    "category": "variety",
     "difficultys": {
       "comet": 3,
       "nova": 5,
@@ -575,6 +641,8 @@
     "id": "nataliacode",
     "title": "Natalia:Code",
     "composer": "WHITEFISTS",
+    "dlc": "base",
+    "category": "variety",
     "difficultys": {
       "comet": 4,
       "nova": 7,
@@ -593,6 +661,8 @@
     "id": "strangebar",
     "title": "Strange Bar",
     "composer": "Laur",
+    "dlc": "base",
+    "category": "variety",
     "difficultys": {
       "comet": 2,
       "nova": 5,
@@ -610,6 +680,8 @@
     "id": "retrocolorstage",
     "title": "Retro Color Stage",
     "composer": "yomoha",
+    "dlc": "base",
+    "category": "original",
     "difficultys": {
       "comet": 3,
       "nova": 6,
@@ -627,6 +699,8 @@
     "id": "asteroidsdream",
     "title": "Asteroid's Dream",
     "composer": "brz1128",
+    "dlc": "base",
+    "category": "variety",
     "difficultys": {
       "comet": 4,
       "nova": 7,
@@ -645,6 +719,8 @@
     "id": "sazanka",
     "title": "Sazanka",
     "composer": "Yunosuke",
+    "dlc": "base",
+    "category": "variety",
     "difficultys": {
       "comet": 1,
       "nova": 4,
@@ -662,6 +738,8 @@
     "id": "neosbladeremix",
     "title": "NeosbladE ~X-mas Remix~",
     "composer": "KARUT (Remix. yomoha)",
+    "dlc": "base",
+    "category": "remix",
     "difficultys": {
       "comet": 4,
       "nova": 7,
@@ -679,6 +757,8 @@
     "id": "cirno",
     "title": "チルノのパーフェクトさんすう教室 (Cirno's Perfect Math Class)",
     "composer": "ARM+夕野ヨシミ (IOSYS) feat. miko",
+    "dlc": "base",
+    "category": "touhou",
     "difficultys": {
       "comet": 2,
       "nova": 6,
@@ -697,6 +777,8 @@
     "id": "cybersparks",
     "title": "CYBER Sparks",
     "composer": "TatshMusicCircle",
+    "dlc": "base",
+    "category": "touhou",
     "difficultys": {
       "comet": 3,
       "nova": 5,
@@ -715,6 +797,8 @@
     "id": "pavedgarden",
     "title": "Paved Garden",
     "composer": "ginkiha",
+    "dlc": "base",
+    "category": "collab",
     "difficultys": {
       "comet": 2,
       "nova": 5,
@@ -732,6 +816,8 @@
     "id": "popsequence",
     "title": "POP SEQUENCE",
     "composer": "Hommarju",
+    "dlc": "base",
+    "category": "collab",
     "difficultys": {
       "comet": 1,
       "nova": 4,
@@ -749,6 +835,8 @@
     "id": "slapstick",
     "title": "Slapstick Parfait",
     "composer": "t+pazolite",
+    "dlc": "base",
+    "category": "collab",
     "difficultys": {
       "comet": 3,
       "nova": 6,
@@ -766,6 +854,8 @@
     "id": "crossingdelta",
     "title": "CROSSING DELTA",
     "composer": "t+pazolite×Hommarju×ginkiha",
+    "dlc": "base",
+    "category": "collab",
     "difficultys": {
       "comet": 2,
       "nova": 6,
@@ -783,6 +873,8 @@
     "id": "moonlightdancefull",
     "title": "MOON LIGHT DANCE -full song-",
     "composer": "TatshMusicCircle",
+    "dlc": "base",
+    "category": "touhou",
     "difficultys": {
       "quasar": 12,
       "starlight": 15
@@ -795,6 +887,8 @@
     "id": "readytoflight",
     "title": "Ready to Flight",
     "composer": "yomoha",
+    "dlc": "base",
+    "category": "original",
     "difficultys": {
       "comet": 4,
       "nova": 6,
@@ -813,6 +907,8 @@
     "id": "shadowcall",
     "title": "Shadow Call (feat. Sennzai)",
     "composer": "WHITEFISTS",
+    "dlc": "base",
+    "category": "variety",
     "difficultys": {
       "comet": 3,
       "nova": 5,
@@ -830,6 +926,8 @@
     "id": "intoafrenzy",
     "title": "Into a Frenzy",
     "composer": "Masahiro \"Godspeed\" Aoki",
+    "dlc": "base",
+    "category": "original",
     "difficultys": {
       "comet": 4,
       "nova": 7,
@@ -847,6 +945,8 @@
     "id": "aquastars",
     "title": "Aqua Stars",
     "composer": "Sound Souler",
+    "dlc": "base",
+    "category": "variety",
     "difficultys": {
       "comet": 3,
       "nova": 5,
@@ -865,6 +965,8 @@
     "id": "shiningaquarius",
     "title": "Shining Aquarius",
     "composer": "KARUT",
+    "dlc": "base",
+    "category": "original",
     "difficultys": {
       "comet": 4,
       "nova": 7,
@@ -883,6 +985,8 @@
     "id": "submarinelog",
     "title": "Submarine Log",
     "composer": "yomoha",
+    "dlc": "base",
+    "category": "original",
     "difficultys": {
       "comet": 4,
       "nova": 7,
@@ -901,6 +1005,8 @@
     "id": "crystal",
     "title": "Crystal",
     "composer": "WyvernP",
+    "dlc": "base",
+    "category": "variety",
     "difficultys": {
       "comet": 2,
       "nova": 5,
@@ -918,6 +1024,8 @@
     "id": "dement",
     "title": "Dement ~After Legend~",
     "composer": "Cosmograph",
+    "dlc": "base",
+    "category": "variety",
     "difficultys": {
       "comet": 4,
       "nova": 7,
@@ -935,6 +1043,8 @@
     "id": "basshouserave",
     "title": "BASS, HOUSE, RAVE",
     "composer": "yomoha",
+    "dlc": "base",
+    "category": "original",
     "difficultys": {
       "comet": 1,
       "nova": 6,
@@ -953,6 +1063,8 @@
     "id": "marisstella",
     "title": "Maris Stella",
     "composer": "iTIC",
+    "dlc": "base",
+    "category": "original",
     "difficultys": {
       "comet": 2,
       "nova": 6,
@@ -970,6 +1082,8 @@
     "id": "snowwolf",
     "title": "Snow Wolf",
     "composer": "tokiwa",
+    "dlc": "base",
+    "category": "original",
     "difficultys": {
       "comet": 2,
       "nova": 5,
@@ -987,6 +1101,8 @@
   {
     "id": "winningwave",
     "title": "Winning Wave",
+    "dlc": "base",
+    "category": "original",
     "composer": "Sound Souler",
     "difficultys": {
       "comet": 2,
@@ -1005,6 +1121,8 @@
     "id": "fullcolorcocktail",
     "title": "Full Color Cocktail",
     "composer": "yomoha",
+    "dlc": "base",
+    "category": "original",
     "difficultys": {
       "comet": 2,
       "nova": 5,
@@ -1022,6 +1140,8 @@
     "id": "languageofdawn",
     "title": "暁の言葉 (Language of Dawn)",
     "composer": "7OAST",
+    "dlc": "base",
+    "category": "variety",
     "difficultys": {
       "comet": 2,
       "nova": 5,
@@ -1039,6 +1159,8 @@
     "id": "spacecarousel",
     "title": "Space Carousel",
     "composer": "yomoha",
+    "dlc": "base",
+    "category": "original",
     "difficultys": {
       "comet": 2,
       "nova": 4,
@@ -1056,6 +1178,8 @@
     "id": "ginsekai",
     "title": "銀世廻 (Ginsekai)",
     "composer": "Halv",
+    "dlc": "base",
+    "category": "variety",
     "difficultys": {
       "comet": 4,
       "nova": 7,
@@ -1073,6 +1197,8 @@
     "id": "pearlystars",
     "title": "Pearly Stars",
     "composer": "Sound Souler",
+    "dlc": "base",
+    "category": "original",
     "difficultys": {
       "comet": 3,
       "nova": 7,
@@ -1090,7 +1216,9 @@
   {
     "id": "warning",
     "title": "WARNING×WARNING×WARNING",
+    "dlc": "base",
     "composer": "暁Records",
+    "category": "touhou",
     "difficultys": {
       "comet": 3,
       "nova": 5,
@@ -1108,6 +1236,8 @@
     "id": "shiawase",
     "title": "シアワセエゴイスト (The Happy Egoist)",
     "composer": "森羅万象",
+    "dlc": "base",
+    "category": "touhou",
     "difficultys": {
       "comet": 2,
       "nova": 6,
@@ -1125,6 +1255,8 @@
     "id": "aquamarine",
     "title": "Aquamarine",
     "composer": "WyvernP",
+    "dlc": "base",
+    "category": "original",
     "difficultys": {
       "comet": 2,
       "nova": 5,
@@ -1142,6 +1274,8 @@
     "id": "onewaydrive",
     "title": "One Way Drive",
     "composer": "KARUT",
+    "dlc": "base",
+    "category": "original",
     "difficultys": {
       "comet": 3,
       "nova": 6,
@@ -1159,6 +1293,8 @@
     "id": "influx",
     "title": "Influx",
     "composer": "TQ☆",
+    "dlc": "base",
+    "category": "variety",
     "difficultys": {
       "comet": 3,
       "nova": 7,
@@ -1177,6 +1313,8 @@
     "id": "esmatrix",
     "title": "ENERGY SYNERGY MATRIX",
     "composer": "Tanchiky",
+    "dlc": "base",
+    "category": "variety",
     "difficultys": {
       "comet": 2,
       "nova": 6,
@@ -1194,6 +1332,8 @@
     "id": "raintain",
     "title": "Raintain",
     "composer": "Sound Souler",
+    "dlc": "base",
+    "category": "original",
     "difficultys": {
       "comet": 4,
       "nova": 6,
@@ -1211,6 +1351,8 @@
     "id": "routeout",
     "title": "Routeout",
     "composer": "Sound Souler",
+    "dlc": "base",
+    "category": "original",
     "difficultys": {
       "comet": 1,
       "nova": 4,
@@ -1228,6 +1370,8 @@
     "id": "414perspeed",
     "title": "414 PER SPEED",
     "composer": "Sound Souler",
+    "dlc": "base",
+    "category": "original",
     "difficultys": {
       "comet": 3,
       "nova": 7,
@@ -1245,6 +1389,8 @@
     "id": "414perspeedremix",
     "title": "414 PER SPEED (yomoha Remix)",
     "composer": "Sound Souler (Remix. yomoha)",
+    "dlc": "base",
+    "category": "remix",
     "difficultys": {
       "comet": 3,
       "nova": 6,
@@ -1262,6 +1408,8 @@
     "id": "tourmaline",
     "title": "Tourmaline",
     "composer": "WyvernP",
+    "dlc": "base",
+    "category": "original",
     "difficultys": {
       "comet": 2,
       "nova": 5,
@@ -1279,6 +1427,8 @@
     "id": "wolfsbane",
     "title": "Wolfsbane",
     "composer": "LucaProject",
+    "dlc": "base",
+    "category": "variety",
     "difficultys": {
       "comet": 3,
       "nova": 6,
@@ -1296,6 +1446,8 @@
     "id": "eranthis",
     "title": "Eranthis",
     "composer": "LucaProject",
+    "dlc": "floweranddestiny",
+    "category": "original",
     "difficultys": {
       "comet": 2,
       "nova": 5,
@@ -1313,6 +1465,8 @@
     "id": "maidenapricot",
     "title": "Maiden+Apricot",
     "composer": "seatrus",
+    "dlc": "floweranddestiny",
+    "category": "original",
     "difficultys": {
       "comet": 4,
       "nova": 6,
@@ -1330,6 +1484,8 @@
     "id": "thecherry",
     "title": "終桜散華 (The cherry blossoms wither and the petals fall)",
     "composer": "tokiwa",
+    "dlc": "floweranddestiny",
+    "category": "variety",
     "difficultys": {
       "comet": 3,
       "nova": 5,
@@ -1347,6 +1503,8 @@
     "id": "xakuro",
     "title": "Xakuro",
     "composer": "Halv",
+    "dlc": "floweranddestiny",
+    "category": "variety",
     "difficultys": {
       "comet": 4,
       "nova": 7,
@@ -1364,6 +1522,8 @@
     "id": "secretmirage",
     "title": "secret:mirage",
     "composer": "かゆき",
+    "dlc": "floweranddestiny",
+    "category": "variety",
     "difficultys": {
       "comet": 3,
       "nova": 6,
@@ -1381,6 +1541,8 @@
     "id": "redrose",
     "title": "Red Rose",
     "composer": "yomoha",
+    "dlc": "floweranddestiny",
+    "category": "original",
     "difficultys": {
       "comet": 4,
       "nova": 7,
@@ -1398,6 +1560,8 @@
     "id": "heavenlystars",
     "title": "Heavenly Stars",
     "composer": "yomoha",
+    "dlc": "floweranddestiny",
+    "category": "original",
     "difficultys": {
       "comet": 3,
       "nova": 6,
@@ -1415,6 +1579,8 @@
     "id": "flowerofdestiny",
     "title": "Flower of Destiny",
     "composer": "Sound Souler",
+    "dlc": "floweranddestiny",
+    "category": "original",
     "difficultys": {
       "comet": 2,
       "nova": 5,
@@ -1432,6 +1598,8 @@
     "id": "stargateextreme",
     "title": "STARGATE EXTREME",
     "composer": "KARUT",
+    "dlc": "floweranddestiny",
+    "category": "original",
     "difficultys": {
       "comet": 3,
       "nova": 7,
@@ -1449,6 +1617,8 @@
     "id": "kakitsubata",
     "title": "燕子花 -Kakitsubata-",
     "composer": "polysha vs. モリモリあつし",
+    "dlc": "floweranddestiny",
+    "category": "variety",
     "difficultys": {
       "comet": 4,
       "nova": 6,
@@ -1467,6 +1637,8 @@
     "id": "kawaakari",
     "title": "カワアカリ (feat. neur6sia) (Blurry River (feat. neur6sia))",
     "composer": "7OAST",
+    "category": "variety",
+    "dlc": "base",
     "difficultys": {
       "comet": 1,
       "nova": 5,
@@ -1484,6 +1656,8 @@
     "id": "twinkleraindrop",
     "title": "Twinkle rain drop",
     "composer": "キリケン",
+    "dlc": "base",
+    "category": "original",
     "difficultys": {
       "comet": 3,
       "nova": 5,
@@ -1501,6 +1675,8 @@
     "id": "koibyou",
     "title": "恋病 (TV Size) (Lovesickness (TV Size))",
     "composer": "Street",
+    "dlc": "base",
+    "category": "variety",
     "difficultys": {
       "comet": 2,
       "nova": 5,
@@ -1518,6 +1694,8 @@
     "id": "crossingdeltaremix",
     "title": "CROSSING DELTA (yomoha flip)",
     "composer": "t+pazolite×Hommarju×ginkiha (Remix. yomoha)",
+    "dlc": "base",
+    "category": "remix",
     "difficultys": {
       "comet": 4,
       "nova": 7,
@@ -1535,6 +1713,8 @@
     "id": "novatailremix",
     "title": "Novatail (seatrus Luminous Remix)",
     "composer": "Sound Souler (Remix. seatrus)",
+    "dlc": "base",
+    "category": "remix",
     "difficultys": {
       "comet": 3,
       "nova": 7,
@@ -1552,6 +1732,8 @@
     "id": "harunohime",
     "title": "春の姫 (Princess of Spring)",
     "composer": "yomoha",
+    "dlc": "base",
+    "category": "original",
     "difficultys": {
       "comet": 2,
       "nova": 5,
@@ -1569,6 +1751,8 @@
     "id": "andromeda01",
     "title": "Andromeda 01",
     "composer": "Sound Souler",
+    "dlc": "base",
+    "category": "original",
     "difficultys": {
       "comet": 1,
       "nova": 6,
@@ -1588,6 +1772,8 @@
     "id": "9876734123",
     "title": "9876734123",
     "composer": "Silentroom",
+    "dlc": "base",
+    "category": "variety",
     "difficultys": {
       "comet": 4,
       "nova": 7,
@@ -1606,6 +1792,8 @@
     "id": "pupa",
     "title": "PUPA",
     "composer": "モリモリあつし\t",
+    "dlc": "base",
+    "category": "variety",
     "difficultys": {
       "comet": 4,
       "nova": 7,
@@ -1624,6 +1812,8 @@
     "id": "kasumisou",
     "title": "カスミソウ (Gypsophila)",
     "composer": "yomoha",
+    "dlc": "base",
+    "category": "original",
     "difficultys": {
       "comet": 2,
       "nova": 4,
@@ -1641,6 +1831,8 @@
     "id": "vintagefairies",
     "title": "Vintage Fairies",
     "composer": "systile",
+    "dlc": "base",
+    "category": "variety",
     "difficultys": {
       "comet": 2,
       "nova": 5,
@@ -1658,6 +1850,8 @@
     "id": "tekketsumajyo",
     "title": "鉄血魔女 (Iron Blooded Witch)",
     "composer": "yomoha",
+    "dlc": "base",
+    "category": "original",
     "difficultys": {
       "comet": 3,
       "nova": 6,
@@ -1677,6 +1871,8 @@
     "id": "outofsense",
     "title": "Out of Sense",
     "composer": "Sound Souler",
+    "dlc": "base",
+    "category": "variety",
     "difficultys": {
       "comet": 2,
       "nova": 6,
@@ -1694,6 +1890,8 @@
     "id": "soundchimera",
     "title": "Sound Chimera",
     "composer": "Laur",
+    "dlc": "base",
+    "category": "variety",
     "difficultys": {
       "comet": 4,
       "nova": 7,
@@ -1712,6 +1910,8 @@
     "id": "satorithewitch",
     "title": "Satori the Witch",
     "composer": "yomoha",
+    "dlc": "touhou01",
+    "category": "touhou",
     "difficultys": {
       "comet": 2,
       "nova": 5,
@@ -1729,6 +1929,8 @@
     "id": "gensouno",
     "title": "幻想のサテライト (Fantasy Satellite)",
     "composer": "豚乙女",
+    "dlc": "touhou01",
+    "category": "touhou",
     "difficultys": {
       "comet": 2,
       "nova": 6,
@@ -1746,6 +1948,8 @@
     "id": "itazura",
     "title": "悪戯センセーション (Mischievous Sensation)",
     "composer": "森羅万象",
+    "dlc": "touhou01",
+    "category": "touhou",
     "difficultys": {
       "comet": 2,
       "nova": 5,
@@ -1763,6 +1967,8 @@
     "id": "hakanakimono",
     "title": "儚きもの人間 (Hakanakimono Ningen)",
     "composer": "豚乙女",
+    "dlc": "touhou01",
+    "category": "touhou",
     "difficultys": {
       "comet": 3,
       "nova": 5,
@@ -1780,6 +1986,8 @@
     "id": "zenryoku",
     "title": "全力ハッピーライフ (Full power Happy life)",
     "composer": "森羅万象",
+    "dlc": "touhou01",
+    "category": "touhou",
     "difficultys": {
       "comet": 2,
       "nova": 5,
@@ -1797,6 +2005,8 @@
     "id": "dwarfs",
     "title": "進め！イッスン軍団 (Rebellion of the Dwarfs)",
     "composer": "yoa(dawn-system)",
+    "dlc": "touhou01",
+    "category": "touhou",
     "difficultys": {
       "comet": 4,
       "nova": 7,
@@ -1814,6 +2024,8 @@
     "id": "shootingstar",
     "title": "Shooting Star feat. Risa Yuzuki",
     "composer": "uma vs. モリモリあつし",
+    "dlc": "touhou01",
+    "category": "touhou",
     "difficultys": {
       "comet": 3,
       "nova": 6,
@@ -1831,6 +2043,8 @@
     "id": "udongein",
     "title": "患部で止まってすぐ溶ける～狂気の優曇華院 (Kanbu de Tomatte Sugu Tokeru~ Kyouki no Udongein)",
     "composer": "IOSYS",
+    "dlc": "touhou01",
+    "category": "touhou",
     "difficultys": {
       "nova": 5,
       "supernova": 8,
@@ -1846,6 +2060,8 @@
     "id": "venten",
     "title": "VENTEN",
     "composer": "暁Records",
+    "dlc": "touhou01",
+    "category": "touhou",
     "difficultys": {
       "comet": 3,
       "nova": 7,
@@ -1863,6 +2079,8 @@
     "id": "calamityfortune",
     "title": "Calamity Fortune",
     "composer": "LeaF",
+    "dlc": "touhou01",
+    "category": "touhou",
     "difficultys": {
       "comet": 4,
       "nova": 7,
@@ -1880,6 +2098,8 @@
     "id": "themoonrabbit",
     "title": "The Moon Rabbit",
     "composer": "yomoha",
+    "dlc": "touhou01",
+    "category": "touhou",
     "difficultys": {
       "comet": 3,
       "nova": 6,
@@ -1897,6 +2117,8 @@
     "id": "grayroad",
     "title": "グレーロード",
     "composer": "Noa",
+    "dlc": "base",
+    "category": "variety",
     "difficultys": {
       "comet": 1,
       "nova": 5,
@@ -1914,6 +2136,8 @@
     "id": "noisepollution",
     "title": "소음공해 (Noise Pollution)",
     "composer": "WyvernP (Guitar. BlueArpeggio)",
+    "dlc": "base",
+    "category": "variety",
     "difficultys": {
       "comet": 2,
       "nova": 5,
@@ -1931,6 +2155,8 @@
     "id": "inamour",
     "title": "în amour",
     "composer": "ZxNX",
+    "dlc": "luminousanddarkness",
+    "category": "variety",
     "difficultys": {
       "comet": 2,
       "nova": 5,
@@ -1948,6 +2174,8 @@
     "id": "siorai",
     "title": "Síoraí",
     "composer": "KθZyo",
+    "dlc": "luminousanddarkness",
+    "category": "variety",
     "difficultys": {
       "comet": 2,
       "nova": 5,
@@ -1965,6 +2193,8 @@
     "id": "ginsekainihitori",
     "title": "銀世界にひとり (Alone in Silver World)",
     "composer": "後藤 feat. nayuta",
+    "dlc": "luminousanddarkness",
+    "category": "variety",
     "difficultys": {
       "comet": 3,
       "nova": 6,
@@ -1982,6 +2212,8 @@
     "id": "aloneinstarlight",
     "title": "Alone in Starlight",
     "composer": "Palami",
+    "dlc": "luminousanddarkness",
+    "category": "variety",
     "difficultys": {
       "comet": 4,
       "nova": 7,
@@ -1999,6 +2231,8 @@
     "id": "mangobingsu",
     "title": "Mango Bingsu",
     "composer": "Palami",
+    "dlc": "luminousanddarkness",
+    "category": "variety",
     "difficultys": {
       "comet": 3,
       "nova": 5,
@@ -2017,6 +2251,8 @@
     "id": "stellarmemoria",
     "title": "StellaR-MemoriA",
     "composer": "Raphiiel",
+    "dlc": "luminousanddarkness",
+    "category": "original",
     "difficultys": {
       "comet": 4,
       "nova": 7,
@@ -2034,6 +2270,8 @@
     "id": "lustroustravel",
     "title": "Lustroustravel",
     "composer": "大豆使徒(打打だいず+seatrus)",
+    "dlc": "luminousanddarkness",
+    "category": "original",
     "difficultys": {
       "comet": 3,
       "nova": 6,
@@ -2051,6 +2289,8 @@
     "id": "starrider",
     "title": "Star rider",
     "composer": "Essbee",
+    "dlc": "luminousanddarkness",
+    "category": "original",
     "difficultys": {
       "comet": 3,
       "nova": 7,
@@ -2069,6 +2309,8 @@
     "id": "infinity",
     "title": "Infinity",
     "composer": "PIKASONIC",
+    "dlc": "base",
+    "category": "variety",
     "difficultys": {
       "comet": 3,
       "nova": 5,
@@ -2086,6 +2328,8 @@
     "id": "replayandaction",
     "title": "Replay & Action",
     "composer": "KARUT",
+    "dlc": "base",
+    "category": "original",
     "difficultys": {
       "comet": 2,
       "nova": 7,
@@ -2103,6 +2347,8 @@
     "id": "alliwant",
     "title": "All I want",
     "composer": "awfuless",
+    "dlc": "base",
+    "category": "variety",
     "difficultys": {
       "comet": 3,
       "nova": 6,
@@ -2120,6 +2366,8 @@
     "id": "tsubakinohana",
     "title": "椿の花 (Camellia)",
     "composer": "yomoha",
+    "dlc": "base",
+    "category": "original",
     "difficultys": {
       "comet": 2,
       "nova": 4,
@@ -2137,6 +2385,8 @@
     "id": "lustroustravelremix",
     "title": "Lustroustravel (X-mas Remix)",
     "composer": "大豆使徒(打打だいず+seatrus) (Remix. yomoha)",
+    "dlc": "base",
+    "category": "remix",
     "difficultys": {
       "comet": 3,
       "nova": 7,
@@ -2154,6 +2404,8 @@
     "id": "paperbutterfly",
     "title": "Paper Butterfly",
     "composer": "banibini",
+    "dlc": "base",
+    "category": "original",
     "difficultys": {
       "comet": 3,
       "nova": 6,
@@ -2171,6 +2423,8 @@
     "id": "introspect",
     "title": "Introspect",
     "composer": "Lokan",
+    "dlc": "base",
+    "category": "variety",
     "difficultys": {
       "comet": 3,
       "nova": 6,
@@ -2188,6 +2442,8 @@
     "id": "andromeda02",
     "title": "Andromeda 02",
     "composer": "Sound Souler",
+    "dlc": "base",
+    "category": "original",
     "difficultys": {
       "comet": 4,
       "nova": 7,
@@ -2207,6 +2463,8 @@
     "id": "tabinotobira",
     "title": "旅の扉 (The Door of a Journey)",
     "composer": "Seffyna (w/ 7OAST, ESAI)",
+    "dlc": "base",
+    "category": "original",
     "difficultys": {
       "comet": 2,
       "nova": 5,
@@ -2224,6 +2482,8 @@
     "id": "daydream",
     "title": "Daydream",
     "composer": "RiraN",
+    "dlc": "base",
+    "category": "variety",
     "difficultys": {
       "comet": 4,
       "nova": 6,
@@ -2241,6 +2501,8 @@
     "id": "moonandback",
     "title": "Moon And Back",
     "composer": "RiraN",
+    "dlc": "base",
+    "category": "original",
     "difficultys": {
       "comet": 3,
       "nova": 5,
@@ -2258,6 +2520,8 @@
     "id": "daydreamremix",
     "title": "Daydream (KARUT Remix)",
     "composer": "RiraN (Remix. KARUT)",
+    "dlc": "base",
+    "category": "remix",
     "difficultys": {
       "comet": 4,
       "nova": 7,
@@ -2275,6 +2539,8 @@
     "id": "flowergarden",
     "title": "Flower Garden",
     "composer": "STELLAR (Arr. STELLAR, N4ML)",
+    "dlc": "pocotone",
+    "category": "collab",
     "difficultys": {
       "comet": 1,
       "nova": 4,
@@ -2292,6 +2558,8 @@
     "id": "dreamstar",
     "title": "Dream Star",
     "composer": "STELLAR",
+    "dlc": "pocotone",
+    "category": "collab",
     "difficultys": {
       "comet": 1,
       "nova": 4,
@@ -2309,6 +2577,8 @@
     "id": "iloveme",
     "title": "I Love Me",
     "composer": "litmus*",
+    "dlc": "pocotone",
+    "category": "collab",
     "difficultys": {
       "comet": 1,
       "nova": 5,
@@ -2326,6 +2596,8 @@
     "id": "someonesb",
     "title": "사무치는 누군가의 위로 (Scatter One's Consolation)",
     "composer": "litmus*",
+    "dlc": "pocotone",
+    "category": "collab",
     "difficultys": {
       "comet": 2,
       "nova": 5,
@@ -2343,6 +2615,8 @@
     "id": "crimeworld",
     "title": "죄인과 세계의 마침표 (Come to an End)",
     "composer": "139cm (Arr. STELLAR)",
+    "dlc": "pocotone",
+    "category": "collab",
     "difficultys": {
       "comet": 2,
       "nova": 6,
@@ -2360,6 +2634,8 @@
     "id": "cosmictelepathy",
     "title": "코스믹 텔레파시 (Cosmic Telepathy)",
     "composer": "N4ML",
+    "dlc": "pocotone",
+    "category": "collab",
     "difficultys": {
       "comet": 3,
       "nova": 6,
@@ -2377,6 +2653,8 @@
     "id": "emoticone",
     "title": ":하트: :돋보기: :무지개: :오리: :별: (:heart: :mag: :rainbow: :​duck: :sparkles:)",
     "composer": "139cm",
+    "dlc": "pocotone",
+    "category": "collab",
     "difficultys": {
       "comet": 2,
       "nova": 5,
@@ -2394,6 +2672,8 @@
     "id": "lovethismemory",
     "title": "Love this memory",
     "composer": "139cm",
+    "dlc": "pocotone",
+    "category": "collab",
     "difficultys": {
       "comet": 3,
       "nova": 6,
@@ -2411,6 +2691,8 @@
     "id": "firstlovesound",
     "title": "첫사랑의 시작 소리 (First love begins)",
     "composer": "STELLAR",
+    "dlc": "pocotone",
+    "category": "collab",
     "difficultys": {
       "comet": 4,
       "nova": 7,
@@ -2428,6 +2710,8 @@
     "id": "disallowed",
     "title": "Disallowed",
     "composer": "BlueArpeggio",
+    "dlc": "pocotone",
+    "category": "collab",
     "difficultys": {
       "comet": 4,
       "nova": 7,
@@ -2445,6 +2729,8 @@
     "id": "marionnette",
     "title": "Marion:nette",
     "composer": "Sound Souler",
+    "dlc": "base",
+    "category": "original",
     "difficultys": {
       "comet": 3,
       "nova": 6,
@@ -2462,6 +2748,8 @@
     "id": "madengine",
     "title": "MAD ENGINE",
     "composer": "yomoha",
+    "dlc": "base",
+    "category": "original",
     "difficultys": {
       "comet": 4,
       "nova": 8,
@@ -2479,6 +2767,8 @@
     "id": "sakurafubuki",
     "title": "Sakura Fubuki",
     "composer": "Street",
+    "dlc": "floweranddestiny",
+    "category": "variety",
     "difficultys": {
       "comet": 3,
       "nova": 5,
@@ -2496,6 +2786,8 @@
     "id": "karmanations",
     "title": "KARMANATIONS",
     "composer": "暁Records",
+    "dlc": "touhou01",
+    "category": "touhou",
     "difficultys": {
       "comet": 2,
       "nova": 5,
@@ -2513,6 +2805,8 @@
     "id": "starlightnightmare",
     "title": "Starlight Nightmare",
     "composer": "Sound Souler",
+    "dlc": "base",
+    "category": "original",
     "difficultys": {
       "comet": 2,
       "nova": 5,
@@ -2532,6 +2826,8 @@
     "id": "banshun",
     "title": "晩春。",
     "composer": "yomoha",
+    "dlc": "yomohasplanet",
+    "category": "variety",
     "difficultys": {
       "comet": 2,
       "nova": 5,
@@ -2549,6 +2845,8 @@
     "id": "noiseremix",
     "title": "소음공해 (yomoha Remix) (Noise Pollution (yomoha Remix))",
     "composer": "yomoha",
+    "dlc": "yomohasplanet",
+    "category": "remix",
     "difficultys": {
       "comet": 1,
       "nova": 4,
@@ -2566,6 +2864,8 @@
     "id": "wonderpropose",
     "title": "Wonder♡Propose",
     "composer": "yomoha",
+    "dlc": "yomohasplanet",
+    "category": "original",
     "difficultys": {
       "comet": 2,
       "nova": 5,
@@ -2583,6 +2883,8 @@
     "id": "swingwith",
     "title": "Swing with Boogieman",
     "composer": "yomoha",
+    "dlc": "yomohasplanet",
+    "category": "variety",
     "difficultys": {
       "comet": 4,
       "nova": 6,
@@ -2600,6 +2902,8 @@
     "id": "badkidbad",
     "title": "Bad kid Bad",
     "composer": "banibini",
+    "dlc": "yomohasplanet",
+    "category": "original",
     "difficultys": {
       "comet": 3,
       "nova": 6,
@@ -2617,6 +2921,8 @@
     "id": "melonbread",
     "title": "Melonbread",
     "composer": "yomoha",
+    "dlc": "yomohasplanet",
+    "category": "original",
     "difficultys": {
       "comet": 2,
       "nova": 5,
@@ -2634,6 +2940,8 @@
     "id": "ohanami",
     "title": "お花見",
     "composer": "yomoha",
+    "dlc": "yomohasplanet",
+    "category": "original",
     "difficultys": {
       "comet": 4,
       "nova": 8,
@@ -2651,6 +2959,8 @@
     "id": "bloomed",
     "title": "Bloomed",
     "composer": "yomoha",
+    "dlc": "yomohasplanet",
+    "category": "original",
     "difficultys": {
       "comet": 4,
       "nova": 7,
@@ -2668,6 +2978,8 @@
     "id": "sixtartales",
     "title": "SixtarTales (Voc. 景山梨彩)",
     "composer": "Sound Souler",
+    "dlc": "base",
+    "category": "original",
     "difficultys": {
       "comet": 1,
       "nova": 5,
@@ -2685,6 +2997,8 @@
     "id": "letyoudive",
     "title": "Let you DIVE!",
     "composer": "HARDCORE TANO*C & エリザベス (CV:大西沙織)",
+    "dlc": "wacca",
+    "category": "collab",
     "difficultys": {
       "comet": 2,
       "nova": 5,
@@ -2702,6 +3016,8 @@
     "id": "chariot",
     "title": "Chariot",
     "composer": "USAO",
+    "dlc": "wacca",
+    "category": "collab",
     "difficultys": {
       "comet": 3,
       "nova": 6,
@@ -2719,6 +3035,8 @@
     "id": "onomatopairing",
     "title": "ONOMATO Pairing!!!",
     "composer": "t+pazolite feat. ななひら",
+    "dlc": "wacca",
+    "category": "collab",
     "difficultys": {
       "comet": 3,
       "nova": 5,
@@ -2736,6 +3054,8 @@
     "id": "withu",
     "title": "with U",
     "composer": "t+pazolite & Massive New Krew feat. リリィ (CV:青木志貴)",
+    "dlc": "wacca",
+    "category": "collab",
     "difficultys": {
       "comet": 2,
       "nova": 7,
@@ -2754,6 +3074,8 @@
     "id": "ouverture",
     "title": "Ouvertüre",
     "composer": "USAO & DJ Genki feat. ルーン (CV:河瀬茉希)",
+    "dlc": "wacca",
+    "category": "collab",
     "difficultys": {
       "comet": 3,
       "nova": 6,
@@ -2771,6 +3093,8 @@
     "id": "dualbreakerxx",
     "title": "DUAL BREAKER XX",
     "composer": "Srav3R vs Getty",
+    "dlc": "wacca",
+    "category": "collab",
     "difficultys": {
       "comet": 4,
       "nova": 7,
@@ -2788,6 +3112,8 @@
     "id": "invisiblefrenzy",
     "title": "Invisible Frenzy",
     "composer": "Kobaryo",
+    "dlc": "wacca",
+    "category": "collab",
     "difficultys": {
       "comet": 5,
       "nova": 7,
@@ -2806,6 +3132,8 @@
     "id": "ephmr",
     "title": "EPHMR",
     "composer": "aran",
+    "dlc": "wacca",
+    "category": "collab",
     "difficultys": {
       "comet": 4,
       "nova": 6,
@@ -2823,6 +3151,8 @@
     "id": "spectrum",
     "title": "SPECTRUM",
     "composer": "Essbee",
+    "dlc": "oshiribeat",
+    "category": "variety",
     "difficultys": {
       "comet": 3,
       "nova": 5,
@@ -2840,6 +3170,8 @@
     "id": "slecta",
     "title": "SLECTA",
     "composer": "mybear",
+    "dlc": "oshiribeat",
+    "category": "variety",
     "difficultys": {
       "comet": 2,
       "nova": 5,
@@ -2857,6 +3189,8 @@
     "id": "lepetitprincess",
     "title": "Le Petit Princess",
     "composer": "Plastic Fruits",
+    "dlc": "oshiribeat",
+    "category": "original",
     "difficultys": {
       "comet": 2,
       "nova": 5,
@@ -2874,6 +3208,8 @@
     "id": "diosa",
     "title": "Diosa Maquinaria",
     "composer": "MASEraaaN",
+    "dlc": "oshiribeat",
+    "category": "variety",
     "difficultys": {
       "comet": 4,
       "nova": 6,
@@ -2891,6 +3227,8 @@
     "id": "sanity",
     "title": "Sanity",
     "composer": "K-forest",
+    "dlc": "oshiribeat",
+    "category": "variety",
     "difficultys": {
       "comet": 3,
       "nova": 6,
@@ -2908,6 +3246,8 @@
     "id": "omoide",
     "title": "OMOIDE",
     "composer": "Essbee",
+    "dlc": "oshiribeat",
+    "category": "original",
     "difficultys": {
       "comet": 3,
       "nova": 7,
@@ -2925,6 +3265,8 @@
     "id": "bossfire",
     "title": "Bossfire",
     "composer": "Roy Mikelate feat. ATAS",
+    "dlc": "oshiribeat",
+    "category": "original",
     "difficultys": {
       "comet": 4,
       "nova": 7,
@@ -2942,6 +3284,8 @@
     "id": "supanova",
     "title": "SUPANOVA",
     "composer": "FRAKTAL",
+    "dlc": "base",
+    "category": "variety",
     "difficultys": {
       "comet": 1,
       "nova": 4,
@@ -2959,6 +3303,8 @@
     "id": "3yearcat",
     "title": "영원★세살 고양이 (eternal★3.Y.O)",
     "composer": "Rabbit House",
+    "dlc": "base",
+    "category": "variety",
     "difficultys": {
       "comet": 2,
       "nova": 5,
@@ -2976,6 +3322,8 @@
     "id": "lostmymind",
     "title": "Lost My Mind",
     "composer": "PIKASONIC",
+    "dlc": "dystopia",
+    "category": "variety",
     "difficultys": {
       "comet": 2,
       "nova": 5,
@@ -2993,6 +3341,8 @@
     "id": "async",
     "title": "async",
     "composer": "kolaa",
+    "dlc": "dystopia",
+    "category": "variety",
     "difficultys": {
       "comet": 3,
       "nova": 6,
@@ -3011,6 +3361,8 @@
     "id": "beforeitends",
     "title": "Before it Ends",
     "composer": "BilliumMoto",
+    "dlc": "dystopia",
+    "category": "variety",
     "difficultys": {
       "comet": 3,
       "nova": 6,
@@ -3028,6 +3380,8 @@
     "id": "sense",
     "title": "Sense",
     "composer": "BilliumMoto x Silentroom",
+    "dlc": "dystopia",
+    "category": "variety",
     "difficultys": {
       "comet": 4,
       "nova": 7,
@@ -3046,6 +3400,8 @@
     "id": "theladywith",
     "title": "The Lady with a Monocle",
     "composer": "polysha",
+    "dlc": "dystopia",
+    "category": "variety",
     "difficultys": {
       "comet": 3,
       "nova": 7,
@@ -3063,6 +3419,8 @@
     "id": "alicein",
     "title": "Alice in Misanthrope -厭世アリス-",
     "composer": "LeaF",
+    "dlc": "dystopia",
+    "category": "variety",
     "difficultys": {
       "comet": 4,
       "nova": 6,
@@ -3081,6 +3439,8 @@
     "id": "antinomicqueen",
     "title": "Antinomic Queen",
     "composer": "polysha",
+    "dlc": "dystopia",
+    "category": "original",
     "difficultys": {
       "comet": 4,
       "nova": 7,
@@ -3098,6 +3458,8 @@
     "id": "gigantomakhia",
     "title": "GigantomakhiA",
     "composer": "cosMo vs モリモリあつし",
+    "dlc": "dystopia",
+    "category": "variety",
     "difficultys": {
       "comet": 5,
       "nova": 8,
@@ -3115,6 +3477,8 @@
     "id": "zantetsuken",
     "title": "斬鉄剣 (Zantetsuken)",
     "composer": "黒沢ダイスケ feat.よしださくら",
+    "dlc": "base",
+    "category": "original",
     "difficultys": {
       "comet": 4,
       "nova": 7,
@@ -3132,6 +3496,8 @@
     "id": "startingpointremix",
     "title": "Starting Point (yomoha Jazz Arrange)",
     "composer": "LucaProject (Remix. yomoha)",
+    "dlc": "base",
+    "category": "remix",
     "difficultys": {
       "comet": 1,
       "nova": 4,

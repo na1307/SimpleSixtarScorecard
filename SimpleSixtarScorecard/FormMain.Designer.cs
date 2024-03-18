@@ -35,6 +35,8 @@ partial class FormMain {
         composerColumn = new DataGridViewTextBoxColumn();
         solarQuasarColumn = new DataGridViewTextBoxColumn();
         lunarQuasarColumn = new DataGridViewTextBoxColumn();
+        dlcColumn = new DataGridViewTextBoxColumn();
+        categoryColumn = new DataGridViewTextBoxColumn();
         ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
         SuspendLayout();
         // 
@@ -66,7 +68,7 @@ partial class FormMain {
         dataGridView1.AllowUserToResizeRows = false;
         dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
         dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-        dataGridView1.Columns.AddRange(new DataGridViewColumn[] { nameColumn, composerColumn, solarQuasarColumn, lunarQuasarColumn });
+        dataGridView1.Columns.AddRange(new DataGridViewColumn[] { nameColumn, composerColumn, solarQuasarColumn, lunarQuasarColumn, dlcColumn, categoryColumn });
         dataGridView1.Location = new Point(12, 66);
         dataGridView1.MultiSelect = false;
         dataGridView1.Name = "dataGridView1";
@@ -119,7 +121,7 @@ partial class FormMain {
         nameColumn.HeaderText = "제목";
         nameColumn.Name = "nameColumn";
         nameColumn.ReadOnly = true;
-        nameColumn.Width = 230;
+        nameColumn.Width = 220;
         // 
         // composerColumn
         // 
@@ -127,7 +129,7 @@ partial class FormMain {
         composerColumn.HeaderText = "작곡가";
         composerColumn.Name = "composerColumn";
         composerColumn.ReadOnly = true;
-        composerColumn.Width = 230;
+        composerColumn.Width = 220;
         // 
         // solarQuasarColumn
         // 
@@ -144,6 +146,22 @@ partial class FormMain {
         lunarQuasarColumn.Name = "lunarQuasarColumn";
         lunarQuasarColumn.ReadOnly = true;
         lunarQuasarColumn.Width = 140;
+        // 
+        // dlcColumn
+        // 
+        dlcColumn.DataPropertyName = "DlcName";
+        dlcColumn.HeaderText = "DLC";
+        dlcColumn.Name = "dlcColumn";
+        dlcColumn.ReadOnly = true;
+        dlcColumn.Width = 150;
+        // 
+        // categoryColumn
+        // 
+        categoryColumn.DataPropertyName = "Category";
+        categoryColumn.HeaderText = "카테고리";
+        categoryColumn.Name = "categoryColumn";
+        categoryColumn.ReadOnly = true;
+        categoryColumn.Width = 80;
         // 
         // FormMain
         // 
@@ -177,4 +195,6 @@ partial class FormMain {
     private DataGridViewTextBoxColumn composerColumn;
     private DataGridViewTextBoxColumn solarQuasarColumn;
     private DataGridViewTextBoxColumn lunarQuasarColumn;
+    private DataGridViewTextBoxColumn dlcColumn;
+    private DataGridViewTextBoxColumn categoryColumn;
 }

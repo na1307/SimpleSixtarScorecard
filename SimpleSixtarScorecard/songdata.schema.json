@@ -18,6 +18,12 @@
         "composer": {
           "type": "string"
         },
+        "dlc": {
+          "type": "string"
+        },
+        "category": {
+          "type": "string"
+        },
         "difficultys": {
           "$ref": "#/definitions/difficulty"
         },
@@ -29,6 +35,8 @@
         "id",
         "title",
         "composer",
+        "dlc",
+        "category",
         "difficultys",
         "difficultyl"
       ],
