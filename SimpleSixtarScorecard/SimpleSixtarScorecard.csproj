@@ -5,8 +5,8 @@
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
     <UseWindowsForms>true</UseWindowsForms>
     <AssemblyVersion>0</AssemblyVersion>
-    <FileVersion>0.2.0</FileVersion>
-    <Version>0.2</Version>
+    <FileVersion>0.3.0</FileVersion>
+    <Version>0.3</Version>
   </PropertyGroup>
   <ItemGroup>
     <Using Include="Bluehill" />
@@ -16,7 +16,7 @@
     <EmbeddedResource Include="songdata.schema.json" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="JsonSchema.Net" Version="6.0.4" />
+    <PackageReference Include="JsonSchema.Net" Version="6.0.5" />
     <PackageReference Include="Bluehill.Forms" Version="0.2.0" />
   </ItemGroup>
   <ItemGroup>
