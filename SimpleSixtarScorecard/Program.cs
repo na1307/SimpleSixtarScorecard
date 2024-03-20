@@ -1,4 +1,4 @@
-using Json.Schema;
+ï»¿using Json.Schema;
 using System.Reflection;
 using System.Text.Json;
 
@@ -14,7 +14,7 @@ internal static class Program {
         // see https://aka.ms/applicationconfiguration.
         ApplicationConfiguration.Initialize();
 
-        // songdata.json °ËÁõ
+        // songdata.json ê²€ì¦
         using (var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("SimpleSixtarScorecard.songdata.schema.json")) {
             if (stream == null) {
                 ErrMsg("schema not found!");
@@ -30,7 +30,7 @@ internal static class Program {
             }
         }
 
-        // ÇÁ·ÎÇÊ »ı¼º °úÁ¤
+        // í”„ë¡œí•„ ìƒì„± ê³¼ì •
         if (!File.Exists(Profile.ProfileFile)) {
             using ProfileNameDialog dialog = new(true);
 
@@ -48,7 +48,7 @@ internal static class Program {
             }
         }
 
-        // Á¾·áµÉ ¶§ ÇÁ·ÎÇÊ ÀúÀå
+        // ì¢…ë£Œë  ë•Œ í”„ë¡œí•„ ì €ì¥
         Application.ApplicationExit += Application_ApplicationExit;
 
         Application.Run(new FormMain());

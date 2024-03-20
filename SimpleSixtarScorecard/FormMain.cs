@@ -1,4 +1,4 @@
-namespace SimpleSixtarScorecard;
+ï»¿namespace SimpleSixtarScorecard;
 
 public partial class FormMain : Form {
     private SortableBindingList<Song> songs = new(Song.SongList);
@@ -7,25 +7,25 @@ public partial class FormMain : Form {
 
     public FormMain() {
         InitializeComponent();
-        label1.Text = Profile.Instance.UserName + " ´Ô";
+        label1.Text = Profile.Instance.UserName + " ë‹˜";
 
-        // °î µ¥ÀÌÅÍ °¡Á®¿À±â
+        // ê³¡ ë°ì´í„° ê°€ì ¸ì˜¤ê¸°
         dataGridView1.AutoGenerateColumns = false;
         dataGridView1.DataSource = songs;
-        label2.Text = "ÃÑ " + songs.Count.ToString() + "°î";
+        label2.Text = "ì´ " + songs.Count.ToString() + "ê³¡";
 
-        // ÄŞº¸¹Ú½º ¼³Á¤
-        comboBox1.DataSource = ((string[])(["¸ğµÎ"])).Concat(Enum.GetValues<Dlc>().Select(dlc => dlc.ToName())).ToArray();
-        comboBox2.DataSource = ((string[])(["¸ğµÎ"])).Concat(Enum.GetValues<Category>().Select(category => category.ToString())).ToArray();
+        // ì½¤ë³´ë°•ìŠ¤ ì„¤ì •
+        comboBox1.DataSource = ((string[])(["ëª¨ë‘"])).Concat(Enum.GetValues<Dlc>().Select(dlc => dlc.ToName())).ToArray();
+        comboBox2.DataSource = ((string[])(["ëª¨ë‘"])).Concat(Enum.GetValues<Category>().Select(category => category.ToString())).ToArray();
     }
 
     private void button1_Click(object sender, EventArgs e) {
-        // »ç¿ëÀÚ ÀÌ¸§ ¹Ù²Ù±â
+        // ì‚¬ìš©ì ì´ë¦„ ë°”ê¾¸ê¸°
         using ProfileNameDialog dialog = new(false);
 
         if (dialog.ShowDialog() == DialogResult.OK) {
             Profile.Instance.UserName = dialog.UserName.Trim();
-            label1.Text = Profile.Instance.UserName + " ´Ô";
+            label1.Text = Profile.Instance.UserName + " ë‹˜";
         }
     }
 
@@ -33,15 +33,15 @@ public partial class FormMain : Form {
         int index;
 
         try {
-            // ¼±ÅÃµÈ °î ÀÎµ¦½º
+            // ì„ íƒëœ ê³¡ ì¸ë±ìŠ¤
             index = dataGridView1.SelectedRows[0].Index;
         } catch (ArgumentOutOfRangeException) {
-            // ¼±ÅÃµÈ °îÀÌ ¾øÀ¸¸é ºñÈ°¼ºÈ­
+            // ì„ íƒëœ ê³¡ì´ ì—†ìœ¼ë©´ ë¹„í™œì„±í™”
             panel1.Visible = false;
             return;
         }
 
-        // ¼±ÅÃµÈ °îÀÌ ÀÖÀ¸¸é Ç¥½Ã
+        // ì„ íƒëœ ê³¡ì´ ìˆìœ¼ë©´ í‘œì‹œ
         panel1.Visible = true;
         panel1.Controls.Clear();
 
@@ -69,24 +69,24 @@ public partial class FormMain : Form {
 
         songs = new(tmpSongs);
         dataGridView1.DataSource = songs;
-        label2.Text = "ÃÑ " + songs.Count.ToString() + "°î";
+        label2.Text = "ì´ " + songs.Count.ToString() + "ê³¡";
 
         bool enumTest(Song song) {
             if (dlc == 0 && category == 0) {
-                // DLC¿Í Ä«Å×°í¸®°¡ µÑ ´Ù "¸ğµÎ"¶ó¸é
+                // DLCì™€ ì¹´í…Œê³ ë¦¬ê°€ ë‘˜ ë‹¤ "ëª¨ë‘"ë¼ë©´
                 return true;
             } else if (dlc != 0 && category == 0) {
-                // DLC°¡ ÁöÁ¤µÇ¾î ÀÖÀ¸¸é
+                // DLCê°€ ì§€ì •ë˜ì–´ ìˆìœ¼ë©´
                 return dlcTest();
             } else if (dlc == 0 && category != 0) {
-                // Ä«Å×°í¸®°¡ ÁöÁ¤µÇ¾î ÀÖÀ¸¸é
+                // ì¹´í…Œê³ ë¦¬ê°€ ì§€ì •ë˜ì–´ ìˆìœ¼ë©´
                 return categoryTest();
             } else {
-                // µÑ ´Ù ÁöÁ¤µÇ¾î ÀÖÀ¸¸é
+                // ë‘˜ ë‹¤ ì§€ì •ë˜ì–´ ìˆìœ¼ë©´
                 return dlcTest() && categoryTest();
             }
 
-            // 1À» »©´Â ÀÌÀ¯: ¿­°ÅÇüÀº 0ºÎÅÍ ½ÃÀÛÇÏ´Âµ¥ ¿©±â¼­´Â 0ÀÌ "¸ğµÎ"·Î ¼³Á¤µÇ¾î ÀÖ±â ¶§¹®
+            // 1ì„ ë¹¼ëŠ” ì´ìœ : ì—´ê±°í˜•ì€ 0ë¶€í„° ì‹œì‘í•˜ëŠ”ë° ì—¬ê¸°ì„œëŠ” 0ì´ "ëª¨ë‘"ë¡œ ì„¤ì •ë˜ì–´ ìˆê¸° ë•Œë¬¸
             bool dlcTest() => song.Dlc == (Dlc)(dlc - 1);
             bool categoryTest() => song.Category == (Category)(category - 1);
         }
