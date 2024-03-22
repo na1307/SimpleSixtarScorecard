@@ -1,17 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
-  <!-- 
+  <!--
     Microsoft ResX Schema 
-    
+
     Version 2.0
-    
-    The primary goals of this format is to allow a simple XML format 
-    that is mostly human readable. The generation and parsing of the 
-    various data types are done through the TypeConverter classes 
+
+    The primary goals of this format is to allow a simple XML format
+    that is mostly human readable. The generation and parsing of the
+    various data types are done through the TypeConverter classes
     associated with the data types.
-    
+
     Example:
-    
+
     ... ado.net/XML headers & schema ...
     <resheader name="resmimetype">text/microsoft-resx</resheader>
     <resheader name="version">2.0</resheader>
@@ -26,36 +26,36 @@
         <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
         <comment>This is a comment</comment>
     </data>
-                
-    There are any number of "resheader" rows that contain simple 
+
+    There are any number of "resheader" rows that contain simple
     name/value pairs.
-    
-    Each data row contains a name, and value. The row also contains a 
-    type or mimetype. Type corresponds to a .NET class that support 
-    text/value conversion through the TypeConverter architecture. 
-    Classes that don't support this are serialized and stored with the 
+
+    Each data row contains a name, and value. The row also contains a
+    type or mimetype. Type corresponds to a .NET class that support
+    text/value conversion through the TypeConverter architecture.
+    Classes that don't support this are serialized and stored with the
     mimetype set.
-    
-    The mimetype is used for serialized objects, and tells the 
-    ResXResourceReader how to depersist the object. This is currently not 
+
+    The mimetype is used for serialized objects, and tells the
+    ResXResourceReader how to depersist the object. This is currently not
     extensible. For a given mimetype the value must be set accordingly:
-    
-    Note - application/x-microsoft.net.object.binary.base64 is the format 
-    that the ResXResourceWriter will generate, however the reader can 
+
+    Note - application/x-microsoft.net.object.binary.base64 is the format
+    that the ResXResourceWriter will generate, however the reader can
     read any of the formats listed below.
-    
+
     mimetype: application/x-microsoft.net.object.binary.base64
-    value   : The object must be serialized with 
+    value   : The object must be serialized with
             : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
             : and then encoded with base64 encoding.
     
     mimetype: application/x-microsoft.net.object.soap.base64
-    value   : The object must be serialized with 
+    value   : The object must be serialized with
             : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
             : and then encoded with base64 encoding.
 
     mimetype: application/x-microsoft.net.object.bytearray.base64
-    value   : The object must be serialized into a byte array 
+    value   : The object must be serialized into a byte array
             : using a System.ComponentModel.TypeConverter
             : and then encoded with base64 encoding.
     -->
@@ -117,37 +117,41 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="All" xml:space="preserve">
-    <value>모두</value>
+  <data name="button1.Text" xml:space="preserve">
+    <value>사용자 이름 바꾸기</value>
   </data>
-  <data name="DlcBase" xml:space="preserve">
-    <value>본편</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>411, 44</value>
   </data>
-  <data name="DlcDystopia" xml:space="preserve">
-    <value>디스토피아</value>
+  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>34, 15</value>
   </data>
-  <data name="DlcOshiribeat" xml:space="preserve">
-    <value>오시리비트</value>
+  <data name="label3.Text" xml:space="preserve">
+    <value>검색:</value>
   </data>
-  <data name="DlcPocotone" xml:space="preserve">
-    <value>포코톤</value>
+  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>34, 15</value>
   </data>
-  <data name="DlcTouhou01" xml:space="preserve">
-    <value>동방 프로젝트 팩 01</value>
+  <data name="label4.Text" xml:space="preserve">
+    <value>필터:</value>
   </data>
-  <data name="InputScoreIsInvalid" xml:space="preserve">
-    <value>점수가 올바르지 않음!</value>
+  <data name="label6.Text" xml:space="preserve">
+    <value>카테고리</value>
   </data>
-  <data name="Songs" xml:space="preserve">
-    <value>총 {0} 곡</value>
+  <data name="nameColumn.HeaderText" xml:space="preserve">
+    <value>제목</value>
   </data>
-  <data name="UserName" xml:space="preserve">
-    <value>{0} 님</value>
+  <data name="composerColumn.HeaderText" xml:space="preserve">
+    <value>작곡가</value>
   </data>
-  <data name="WhatsYourName" xml:space="preserve">
-    <value>이름이 무엇인가요?</value>
+  <data name="solarQuasarColumn.HeaderText" xml:space="preserve">
+    <value>솔라 궤이사 난이도</value>
   </data>
-  <data name="YouCanAlways" xml:space="preserve">
-    <value>언제든지 변경할 수 있습니다.</value>
+  <data name="lunarQuasarColumn.HeaderText" xml:space="preserve">
+    <value>루나 퀘이사 난이도</value>
+  </data>
+  <data name="categoryColumn.HeaderText" xml:space="preserve">
+    <value>카테고리</value>
   </data>
 </root>

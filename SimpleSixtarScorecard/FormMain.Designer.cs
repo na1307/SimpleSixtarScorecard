@@ -24,15 +24,10 @@ partial class FormMain {
     ///  the contents of this method with the code editor.
     /// </summary>
     private void InitializeComponent() {
+        var resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
         label1 = new Label();
         button1 = new Button();
         dataGridView1 = new DataGridView();
-        nameColumn = new DataGridViewTextBoxColumn();
-        composerColumn = new DataGridViewTextBoxColumn();
-        solarQuasarColumn = new DataGridViewTextBoxColumn();
-        lunarQuasarColumn = new DataGridViewTextBoxColumn();
-        dlcColumn = new DataGridViewTextBoxColumn();
-        categoryColumn = new DataGridViewTextBoxColumn();
         label2 = new Label();
         panel1 = new Panel();
         textBox1 = new TextBox();
@@ -42,184 +37,140 @@ partial class FormMain {
         label5 = new Label();
         label6 = new Label();
         comboBox2 = new ComboBox();
+        nameColumn = new DataGridViewTextBoxColumn();
+        composerColumn = new DataGridViewTextBoxColumn();
+        solarQuasarColumn = new DataGridViewTextBoxColumn();
+        lunarQuasarColumn = new DataGridViewTextBoxColumn();
+        dlcColumn = new DataGridViewTextBoxColumn();
+        categoryColumn = new DataGridViewTextBoxColumn();
         ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
         SuspendLayout();
         // 
         // label1
         // 
-        label1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-        label1.Font = new Font("맑은 고딕", 12F);
-        label1.Location = new Point(12, 12);
+        resources.ApplyResources(label1, "label1");
         label1.Name = "label1";
-        label1.Size = new Size(604, 21);
-        label1.TabIndex = 0;
-        label1.Text = "label1";
         // 
         // button1
         // 
-        button1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-        button1.Location = new Point(622, 12);
+        resources.ApplyResources(button1, "button1");
         button1.Name = "button1";
-        button1.Size = new Size(150, 25);
-        button1.TabIndex = 1;
-        button1.Text = "Change Username";
         button1.UseVisualStyleBackColor = true;
         button1.Click += button1_Click;
         // 
         // dataGridView1
         // 
+        resources.ApplyResources(dataGridView1, "dataGridView1");
         dataGridView1.AllowUserToAddRows = false;
         dataGridView1.AllowUserToDeleteRows = false;
         dataGridView1.AllowUserToResizeRows = false;
-        dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
         dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
         dataGridView1.Columns.AddRange(new DataGridViewColumn[] { nameColumn, composerColumn, solarQuasarColumn, lunarQuasarColumn, dlcColumn, categoryColumn });
-        dataGridView1.Location = new Point(12, 66);
         dataGridView1.MultiSelect = false;
         dataGridView1.Name = "dataGridView1";
         dataGridView1.ReadOnly = true;
         dataGridView1.RowHeadersVisible = false;
         dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-        dataGridView1.Size = new Size(760, 425);
-        dataGridView1.TabIndex = 2;
         dataGridView1.SelectionChanged += DataGridView1_SelectionChanged;
-        // 
-        // nameColumn
-        // 
-        nameColumn.DataPropertyName = "Title";
-        nameColumn.HeaderText = "Title";
-        nameColumn.Name = "nameColumn";
-        nameColumn.ReadOnly = true;
-        nameColumn.Width = 220;
-        // 
-        // composerColumn
-        // 
-        composerColumn.DataPropertyName = "Composer";
-        composerColumn.HeaderText = "Composer";
-        composerColumn.Name = "composerColumn";
-        composerColumn.ReadOnly = true;
-        composerColumn.Width = 220;
-        // 
-        // solarQuasarColumn
-        // 
-        solarQuasarColumn.DataPropertyName = "SolarQuasar";
-        solarQuasarColumn.HeaderText = "Solar Quasar";
-        solarQuasarColumn.Name = "solarQuasarColumn";
-        solarQuasarColumn.ReadOnly = true;
-        solarQuasarColumn.Width = 140;
-        // 
-        // lunarQuasarColumn
-        // 
-        lunarQuasarColumn.DataPropertyName = "LunarQuasar";
-        lunarQuasarColumn.HeaderText = "Lunar Quasar";
-        lunarQuasarColumn.Name = "lunarQuasarColumn";
-        lunarQuasarColumn.ReadOnly = true;
-        lunarQuasarColumn.Width = 140;
-        // 
-        // dlcColumn
-        // 
-        dlcColumn.DataPropertyName = "DlcName";
-        dlcColumn.HeaderText = "DLC";
-        dlcColumn.Name = "dlcColumn";
-        dlcColumn.ReadOnly = true;
-        dlcColumn.Width = 150;
-        // 
-        // categoryColumn
-        // 
-        categoryColumn.DataPropertyName = "Category";
-        categoryColumn.HeaderText = "Category";
-        categoryColumn.Name = "categoryColumn";
-        categoryColumn.ReadOnly = true;
-        categoryColumn.Width = 80;
         // 
         // label2
         // 
-        label2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-        label2.Location = new Point(697, 40);
+        resources.ApplyResources(label2, "label2");
         label2.Name = "label2";
-        label2.Size = new Size(75, 23);
-        label2.TabIndex = 4;
-        label2.TextAlign = ContentAlignment.MiddleRight;
         // 
         // panel1
         // 
-        panel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-        panel1.Location = new Point(12, 497);
+        resources.ApplyResources(panel1, "panel1");
         panel1.Name = "panel1";
-        panel1.Size = new Size(760, 252);
-        panel1.TabIndex = 5;
         // 
         // textBox1
         // 
-        textBox1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-        textBox1.Location = new Point(451, 40);
+        resources.ApplyResources(textBox1, "textBox1");
         textBox1.Name = "textBox1";
-        textBox1.Size = new Size(240, 23);
-        textBox1.TabIndex = 6;
         textBox1.TextChanged += textBox1_TextChanged;
         // 
         // label3
         // 
-        label3.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-        label3.AutoSize = true;
-        label3.Location = new Point(399, 44);
+        resources.ApplyResources(label3, "label3");
         label3.Name = "label3";
-        label3.Size = new Size(46, 15);
-        label3.TabIndex = 7;
-        label3.Text = "Search:";
         // 
         // label4
         // 
-        label4.AutoSize = true;
-        label4.Location = new Point(12, 44);
+        resources.ApplyResources(label4, "label4");
         label4.Name = "label4";
-        label4.Size = new Size(36, 15);
-        label4.TabIndex = 8;
-        label4.Text = "Filter:";
         // 
         // comboBox1
         // 
+        resources.ApplyResources(comboBox1, "comboBox1");
         comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
         comboBox1.FormattingEnabled = true;
-        comboBox1.Location = new Point(88, 41);
         comboBox1.Name = "comboBox1";
-        comboBox1.Size = new Size(160, 23);
-        comboBox1.TabIndex = 9;
         comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
         // 
         // label5
         // 
-        label5.AutoSize = true;
-        label5.Location = new Point(52, 44);
+        resources.ApplyResources(label5, "label5");
         label5.Name = "label5";
-        label5.Size = new Size(30, 15);
-        label5.TabIndex = 10;
-        label5.Text = "DLC";
         // 
         // label6
         // 
-        label6.AutoSize = true;
-        label6.Location = new Point(252, 44);
+        resources.ApplyResources(label6, "label6");
         label6.Name = "label6";
-        label6.Size = new Size(55, 15);
-        label6.TabIndex = 11;
-        label6.Text = "Category";
         // 
         // comboBox2
         // 
+        resources.ApplyResources(comboBox2, "comboBox2");
         comboBox2.DropDownStyle = ComboBoxStyle.DropDownList;
         comboBox2.FormattingEnabled = true;
-        comboBox2.Location = new Point(313, 41);
         comboBox2.Name = "comboBox2";
-        comboBox2.Size = new Size(80, 23);
-        comboBox2.TabIndex = 12;
         comboBox2.SelectedIndexChanged += comboBox2_SelectedIndexChanged;
+        // 
+        // nameColumn
+        // 
+        nameColumn.DataPropertyName = "Title";
+        resources.ApplyResources(nameColumn, "nameColumn");
+        nameColumn.Name = "nameColumn";
+        nameColumn.ReadOnly = true;
+        // 
+        // composerColumn
+        // 
+        composerColumn.DataPropertyName = "Composer";
+        resources.ApplyResources(composerColumn, "composerColumn");
+        composerColumn.Name = "composerColumn";
+        composerColumn.ReadOnly = true;
+        // 
+        // solarQuasarColumn
+        // 
+        solarQuasarColumn.DataPropertyName = "SolarQuasar";
+        resources.ApplyResources(solarQuasarColumn, "solarQuasarColumn");
+        solarQuasarColumn.Name = "solarQuasarColumn";
+        solarQuasarColumn.ReadOnly = true;
+        // 
+        // lunarQuasarColumn
+        // 
+        lunarQuasarColumn.DataPropertyName = "LunarQuasar";
+        resources.ApplyResources(lunarQuasarColumn, "lunarQuasarColumn");
+        lunarQuasarColumn.Name = "lunarQuasarColumn";
+        lunarQuasarColumn.ReadOnly = true;
+        // 
+        // dlcColumn
+        // 
+        dlcColumn.DataPropertyName = "DlcName";
+        resources.ApplyResources(dlcColumn, "dlcColumn");
+        dlcColumn.Name = "dlcColumn";
+        dlcColumn.ReadOnly = true;
+        // 
+        // categoryColumn
+        // 
+        categoryColumn.DataPropertyName = "Category";
+        resources.ApplyResources(categoryColumn, "categoryColumn");
+        categoryColumn.Name = "categoryColumn";
+        categoryColumn.ReadOnly = true;
         // 
         // FormMain
         // 
-        AutoScaleDimensions = new SizeF(7F, 15F);
+        resources.ApplyResources(this, "$this");
         AutoScaleMode = AutoScaleMode.Font;
-        ClientSize = new Size(784, 761);
         Controls.Add(comboBox2);
         Controls.Add(label6);
         Controls.Add(label5);
@@ -233,7 +184,6 @@ partial class FormMain {
         Controls.Add(button1);
         Controls.Add(label1);
         Name = "FormMain";
-        StartPosition = FormStartPosition.CenterScreen;
         ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
         ResumeLayout(false);
         PerformLayout();

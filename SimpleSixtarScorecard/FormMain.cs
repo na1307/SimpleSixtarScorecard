@@ -1,4 +1,6 @@
-﻿namespace SimpleSixtarScorecard;
+﻿using static SimpleSixtarScorecard.Properties.Strings;
+
+namespace SimpleSixtarScorecard;
 
 public partial class FormMain : Form {
     private SortableBindingList<Song> songs = new(Song.SongList);
@@ -7,16 +9,16 @@ public partial class FormMain : Form {
 
     public FormMain() {
         InitializeComponent();
-        label1.Text = Profile.Instance.UserName;
+        label1.Text = string.Format(UserName, Profile.Instance.UserName);
 
         // Song data
         dataGridView1.AutoGenerateColumns = false;
         dataGridView1.DataSource = songs;
-        label2.Text = songs.Count.ToString() + " songs";
+        label2.Text = string.Format(Songs, songs.Count);
 
         // ComboBoxes
-        comboBox1.DataSource = ((string[])(["All"])).Concat(Enum.GetValues<Dlc>().Select(dlc => dlc.ToName())).ToArray();
-        comboBox2.DataSource = ((string[])(["All"])).Concat(Enum.GetValues<Category>().Select(category => category.ToString())).ToArray();
+        comboBox1.DataSource = ((string[])([All])).Concat(Enum.GetValues<Dlc>().Select(dlc => dlc.ToName())).ToArray();
+        comboBox2.DataSource = ((string[])([All])).Concat(Enum.GetValues<Category>().Select(category => category.ToString())).ToArray();
     }
 
     private void button1_Click(object sender, EventArgs e) {
@@ -25,7 +27,7 @@ public partial class FormMain : Form {
 
         if (dialog.ShowDialog() == DialogResult.OK) {
             Profile.Instance.UserName = dialog.UserName.Trim();
-            label1.Text = Profile.Instance.UserName;
+            label1.Text = string.Format(UserName, Profile.Instance.UserName);
         }
     }
 
@@ -69,7 +71,7 @@ public partial class FormMain : Form {
 
         songs = new(tmpSongs);
         dataGridView1.DataSource = songs;
-        label2.Text = songs.Count.ToString() + " songs";
+        label2.Text = string.Format(Songs, songs.Count);
 
         bool enumTest(Song song) {
             if (dlc == 0 && category == 0) {
