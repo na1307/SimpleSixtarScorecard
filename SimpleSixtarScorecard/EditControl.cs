@@ -73,7 +73,7 @@ public partial class EditControl : UserControl {
                     };
 
                     // Score
-                    button.Text += $"{Environment.NewLine}{result.Score}({rank}){(result.FullCombo ? ", FC" : string.Empty)}";
+                    button.Text += $"{Environment.NewLine}{result.Score} ({rank}){(result.FullCombo ? ", FC" : string.Empty)}";
                 }
             } else {
                 // Disable button if there's no chart
@@ -181,7 +181,7 @@ public partial class EditControl : UserControl {
     private void textBoxScore_Leave(object sender, EventArgs e) {
         // Score must be a numeric value between 0 and 1,000,000 to be accepted; otherwise throw an error
         if (!(int.TryParse(textBoxScore.Text, out var number) && (number is >= 0 and <= 1000000))) {
-            MessageBox.Show("Input score is invalid!");
+            MessageBox.Show(Properties.Strings.InputScoreIsInvalid);
             textBoxScore.Focus();
         }
     }

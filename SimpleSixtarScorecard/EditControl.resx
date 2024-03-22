@@ -117,4 +117,439 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="textBoxScore.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 23</value>
+  </data>
+  <data name="&gt;&gt;label3.Name" xml:space="preserve">
+    <value>label3</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="label3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;radioButtonSQuasar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="radioButtonSQuasar.Text" xml:space="preserve">
+    <value>Quasar</value>
+  </data>
+  <data name="textBoxScore.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="groupBoxSolar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>754, 78</value>
+  </data>
+  <data name="&gt;&gt;textBoxScore.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="radioButtonSQuasar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>462, 22</value>
+  </data>
+  <data name="&gt;&gt;radioButtonLNova.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="button1.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>Score: </value>
+  </data>
+  <data name="&gt;&gt;radioButtonSQuasar.Name" xml:space="preserve">
+    <value>radioButtonSQuasar</value>
+  </data>
+  <data name="&gt;&gt;groupBoxLunar.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>44, 15</value>
+  </data>
+  <data name="&gt;&gt;radioButtonLQuasar.Name" xml:space="preserve">
+    <value>radioButtonLQuasar</value>
+  </data>
+  <data name="&gt;&gt;textBoxScore.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;radioButtonSSuperNova.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="radioButtonSStarlight.Text" xml:space="preserve">
+    <value>Starlight</value>
+  </data>
+  <data name="checkBoxFullCombo.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.UserControl, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBoxScore.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="radioButtonLNova.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="radioButtonLComet.Text" xml:space="preserve">
+    <value>Comet</value>
+  </data>
+  <data name="&gt;&gt;radioButtonLSuperNova.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;groupBoxSolar.Name" xml:space="preserve">
+    <value>groupBoxSolar</value>
+  </data>
+  <data name="radioButtonSSuperNova.Size" type="System.Drawing.Size, System.Drawing">
+    <value>140, 50</value>
+  </data>
+  <data name="radioButtonLNova.Size" type="System.Drawing.Size, System.Drawing">
+    <value>140, 50</value>
+  </data>
+  <data name="&gt;&gt;button1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;checkBoxFullCombo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="radioButtonSQuasar.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;radioButtonSNova.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="groupBoxLunar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>754, 78</value>
+  </data>
+  <data name="&gt;&gt;groupBoxSolar.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;radioButtonLNova.Parent" xml:space="preserve">
+    <value>groupBoxLunar</value>
+  </data>
+  <data name="radioButtonSNova.Text" xml:space="preserve">
+    <value>Nova</value>
+  </data>
+  <data name="&gt;&gt;radioButtonSQuasar.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="label3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left, Right</value>
+  </data>
+  <data name="radioButtonLSuperNova.Text" xml:space="preserve">
+    <value>Supernova</value>
+  </data>
+  <data name="&gt;&gt;radioButtonLStarlight.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="button1.Text" xml:space="preserve">
+    <value>Apply</value>
+  </data>
+  <data name="&gt;&gt;radioButtonSStarlight.Parent" xml:space="preserve">
+    <value>groupBoxSolar</value>
+  </data>
+  <data name="&gt;&gt;groupBoxLunar.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="radioButtonLQuasar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>140, 50</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>7, 15</value>
+  </data>
+  <data name="&gt;&gt;radioButtonLQuasar.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="groupBoxLunar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 87</value>
+  </data>
+  <data name="&gt;&gt;radioButtonSSuperNova.Parent" xml:space="preserve">
+    <value>groupBoxSolar</value>
+  </data>
+  <data name="&gt;&gt;radioButtonLSuperNova.Parent" xml:space="preserve">
+    <value>groupBoxLunar</value>
+  </data>
+  <data name="radioButtonLStarlight.Text" xml:space="preserve">
+    <value>Starlight</value>
+  </data>
+  <data name="radioButtonSNova.Size" type="System.Drawing.Size, System.Drawing">
+    <value>140, 50</value>
+  </data>
+  <data name="&gt;&gt;radioButtonSNova.Parent" xml:space="preserve">
+    <value>groupBoxSolar</value>
+  </data>
+  <data name="&gt;&gt;radioButtonSSuperNova.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="radioButtonLNova.Location" type="System.Drawing.Point, System.Drawing">
+    <value>170, 22</value>
+  </data>
+  <data name="&gt;&gt;radioButtonSComet.Parent" xml:space="preserve">
+    <value>groupBoxSolar</value>
+  </data>
+  <data name="radioButtonSComet.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="textBoxScore.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;groupBoxSolar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label3.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;button1.Name" xml:space="preserve">
+    <value>button1</value>
+  </data>
+  <data name="&gt;&gt;radioButtonSSuperNova.Name" xml:space="preserve">
+    <value>radioButtonSSuperNova</value>
+  </data>
+  <data name="&gt;&gt;button1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="label3.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="radioButtonLQuasar.Text" xml:space="preserve">
+    <value>Quasar</value>
+  </data>
+  <data name="&gt;&gt;radioButtonLComet.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;radioButtonLComet.Name" xml:space="preserve">
+    <value>radioButtonLComet</value>
+  </data>
+  <data name="radioButtonLSuperNova.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;radioButtonLComet.Parent" xml:space="preserve">
+    <value>groupBoxLunar</value>
+  </data>
+  <data name="button1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>682, 222</value>
+  </data>
+  <data name="&gt;&gt;groupBoxSolar.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="button1.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="radioButtonSNova.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;radioButtonSQuasar.Parent" xml:space="preserve">
+    <value>groupBoxSolar</value>
+  </data>
+  <data name="radioButtonLNova.Text" xml:space="preserve">
+    <value>Nova</value>
+  </data>
+  <data name="button1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 25</value>
+  </data>
+  <data name="checkBoxFullCombo.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>EditControl</value>
+  </data>
+  <data name="&gt;&gt;checkBoxFullCombo.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;radioButtonLSuperNova.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="button1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="&gt;&gt;radioButtonSNova.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="checkBoxFullCombo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>89, 19</value>
+  </data>
+  <data name="&gt;&gt;radioButtonSComet.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="checkBoxFullCombo.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;checkBoxFullCombo.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="radioButtonSComet.Size" type="System.Drawing.Size, System.Drawing">
+    <value>140, 50</value>
+  </data>
+  <data name="textBoxScore.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left, Right</value>
+  </data>
+  <data name="textBoxScore.Location" type="System.Drawing.Point, System.Drawing">
+    <value>310, 171</value>
+  </data>
+  <data name="radioButtonSQuasar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>140, 50</value>
+  </data>
+  <data name="&gt;&gt;radioButtonSStarlight.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;radioButtonLQuasar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;radioButtonSStarlight.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;textBoxScore.Name" xml:space="preserve">
+    <value>textBoxScore</value>
+  </data>
+  <data name="radioButtonLQuasar.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;label3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="radioButtonLComet.Location" type="System.Drawing.Point, System.Drawing">
+    <value>24, 22</value>
+  </data>
+  <data name="radioButtonLComet.Size" type="System.Drawing.Size, System.Drawing">
+    <value>140, 50</value>
+  </data>
+  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>260, 174</value>
+  </data>
+  <data name="&gt;&gt;radioButtonSComet.Name" xml:space="preserve">
+    <value>radioButtonSComet</value>
+  </data>
+  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="radioButtonLStarlight.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="groupBoxLunar.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="&gt;&gt;button1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="radioButtonLComet.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;radioButtonLQuasar.Parent" xml:space="preserve">
+    <value>groupBoxLunar</value>
+  </data>
+  <data name="radioButtonSNova.Location" type="System.Drawing.Point, System.Drawing">
+    <value>170, 22</value>
+  </data>
+  <data name="radioButtonSStarlight.Size" type="System.Drawing.Size, System.Drawing">
+    <value>140, 50</value>
+  </data>
+  <data name="groupBoxSolar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="checkBoxFullCombo.Text" xml:space="preserve">
+    <value>Full Combo</value>
+  </data>
+  <data name="radioButtonSSuperNova.Text" xml:space="preserve">
+    <value>Supernova</value>
+  </data>
+  <data name="radioButtonLStarlight.Size" type="System.Drawing.Size, System.Drawing">
+    <value>140, 50</value>
+  </data>
+  <data name="checkBoxFullCombo.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left, Right</value>
+  </data>
+  <data name="&gt;&gt;radioButtonLNova.Name" xml:space="preserve">
+    <value>radioButtonLNova</value>
+  </data>
+  <data name="radioButtonSStarlight.Location" type="System.Drawing.Point, System.Drawing">
+    <value>608, 22</value>
+  </data>
+  <data name="radioButtonLSuperNova.Size" type="System.Drawing.Size, System.Drawing">
+    <value>140, 50</value>
+  </data>
+  <data name="radioButtonSComet.Text" xml:space="preserve">
+    <value>Comet</value>
+  </data>
+  <data name="&gt;&gt;radioButtonLSuperNova.Name" xml:space="preserve">
+    <value>radioButtonLSuperNova</value>
+  </data>
+  <data name="radioButtonLStarlight.Location" type="System.Drawing.Point, System.Drawing">
+    <value>608, 22</value>
+  </data>
+  <data name="groupBoxLunar.Text" xml:space="preserve">
+    <value>Lunar Mode</value>
+  </data>
+  <data name="&gt;&gt;radioButtonLStarlight.Parent" xml:space="preserve">
+    <value>groupBoxLunar</value>
+  </data>
+  <data name="radioButtonSSuperNova.Location" type="System.Drawing.Point, System.Drawing">
+    <value>316, 22</value>
+  </data>
+  <data name="&gt;&gt;radioButtonSStarlight.Name" xml:space="preserve">
+    <value>radioButtonSStarlight</value>
+  </data>
+  <data name="checkBoxFullCombo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>416, 173</value>
+  </data>
+  <data name="&gt;&gt;groupBoxLunar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="groupBoxSolar.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="groupBoxSolar.Text" xml:space="preserve">
+    <value>Solar Mode</value>
+  </data>
+  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
+    <value>760, 250</value>
+  </data>
+  <data name="&gt;&gt;radioButtonLComet.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;radioButtonLStarlight.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBoxLunar.Name" xml:space="preserve">
+    <value>groupBoxLunar</value>
+  </data>
+  <data name="&gt;&gt;radioButtonSNova.Name" xml:space="preserve">
+    <value>radioButtonSNova</value>
+  </data>
+  <data name="&gt;&gt;radioButtonLNova.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="radioButtonLQuasar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>462, 22</value>
+  </data>
+  <data name="&gt;&gt;radioButtonSComet.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;radioButtonLStarlight.Name" xml:space="preserve">
+    <value>radioButtonLStarlight</value>
+  </data>
+  <data name="groupBoxLunar.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;checkBoxFullCombo.Name" xml:space="preserve">
+    <value>checkBoxFullCombo</value>
+  </data>
+  <data name="groupBoxSolar.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="radioButtonSStarlight.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="radioButtonLSuperNova.Location" type="System.Drawing.Point, System.Drawing">
+    <value>316, 22</value>
+  </data>
+  <data name="radioButtonSComet.Location" type="System.Drawing.Point, System.Drawing">
+    <value>24, 22</value>
+  </data>
+  <data name="radioButtonSSuperNova.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
 </root>

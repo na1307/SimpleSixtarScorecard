@@ -140,5 +140,14 @@ namespace SimpleSixtarScorecard.Properties {
                 return ResourceManager.GetString("DlcYomohasPlanet", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Input score is invalid!과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string InputScoreIsInvalid {
+            get {
+                return ResourceManager.GetString("InputScoreIsInvalid", resourceCulture);
+            }
+        }
     }
 }
