@@ -1,7 +1,7 @@
 ﻿namespace SimpleSixtarScorecard;
 
 public enum Category {
-    Original,
+    Original = 1,
     Variety,
     Remix,
     Touhou,
