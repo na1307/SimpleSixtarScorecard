@@ -61,6 +61,15 @@ namespace SimpleSixtarScorecard.Properties {
         }
         
         /// <summary>
+        ///   All과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string All {
+            get {
+                return ResourceManager.GetString("All", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Base game과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string DlcBase {
@@ -147,6 +156,24 @@ namespace SimpleSixtarScorecard.Properties {
         internal static string InputScoreIsInvalid {
             get {
                 return ResourceManager.GetString("InputScoreIsInvalid", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   {0} songs과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string Songs {
+            get {
+                return ResourceManager.GetString("Songs", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   {0}과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string UserName {
+            get {
+                return ResourceManager.GetString("UserName", resourceCulture);
             }
         }
         
