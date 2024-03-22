@@ -11,14 +11,14 @@ public partial class EditControl : UserControl {
         // Solar
         initialString[radioButtonSComet] = radioButtonSComet.Text;
         initialString[radioButtonSNova] = radioButtonSNova.Text;
-        initialString[radioButtonSSuperNova] = radioButtonSSuperNova.Text;
+        initialString[radioButtonSSupernova] = radioButtonSSupernova.Text;
         initialString[radioButtonSQuasar] = radioButtonSQuasar.Text;
         initialString[radioButtonSStarlight] = radioButtonSStarlight.Text;
 
         // Lunar
         initialString[radioButtonLComet] = radioButtonLComet.Text;
         initialString[radioButtonLNova] = radioButtonLNova.Text;
-        initialString[radioButtonLSuperNova] = radioButtonLSuperNova.Text;
+        initialString[radioButtonLSupernova] = radioButtonLSupernova.Text;
         initialString[radioButtonLQuasar] = radioButtonLQuasar.Text;
         initialString[radioButtonLStarlight] = radioButtonLStarlight.Text;
 
@@ -38,14 +38,14 @@ public partial class EditControl : UserControl {
         // Solar
         set(radioButtonSComet, Mode.Solar, Difficulty.Comet);
         set(radioButtonSNova, Mode.Solar, Difficulty.Nova);
-        set(radioButtonSSuperNova, Mode.Solar, Difficulty.SuperNova);
+        set(radioButtonSSupernova, Mode.Solar, Difficulty.Supernova);
         set(radioButtonSQuasar, Mode.Solar, Difficulty.Quasar);
         set(radioButtonSStarlight, Mode.Solar, Difficulty.Starlight);
 
         // Lunar
         set(radioButtonLComet, Mode.Lunar, Difficulty.Comet);
         set(radioButtonLNova, Mode.Lunar, Difficulty.Nova);
-        set(radioButtonLSuperNova, Mode.Lunar, Difficulty.SuperNova);
+        set(radioButtonLSupernova, Mode.Lunar, Difficulty.Supernova);
         set(radioButtonLQuasar, Mode.Lunar, Difficulty.Quasar);
         set(radioButtonLStarlight, Mode.Lunar, Difficulty.Starlight);
 
@@ -90,7 +90,7 @@ public partial class EditControl : UserControl {
                 return difficulty switch {
                     Difficulty.Comet => diffObj.Comet,
                     Difficulty.Nova => diffObj.Nova,
-                    Difficulty.SuperNova => diffObj.SuperNova,
+                    Difficulty.Supernova => diffObj.Supernova,
                     Difficulty.Quasar => diffObj.Quasar,
                     Difficulty.Starlight => diffObj.Starlight,
                     _ => throw new NotImplementedException(),
@@ -133,8 +133,8 @@ public partial class EditControl : UserControl {
             return (Mode.Solar, Difficulty.Comet);
         } else if (radioButtonSNova.Checked) {
             return (Mode.Solar, Difficulty.Nova);
-        } else if (radioButtonSSuperNova.Checked) {
-            return (Mode.Solar, Difficulty.SuperNova);
+        } else if (radioButtonSSupernova.Checked) {
+            return (Mode.Solar, Difficulty.Supernova);
         } else if (radioButtonSQuasar.Checked) {
             return (Mode.Solar, Difficulty.Quasar);
         } else if (radioButtonSStarlight.Checked) {
@@ -143,8 +143,8 @@ public partial class EditControl : UserControl {
             return (Mode.Lunar, Difficulty.Comet);
         } else if (radioButtonLNova.Checked) {
             return (Mode.Lunar, Difficulty.Nova);
-        } else if (radioButtonLSuperNova.Checked) {
-            return (Mode.Lunar, Difficulty.SuperNova);
+        } else if (radioButtonLSupernova.Checked) {
+            return (Mode.Lunar, Difficulty.Supernova);
         } else if (radioButtonLQuasar.Checked) {
             return (Mode.Lunar, Difficulty.Quasar);
         } else if (radioButtonLStarlight.Checked) {

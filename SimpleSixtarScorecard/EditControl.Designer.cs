@@ -28,12 +28,12 @@ partial class EditControl {
         groupBoxSolar = new GroupBox();
         radioButtonSStarlight = new RadioButton();
         radioButtonSQuasar = new RadioButton();
-        radioButtonSSuperNova = new RadioButton();
+        radioButtonSSupernova = new RadioButton();
         radioButtonSNova = new RadioButton();
         radioButtonSComet = new RadioButton();
         radioButtonLComet = new RadioButton();
         radioButtonLNova = new RadioButton();
-        radioButtonLSuperNova = new RadioButton();
+        radioButtonLSupernova = new RadioButton();
         radioButtonLQuasar = new RadioButton();
         radioButtonLStarlight = new RadioButton();
         groupBoxLunar = new GroupBox();
@@ -50,7 +50,7 @@ partial class EditControl {
         resources.ApplyResources(groupBoxSolar, "groupBoxSolar");
         groupBoxSolar.Controls.Add(radioButtonSStarlight);
         groupBoxSolar.Controls.Add(radioButtonSQuasar);
-        groupBoxSolar.Controls.Add(radioButtonSSuperNova);
+        groupBoxSolar.Controls.Add(radioButtonSSupernova);
         groupBoxSolar.Controls.Add(radioButtonSNova);
         groupBoxSolar.Controls.Add(radioButtonSComet);
         groupBoxSolar.Name = "groupBoxSolar";
@@ -68,11 +68,11 @@ partial class EditControl {
         radioButtonSQuasar.Name = "radioButtonSQuasar";
         radioButtonSQuasar.UseVisualStyleBackColor = true;
         // 
-        // radioButtonSSuperNova
+        // radioButtonSSupernova
         // 
-        resources.ApplyResources(radioButtonSSuperNova, "radioButtonSSuperNova");
-        radioButtonSSuperNova.Name = "radioButtonSSuperNova";
-        radioButtonSSuperNova.UseVisualStyleBackColor = true;
+        resources.ApplyResources(radioButtonSSupernova, "radioButtonSSupernova");
+        radioButtonSSupernova.Name = "radioButtonSSupernova";
+        radioButtonSSupernova.UseVisualStyleBackColor = true;
         // 
         // radioButtonSNova
         // 
@@ -98,11 +98,11 @@ partial class EditControl {
         radioButtonLNova.Name = "radioButtonLNova";
         radioButtonLNova.UseVisualStyleBackColor = true;
         // 
-        // radioButtonLSuperNova
+        // radioButtonLSupernova
         // 
-        resources.ApplyResources(radioButtonLSuperNova, "radioButtonLSuperNova");
-        radioButtonLSuperNova.Name = "radioButtonLSuperNova";
-        radioButtonLSuperNova.UseVisualStyleBackColor = true;
+        resources.ApplyResources(radioButtonLSupernova, "radioButtonLSupernova");
+        radioButtonLSupernova.Name = "radioButtonLSupernova";
+        radioButtonLSupernova.UseVisualStyleBackColor = true;
         // 
         // radioButtonLQuasar
         // 
@@ -121,7 +121,7 @@ partial class EditControl {
         resources.ApplyResources(groupBoxLunar, "groupBoxLunar");
         groupBoxLunar.Controls.Add(radioButtonLStarlight);
         groupBoxLunar.Controls.Add(radioButtonLQuasar);
-        groupBoxLunar.Controls.Add(radioButtonLSuperNova);
+        groupBoxLunar.Controls.Add(radioButtonLSupernova);
         groupBoxLunar.Controls.Add(radioButtonLNova);
         groupBoxLunar.Controls.Add(radioButtonLComet);
         groupBoxLunar.Name = "groupBoxLunar";
@@ -174,10 +174,10 @@ partial class EditControl {
     private RadioButton radioButtonSComet;
     private RadioButton radioButtonSStarlight;
     private RadioButton radioButtonSQuasar;
-    private RadioButton radioButtonSSuperNova;
+    private RadioButton radioButtonSSupernova;
     private RadioButton radioButtonLComet;
     private RadioButton radioButtonLNova;
-    private RadioButton radioButtonLSuperNova;
+    private RadioButton radioButtonLSupernova;
     private RadioButton radioButtonLQuasar;
     private RadioButton radioButtonLStarlight;
     private GroupBox groupBoxLunar;
