@@ -2,17 +2,17 @@
 
 public static class DlcExtensions {
     public static string ToName(this Dlc dlc) {
-        // Dlc 열거형의 DLC 이름을 반환함
+        // Returns the DLC name from the Dlc value.
         return dlc switch {
-            Dlc.Base => "본편",
+            Dlc.Base => "Base game",
             Dlc.FlowerAndDestiny => "Flower & Destiny",
-            Dlc.Touhou01 => "동방 프로젝트 팩 01",
+            Dlc.Touhou01 => "Touhou Project Pack 01",
             Dlc.LuminousAndDarkness => "Luminous & Darkness",
-            Dlc.Pocotone => "포코톤",
+            Dlc.Pocotone => "POCOTONE",
             Dlc.YomohasPlanet => "Yomoha's Planet",
             Dlc.Wacca => "WACCA",
-            Dlc.Oshiribeat => "오시리비트",
-            Dlc.Dystopia => "디스토피아",
+            Dlc.Oshiribeat => "Oshiribeat",
+            Dlc.Dystopia => "Dystopia",
             _ => throw new NotImplementedException(),
         };
     }

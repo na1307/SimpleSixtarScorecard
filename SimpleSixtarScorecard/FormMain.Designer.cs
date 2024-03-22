@@ -62,7 +62,7 @@ partial class FormMain {
         button1.Name = "button1";
         button1.Size = new Size(150, 25);
         button1.TabIndex = 1;
-        button1.Text = "사용자 이름 바꾸기";
+        button1.Text = "Change Username";
         button1.UseVisualStyleBackColor = true;
         button1.Click += button1_Click;
         // 
@@ -87,7 +87,7 @@ partial class FormMain {
         // nameColumn
         // 
         nameColumn.DataPropertyName = "Title";
-        nameColumn.HeaderText = "제목";
+        nameColumn.HeaderText = "Title";
         nameColumn.Name = "nameColumn";
         nameColumn.ReadOnly = true;
         nameColumn.Width = 220;
@@ -95,7 +95,7 @@ partial class FormMain {
         // composerColumn
         // 
         composerColumn.DataPropertyName = "Composer";
-        composerColumn.HeaderText = "작곡가";
+        composerColumn.HeaderText = "Composer";
         composerColumn.Name = "composerColumn";
         composerColumn.ReadOnly = true;
         composerColumn.Width = 220;
@@ -103,7 +103,7 @@ partial class FormMain {
         // solarQuasarColumn
         // 
         solarQuasarColumn.DataPropertyName = "SolarQuasar";
-        solarQuasarColumn.HeaderText = "솔라 퀘이사 난이도";
+        solarQuasarColumn.HeaderText = "Solar Quasar";
         solarQuasarColumn.Name = "solarQuasarColumn";
         solarQuasarColumn.ReadOnly = true;
         solarQuasarColumn.Width = 140;
@@ -111,7 +111,7 @@ partial class FormMain {
         // lunarQuasarColumn
         // 
         lunarQuasarColumn.DataPropertyName = "LunarQuasar";
-        lunarQuasarColumn.HeaderText = "루나 퀘이사 난이도";
+        lunarQuasarColumn.HeaderText = "Lunar Quasar";
         lunarQuasarColumn.Name = "lunarQuasarColumn";
         lunarQuasarColumn.ReadOnly = true;
         lunarQuasarColumn.Width = 140;
@@ -127,7 +127,7 @@ partial class FormMain {
         // categoryColumn
         // 
         categoryColumn.DataPropertyName = "Category";
-        categoryColumn.HeaderText = "카테고리";
+        categoryColumn.HeaderText = "Category";
         categoryColumn.Name = "categoryColumn";
         categoryColumn.ReadOnly = true;
         categoryColumn.Width = 80;
@@ -152,9 +152,9 @@ partial class FormMain {
         // textBox1
         // 
         textBox1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-        textBox1.Location = new Point(431, 40);
+        textBox1.Location = new Point(451, 40);
         textBox1.Name = "textBox1";
-        textBox1.Size = new Size(260, 23);
+        textBox1.Size = new Size(240, 23);
         textBox1.TabIndex = 6;
         textBox1.TextChanged += textBox1_TextChanged;
         // 
@@ -162,20 +162,20 @@ partial class FormMain {
         // 
         label3.Anchor = AnchorStyles.Top | AnchorStyles.Right;
         label3.AutoSize = true;
-        label3.Location = new Point(391, 44);
+        label3.Location = new Point(399, 44);
         label3.Name = "label3";
-        label3.Size = new Size(34, 15);
+        label3.Size = new Size(46, 15);
         label3.TabIndex = 7;
-        label3.Text = "검색:";
+        label3.Text = "Search:";
         // 
         // label4
         // 
         label4.AutoSize = true;
         label4.Location = new Point(12, 44);
         label4.Name = "label4";
-        label4.Size = new Size(34, 15);
+        label4.Size = new Size(36, 15);
         label4.TabIndex = 8;
-        label4.Text = "필터:";
+        label4.Text = "Filter:";
         // 
         // comboBox1
         // 
@@ -183,7 +183,7 @@ partial class FormMain {
         comboBox1.FormattingEnabled = true;
         comboBox1.Location = new Point(88, 41);
         comboBox1.Name = "comboBox1";
-        comboBox1.Size = new Size(150, 23);
+        comboBox1.Size = new Size(160, 23);
         comboBox1.TabIndex = 9;
         comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
         // 
@@ -199,17 +199,17 @@ partial class FormMain {
         // label6
         // 
         label6.AutoSize = true;
-        label6.Location = new Point(244, 44);
+        label6.Location = new Point(252, 44);
         label6.Name = "label6";
         label6.Size = new Size(55, 15);
         label6.TabIndex = 11;
-        label6.Text = "카테고리";
+        label6.Text = "Category";
         // 
         // comboBox2
         // 
         comboBox2.DropDownStyle = ComboBoxStyle.DropDownList;
         comboBox2.FormattingEnabled = true;
-        comboBox2.Location = new Point(305, 41);
+        comboBox2.Location = new Point(313, 41);
         comboBox2.Name = "comboBox2";
         comboBox2.Size = new Size(80, 23);
         comboBox2.TabIndex = 12;
@@ -248,15 +248,15 @@ partial class FormMain {
     private Panel panel1;
     private TextBox textBox1;
     private Label label3;
+    private Label label4;
+    private ComboBox comboBox1;
+    private Label label5;
+    private Label label6;
+    private ComboBox comboBox2;
     private DataGridViewTextBoxColumn nameColumn;
     private DataGridViewTextBoxColumn composerColumn;
     private DataGridViewTextBoxColumn solarQuasarColumn;
     private DataGridViewTextBoxColumn lunarQuasarColumn;
     private DataGridViewTextBoxColumn dlcColumn;
     private DataGridViewTextBoxColumn categoryColumn;
-    private Label label4;
-    private ComboBox comboBox1;
-    private Label label5;
-    private Label label6;
-    private ComboBox comboBox2;
 }

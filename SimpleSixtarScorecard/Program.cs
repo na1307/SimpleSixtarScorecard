@@ -14,7 +14,7 @@ internal static class Program {
         // see https://aka.ms/applicationconfiguration.
         ApplicationConfiguration.Initialize();
 
-        // songdata.json 검증
+        // Verify songdata.json
         using (var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("SimpleSixtarScorecard.songdata.schema.json")) {
             if (stream == null) {
                 ErrMsg("schema not found!");
@@ -30,7 +30,7 @@ internal static class Program {
             }
         }
 
-        // 프로필 생성 과정
+        // Profile creation
         if (!File.Exists(Profile.ProfileFile)) {
             using ProfileNameDialog dialog = new(true);
 
@@ -48,7 +48,7 @@ internal static class Program {
             }
         }
 
-        // 종료될 때 프로필 저장
+        // Save profile when exited
         Application.ApplicationExit += Application_ApplicationExit;
 
         Application.Run(new FormMain());

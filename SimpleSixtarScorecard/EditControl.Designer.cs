@@ -57,7 +57,7 @@ partial class EditControl {
         groupBoxSolar.Size = new Size(754, 78);
         groupBoxSolar.TabIndex = 3;
         groupBoxSolar.TabStop = false;
-        groupBoxSolar.Text = "솔라 모드";
+        groupBoxSolar.Text = "Solar Mode";
         // 
         // radioButtonSStarlight
         // 
@@ -65,7 +65,7 @@ partial class EditControl {
         radioButtonSStarlight.Name = "radioButtonSStarlight";
         radioButtonSStarlight.Size = new Size(140, 50);
         radioButtonSStarlight.TabIndex = 4;
-        radioButtonSStarlight.Text = "스타라이트";
+        radioButtonSStarlight.Text = "Starlight";
         radioButtonSStarlight.UseVisualStyleBackColor = true;
         // 
         // radioButtonSQuasar
@@ -74,7 +74,7 @@ partial class EditControl {
         radioButtonSQuasar.Name = "radioButtonSQuasar";
         radioButtonSQuasar.Size = new Size(140, 50);
         radioButtonSQuasar.TabIndex = 3;
-        radioButtonSQuasar.Text = "퀘이사";
+        radioButtonSQuasar.Text = "Quasar";
         radioButtonSQuasar.UseVisualStyleBackColor = true;
         // 
         // radioButtonSSuperNova
@@ -83,7 +83,7 @@ partial class EditControl {
         radioButtonSSuperNova.Name = "radioButtonSSuperNova";
         radioButtonSSuperNova.Size = new Size(140, 50);
         radioButtonSSuperNova.TabIndex = 2;
-        radioButtonSSuperNova.Text = "슈퍼노바";
+        radioButtonSSuperNova.Text = "Supernova";
         radioButtonSSuperNova.UseVisualStyleBackColor = true;
         // 
         // radioButtonSNova
@@ -92,7 +92,7 @@ partial class EditControl {
         radioButtonSNova.Name = "radioButtonSNova";
         radioButtonSNova.Size = new Size(140, 50);
         radioButtonSNova.TabIndex = 1;
-        radioButtonSNova.Text = "노바";
+        radioButtonSNova.Text = "Nova";
         radioButtonSNova.UseVisualStyleBackColor = true;
         // 
         // radioButtonSComet
@@ -101,7 +101,7 @@ partial class EditControl {
         radioButtonSComet.Name = "radioButtonSComet";
         radioButtonSComet.Size = new Size(140, 50);
         radioButtonSComet.TabIndex = 0;
-        radioButtonSComet.Text = "코멧";
+        radioButtonSComet.Text = "Comet";
         radioButtonSComet.UseVisualStyleBackColor = true;
         // 
         // radioButtonLComet
@@ -110,7 +110,7 @@ partial class EditControl {
         radioButtonLComet.Name = "radioButtonLComet";
         radioButtonLComet.Size = new Size(140, 50);
         radioButtonLComet.TabIndex = 0;
-        radioButtonLComet.Text = "코멧";
+        radioButtonLComet.Text = "Comet";
         radioButtonLComet.UseVisualStyleBackColor = true;
         // 
         // radioButtonLNova
@@ -119,7 +119,7 @@ partial class EditControl {
         radioButtonLNova.Name = "radioButtonLNova";
         radioButtonLNova.Size = new Size(140, 50);
         radioButtonLNova.TabIndex = 1;
-        radioButtonLNova.Text = "노바";
+        radioButtonLNova.Text = "Nova";
         radioButtonLNova.UseVisualStyleBackColor = true;
         // 
         // radioButtonLSuperNova
@@ -128,7 +128,7 @@ partial class EditControl {
         radioButtonLSuperNova.Name = "radioButtonLSuperNova";
         radioButtonLSuperNova.Size = new Size(140, 50);
         radioButtonLSuperNova.TabIndex = 2;
-        radioButtonLSuperNova.Text = "슈퍼노바";
+        radioButtonLSuperNova.Text = "Supernova";
         radioButtonLSuperNova.UseVisualStyleBackColor = true;
         // 
         // radioButtonLQuasar
@@ -137,7 +137,7 @@ partial class EditControl {
         radioButtonLQuasar.Name = "radioButtonLQuasar";
         radioButtonLQuasar.Size = new Size(140, 50);
         radioButtonLQuasar.TabIndex = 3;
-        radioButtonLQuasar.Text = "퀘이사";
+        radioButtonLQuasar.Text = "Quasar";
         radioButtonLQuasar.UseVisualStyleBackColor = true;
         // 
         // radioButtonLStarlight
@@ -146,7 +146,7 @@ partial class EditControl {
         radioButtonLStarlight.Name = "radioButtonLStarlight";
         radioButtonLStarlight.Size = new Size(140, 50);
         radioButtonLStarlight.TabIndex = 4;
-        radioButtonLStarlight.Text = "스타라이트";
+        radioButtonLStarlight.Text = "Starlight";
         radioButtonLStarlight.UseVisualStyleBackColor = true;
         // 
         // groupBoxLunar
@@ -162,18 +162,18 @@ partial class EditControl {
         groupBoxLunar.Size = new Size(754, 78);
         groupBoxLunar.TabIndex = 3;
         groupBoxLunar.TabStop = false;
-        groupBoxLunar.Text = "루나 모드";
+        groupBoxLunar.Text = "Lunar Mode";
         // 
         // label3
         // 
         label3.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
         label3.AutoSize = true;
         label3.Enabled = false;
-        label3.Location = new Point(266, 174);
+        label3.Location = new Point(260, 174);
         label3.Name = "label3";
-        label3.Size = new Size(38, 15);
+        label3.Size = new Size(44, 15);
         label3.TabIndex = 4;
-        label3.Text = "점수: ";
+        label3.Text = "Score: ";
         // 
         // textBoxScore
         // 
@@ -192,9 +192,9 @@ partial class EditControl {
         checkBoxFullCombo.Enabled = false;
         checkBoxFullCombo.Location = new Point(416, 173);
         checkBoxFullCombo.Name = "checkBoxFullCombo";
-        checkBoxFullCombo.Size = new Size(66, 19);
+        checkBoxFullCombo.Size = new Size(89, 19);
         checkBoxFullCombo.TabIndex = 6;
-        checkBoxFullCombo.Text = "풀 콤보";
+        checkBoxFullCombo.Text = "Full Combo";
         checkBoxFullCombo.UseVisualStyleBackColor = true;
         // 
         // button1
@@ -205,7 +205,7 @@ partial class EditControl {
         button1.Name = "button1";
         button1.Size = new Size(75, 25);
         button1.TabIndex = 7;
-        button1.Text = "적용";
+        button1.Text = "Apply";
         button1.UseVisualStyleBackColor = true;
         button1.Click += button1_Click;
         // 
