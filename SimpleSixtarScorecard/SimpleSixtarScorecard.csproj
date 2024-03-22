@@ -17,7 +17,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="JsonSchema.Net" Version="6.0.5" />
-    <PackageReference Include="Bluehill.Forms" Version="0.2.0" />
+    <PackageReference Include="Bluehill.Forms" Version="0.3.0" />
   </ItemGroup>
   <ItemGroup>
     <None Update="songdata.json">
