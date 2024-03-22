@@ -1,7 +1,7 @@
 ﻿namespace SimpleSixtarScorecard;
 
 public enum Dlc {
-    Base,
+    Base = 1,
     FlowerAndDestiny,
     Touhou01,
     LuminousAndDarkness,

@@ -88,8 +88,8 @@ public partial class FormMain : Form {
                 return dlcTest() && categoryTest();
             }
 
-            bool dlcTest() => song.Dlc == (Dlc)(dlc - 1);
-            bool categoryTest() => song.Category == (Category)(category - 1);
+            bool dlcTest() => song.Dlc == (Dlc)dlc;
+            bool categoryTest() => song.Category == (Category)category;
         }
     }
 }
