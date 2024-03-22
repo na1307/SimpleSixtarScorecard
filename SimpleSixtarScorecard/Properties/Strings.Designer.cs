@@ -149,5 +149,23 @@ namespace SimpleSixtarScorecard.Properties {
                 return ResourceManager.GetString("InputScoreIsInvalid", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   What&apos;s your name?과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string WhatsYourName {
+            get {
+                return ResourceManager.GetString("WhatsYourName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   You can always change it later.과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string YouCanAlways {
+            get {
+                return ResourceManager.GetString("YouCanAlways", resourceCulture);
+            }
+        }
     }
 }

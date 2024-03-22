@@ -24,34 +24,28 @@ partial class ProfileNameDialog {
     /// the contents of this method with the code editor.
     /// </summary>
     private void InitializeComponent() {
+        var resources = new System.ComponentModel.ComponentResourceManager(typeof(ProfileNameDialog));
         label1 = new Label();
         textBox1 = new TextBox();
         SuspendLayout();
         // 
         // label1
         // 
-        label1.AutoSize = true;
-        label1.Location = new Point(12, 9);
+        resources.ApplyResources(label1, "label1");
         label1.Name = "label1";
-        label1.Size = new Size(0, 15);
-        label1.TabIndex = 1;
         // 
         // textBox1
         // 
-        textBox1.Location = new Point(12, 57);
+        resources.ApplyResources(textBox1, "textBox1");
         textBox1.Name = "textBox1";
-        textBox1.Size = new Size(460, 23);
-        textBox1.TabIndex = 2;
         // 
         // ProfileNameDialog
         // 
-        AutoScaleDimensions = new SizeF(7F, 15F);
+        resources.ApplyResources(this, "$this");
         AutoScaleMode = AutoScaleMode.Font;
-        ClientSize = new Size(484, 111);
         Controls.Add(textBox1);
         Controls.Add(label1);
         Name = "ProfileNameDialog";
-        Text = "What's your name?";
         Controls.SetChildIndex(label1, 0);
         Controls.SetChildIndex(textBox1, 0);
         ResumeLayout(false);
