@@ -3,7 +3,7 @@
 public enum Difficulty {
     Comet,
     Nova,
-    SuperNova,
+    Supernova,
     Quasar,
     Starlight
 }
