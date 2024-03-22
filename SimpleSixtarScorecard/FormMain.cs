@@ -7,25 +7,25 @@ public partial class FormMain : Form {
 
     public FormMain() {
         InitializeComponent();
-        label1.Text = Profile.Instance.UserName + " 님";
+        label1.Text = Profile.Instance.UserName;
 
-        // 곡 데이터 가져오기
+        // Song data
         dataGridView1.AutoGenerateColumns = false;
         dataGridView1.DataSource = songs;
-        label2.Text = "총 " + songs.Count.ToString() + "곡";
+        label2.Text = songs.Count.ToString() + " songs";
 
-        // 콤보박스 설정
-        comboBox1.DataSource = ((string[])(["모두"])).Concat(Enum.GetValues<Dlc>().Select(dlc => dlc.ToName())).ToArray();
-        comboBox2.DataSource = ((string[])(["모두"])).Concat(Enum.GetValues<Category>().Select(category => category.ToString())).ToArray();
+        // ComboBoxes
+        comboBox1.DataSource = ((string[])(["All"])).Concat(Enum.GetValues<Dlc>().Select(dlc => dlc.ToName())).ToArray();
+        comboBox2.DataSource = ((string[])(["All"])).Concat(Enum.GetValues<Category>().Select(category => category.ToString())).ToArray();
     }
 
     private void button1_Click(object sender, EventArgs e) {
-        // 사용자 이름 바꾸기
+        // Change username
         using ProfileNameDialog dialog = new(false);
 
         if (dialog.ShowDialog() == DialogResult.OK) {
             Profile.Instance.UserName = dialog.UserName.Trim();
-            label1.Text = Profile.Instance.UserName + " 님";
+            label1.Text = Profile.Instance.UserName;
         }
     }
 
@@ -33,15 +33,15 @@ public partial class FormMain : Form {
         int index;
 
         try {
-            // 선택된 곡 인덱스
+            // Selected song index
             index = dataGridView1.SelectedRows[0].Index;
         } catch (ArgumentOutOfRangeException) {
-            // 선택된 곡이 없으면 비활성화
+            // Disable if no song is selected
             panel1.Visible = false;
             return;
         }
 
-        // 선택된 곡이 있으면 표시
+        // Shows if a song is selected
         panel1.Visible = true;
         panel1.Controls.Clear();
 
@@ -69,24 +69,23 @@ public partial class FormMain : Form {
 
         songs = new(tmpSongs);
         dataGridView1.DataSource = songs;
-        label2.Text = "총 " + songs.Count.ToString() + "곡";
+        label2.Text = songs.Count.ToString() + " songs";
 
         bool enumTest(Song song) {
             if (dlc == 0 && category == 0) {
-                // DLC와 카테고리가 둘 다 "모두"라면
+                // If DLC and Category are both "All"
                 return true;
             } else if (dlc != 0 && category == 0) {
-                // DLC가 지정되어 있으면
+                // If DLC is specified
                 return dlcTest();
             } else if (dlc == 0 && category != 0) {
-                // 카테고리가 지정되어 있으면
+                // If Category is specified
                 return categoryTest();
             } else {
-                // 둘 다 지정되어 있으면
+                // If both are specified
                 return dlcTest() && categoryTest();
             }
 
-            // 1을 빼는 이유: 열거형은 0부터 시작하는데 여기서는 0이 "모두"로 설정되어 있기 때문
             bool dlcTest() => song.Dlc == (Dlc)(dlc - 1);
             bool categoryTest() => song.Category == (Category)(category - 1);
         }

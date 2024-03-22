@@ -8,14 +8,14 @@ public partial class EditControl : UserControl {
         InitializeComponent();
         this.song = song;
 
-        // 솔라
+        // Solar
         initialString[radioButtonSComet] = radioButtonSComet.Text;
         initialString[radioButtonSNova] = radioButtonSNova.Text;
         initialString[radioButtonSSuperNova] = radioButtonSSuperNova.Text;
         initialString[radioButtonSQuasar] = radioButtonSQuasar.Text;
         initialString[radioButtonSStarlight] = radioButtonSStarlight.Text;
 
-        // 루나
+        // Lunar
         initialString[radioButtonLComet] = radioButtonLComet.Text;
         initialString[radioButtonLNova] = radioButtonLNova.Text;
         initialString[radioButtonLSuperNova] = radioButtonLSuperNova.Text;
@@ -24,7 +24,7 @@ public partial class EditControl : UserControl {
 
         rbInit();
 
-        // 이벤트 등록
+        // Event registration
         foreach (var srb in groupBoxSolar.Controls.Cast<RadioButton>()) {
             srb.CheckedChanged += Srb_CheckedChanged;
         }
@@ -35,14 +35,14 @@ public partial class EditControl : UserControl {
     }
 
     private void rbInit() {
-        // 솔라
+        // Solar
         set(radioButtonSComet, Mode.Solar, Difficulty.Comet);
         set(radioButtonSNova, Mode.Solar, Difficulty.Nova);
         set(radioButtonSSuperNova, Mode.Solar, Difficulty.SuperNova);
         set(radioButtonSQuasar, Mode.Solar, Difficulty.Quasar);
         set(radioButtonSStarlight, Mode.Solar, Difficulty.Starlight);
 
-        // 루나
+        // Lunar
         set(radioButtonLComet, Mode.Lunar, Difficulty.Comet);
         set(radioButtonLNova, Mode.Lunar, Difficulty.Nova);
         set(radioButtonLSuperNova, Mode.Lunar, Difficulty.SuperNova);
@@ -52,15 +52,15 @@ public partial class EditControl : UserControl {
         void set(RadioButton button, Mode mode, Difficulty difficulty) {
             var diff = getDiff();
 
-            // 난이도가 0이 아니면 (== 채보가 있으면)
+            // If difficulty is not 0 (== if a chart exists)
             if (diff != 0) {
-                // 난이도
+                // Difficulty
                 button.Text = initialString[button] + " - " + diff.ToString("D2");
                 var result = Profile.Instance.Results.Find(r => r.SongId == song.Id && r.Mode == mode && r.Difficulty == difficulty);
 
-                // 결과가 있으면
+                // If results exist
                 if (result is not null) {
-                    // 랭크
+                    // Rank
                     var rank = result.Score switch {
                         1000000 => "PB",
                         >= 980000 => "SS",
@@ -72,11 +72,11 @@ public partial class EditControl : UserControl {
                         _ => "F",
                     };
 
-                    // 점수
-                    button.Text += Environment.NewLine + result.Score + "점 (" + rank + ")" + (result.FullCombo ? ", FC" : string.Empty);
+                    // Score
+                    button.Text += $"{Environment.NewLine}{result.Score}({rank}){(result.FullCombo ? ", FC" : string.Empty)}";
                 }
             } else {
-                // 없으면 버튼 비활성화
+                // Disable button if there's no chart
                 button.Enabled = false;
             }
 
@@ -103,12 +103,12 @@ public partial class EditControl : UserControl {
         var (mode, diff) = getModeAndDiff();
         var resultIndex = Profile.Instance.Results.FindIndex(i => i.SongId == song.Id && i.Mode == mode && i.Difficulty == diff);
 
-        // 등록된 결과가 없으면
+        // If there aren't any registered results
         if (resultIndex == -1) {
-            // 결과 새로 등록
+            // Register new results
             var score = int.Parse(textBoxScore.Text);
 
-            // 점수가 1 이상이어야지만 등록함
+            // Score must be at least 1 to be registered
             if (score != 0) {
                 Profile.Instance.Results.Add(new Result {
                     SongId = song.Id,
@@ -119,7 +119,7 @@ public partial class EditControl : UserControl {
                 });
             }
         } else {
-            // 이미 등록된 결과 수정
+            // Edit pre-existing results
             Profile.Instance.Results[resultIndex].Score = int.Parse(textBoxScore.Text);
             Profile.Instance.Results[resultIndex].FullCombo = checkBoxFullCombo.Checked;
         }
@@ -127,7 +127,7 @@ public partial class EditControl : UserControl {
         rbInit();
     }
 
-    // 체크된 버튼에 따라 모드와 난이도를 반환하는 메서드
+    // Return mode and difficulty based on which button was clicked
     private (Mode mode, Difficulty diff) getModeAndDiff() {
         if (radioButtonSComet.Checked) {
             return (Mode.Solar, Difficulty.Comet);
@@ -155,20 +155,20 @@ public partial class EditControl : UserControl {
     }
 
     private void checkedChanged(RadioButton button, GroupBox box, Mode mode) {
-        // 지정된 버튼이 체크되면
+        // Event fires upon clicking a specific button
         if (button.Checked) {
-            // 점수 입력창, 풀 콤보 체크박스 활성화
+            // Enable score input field and FC checkbox
             label3.Enabled = true;
             textBoxScore.Enabled = true;
             checkBoxFullCombo.Enabled = true;
             button1.Enabled = true;
 
-            // 다른 모드의 버튼은 체크 해제
+            // Uncheck other mode/difficulty combos' buttons
             foreach (var rb in box.Controls.Cast<RadioButton>()) {
                 rb.Checked = false;
             }
 
-            // 점수 입력창, 풀 콤보 체크박스
+            // Score input field and FC checkbox
             var result = Profile.Instance.Results.Find(r => r.SongId == song.Id && r.Mode == mode && r.Difficulty == getModeAndDiff().diff);
             textBoxScore.Text = result?.Score.ToString() ?? "0";
             checkBoxFullCombo.Checked = result?.FullCombo ?? false;
@@ -179,9 +179,9 @@ public partial class EditControl : UserControl {
     private void Lrb_CheckedChanged(object? sender, EventArgs e) => checkedChanged((RadioButton)sender!, groupBoxSolar, Mode.Lunar);
 
     private void textBoxScore_Leave(object sender, EventArgs e) {
-        // 숫자가 아니거나 0보다 작거나 1000000보다 크면
+        // Score must be a numeric value between 0 and 1,000,000 to be accepted; otherwise throw an error
         if (!(int.TryParse(textBoxScore.Text, out var number) && (number is >= 0 and <= 1000000))) {
-            MessageBox.Show("점수가 올바르지 않음!");
+            MessageBox.Show("Input score is invalid!");
             textBoxScore.Focus();
         }
     }

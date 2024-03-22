@@ -43,15 +43,15 @@ partial class ProfileNameDialog {
         textBox1.Size = new Size(460, 23);
         textBox1.TabIndex = 2;
         // 
-        // ProfileNameDioalog
+        // ProfileNameDialog
         // 
         AutoScaleDimensions = new SizeF(7F, 15F);
         AutoScaleMode = AutoScaleMode.Font;
         ClientSize = new Size(484, 111);
         Controls.Add(textBox1);
         Controls.Add(label1);
-        Name = "ProfileNameDioalog";
-        Text = "프로필 생성";
+        Name = "ProfileNameDialog";
+        Text = "What's your name?";
         Controls.SetChildIndex(label1, 0);
         Controls.SetChildIndex(textBox1, 0);
         ResumeLayout(false);
