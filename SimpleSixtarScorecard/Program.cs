@@ -17,7 +17,7 @@ internal static class Program {
         // Verify songdata.json
         using (var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("SimpleSixtarScorecard.songdata.schema.json")) {
             if (stream == null) {
-                ErrMsg("schema not found!");
+                ErrMsg("Song data schema not found!");
                 return;
             }
 
@@ -25,7 +25,7 @@ internal static class Program {
             using var json = JsonDocument.Parse(songdata);
 
             if (!(await JsonSchema.FromStream(stream)).Evaluate(json).IsValid) {
-                ErrMsg("songdata json is invalid!");
+                ErrMsg("Song data is invalid!");
                 return;
             }
         }
