@@ -24,6 +24,7 @@ partial class EditControl {
     /// the contents of this method with the code editor.
     /// </summary>
     private void InitializeComponent() {
+        var resources = new System.ComponentModel.ComponentResourceManager(typeof(EditControl));
         groupBoxSolar = new GroupBox();
         radioButtonSStarlight = new RadioButton();
         radioButtonSQuasar = new RadioButton();
@@ -46,172 +47,113 @@ partial class EditControl {
         // 
         // groupBoxSolar
         // 
-        groupBoxSolar.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+        resources.ApplyResources(groupBoxSolar, "groupBoxSolar");
         groupBoxSolar.Controls.Add(radioButtonSStarlight);
         groupBoxSolar.Controls.Add(radioButtonSQuasar);
         groupBoxSolar.Controls.Add(radioButtonSSuperNova);
         groupBoxSolar.Controls.Add(radioButtonSNova);
         groupBoxSolar.Controls.Add(radioButtonSComet);
-        groupBoxSolar.Location = new Point(3, 3);
         groupBoxSolar.Name = "groupBoxSolar";
-        groupBoxSolar.Size = new Size(754, 78);
-        groupBoxSolar.TabIndex = 3;
         groupBoxSolar.TabStop = false;
-        groupBoxSolar.Text = "Solar Mode";
         // 
         // radioButtonSStarlight
         // 
-        radioButtonSStarlight.Location = new Point(608, 22);
+        resources.ApplyResources(radioButtonSStarlight, "radioButtonSStarlight");
         radioButtonSStarlight.Name = "radioButtonSStarlight";
-        radioButtonSStarlight.Size = new Size(140, 50);
-        radioButtonSStarlight.TabIndex = 4;
-        radioButtonSStarlight.Text = "Starlight";
         radioButtonSStarlight.UseVisualStyleBackColor = true;
         // 
         // radioButtonSQuasar
         // 
-        radioButtonSQuasar.Location = new Point(462, 22);
+        resources.ApplyResources(radioButtonSQuasar, "radioButtonSQuasar");
         radioButtonSQuasar.Name = "radioButtonSQuasar";
-        radioButtonSQuasar.Size = new Size(140, 50);
-        radioButtonSQuasar.TabIndex = 3;
-        radioButtonSQuasar.Text = "Quasar";
         radioButtonSQuasar.UseVisualStyleBackColor = true;
         // 
         // radioButtonSSuperNova
         // 
-        radioButtonSSuperNova.Location = new Point(316, 22);
+        resources.ApplyResources(radioButtonSSuperNova, "radioButtonSSuperNova");
         radioButtonSSuperNova.Name = "radioButtonSSuperNova";
-        radioButtonSSuperNova.Size = new Size(140, 50);
-        radioButtonSSuperNova.TabIndex = 2;
-        radioButtonSSuperNova.Text = "Supernova";
         radioButtonSSuperNova.UseVisualStyleBackColor = true;
         // 
         // radioButtonSNova
         // 
-        radioButtonSNova.Location = new Point(170, 22);
+        resources.ApplyResources(radioButtonSNova, "radioButtonSNova");
         radioButtonSNova.Name = "radioButtonSNova";
-        radioButtonSNova.Size = new Size(140, 50);
-        radioButtonSNova.TabIndex = 1;
-        radioButtonSNova.Text = "Nova";
         radioButtonSNova.UseVisualStyleBackColor = true;
         // 
         // radioButtonSComet
         // 
-        radioButtonSComet.Location = new Point(24, 22);
+        resources.ApplyResources(radioButtonSComet, "radioButtonSComet");
         radioButtonSComet.Name = "radioButtonSComet";
-        radioButtonSComet.Size = new Size(140, 50);
-        radioButtonSComet.TabIndex = 0;
-        radioButtonSComet.Text = "Comet";
         radioButtonSComet.UseVisualStyleBackColor = true;
         // 
         // radioButtonLComet
         // 
-        radioButtonLComet.Location = new Point(24, 22);
+        resources.ApplyResources(radioButtonLComet, "radioButtonLComet");
         radioButtonLComet.Name = "radioButtonLComet";
-        radioButtonLComet.Size = new Size(140, 50);
-        radioButtonLComet.TabIndex = 0;
-        radioButtonLComet.Text = "Comet";
         radioButtonLComet.UseVisualStyleBackColor = true;
         // 
         // radioButtonLNova
         // 
-        radioButtonLNova.Location = new Point(170, 22);
+        resources.ApplyResources(radioButtonLNova, "radioButtonLNova");
         radioButtonLNova.Name = "radioButtonLNova";
-        radioButtonLNova.Size = new Size(140, 50);
-        radioButtonLNova.TabIndex = 1;
-        radioButtonLNova.Text = "Nova";
         radioButtonLNova.UseVisualStyleBackColor = true;
         // 
         // radioButtonLSuperNova
         // 
-        radioButtonLSuperNova.Location = new Point(316, 22);
+        resources.ApplyResources(radioButtonLSuperNova, "radioButtonLSuperNova");
         radioButtonLSuperNova.Name = "radioButtonLSuperNova";
-        radioButtonLSuperNova.Size = new Size(140, 50);
-        radioButtonLSuperNova.TabIndex = 2;
-        radioButtonLSuperNova.Text = "Supernova";
         radioButtonLSuperNova.UseVisualStyleBackColor = true;
         // 
         // radioButtonLQuasar
         // 
-        radioButtonLQuasar.Location = new Point(462, 22);
+        resources.ApplyResources(radioButtonLQuasar, "radioButtonLQuasar");
         radioButtonLQuasar.Name = "radioButtonLQuasar";
-        radioButtonLQuasar.Size = new Size(140, 50);
-        radioButtonLQuasar.TabIndex = 3;
-        radioButtonLQuasar.Text = "Quasar";
         radioButtonLQuasar.UseVisualStyleBackColor = true;
         // 
         // radioButtonLStarlight
         // 
-        radioButtonLStarlight.Location = new Point(608, 22);
+        resources.ApplyResources(radioButtonLStarlight, "radioButtonLStarlight");
         radioButtonLStarlight.Name = "radioButtonLStarlight";
-        radioButtonLStarlight.Size = new Size(140, 50);
-        radioButtonLStarlight.TabIndex = 4;
-        radioButtonLStarlight.Text = "Starlight";
         radioButtonLStarlight.UseVisualStyleBackColor = true;
         // 
         // groupBoxLunar
         // 
-        groupBoxLunar.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+        resources.ApplyResources(groupBoxLunar, "groupBoxLunar");
         groupBoxLunar.Controls.Add(radioButtonLStarlight);
         groupBoxLunar.Controls.Add(radioButtonLQuasar);
         groupBoxLunar.Controls.Add(radioButtonLSuperNova);
         groupBoxLunar.Controls.Add(radioButtonLNova);
         groupBoxLunar.Controls.Add(radioButtonLComet);
-        groupBoxLunar.Location = new Point(3, 87);
         groupBoxLunar.Name = "groupBoxLunar";
-        groupBoxLunar.Size = new Size(754, 78);
-        groupBoxLunar.TabIndex = 3;
         groupBoxLunar.TabStop = false;
-        groupBoxLunar.Text = "Lunar Mode";
         // 
         // label3
         // 
-        label3.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-        label3.AutoSize = true;
-        label3.Enabled = false;
-        label3.Location = new Point(260, 174);
+        resources.ApplyResources(label3, "label3");
         label3.Name = "label3";
-        label3.Size = new Size(44, 15);
-        label3.TabIndex = 4;
-        label3.Text = "Score: ";
         // 
         // textBoxScore
         // 
-        textBoxScore.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-        textBoxScore.Enabled = false;
-        textBoxScore.Location = new Point(310, 171);
+        resources.ApplyResources(textBoxScore, "textBoxScore");
         textBoxScore.Name = "textBoxScore";
-        textBoxScore.Size = new Size(100, 23);
-        textBoxScore.TabIndex = 5;
         textBoxScore.Leave += textBoxScore_Leave;
         // 
         // checkBoxFullCombo
         // 
-        checkBoxFullCombo.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-        checkBoxFullCombo.AutoSize = true;
-        checkBoxFullCombo.Enabled = false;
-        checkBoxFullCombo.Location = new Point(416, 173);
+        resources.ApplyResources(checkBoxFullCombo, "checkBoxFullCombo");
         checkBoxFullCombo.Name = "checkBoxFullCombo";
-        checkBoxFullCombo.Size = new Size(89, 19);
-        checkBoxFullCombo.TabIndex = 6;
-        checkBoxFullCombo.Text = "Full Combo";
         checkBoxFullCombo.UseVisualStyleBackColor = true;
         // 
         // button1
         // 
-        button1.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-        button1.Enabled = false;
-        button1.Location = new Point(682, 222);
+        resources.ApplyResources(button1, "button1");
         button1.Name = "button1";
-        button1.Size = new Size(75, 25);
-        button1.TabIndex = 7;
-        button1.Text = "Apply";
         button1.UseVisualStyleBackColor = true;
         button1.Click += button1_Click;
         // 
         // EditControl
         // 
-        AutoScaleDimensions = new SizeF(7F, 15F);
+        resources.ApplyResources(this, "$this");
         AutoScaleMode = AutoScaleMode.Font;
         Controls.Add(button1);
         Controls.Add(checkBoxFullCombo);
@@ -220,7 +162,6 @@ partial class EditControl {
         Controls.Add(groupBoxLunar);
         Controls.Add(groupBoxSolar);
         Name = "EditControl";
-        Size = new Size(760, 250);
         groupBoxSolar.ResumeLayout(false);
         groupBoxLunar.ResumeLayout(false);
         ResumeLayout(false);
