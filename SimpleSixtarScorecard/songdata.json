@@ -2824,7 +2824,7 @@
   },
   {
     "id": "banshun",
-    "title": "晩春。",
+    "title": "「晩春。」",
     "composer": "yomoha",
     "dlc": "yomohasplanet",
     "category": "variety",
@@ -2938,7 +2938,7 @@
   },
   {
     "id": "ohanami",
-    "title": "お花見",
+    "title": "お花見。",
     "composer": "yomoha",
     "dlc": "yomohasplanet",
     "category": "original",
@@ -3340,7 +3340,7 @@
   {
     "id": "async",
     "title": "async",
-    "composer": "kolaa",
+    "composer": "Kolaa",
     "dlc": "dystopia",
     "category": "variety",
     "difficultys": {

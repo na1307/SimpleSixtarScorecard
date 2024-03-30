@@ -145,7 +145,7 @@
     <value>WACCA</value>
   </data>
   <data name="DlcYomohasPlanet" xml:space="preserve">
-    <value>Yomoha's Planet</value>
+    <value>yomoha's Planet</value>
   </data>
   <data name="InputScoreIsInvalid" xml:space="preserve">
     <value>Input score is invalid!</value>
