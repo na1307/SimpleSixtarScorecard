@@ -5,6 +5,8 @@ VisualStudioVersion = 17.9.34622.214
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleSixtarScorecard", "SimpleSixtarScorecard\SimpleSixtarScorecard.csproj", "{6ACBA677-9AA7-4896-80AB-A4A9C4A45893}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleSixtarScorecard.Tests", "SimpleSixtarScorecard.Tests\SimpleSixtarScorecard.Tests.csproj", "{8DB66A31-1741-4567-9164-711D8B36CD54}"
+EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "솔루션 항목", "솔루션 항목", "{94DEBC2B-F3CE-4C4F-B24C-DF6F2E4ECB90}"
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
@@ -22,6 +24,10 @@ Global
 		{6ACBA677-9AA7-4896-80AB-A4A9C4A45893}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6ACBA677-9AA7-4896-80AB-A4A9C4A45893}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6ACBA677-9AA7-4896-80AB-A4A9C4A45893}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8DB66A31-1741-4567-9164-711D8B36CD54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DB66A31-1741-4567-9164-711D8B36CD54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DB66A31-1741-4567-9164-711D8B36CD54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DB66A31-1741-4567-9164-711D8B36CD54}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
