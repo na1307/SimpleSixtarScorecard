@@ -1,26 +1,13 @@
-﻿namespace SimpleSixtarScorecard;
+﻿using SimpleSixtarScorecard.Properties;
+
+namespace SimpleSixtarScorecard;
 
 public partial class EditControl : UserControl {
     private readonly Song song;
-    private readonly Dictionary<RadioButton, string> initialString = [];
 
     public EditControl(Song song) {
         InitializeComponent();
         this.song = song;
-
-        // Solar
-        initialString[radioButtonSComet] = radioButtonSComet.Text;
-        initialString[radioButtonSNova] = radioButtonSNova.Text;
-        initialString[radioButtonSSupernova] = radioButtonSSupernova.Text;
-        initialString[radioButtonSQuasar] = radioButtonSQuasar.Text;
-        initialString[radioButtonSStarlight] = radioButtonSStarlight.Text;
-
-        // Lunar
-        initialString[radioButtonLComet] = radioButtonLComet.Text;
-        initialString[radioButtonLNova] = radioButtonLNova.Text;
-        initialString[radioButtonLSupernova] = radioButtonLSupernova.Text;
-        initialString[radioButtonLQuasar] = radioButtonLQuasar.Text;
-        initialString[radioButtonLStarlight] = radioButtonLStarlight.Text;
 
         rbInit();
 
@@ -51,11 +38,12 @@ public partial class EditControl : UserControl {
 
         void set(RadioButton button, Mode mode, Difficulty difficulty) {
             var diff = getDiff();
+            button.Text = getDiffText();
 
             // If difficulty is not 0 (== if a chart exists)
             if (diff != 0) {
                 // Difficulty
-                button.Text = initialString[button] + " - " + diff.ToString("D2");
+                button.Text += " - " + diff.ToString("D2");
                 var result = Profile.Instance.Results.Find(r => r.SongId == song.Id && r.Mode == mode && r.Difficulty == difficulty);
 
                 // If results exist
@@ -93,6 +81,17 @@ public partial class EditControl : UserControl {
                     Difficulty.Supernova => diffObj.Supernova,
                     Difficulty.Quasar => diffObj.Quasar,
                     Difficulty.Starlight => diffObj.Starlight,
+                    _ => throw new NotImplementedException(),
+                };
+            }
+
+            string getDiffText() {
+                return difficulty switch {
+                    Difficulty.Comet => Strings.Comet,
+                    Difficulty.Nova => Strings.Nova,
+                    Difficulty.Supernova => Strings.Supernova,
+                    Difficulty.Quasar => Strings.Quasar,
+                    Difficulty.Starlight => Strings.Starlight,
                     _ => throw new NotImplementedException(),
                 };
             }

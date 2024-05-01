@@ -70,6 +70,15 @@ namespace SimpleSixtarScorecard.Properties {
         }
         
         /// <summary>
+        ///   Comet과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string Comet {
+            get {
+                return ResourceManager.GetString("Comet", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Base game과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string DlcBase {
@@ -142,7 +151,7 @@ namespace SimpleSixtarScorecard.Properties {
         }
         
         /// <summary>
-        ///   Yomoha&apos;s Planet과(와) 유사한 지역화된 문자열을 찾습니다.
+        ///   yomoha&apos;s Planet과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string DlcYomohasPlanet {
             get {
@@ -160,11 +169,47 @@ namespace SimpleSixtarScorecard.Properties {
         }
         
         /// <summary>
+        ///   Nova과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string Nova {
+            get {
+                return ResourceManager.GetString("Nova", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Quasar과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string Quasar {
+            get {
+                return ResourceManager.GetString("Quasar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   {0} songs과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string Songs {
             get {
                 return ResourceManager.GetString("Songs", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Starlight과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string Starlight {
+            get {
+                return ResourceManager.GetString("Starlight", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Supernova과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string Supernova {
+            get {
+                return ResourceManager.GetString("Supernova", resourceCulture);
             }
         }
         

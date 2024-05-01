@@ -141,4 +141,19 @@
   <data name="InputScoreIsInvalid" xml:space="preserve">
     <value>入力スコアが無効です!</value>
   </data>
+  <data name="Comet" xml:space="preserve">
+    <value>コメット</value>
+  </data>
+  <data name="Nova" xml:space="preserve">
+    <value>ノヴァ</value>
+  </data>
+  <data name="Quasar" xml:space="preserve">
+    <value>クエーサー</value>
+  </data>
+  <data name="Starlight" xml:space="preserve">
+    <value>スターライト</value>
+  </data>
+  <data name="Supernova" xml:space="preserve">
+    <value>スーパーノヴァ</value>
+  </data>
 </root>

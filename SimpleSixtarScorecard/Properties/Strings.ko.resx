@@ -120,6 +120,9 @@
   <data name="All" xml:space="preserve">
     <value>모두</value>
   </data>
+  <data name="Comet" xml:space="preserve">
+    <value>코멧</value>
+  </data>
   <data name="DlcBase" xml:space="preserve">
     <value>본편</value>
   </data>
@@ -138,8 +141,20 @@
   <data name="InputScoreIsInvalid" xml:space="preserve">
     <value>점수가 올바르지 않음!</value>
   </data>
+  <data name="Nova" xml:space="preserve">
+    <value>노바</value>
+  </data>
+  <data name="Quasar" xml:space="preserve">
+    <value>퀘이사</value>
+  </data>
   <data name="Songs" xml:space="preserve">
     <value>총 {0} 곡</value>
+  </data>
+  <data name="Starlight" xml:space="preserve">
+    <value>스타라이트</value>
+  </data>
+  <data name="Supernova" xml:space="preserve">
+    <value>슈퍼노바</value>
   </data>
   <data name="UserName" xml:space="preserve">
     <value>{0} 님</value>
