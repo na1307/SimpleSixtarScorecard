@@ -16,7 +16,7 @@
     <EmbeddedResource Include="songdata.schema.json" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="JsonSchema.Net" Version="6.0.5" />
+    <PackageReference Include="JsonSchema.Net" Version="7.0.0" />
     <PackageReference Include="Bluehill.Forms" Version="0.3.0" />
   </ItemGroup>
   <ItemGroup>
