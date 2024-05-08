@@ -22,6 +22,8 @@ jobs:
         uses: actions/setup-dotnet@v4
         with:
           dotnet-version: 8.0.x
+          cache: true
+          cache-dependency-path: SimpleSixtarScorecard/packages.lock.json
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
@@ -57,12 +59,6 @@ jobs:
         run: |
           New-Item -Path .\dotnet-coverage -ItemType Directory
           dotnet tool update dotnet-coverage --tool-path .\dotnet-coverage
-      - name: Cache NuGet
-        uses: actions/cache@v4
-        with:
-          path: ${{ github.workspace }}\.nuget\packages
-          key: ${{ runner.os }}-nuget-${{ hashFiles('**/*.csproj') }} #hash of project files
-          restore-keys: ${{ runner.os }}-nuget-
       - name: Build and analyze
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
@@ -70,6 +66,7 @@ jobs:
         shell: powershell
         run: |
           .\.sonar\scanner\dotnet-sonarscanner begin /k:"na1307_SimpleSixtarScorecard" /o:"na1307" /d:sonar.token="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.cs.vscoveragexml.reportsPaths=coverage.xml
-          dotnet build --no-incremental
+          dotnet restore --locked-mode
+          dotnet build --no-restore --no-incremental
           .\dotnet-coverage\dotnet-coverage collect 'dotnet test --no-build --verbosity normal' -f xml  -o 'coverage.xml'
           .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.token="${{ secrets.SONAR_TOKEN }}"
