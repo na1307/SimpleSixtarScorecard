@@ -29,8 +29,8 @@ jobs:
         uses: actions/cache@v4
         with:
           path: ${{ github.workspace }}/.nuget/packages
-          key: ${{ runner.os }}-nuget-${{ hashFiles('**/*.csproj', '.config/dotnet-tools.json') }} #hash of project files
-          restore-keys: ${{ runner.os }}-nuget-
+          key: ${{ runner.os }}-nuget-sonar-${{ hashFiles('**/*.csproj', '.config/dotnet-tools.json') }} #hash of project files
+          restore-keys: ${{ runner.os }}-nuget-sonar-
       - name: Install Tools
         shell: powershell
         run: dotnet tool restore 
