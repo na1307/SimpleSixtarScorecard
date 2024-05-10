@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2,
   "dependencies": {
     "net8.0-windows7.0": {
       "Microsoft.NET.Test.Sdk": {
@@ -34,14 +34,6 @@
         "resolved": "0.3.0",
         "contentHash": "ulPLeMZ4khjDyEbcYaeW70Q1GeBn08553oYyDZoz/dDIxK8aeaTKW4BMREPDcqbDagrBSg0t+whrntcbyPkTfg=="
       },
-      "Bluehill.Forms": {
-        "type": "Transitive",
-        "resolved": "0.3.0",
-        "contentHash": "mi2bVlkDNq5REMlfOtKtXaFfOSDjUBdiw9vbnVE100lo4Uod9BDjG3pLlXdiAhewtIkLns7QkgCBdOe+El32TA==",
-        "dependencies": {
-          "Bluehill.Features": "0.3.0"
-        }
-      },
       "Humanizer.Core": {
         "type": "Transitive",
         "resolved": "2.14.1",
@@ -59,14 +51,6 @@
         "dependencies": {
           "Humanizer.Core": "2.14.1",
           "Json.More.Net": "2.0.1.2"
-        }
-      },
-      "JsonSchema.Net": {
-        "type": "Transitive",
-        "resolved": "7.0.0.3",
-        "contentHash": "GPx6fLqMUHLocrrM33GfAd3eE1sPqZcnAhr2aJ1zvJ73QUg4ECclCRCg6fAEe88emIBe6aoM6Ng740esx96zrQ==",
-        "dependencies": {
-          "JsonPointer.Net": "5.0.0"
         }
       },
       "Microsoft.CodeCoverage": {
@@ -145,7 +129,25 @@
         "type": "Project",
         "dependencies": {
           "Bluehill.Forms": "[0.3.0, )",
-          "JsonSchema.Net": "[7.0.0.3, )"
+          "JsonSchema.Net": "[7.0.1, )"
+        }
+      },
+      "Bluehill.Forms": {
+        "type": "CentralTransitive",
+        "requested": "[0.3.0, )",
+        "resolved": "0.3.0",
+        "contentHash": "mi2bVlkDNq5REMlfOtKtXaFfOSDjUBdiw9vbnVE100lo4Uod9BDjG3pLlXdiAhewtIkLns7QkgCBdOe+El32TA==",
+        "dependencies": {
+          "Bluehill.Features": "0.3.0"
+        }
+      },
+      "JsonSchema.Net": {
+        "type": "CentralTransitive",
+        "requested": "[7.0.1, )",
+        "resolved": "7.0.1",
+        "contentHash": "LJuwfD8SjYJF76VqDc4OwGr3U79ONrVu1aoJ+t1Z4jY4gUIakJxQtFYqUxlQE4bhIj3aSlcq5lkUzNH3G4lIfA==",
+        "dependencies": {
+          "JsonPointer.Net": "5.0.0"
         }
       }
     }
