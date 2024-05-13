@@ -13,6 +13,8 @@ public sealed class Profile {
     private static readonly Lazy<Profile> instance = new(converter.Load);
     private static readonly JsonWriterOptions indentedWriterOptions = new() { Indented = true };
 
+    private Profile() { }
+
     public static Profile Instance => instance.Value;
 
     [JsonPropertyName(UserNamePropertyName)]
