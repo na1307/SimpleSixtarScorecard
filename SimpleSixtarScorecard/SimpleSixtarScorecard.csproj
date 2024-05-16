@@ -2,6 +2,7 @@
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <TargetFramework>net8.0-windows</TargetFramework>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
     <UseWindowsForms>true</UseWindowsForms>
     <AssemblyTitle>초간단 식스타 게이트: 스타트레일 점수표 프로그램</AssemblyTitle>
     <AssemblyVersion>0</AssemblyVersion>
