@@ -51,7 +51,7 @@ internal static class Program {
         // Save profile when exited
         Application.ApplicationExit += Application_ApplicationExit;
 
-        Application.Run(new FormMain());
+        Application.Run(new MainForm());
     }
 
     private static void Application_ApplicationExit(object? sender, EventArgs e) => Profile.Instance.SaveProfile();

@@ -2,12 +2,12 @@
 
 namespace SimpleSixtarScorecard;
 
-public partial class FormMain : Form {
+public partial class MainForm : Form {
     private SortableBindingList<Song> songs = new(Song.SongList);
     private int dlc = 0;
     private int category = 0;
 
-    public FormMain() {
+    public MainForm() {
         InitializeComponent();
         label1.Text = string.Format(Strings.UserName, Profile.Instance.UserName);
 

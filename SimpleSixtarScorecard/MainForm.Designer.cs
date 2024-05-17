@@ -1,6 +1,6 @@
 ﻿namespace SimpleSixtarScorecard;
 
-partial class FormMain {
+partial class MainForm {
     /// <summary>
     ///  Required designer variable.
     /// </summary>
@@ -24,10 +24,16 @@ partial class FormMain {
     ///  the contents of this method with the code editor.
     /// </summary>
     private void InitializeComponent() {
-        var resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
+        var resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
         label1 = new Label();
         button1 = new Button();
         dataGridView1 = new DataGridView();
+        nameColumn = new DataGridViewTextBoxColumn();
+        composerColumn = new DataGridViewTextBoxColumn();
+        solarQuasarColumn = new DataGridViewTextBoxColumn();
+        lunarQuasarColumn = new DataGridViewTextBoxColumn();
+        dlcColumn = new DataGridViewTextBoxColumn();
+        categoryColumn = new DataGridViewTextBoxColumn();
         label2 = new Label();
         panel1 = new Panel();
         textBox1 = new TextBox();
@@ -37,12 +43,6 @@ partial class FormMain {
         label5 = new Label();
         label6 = new Label();
         comboBox2 = new ComboBox();
-        nameColumn = new DataGridViewTextBoxColumn();
-        composerColumn = new DataGridViewTextBoxColumn();
-        solarQuasarColumn = new DataGridViewTextBoxColumn();
-        lunarQuasarColumn = new DataGridViewTextBoxColumn();
-        dlcColumn = new DataGridViewTextBoxColumn();
-        categoryColumn = new DataGridViewTextBoxColumn();
         ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
         SuspendLayout();
         // 
@@ -60,10 +60,10 @@ partial class FormMain {
         // 
         // dataGridView1
         // 
-        resources.ApplyResources(dataGridView1, "dataGridView1");
         dataGridView1.AllowUserToAddRows = false;
         dataGridView1.AllowUserToDeleteRows = false;
         dataGridView1.AllowUserToResizeRows = false;
+        resources.ApplyResources(dataGridView1, "dataGridView1");
         dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
         dataGridView1.Columns.AddRange(new DataGridViewColumn[] { nameColumn, composerColumn, solarQuasarColumn, lunarQuasarColumn, dlcColumn, categoryColumn });
         dataGridView1.MultiSelect = false;
@@ -72,58 +72,6 @@ partial class FormMain {
         dataGridView1.RowHeadersVisible = false;
         dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         dataGridView1.SelectionChanged += DataGridView1_SelectionChanged;
-        // 
-        // label2
-        // 
-        resources.ApplyResources(label2, "label2");
-        label2.Name = "label2";
-        // 
-        // panel1
-        // 
-        resources.ApplyResources(panel1, "panel1");
-        panel1.Name = "panel1";
-        // 
-        // textBox1
-        // 
-        resources.ApplyResources(textBox1, "textBox1");
-        textBox1.Name = "textBox1";
-        textBox1.TextChanged += textBox1_TextChanged;
-        // 
-        // label3
-        // 
-        resources.ApplyResources(label3, "label3");
-        label3.Name = "label3";
-        // 
-        // label4
-        // 
-        resources.ApplyResources(label4, "label4");
-        label4.Name = "label4";
-        // 
-        // comboBox1
-        // 
-        resources.ApplyResources(comboBox1, "comboBox1");
-        comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
-        comboBox1.FormattingEnabled = true;
-        comboBox1.Name = "comboBox1";
-        comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
-        // 
-        // label5
-        // 
-        resources.ApplyResources(label5, "label5");
-        label5.Name = "label5";
-        // 
-        // label6
-        // 
-        resources.ApplyResources(label6, "label6");
-        label6.Name = "label6";
-        // 
-        // comboBox2
-        // 
-        resources.ApplyResources(comboBox2, "comboBox2");
-        comboBox2.DropDownStyle = ComboBoxStyle.DropDownList;
-        comboBox2.FormattingEnabled = true;
-        comboBox2.Name = "comboBox2";
-        comboBox2.SelectedIndexChanged += comboBox2_SelectedIndexChanged;
         // 
         // nameColumn
         // 
@@ -167,7 +115,59 @@ partial class FormMain {
         categoryColumn.Name = "categoryColumn";
         categoryColumn.ReadOnly = true;
         // 
-        // FormMain
+        // label2
+        // 
+        resources.ApplyResources(label2, "label2");
+        label2.Name = "label2";
+        // 
+        // panel1
+        // 
+        resources.ApplyResources(panel1, "panel1");
+        panel1.Name = "panel1";
+        // 
+        // textBox1
+        // 
+        resources.ApplyResources(textBox1, "textBox1");
+        textBox1.Name = "textBox1";
+        textBox1.TextChanged += textBox1_TextChanged;
+        // 
+        // label3
+        // 
+        resources.ApplyResources(label3, "label3");
+        label3.Name = "label3";
+        // 
+        // label4
+        // 
+        resources.ApplyResources(label4, "label4");
+        label4.Name = "label4";
+        // 
+        // comboBox1
+        // 
+        comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
+        comboBox1.FormattingEnabled = true;
+        resources.ApplyResources(comboBox1, "comboBox1");
+        comboBox1.Name = "comboBox1";
+        comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
+        // 
+        // label5
+        // 
+        resources.ApplyResources(label5, "label5");
+        label5.Name = "label5";
+        // 
+        // label6
+        // 
+        resources.ApplyResources(label6, "label6");
+        label6.Name = "label6";
+        // 
+        // comboBox2
+        // 
+        comboBox2.DropDownStyle = ComboBoxStyle.DropDownList;
+        comboBox2.FormattingEnabled = true;
+        resources.ApplyResources(comboBox2, "comboBox2");
+        comboBox2.Name = "comboBox2";
+        comboBox2.SelectedIndexChanged += comboBox2_SelectedIndexChanged;
+        // 
+        // MainForm
         // 
         resources.ApplyResources(this, "$this");
         AutoScaleMode = AutoScaleMode.Font;
@@ -183,7 +183,7 @@ partial class FormMain {
         Controls.Add(dataGridView1);
         Controls.Add(button1);
         Controls.Add(label1);
-        Name = "FormMain";
+        Name = "MainForm";
         ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
         ResumeLayout(false);
         PerformLayout();
