@@ -7,6 +7,6 @@
     <PackageVersion Include="Bluehill.Forms" Version="0.3.0" />
   </ItemGroup>
   <ItemGroup>
-    <GlobalPackageReference Include="Bluehill.Imports" Version="1.0.3" />
+    <GlobalPackageReference Include="Bluehill.Imports" Version="1.0.4" />
   </ItemGroup>
 </Project>
