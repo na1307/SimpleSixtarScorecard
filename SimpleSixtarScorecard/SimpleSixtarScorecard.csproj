@@ -15,14 +15,15 @@
   </PropertyGroup>
   <ItemGroup>
     <Using Include="Bluehill" />
-    <Using Include="Bluehill.ErrDialogForms" Static="true" />
+    <Using Include="Bluehill.Forms" />
+    <Using Include="Bluehill.Forms.ErrDialog" Static="true" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="songdata.schema.json" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="JsonSchema.Net" />
     <PackageReference Include="Bluehill.Forms" />
+    <PackageReference Include="JsonSchema.Net" />
   </ItemGroup>
   <ItemGroup>
     <Compile Update="Properties\Strings.Designer.cs">
