@@ -1,12 +1,14 @@
 <Project>
   <PropertyGroup>
     <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+    <CentralPackageTransitivePinningEnabled>true</CentralPackageTransitivePinningEnabled>
+    <CentralPackageVersionOverrideEnabled>false</CentralPackageVersionOverrideEnabled>
   </PropertyGroup>
   <ItemGroup>
-    <PackageVersion Include="Bluehill.Forms" Version="0.6.0" />
-    <PackageVersion Include="JsonSchema.Net" Version="7.0.2" />
+    <PackageVersion Include="Bluehill.Forms" Version="0.7.0" />
+    <PackageVersion Include="JsonSchema.Net" Version="7.0.3" />
   </ItemGroup>
   <ItemGroup>
-    <GlobalPackageReference Include="Bluehill.Imports" Version="1.0.4" />
+    <GlobalPackageReference Include="Bluehill.Imports" Version="1.0.5" />
   </ItemGroup>
 </Project>
