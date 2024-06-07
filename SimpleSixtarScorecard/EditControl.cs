@@ -2,7 +2,7 @@
 
 namespace SimpleSixtarScorecard;
 
-public partial class EditControl : UserControl {
+public sealed partial class EditControl : UserControl {
     private readonly Song song;
 
     public EditControl(Song song) {
@@ -85,16 +85,14 @@ public partial class EditControl : UserControl {
                 };
             }
 
-            string getDiffText() {
-                return difficulty switch {
-                    Difficulty.Comet => Strings.Comet,
-                    Difficulty.Nova => Strings.Nova,
-                    Difficulty.Supernova => Strings.Supernova,
-                    Difficulty.Quasar => Strings.Quasar,
-                    Difficulty.Starlight => Strings.Starlight,
-                    _ => throw new NotImplementedException(),
-                };
-            }
+            string getDiffText() => difficulty switch {
+                Difficulty.Comet => Strings.Comet,
+                Difficulty.Nova => Strings.Nova,
+                Difficulty.Supernova => Strings.Supernova,
+                Difficulty.Quasar => Strings.Quasar,
+                Difficulty.Starlight => Strings.Starlight,
+                _ => throw new NotImplementedException(),
+            };
         }
     }
 
@@ -180,7 +178,7 @@ public partial class EditControl : UserControl {
     private void textBoxScore_Leave(object sender, EventArgs e) {
         // Score must be a numeric value between 0 and 1,000,000 to be accepted; otherwise throw an error
         if (!(int.TryParse(textBoxScore.Text, out var number) && (number is >= 0 and <= 1000000))) {
-            MessageBox.Show(Properties.Strings.InputScoreIsInvalid);
+            MessageBox.Show(Strings.InputScoreIsInvalid);
             textBoxScore.Focus();
         }
     }

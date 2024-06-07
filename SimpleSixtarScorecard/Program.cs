@@ -15,14 +15,14 @@ internal static class Program {
         ApplicationConfiguration.Initialize();
 
         // Verify songdata.json
-        using (var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("SimpleSixtarScorecard.songdata.schema.json")) {
+        await using (var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("SimpleSixtarScorecard.songdata.schema.json")) {
             if (stream == null) {
                 ErrMsg("Song data schema not found!");
                 return;
             }
 
-            using FileStream songdata = new("songdata.json", FileMode.Open, FileAccess.Read);
-            using var json = JsonDocument.Parse(songdata);
+            await using FileStream songdata = new("songdata.json", FileMode.Open, FileAccess.Read);
+            using var json = await JsonDocument.ParseAsync(songdata);
 
             if (!(await JsonSchema.FromStream(stream)).Evaluate(json).IsValid) {
                 ErrMsg("Song data is invalid!");
@@ -35,8 +35,8 @@ internal static class Program {
             using ProfileNameDialog dialog = new(true);
 
             if (dialog.ShowDialog() == DialogResult.OK) {
-                using FileStream fs = new(Profile.ProfileFile, FileMode.CreateNew, FileAccess.Write);
-                using Utf8JsonWriter writer = new(fs);
+                await using FileStream fs = new(Profile.ProfileFile, FileMode.CreateNew, FileAccess.Write);
+                await using Utf8JsonWriter writer = new(fs);
 
                 writer.WriteStartObject();
                 writer.WriteString(Profile.UserNamePropertyName, dialog.UserName.Trim());

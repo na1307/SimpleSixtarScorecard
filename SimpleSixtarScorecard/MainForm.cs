@@ -2,10 +2,10 @@
 
 namespace SimpleSixtarScorecard;
 
-public partial class MainForm : Form {
+public sealed partial class MainForm : Form {
     private SortableBindingList<Song> songs = new(Song.SongList);
-    private int dlc = 0;
-    private int category = 0;
+    private int dlc;
+    private int category;
 
     public MainForm() {
         InitializeComponent();

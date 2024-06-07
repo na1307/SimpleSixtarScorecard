@@ -3,9 +3,9 @@
 namespace SimpleSixtarScorecard;
 
 public static class DlcExtensions {
-    public static string ToName(this Dlc dlc) {
+    public static string ToName(this Dlc dlc) =>
         // Returns the DLC name from the Dlc value.
-        return dlc switch {
+        dlc switch {
             Dlc.Base => DlcBase,
             Dlc.FlowerAndDestiny => DlcFlowerAndDestiny,
             Dlc.Touhou01 => DlcTouhou01,
@@ -17,5 +17,4 @@ public static class DlcExtensions {
             Dlc.Dystopia => DlcDystopia,
             _ => throw new NotImplementedException(),
         };
-    }
 }
