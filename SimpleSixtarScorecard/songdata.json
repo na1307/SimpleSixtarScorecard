@@ -1605,13 +1605,15 @@
       "comet": 3,
       "nova": 7,
       "supernova": 11,
-      "quasar": 14
+      "quasar": 14,
+      "starlight": 16
     },
     "difficultyl": {
       "comet": 3,
       "nova": 7,
       "supernova": 11,
-      "quasar": 14
+      "quasar": 14,
+      "starlight": 16
     }
   },
   {
@@ -3513,6 +3515,25 @@
       "supernova": 9,
       "quasar": 13,
       "starlight": 15
+    }
+  },
+  {
+    "id": "primitivelights",
+    "title": "PRIMITIVE LIGHTS",
+    "composer": "TAG",
+    "dlc": "base",
+    "category": "collab",
+    "difficultys": {
+      "comet": 3,
+      "nova": 7,
+      "supernova": 10,
+      "quasar": 14
+    },
+    "difficultyl": {
+      "comet": 3,
+      "nova": 7,
+      "supernova": 10,
+      "quasar": 14
     }
   },
   {
