@@ -12,16 +12,23 @@ internal static class Program {
     private static async Task Main() {
         // To customize application configuration such as set high DPI settings or default font,
         // see https://aka.ms/applicationconfiguration.
-        ApplicationConfiguration.Initialize();
+        Application.EnableVisualStyles();
+        Application.SetCompatibleTextRenderingDefault(false);
 
         // Verify songdata.json
-        await using (var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("SimpleSixtarScorecard.songdata.schema.json")) {
+#if NETCOREAPP3_0_OR_GREATER
+        await
+#endif
+        using (var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("SimpleSixtarScorecard.songdata.schema.json")) {
             if (stream == null) {
                 ErrMsg("Song data schema not found!");
                 return;
             }
 
-            await using FileStream songdata = new("songdata.json", FileMode.Open, FileAccess.Read);
+#if NETCOREAPP3_0_OR_GREATER
+            await
+#endif
+            using FileStream songdata = new("songdata.json", FileMode.Open, FileAccess.Read);
             using var json = await JsonDocument.ParseAsync(songdata);
 
             if (!(await JsonSchema.FromStream(stream)).Evaluate(json).IsValid) {
@@ -35,7 +42,10 @@ internal static class Program {
             using ProfileNameDialog dialog = new(true);
 
             if (dialog.ShowDialog() == DialogResult.OK) {
-                await using FileStream fs = new(Profile.ProfileFile, FileMode.CreateNew, FileAccess.Write);
+#if NETCOREAPP3_0_OR_GREATER
+                await
+#endif
+                using FileStream fs = new(Profile.ProfileFile, FileMode.CreateNew, FileAccess.Write);
                 await using Utf8JsonWriter writer = new(fs);
 
                 writer.WriteStartObject();

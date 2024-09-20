@@ -1,12 +1,8 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net8.0-windows</TargetFramework>
-    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
-    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
-    <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+    <TargetFrameworks>net462;net8.0-windows</TargetFrameworks>
     <UseWindowsForms>true</UseWindowsForms>
-    <PublishSingleFile>true</PublishSingleFile>
     <AssemblyTitle>초간단 식스타 게이트: 스타트레일 점수표 프로그램</AssemblyTitle>
     <AssemblyVersion>0</AssemblyVersion>
     <FileVersion>0.4.0</FileVersion>
@@ -14,15 +10,11 @@
     <NeutralLanguage>en</NeutralLanguage>
   </PropertyGroup>
   <ItemGroup>
-    <Using Include="Bluehill" />
-    <Using Include="Bluehill.Forms" />
-    <Using Include="Bluehill.Forms.ErrDialog" Static="true" />
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="songdata.schema.json" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Bluehill.Forms" />
+    <PackageReference Include="Bluehill.CompilerServices" />
     <PackageReference Include="JsonSchema.Net" />
   </ItemGroup>
   <ItemGroup>
