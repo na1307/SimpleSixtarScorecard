@@ -169,8 +169,8 @@ partial class MainForm {
         // 
         // MainForm
         // 
+        AutoScaleMode = AutoScaleMode.None;
         resources.ApplyResources(this, "$this");
-        AutoScaleMode = AutoScaleMode.Font;
         Controls.Add(comboBox2);
         Controls.Add(label6);
         Controls.Add(label5);

@@ -41,8 +41,8 @@ partial class ProfileNameDialog {
         // 
         // ProfileNameDialog
         // 
+        AutoScaleMode = AutoScaleMode.None;
         resources.ApplyResources(this, "$this");
-        AutoScaleMode = AutoScaleMode.Font;
         Controls.Add(textBox1);
         Controls.Add(label1);
         Name = "ProfileNameDialog";

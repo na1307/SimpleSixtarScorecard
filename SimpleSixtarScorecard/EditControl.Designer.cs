@@ -153,8 +153,6 @@ partial class EditControl {
         // 
         // EditControl
         // 
-        resources.ApplyResources(this, "$this");
-        AutoScaleMode = AutoScaleMode.Font;
         Controls.Add(button1);
         Controls.Add(checkBoxFullCombo);
         Controls.Add(textBoxScore);
@@ -162,6 +160,7 @@ partial class EditControl {
         Controls.Add(groupBoxLunar);
         Controls.Add(groupBoxSolar);
         Name = "EditControl";
+        resources.ApplyResources(this, "$this");
         groupBoxSolar.ResumeLayout(false);
         groupBoxLunar.ResumeLayout(false);
         ResumeLayout(false);
