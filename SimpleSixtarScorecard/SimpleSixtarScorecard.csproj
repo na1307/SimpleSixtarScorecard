@@ -35,4 +35,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties songdata_1json__JsonSchema="songdata.schema.json" />
+    </VisualStudio>
+  </ProjectExtensions>
 </Project>
