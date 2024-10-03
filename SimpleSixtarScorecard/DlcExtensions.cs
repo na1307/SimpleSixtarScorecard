@@ -15,6 +15,7 @@ public static class DlcExtensions {
             Dlc.Wacca => DlcWacca,
             Dlc.Oshiribeat => DlcOshiribeat,
             Dlc.Dystopia => DlcDystopia,
+            Dlc.UnitedNetwalk => DlcUnitedNetwalk,
             _ => throw new NotImplementedException(),
         };
 }

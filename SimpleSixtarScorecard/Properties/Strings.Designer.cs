@@ -142,6 +142,15 @@ namespace SimpleSixtarScorecard.Properties {
         }
         
         /// <summary>
+        ///   UNITED NETWALK과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string DlcUnitedNetwalk {
+            get {
+                return ResourceManager.GetString("DlcUnitedNetwalk", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   WACCA과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string DlcWacca {

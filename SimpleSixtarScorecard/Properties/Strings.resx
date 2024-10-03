@@ -177,4 +177,7 @@
   <data name="YouCanAlways" xml:space="preserve">
     <value>You can always change it later.</value>
   </data>
+  <data name="DlcUnitedNetwalk" xml:space="preserve">
+    <value>UNITED NETWALK</value>
+  </data>
 </root>

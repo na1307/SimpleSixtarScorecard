@@ -12,5 +12,6 @@ public enum Dlc {
     YomohasPlanet,
     Wacca,
     Oshiribeat,
-    Dystopia
+    Dystopia,
+    UnitedNetwalk
 }

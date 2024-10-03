@@ -7,5 +7,4 @@ public sealed record class DifficultyObject(
     [property: JsonPropertyName("nova")] int Nova,
     [property: JsonPropertyName("supernova")] int Supernova,
     [property: JsonPropertyName("quasar")] int Quasar,
-    [property: JsonPropertyName("starlight")] int Starlight) {
-}
+    [property: JsonPropertyName("starlight")] int Starlight);
