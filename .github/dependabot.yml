@@ -11,8 +11,6 @@ updates:
       interval: "daily"
       time: "18:00"
       timezone: "Asia/Seoul"
-    ignore:
-      - dependency-name: "JsonSchema.Net"
     assignees:
       - "na1307"
     pull-request-branch-name:
