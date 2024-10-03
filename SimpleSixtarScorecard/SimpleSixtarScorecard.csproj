@@ -8,7 +8,11 @@
     <FileVersion>0.4.0</FileVersion>
     <Version>0.4</Version>
     <NeutralLanguage>en</NeutralLanguage>
+    <ApplicationIcon>Blue.ico</ApplicationIcon>
   </PropertyGroup>
+  <ItemGroup>
+    <Content Include="Blue.ico" />
+  </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="songdata.schema.json" />
   </ItemGroup>
