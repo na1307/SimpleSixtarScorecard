@@ -13,7 +13,6 @@ updates:
       timezone: "Asia/Seoul"
     ignore:
       - dependency-name: "JsonSchema.Net"
-        versions: [>= 7.0.a, < 7.1]
     assignees:
       - "na1307"
     pull-request-branch-name:
