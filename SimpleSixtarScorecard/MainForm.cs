@@ -66,7 +66,7 @@ public sealed partial class MainForm : Form {
 
     private void refreshSongs() {
         var tmpSongs = !string.IsNullOrWhiteSpace(textBox1.Text)
-            ? Song.SongList.Where(song => enumTest(song) && (song.Title.Contains(textBox1.Text.Trim(), StringComparison.OrdinalIgnoreCase) || song.Composer.Contains(textBox1.Text.Trim(), StringComparison.OrdinalIgnoreCase))).ToArray()
+            ? Song.SongList.Where(song => enumTest(song) && (song.Title.RemoveDiacritics().Contains(textBox1.Text.RemoveDiacritics().Trim(), StringComparison.OrdinalIgnoreCase) || song.Composer.RemoveDiacritics().Contains(textBox1.Text.RemoveDiacritics().Trim(), StringComparison.OrdinalIgnoreCase))).ToArray()
             : Song.SongList.Where(enumTest).ToArray();
 
         songs = new(tmpSongs);
