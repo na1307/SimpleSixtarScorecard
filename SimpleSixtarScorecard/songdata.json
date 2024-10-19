@@ -2828,7 +2828,7 @@
   },
   {
     "id": "banshun",
-    "title": "「晩春。」",
+    "title": "「晩春。」 (「Late Spring。」)",
     "composer": "yomoha",
     "dlc": "yomohasplanet",
     "category": "variety",
@@ -2942,7 +2942,7 @@
   },
   {
     "id": "ohanami",
-    "title": "お花見。",
+    "title": "お花見。 (Cherry Blossom Viewing)",
     "composer": "yomoha",
     "dlc": "yomohasplanet",
     "category": "original",
@@ -3923,7 +3923,7 @@
   },
   {
     "id": "leo",
-    "title": "零 (Zero)",
+    "title": "零 (Lei)",
     "composer": "音無あふ",
     "dlc": "base",
     "category": "collab",
@@ -3938,6 +3938,26 @@
       "nova": 7,
       "supernova": 10,
       "quasar": 13
+    }
+  },
+  {
+    "id": "wowcuteincome",
+    "title": "おきゅインカ帝国 (Wow! Cute! → Income)",
+    "composer": "Shu",
+    "dlc": "base",
+    "category": "collab",
+    "difficultys": {
+      "comet": 4,
+      "nova": 8,
+      "supernova": 10,
+      "quasar": 15,
+      "starlight": 17
+    },
+    "difficultyl": {
+      "comet": 4,
+      "nova": 8,
+      "supernova": 10,
+      "quasar": 15
     }
   },
   {
