@@ -3961,6 +3961,46 @@
     }
   },
   {
+    "id": "ritualfor",
+    "title": "呼唤星的仪式 (Ritual for the stars)",
+    "composer": "Glacia Sound Team \"ILusMin\"",
+    "dlc": "base",
+    "category": "collab",
+    "difficultys": {
+      "comet": 2,
+      "nova": 5,
+      "supernova": 8,
+      "quasar": 12,
+      "starlight": 14
+    },
+    "difficultyl": {
+      "comet": 2,
+      "nova": 5,
+      "supernova": 8,
+      "quasar": 12,
+      "starlight": 14
+    }
+  },
+  {
+    "id": "vivitalmono",
+    "title": "ViViTAL MONO",
+    "composer": "MYUKKE.",
+    "dlc": "base",
+    "category": "collab",
+    "difficultys": {
+      "comet": 3,
+      "nova": 7,
+      "supernova": 9,
+      "quasar": 13
+    },
+    "difficultyl": {
+      "comet": 3,
+      "nova": 7,
+      "supernova": 9,
+      "quasar": 13
+    }
+  },
+  {
     "id": "zantetsuken",
     "title": "斬鉄剣 (Zantetsuken)",
     "composer": "黒沢ダイスケ feat.よしださくら",
