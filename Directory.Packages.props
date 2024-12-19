@@ -5,11 +5,11 @@
     <CentralPackageVersionOverrideEnabled>false</CentralPackageVersionOverrideEnabled>
   </PropertyGroup>
   <ItemGroup>
-    <PackageVersion Include="Bluehill.Forms" Version="0.7.0" />
-    <PackageVersion Include="Bluehill.CompilerServices" Version="1.1.0" />
-    <PackageVersion Include="JsonSchema.Net" Version="7.2.3" />
+    <PackageVersion Include="Bluehill.Forms" Version="0.8.0" />
+    <PackageVersion Include="Bluehill.CompilerServices" Version="1.2.0" />
+    <PackageVersion Include="JsonSchema.Net" Version="7.3.0" />
   </ItemGroup>
   <ItemGroup>
-    <GlobalPackageReference Include="Bluehill.Imports" Version="1.0.7" />
+    <GlobalPackageReference Include="Bluehill.Imports" Version="1.0.8" />
   </ItemGroup>
 </Project>
