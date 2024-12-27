@@ -23,8 +23,6 @@ jobs:
           distribution: temurin
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
-        with:
-          dotnet-version: 8.0.x
       - name: Cache NuGet
         uses: actions/cache@v4
         with:
@@ -32,18 +30,20 @@ jobs:
           key: ${{ runner.os }}-sonar-nuget-${{ hashFiles('Directory.Packages.props', '.config/dotnet-tools.json') }} #hash of project files
           restore-keys: ${{ runner.os }}-sonar-nuget-
       - name: Install Tools
-        shell: powershell
         run: dotnet tool restore 
       - name: MSBuild
         uses: microsoft/setup-msbuild@v2
         with:
           msbuild-architecture: x64
-      - name: Build and analyze
+      - name: SonarScanner Begin
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        shell: powershell
-        run: |
-          dotnet sonarscanner begin /k:"na1307_SimpleSixtarScorecard" /o:"na1307" /d:sonar.token="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.cs.vscoveragexml.reportsPaths=coverage.xml /d:sonar.scanner.skipJreProvisioning=true
-          msbuild -r
-          dotnet sonarscanner end /d:sonar.token="${{ secrets.SONAR_TOKEN }}"
+        run: dotnet sonarscanner begin /k:"na1307_SimpleSixtarScorecard" /o:"na1307" /d:sonar.token="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.cs.vscoveragexml.reportsPaths=coverage.xml /d:sonar.scanner.skipJreProvisioning=true
+      - name: Build
+        run: msbuild -r
+      - name: SonarScanner End
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        run: dotnet sonarscanner end /d:sonar.token="${{ secrets.SONAR_TOKEN }}"
