@@ -36,13 +36,7 @@ jobs:
       - name: Install Tools
         run: dotnet tool restore
       - name: SonarScanner for .NET
-        uses: na1307/dotnet-sonarscanner-server@main
+        uses: na1307/dotnet-sonarscanner-cloud@v1
         with:
-          project-key: na1307_SimpleSixtarScorecard
-          sonar-host-url: https://sonarcloud.io
           sonar-token: ${{ secrets.SONAR_TOKEN }}
-          additional-properties: -o:na1307
-          build-commands: |
-            echo $SHELL
-            echo $PSVersionTable
-            msbuild -r
+          build-commands: msbuild -r
