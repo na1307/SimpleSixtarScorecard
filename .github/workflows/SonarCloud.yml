@@ -5,11 +5,16 @@ on:
     branches:
       - main
       - release
+  pull_request:
+    branches:
+      - main
+      - release
 
 jobs:
   build:
     name: SonarCloud
     runs-on: windows-latest
+    if: github.event_name == 'push' || github.event.pull_request.head.repo.full_name == github.repository
     env:
       NUGET_PACKAGES: ${{ github.workspace }}/.nuget/packages
     steps:
