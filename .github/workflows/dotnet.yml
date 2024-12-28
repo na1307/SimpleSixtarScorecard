@@ -33,5 +33,9 @@ jobs:
         path: ${{ github.workspace }}/.nuget/packages
         key: ${{ runner.os }}-nuget-${{ hashFiles('Directory.Packages.props') }} #hash of project files
         restore-keys: ${{ runner.os }}-nuget-
+    - run: echo $env:PATH
+      shell: pwsh
+    - run: echo $PATH
+      shell: bash
     - name: Build
       run: msbuild -r
