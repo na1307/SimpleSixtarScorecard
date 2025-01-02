@@ -4003,6 +4003,310 @@
     }
   },
   {
+    "id": "interstellar",
+    "title": "Interstellar",
+    "composer": "PIKASONIC",
+    "dlc": "base",
+    "category": "variety",
+    "difficultys": {
+      "comet": 2,
+      "nova": 5,
+      "supernova": 7,
+      "quasar": 11
+    },
+    "difficultyl": {
+      "comet": 2,
+      "nova": 5,
+      "supernova": 7,
+      "quasar": 11
+    }
+  },
+  {
+    "id": "binarystar",
+    "title": "Binary Star",
+    "composer": "透音 feat. 白黒あんこ",
+    "dlc": "base",
+    "category": "variety",
+    "difficultys": {
+      "comet": 2,
+      "nova": 6,
+      "supernova": 8,
+      "quasar": 11
+    },
+    "difficultyl": {
+      "comet": 2,
+      "nova": 6,
+      "supernova": 8,
+      "quasar": 11
+    }
+  },
+  {
+    "id": "receives",
+    "title": "Receives",
+    "composer": "Riya",
+    "dlc": "base",
+    "category": "variety",
+    "difficultys": {
+      "comet": 1,
+      "nova": 5,
+      "supernova": 8,
+      "quasar": 12
+    },
+    "difficultyl": {
+      "comet": 1,
+      "nova": 5,
+      "supernova": 8,
+      "quasar": 12
+    }
+  },
+  {
+    "id": "bluesummerskiss",
+    "title": "Blue Summer's Kiss (feat. Mayumi Morinaga)",
+    "composer": "黒沢ダイスケ",
+    "dlc": "base",
+    "category": "variety",
+    "difficultys": {
+      "comet": 2,
+      "nova": 4,
+      "supernova": 7,
+      "quasar": 13
+    },
+    "difficultyl": {
+      "comet": 2,
+      "nova": 4,
+      "supernova": 7,
+      "quasar": 12
+    }
+  },
+  {
+    "id": "uron",
+    "title": "Uron",
+    "composer": "polysha",
+    "dlc": "base",
+    "category": "variety",
+    "difficultys": {
+      "comet": 2,
+      "nova": 4,
+      "supernova": 9,
+      "quasar": 12
+    },
+    "difficultyl": {
+      "comet": 2,
+      "nova": 4,
+      "supernova": 9,
+      "quasar": 12
+    }
+  },
+  {
+    "id": "thegamechanger",
+    "title": "The Game Changer",
+    "composer": "Masahiro \"Godspeed\" Aoki",
+    "dlc": "base",
+    "category": "variety",
+    "difficultys": {
+      "comet": 3,
+      "nova": 6,
+      "supernova": 10,
+      "quasar": 13
+    },
+    "difficultyl": {
+      "comet": 3,
+      "nova": 6,
+      "supernova": 10,
+      "quasar": 13
+    }
+  },
+  {
+    "id": "cyberneticstrooper",
+    "title": "Cybernetics Trooper",
+    "composer": "KARUT",
+    "dlc": "base",
+    "category": "original",
+    "difficultys": {
+      "comet": 3,
+      "nova": 6,
+      "supernova": 11,
+      "quasar": 13
+    },
+    "difficultyl": {
+      "comet": 3,
+      "nova": 6,
+      "supernova": 11,
+      "quasar": 13
+    }
+  },
+  {
+    "id": "mangoparfait",
+    "title": "Mango Parfait",
+    "composer": "Palami",
+    "dlc": "base",
+    "category": "original",
+    "difficultys": {
+      "comet": 3,
+      "nova": 6,
+      "supernova": 10,
+      "quasar": 13
+    },
+    "difficultyl": {
+      "comet": 3,
+      "nova": 6,
+      "supernova": 10,
+      "quasar": 13
+    }
+  },
+  {
+    "id": "bunnybomb",
+    "title": "Bunny Bomb 2024",
+    "composer": "yomoha",
+    "dlc": "base",
+    "category": "original",
+    "difficultys": {
+      "comet": 2,
+      "nova": 5,
+      "supernova": 9,
+      "quasar": 14
+    },
+    "difficultyl": {
+      "comet": 2,
+      "nova": 6,
+      "supernova": 9,
+      "quasar": 13
+    }
+  },
+  {
+    "id": "flechette",
+    "title": "Flechette",
+    "composer": "awfuless meets PODA",
+    "dlc": "base",
+    "category": "variety",
+    "difficultys": {
+      "comet": 4,
+      "nova": 7,
+      "supernova": 11,
+      "quasar": 14
+    },
+    "difficultyl": {
+      "comet": 4,
+      "nova": 7,
+      "supernova": 12,
+      "quasar": 15
+    }
+  },
+  {
+    "id": "ubringmejoy",
+    "title": "U BRiNG ME JOY",
+    "composer": "KARUT",
+    "dlc": "base",
+    "category": "original",
+    "difficultys": {
+      "comet": 3,
+      "nova": 6,
+      "supernova": 11,
+      "quasar": 14
+    },
+    "difficultyl": {
+      "comet": 4,
+      "nova": 6,
+      "supernova": 11,
+      "quasar": 14
+    }
+  },
+  {
+    "id": "copykitten",
+    "title": "CopyKitten",
+    "composer": "t+pazolite",
+    "dlc": "base",
+    "category": "original",
+    "difficultys": {
+      "comet": 4,
+      "nova": 7,
+      "supernova": 12,
+      "quasar": 15
+    },
+    "difficultyl": {
+      "comet": 4,
+      "nova": 7,
+      "supernova": 12,
+      "quasar": 15
+    }
+  },
+  {
+    "id": "sesamekingdom",
+    "title": "Sesame Kingdom",
+    "composer": "VeetaCrush",
+    "dlc": "base",
+    "category": "variety",
+    "difficultys": {
+      "comet": 2,
+      "nova": 5,
+      "supernova": 10,
+      "quasar": 15
+    },
+    "difficultyl": {
+      "comet": 2,
+      "nova": 5,
+      "supernova": 10,
+      "quasar": 14
+    }
+  },
+  {
+    "id": "verticalwave",
+    "title": "Vertical Wave",
+    "composer": "Lapix",
+    "dlc": "base",
+    "category": "original",
+    "difficultys": {
+      "comet": 4,
+      "nova": 8,
+      "supernova": 12,
+      "quasar": 15
+    },
+    "difficultyl": {
+      "comet": 4,
+      "nova": 8,
+      "supernova": 12,
+      "quasar": 14
+    }
+  },
+  {
+    "id": "fallensavior",
+    "title": "Fallen Savior",
+    "composer": "yomoha",
+    "dlc": "base",
+    "category": "original",
+    "difficultys": {
+      "comet": 4,
+      "nova": 6,
+      "supernova": 11,
+      "quasar": 14
+    },
+    "difficultyl": {
+      "comet": 4,
+      "nova": 6,
+      "supernova": 11,
+      "quasar": 14
+    }
+  },
+  {
+    "id": "anastasix",
+    "title": "AnastasiX",
+    "composer": "Sound Souler",
+    "dlc": "base",
+    "category": "original",
+    "difficultys": {
+      "comet": 5,
+      "nova": 8,
+      "supernova": 10,
+      "quasar": 15
+    },
+    "difficultyl": {
+      "comet": 5,
+      "nova": 8,
+      "supernova": 10,
+      "quasar": 15
+    }
+  },
+  {
     "id": "zantetsuken",
     "title": "斬鉄剣 (Zantetsuken)",
     "composer": "黒沢ダイスケ feat.よしださくら",
