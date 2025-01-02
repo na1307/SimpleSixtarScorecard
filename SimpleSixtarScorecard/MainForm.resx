@@ -492,8 +492,14 @@
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>
   </data>
+  <data name="$this.FormBorderStyle" type="System.Windows.Forms.FormBorderStyle, System.Windows.Forms">
+    <value>FixedSingle</value>
+  </data>
   <data name="&gt;&gt;nameColumn.Name" xml:space="preserve">
     <value>nameColumn</value>
+  </data>
+  <data name="$this.MaximizeBox" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
   </data>
   <data name="&gt;&gt;nameColumn.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
