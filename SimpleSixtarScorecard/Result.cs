@@ -1,26 +1,41 @@
-﻿using System.Text.Json.Serialization;
+﻿using System.ComponentModel;
 
 namespace SimpleSixtarScorecard;
 
-public sealed record class Result {
+public sealed record class Result : INotifyPropertyChanged {
     public const string SongIdPropertyName = "songid";
     public const string ModePropertyName = "mode";
     public const string DifficultyPropertyName = "difficulty";
     public const string ScorePropertyName = "score";
     public const string FullComboPropertyName = "fullcombo";
+    private int score;
+    private bool fullCombo;
 
-    [JsonPropertyName(SongIdPropertyName)]
+    public event PropertyChangedEventHandler? PropertyChanged;
+
     public required string SongId { get; init; }
 
-    [JsonPropertyName(ModePropertyName)]
     public required Mode Mode { get; init; }
 
-    [JsonPropertyName(DifficultyPropertyName)]
     public required Difficulty Difficulty { get; init; }
 
-    [JsonPropertyName(ScorePropertyName)]
-    public int Score { get; set; }
+    public int Score {
+        get => score;
+        set {
+            if (score != value) {
+                score = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(Score)));
+            }
+        }
+    }
 
-    [JsonPropertyName(FullComboPropertyName)]
-    public bool FullCombo { get; set; }
+    public bool FullCombo {
+        get => fullCombo;
+        set {
+            if (fullCombo != value) {
+                fullCombo = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(FullCombo)));
+            }
+        }
+    }
 }

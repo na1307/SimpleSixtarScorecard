@@ -10,8 +10,8 @@ public sealed record class Song(
     [property: JsonPropertyName("composer")] string Composer,
     [property: JsonPropertyName("dlc")] Dlc Dlc,
     [property: JsonPropertyName("category")] Category Category,
-    [property: JsonPropertyName("difficultys")] DifficultyObject DifficultySolar,
-    [property: JsonPropertyName("difficultyl")] DifficultyObject DifficultyLunar) {
+    [property: JsonPropertyName("difficultys")] SongDifficulty DifficultySolar,
+    [property: JsonPropertyName("difficultyl")] SongDifficulty DifficultyLunar) {
     public static ReadOnlyCollection<Song> SongList { get; } = new(JsonSerializer.Deserialize<Song[]>(File.ReadAllBytes("songdata.json"))!);
 
     public int SolarQuasar => DifficultySolar.Quasar;

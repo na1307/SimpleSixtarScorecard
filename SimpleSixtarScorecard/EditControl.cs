@@ -37,14 +37,14 @@ public sealed partial class EditControl : UserControl {
         set(radioButtonLStarlight, Mode.Lunar, Difficulty.Starlight);
 
         void set(RadioButton button, Mode mode, Difficulty difficulty) {
-            var diff = getDiff();
-            button.Text = getDiffText();
+            var difficultyLevel = getDifficulty();
+            button.Text = getDifficultyText();
 
             // If difficulty is not 0 (== if a chart exists)
-            if (diff != 0) {
+            if (difficultyLevel != 0) {
                 // Difficulty
-                button.Text += " - " + diff.ToString("D2");
-                var result = Profile.Instance.Results.Find(r => r.SongId == song.Id && r.Mode == mode && r.Difficulty == difficulty);
+                button.Text += " - " + difficultyLevel.ToString("D2");
+                var result = Profile.Instance.Results.SingleOrDefault(r => r.SongId == song.Id && r.Mode == mode && r.Difficulty == difficulty);
 
                 // If results exist
                 if (result is not null) {
@@ -68,7 +68,7 @@ public sealed partial class EditControl : UserControl {
                 button.Enabled = false;
             }
 
-            int getDiff() {
+            int getDifficulty() {
                 var diffObj = mode switch {
                     Mode.Solar => song.DifficultySolar,
                     Mode.Lunar => song.DifficultyLunar,
@@ -85,7 +85,7 @@ public sealed partial class EditControl : UserControl {
                 };
             }
 
-            string getDiffText() => difficulty switch {
+            string getDifficultyText() => difficulty switch {
                 Difficulty.Comet => Strings.Comet,
                 Difficulty.Nova => Strings.Nova,
                 Difficulty.Supernova => Strings.Supernova,
@@ -98,7 +98,7 @@ public sealed partial class EditControl : UserControl {
 
     private void button1_Click(object sender, EventArgs e) {
         var (mode, diff) = getModeAndDiff();
-        var resultIndex = Profile.Instance.Results.FindIndex(i => i.SongId == song.Id && i.Mode == mode && i.Difficulty == diff);
+        var resultIndex = Profile.Instance.Results.Select((v, i) => new { v, i }).FirstOrDefault(a => a.v.SongId == song.Id && a.v.Mode == mode && a.v.Difficulty == diff)?.i ?? -1;
 
         // If there aren't any registered results
         if (resultIndex == -1) {
@@ -166,7 +166,7 @@ public sealed partial class EditControl : UserControl {
             }
 
             // Score input field and FC checkbox
-            var result = Profile.Instance.Results.Find(r => r.SongId == song.Id && r.Mode == mode && r.Difficulty == getModeAndDiff().diff);
+            var result = Profile.Instance.Results.SingleOrDefault(r => r.SongId == song.Id && r.Mode == mode && r.Difficulty == getModeAndDiff().diff);
             textBoxScore.Text = result?.Score.ToString() ?? "0";
             checkBoxFullCombo.Checked = result?.FullCombo ?? false;
         }

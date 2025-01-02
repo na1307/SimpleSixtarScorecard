@@ -1,4 +1,6 @@
-﻿using System.Text;
+﻿using System.Collections.ObjectModel;
+using System.ComponentModel;
+using System.Text;
 using System.Text.Json;
 using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
@@ -12,16 +14,38 @@ public sealed class Profile {
     private static readonly ProfileConverter converter = new(ProfileFile);
     private static readonly Lazy<Profile> instance = new(converter.Load);
     private static readonly JsonWriterOptions indentedWriterOptions = new() { Indented = true };
+    private string? userName;
+    private ObservableCollection<Result> results = [];
 
     private Profile() { }
 
     public static Profile Instance => instance.Value;
 
-    [JsonPropertyName(UserNamePropertyName)]
-    public required string UserName { get; set; }
+    public string UserName {
+        get => userName!;
+        set {
+            if (userName != value) {
+                var oldValue = userName;
+                userName = value;
 
-    [JsonPropertyName(ResultsPropertyName)]
-    public required List<Result> Results { get; init; }
+                if (oldValue != null) {
+                    SaveProfile();
+                }
+            }
+        }
+    }
+
+    public ObservableCollection<Result> Results {
+        get => results;
+        init {
+            results = value;
+            value.ForEach(result => result.PropertyChanged += (_, _) => SaveProfile());
+            results.CollectionChanged += (_, e) => {
+                e.NewItems?.Cast<INotifyPropertyChanged>().ForEach(inpc => inpc.PropertyChanged += (_, _) => SaveProfile());
+                SaveProfile();
+            };
+        }
+    }
 
     public void SaveProfile() => converter.Save(this);
 
@@ -54,13 +78,13 @@ public sealed class Profile {
 
             return new() {
                 UserName = jo[UserNamePropertyName]!.ToString(),
-                Results = jo[ResultsPropertyName]!.AsArray().Cast<JsonObject>().Select(obj => new Result {
+                Results = new(jo[ResultsPropertyName]!.AsArray().Cast<JsonObject>().Select(obj => new Result {
                     SongId = obj[Result.SongIdPropertyName]!.ToString(),
                     Mode = parseEnum<Mode>(obj[Result.ModePropertyName]),
                     Difficulty = parseEnum<Difficulty>(obj[Result.DifficultyPropertyName]),
                     Score = int.Parse(obj[Result.ScorePropertyName]!.ToString()),
                     FullCombo = bool.Parse(obj[Result.FullComboPropertyName]!.ToString()),
-                }).ToList(),
+                })),
             };
 
             static TEnum parseEnum<TEnum>(JsonNode? node) where TEnum : struct, Enum => Enum.TryParse<TEnum>(node?.ToString(), true, out TEnum value) ? value : default;
