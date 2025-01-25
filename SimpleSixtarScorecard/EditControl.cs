@@ -2,7 +2,7 @@
 
 namespace SimpleSixtarScorecard;
 
-public sealed partial class EditControl : UserControl {
+internal sealed partial class EditControl : UserControl {
     private readonly Song song;
 
     public EditControl(Song song) {
@@ -18,6 +18,35 @@ public sealed partial class EditControl : UserControl {
 
         foreach (var lrb in groupBoxLunar.Controls.Cast<RadioButton>()) {
             lrb.CheckedChanged += Lrb_CheckedChanged;
+        }
+    }
+
+    // Return mode and difficulty based on which button was clicked
+    private (Mode Mode, Difficulty Difficulty) SelectedModeAndDifficulty {
+        get {
+            if (radioButtonSComet.Checked) {
+                return (Mode.Solar, Difficulty.Comet);
+            } else if (radioButtonSNova.Checked) {
+                return (Mode.Solar, Difficulty.Nova);
+            } else if (radioButtonSSupernova.Checked) {
+                return (Mode.Solar, Difficulty.Supernova);
+            } else if (radioButtonSQuasar.Checked) {
+                return (Mode.Solar, Difficulty.Quasar);
+            } else if (radioButtonSStarlight.Checked) {
+                return (Mode.Solar, Difficulty.Starlight);
+            } else if (radioButtonLComet.Checked) {
+                return (Mode.Lunar, Difficulty.Comet);
+            } else if (radioButtonLNova.Checked) {
+                return (Mode.Lunar, Difficulty.Nova);
+            } else if (radioButtonLSupernova.Checked) {
+                return (Mode.Lunar, Difficulty.Supernova);
+            } else if (radioButtonLQuasar.Checked) {
+                return (Mode.Lunar, Difficulty.Quasar);
+            } else if (radioButtonLStarlight.Checked) {
+                return (Mode.Lunar, Difficulty.Starlight);
+            } else {
+                throw new InvalidOperationException();
+            }
         }
     }
 
@@ -72,7 +101,7 @@ public sealed partial class EditControl : UserControl {
                 var diffObj = mode switch {
                     Mode.Solar => song.DifficultySolar,
                     Mode.Lunar => song.DifficultyLunar,
-                    _ => throw new NotImplementedException(),
+                    _ => throw new InvalidOperationException(),
                 };
 
                 return difficulty switch {
@@ -81,7 +110,7 @@ public sealed partial class EditControl : UserControl {
                     Difficulty.Supernova => diffObj.Supernova,
                     Difficulty.Quasar => diffObj.Quasar,
                     Difficulty.Starlight => diffObj.Starlight,
-                    _ => throw new NotImplementedException(),
+                    _ => throw new InvalidOperationException(),
                 };
             }
 
@@ -91,13 +120,13 @@ public sealed partial class EditControl : UserControl {
                 Difficulty.Supernova => Strings.Supernova,
                 Difficulty.Quasar => Strings.Quasar,
                 Difficulty.Starlight => Strings.Starlight,
-                _ => throw new NotImplementedException(),
+                _ => throw new InvalidOperationException(),
             };
         }
     }
 
     private void button1_Click(object sender, EventArgs e) {
-        var (mode, diff) = getModeAndDiff();
+        var (mode, diff) = SelectedModeAndDifficulty;
         var resultIndex = Profile.Instance.Results.Select((v, i) => new { v, i }).FirstOrDefault(a => a.v.SongId == song.Id && a.v.Mode == mode && a.v.Difficulty == diff)?.i ?? -1;
 
         // If there aren't any registered results
@@ -124,33 +153,6 @@ public sealed partial class EditControl : UserControl {
         rbInit();
     }
 
-    // Return mode and difficulty based on which button was clicked
-    private (Mode mode, Difficulty diff) getModeAndDiff() {
-        if (radioButtonSComet.Checked) {
-            return (Mode.Solar, Difficulty.Comet);
-        } else if (radioButtonSNova.Checked) {
-            return (Mode.Solar, Difficulty.Nova);
-        } else if (radioButtonSSupernova.Checked) {
-            return (Mode.Solar, Difficulty.Supernova);
-        } else if (radioButtonSQuasar.Checked) {
-            return (Mode.Solar, Difficulty.Quasar);
-        } else if (radioButtonSStarlight.Checked) {
-            return (Mode.Solar, Difficulty.Starlight);
-        } else if (radioButtonLComet.Checked) {
-            return (Mode.Lunar, Difficulty.Comet);
-        } else if (radioButtonLNova.Checked) {
-            return (Mode.Lunar, Difficulty.Nova);
-        } else if (radioButtonLSupernova.Checked) {
-            return (Mode.Lunar, Difficulty.Supernova);
-        } else if (radioButtonLQuasar.Checked) {
-            return (Mode.Lunar, Difficulty.Quasar);
-        } else if (radioButtonLStarlight.Checked) {
-            return (Mode.Lunar, Difficulty.Starlight);
-        } else {
-            throw new NotImplementedException();
-        }
-    }
-
     private void checkedChanged(RadioButton button, GroupBox box, Mode mode) {
         // Event fires upon clicking a specific button
         if (button.Checked) {
@@ -166,13 +168,14 @@ public sealed partial class EditControl : UserControl {
             }
 
             // Score input field and FC checkbox
-            var result = Profile.Instance.Results.SingleOrDefault(r => r.SongId == song.Id && r.Mode == mode && r.Difficulty == getModeAndDiff().diff);
+            var result = Profile.Instance.Results.SingleOrDefault(r => r.SongId == song.Id && r.Mode == mode && r.Difficulty == SelectedModeAndDifficulty.Difficulty);
             textBoxScore.Text = result?.Score.ToString() ?? "0";
             checkBoxFullCombo.Checked = result?.FullCombo ?? false;
         }
     }
 
     private void Srb_CheckedChanged(object? sender, EventArgs e) => checkedChanged((RadioButton)sender!, groupBoxLunar, Mode.Solar);
+
     private void Lrb_CheckedChanged(object? sender, EventArgs e) => checkedChanged((RadioButton)sender!, groupBoxSolar, Mode.Lunar);
 
     private void textBoxScore_Leave(object sender, EventArgs e) {

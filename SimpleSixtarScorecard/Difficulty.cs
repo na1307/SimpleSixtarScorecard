@@ -1,6 +1,6 @@
 ﻿namespace SimpleSixtarScorecard;
 
-public enum Difficulty {
+internal enum Difficulty {
     Comet,
     Nova,
     Supernova,

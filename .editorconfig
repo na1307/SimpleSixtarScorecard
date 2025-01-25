@@ -25,6 +25,9 @@ dotnet_diagnostic.IDE0004.severity = error
 # Force braces
 dotnet_diagnostic.IDE0011.severity = error
 
+# Use explicitly provided tuple name
+dotnet_diagnostic.IDE0033.severity = error
+
 # Simplify 'default' expression
 dotnet_diagnostic.IDE0034.severity = error
 
@@ -93,9 +96,6 @@ dotnet_diagnostic.IDE0031.severity = warning
 # Use auto-implemented property
 dotnet_diagnostic.IDE0032.severity = warning
 
-# Use explicitly provided tuple name
-dotnet_diagnostic.IDE0033.severity = warning
-
 # Use inferred member names
 dotnet_diagnostic.IDE0037.severity = warning
 
@@ -104,6 +104,9 @@ dotnet_diagnostic.IDE0038.severity = warning
 
 # Use 'is null' check
 dotnet_diagnostic.IDE0041.severity = warning
+
+# Remove unused parameter
+dotnet_diagnostic.IDE0060.severity = warning
 
 # Use simple 'using' statement
 dotnet_diagnostic.IDE0063.severity = warning
@@ -223,10 +226,30 @@ dotnet_diagnostic.CA1016.severity = error
 # Mark attributes with AttributeUsageAttribute
 dotnet_diagnostic.CA1018.severity = error
 
+# Do not use insecure deserializer BinaryFormatter
+dotnet_diagnostic.CA2300.severity = error
+
+# Do not use insecure deserializer LosFormatter
+dotnet_diagnostic.CA2305.severity = error
+
+# Do not use insecure deserializer NetDataContractSerializer
+dotnet_diagnostic.CA2310.severity = error
+
+# Do not use insecure deserializer ObjectStateFormatter
+dotnet_diagnostic.CA2315.severity = error
+
 ## Warnings ##
+
+# Do not declare static members on generic types
+dotnet_diagnostic.CA1000.severity = warning
+dotnet_code_quality.CA1000.api_surface = all
 
 # Types that own disposable fields should be disposable
 dotnet_diagnostic.CA1001.severity = warning
+
+# Do not expose generic lists
+dotnet_diagnostic.CA1002.severity = warning
+dotnet_code_quality.CA1002.api_surface = all
 
 # Use generic event handler instances
 dotnet_diagnostic.CA1003.severity = warning
@@ -236,8 +259,16 @@ dotnet_code_quality.CA1003.api_surface = all
 dotnet_diagnostic.CA1010.severity = warning
 dotnet_code_quality.CA1010.api_surface = all
 
+# Abstract types should not have public constructors
+dotnet_diagnostic.CA1012.severity = warning
+dotnet_code_quality.CA1012.api_surface = all
+
 # Define accessors for attribute arguments
 dotnet_diagnostic.CA1019.severity = warning
+
+# Use properties where appropriate
+dotnet_diagnostic.CA1024.severity = warning
+dotnet_code_quality.CA1024.api_surface = all
 
 # Mark enums with FlagsAttribute
 dotnet_diagnostic.CA1027.severity = warning
@@ -260,9 +291,36 @@ dotnet_diagnostic.CA1033.severity = warning
 # Nested types should not be visible
 dotnet_diagnostic.CA1034.severity = warning
 
+# Override methods on comparable types
+dotnet_diagnostic.CA1036.severity = warning
+dotnet_code_quality.CA1036.api_surface = all
+
+# Avoid empty interfaces
+dotnet_diagnostic.CA1040.severity = warning
+dotnet_code_quality.CA1040.api_surface = all
+
+# Provide ObsoleteAttribute message
+dotnet_diagnostic.CA1041.severity = warning
+dotnet_code_quality.CA1041.api_surface = all
+
 # Use integral or string argument for indexers
 dotnet_diagnostic.CA1043.severity = warning
 dotnet_code_quality.CA1043.api_surface = all
+
+# Properties should not be write only
+dotnet_diagnostic.CA1044.severity = warning
+dotnet_code_quality.CA1044.api_surface = all
+
+# Declare types in namespaces
+dotnet_diagnostic.CA1050.severity = warning
+
+# Do not declare visible instance fields
+dotnet_diagnostic.CA1051.severity = warning
+dotnet_code_quality.CA1051.api_surface = all
+
+# Static holder types should be Static or NotInheritable
+dotnet_diagnostic.CA1052.severity = warning
+dotnet_code_quality.CA1052.api_surface = all
 
 # URI parameters should not be strings
 dotnet_diagnostic.CA1054.severity = warning
@@ -283,9 +341,18 @@ dotnet_code_quality.CA1058.api_surface = all
 # Move P/Invokes to NativeMethods class
 dotnet_diagnostic.CA1060.severity = warning
 
+# Do not hide base class methods
+dotnet_diagnostic.CA1061.severity = warning
+
 # Implement IDisposable correctly
 dotnet_diagnostic.CA1063.severity = warning
 dotnet_code_quality.CA1063.api_surface = all
+
+# Exceptions should be public
+dotnet_diagnostic.CA1064.severity = warning
+
+# Do not raise exceptions in unexpected locations
+dotnet_diagnostic.CA1065.severity = warning
 
 # Implement IEquatable when overriding Equals
 dotnet_diagnostic.CA1066.severity = warning
@@ -299,6 +366,18 @@ dotnet_diagnostic.CA1068.severity = warning
 # Enums should not have duplicate values
 dotnet_diagnostic.CA1069.severity = warning
 
+# Do not declare event fields as virtual
+dotnet_diagnostic.CA1070.severity = warning
+
+# P/Invokes should not be visible
+dotnet_diagnostic.CA1401.severity = warning
+
+# Use nameof in place of string
+dotnet_diagnostic.CA1507.severity = warning
+
+# Avoid dead conditional code
+dotnet_diagnostic.CA1508.severity = warning
+
 # Use ArgumentNullException throw helper
 dotnet_diagnostic.CA1510.severity = warning
 
@@ -311,8 +390,18 @@ dotnet_diagnostic.CA1512.severity = warning
 # Use ObjectDisposedException throw helper
 dotnet_diagnostic.CA1513.severity = warning
 
+# Avoid redundant length argument
+dotnet_diagnostic.CA1514.severity = warning
+
 # Do not name enum values 'Reserved'
 dotnet_diagnostic.CA1700.severity = warning
+
+# Identifiers should not contain underscores
+dotnet_diagnostic.CA1707.severity = warning
+
+# Identifiers should differ by more than case
+dotnet_diagnostic.CA1708.severity = warning
+dotnet_code_quality.CA1708.api_surface = all
 
 # Identifiers should have correct suffix
 dotnet_diagnostic.CA1710.severity = warning
@@ -344,9 +433,6 @@ dotnet_code_quality.CA1716.api_surface = all
 dotnet_diagnostic.CA1717.severity = warning
 dotnet_code_quality.CA1717.api_surface = all
 
-# Properties should not return arrays
-dotnet_diagnostic.CA1819.severity = warning
-
 # Identifiers should not contain type names
 dotnet_diagnostic.CA1720.severity = warning
 dotnet_code_quality.CA1720.api_surface = all
@@ -355,6 +441,16 @@ dotnet_code_quality.CA1720.api_surface = all
 dotnet_diagnostic.CA1721.severity = warning
 dotnet_code_quality.CA1721.api_surface = all
 
+# Type names should not match namespaces
+dotnet_diagnostic.CA1724.severity = warning
+
+# Parameter names should match base declaration
+dotnet_diagnostic.CA1725.severity = warning
+dotnet_code_quality.CA1725.api_surface = all
+
+# Use PascalCase for named placeholders
+dotnet_diagnostic.CA1727.severity = warning
+
 # Use Literals Where Appropriate
 dotnet_diagnostic.CA1802.severity = warning
 dotnet_code_quality.CA1802.api_surface = all
@@ -362,8 +458,23 @@ dotnet_code_quality.CA1802.api_surface = all
 # Do not initialize unnecessarily
 dotnet_diagnostic.CA1805.severity = warning
 
+# Do not ignore method results
+dotnet_diagnostic.CA1806.severity = warning
+
+# Initialize reference type static fields inline
+dotnet_diagnostic.CA1810.severity = warning
+
 # Avoid unsealed attributes
 dotnet_diagnostic.CA1813.severity = warning
+dotnet_code_quality.CA1813.ignore_internalsvisibleto = true
+
+# Override equals and operator equals on value types
+dotnet_diagnostic.CA1815.severity = warning
+dotnet_code_quality.CA1815.api_surface = all
+
+# Call GC.SuppressFinalize correctly
+dotnet_diagnostic.CA1816.severity = warning
+dotnet_code_quality.CA1816.api_surface = all
 
 # Properties should not return arrays
 dotnet_diagnostic.CA1819.severity = warning
@@ -379,8 +490,20 @@ dotnet_diagnostic.CA1821.severity = warning
 dotnet_diagnostic.CA1822.severity = warning
 dotnet_code_quality.CA1822.api_surface = all
 
+# Mark assemblies with NeutralResourcesLanguageAttribute
+dotnet_diagnostic.CA1824.severity = warning
+
 # Avoid zero-length array allocations
 dotnet_diagnostic.CA1825.severity = warning
+
+# Use property instead of Linq Enumerable method
+dotnet_diagnostic.CA1826.severity = warning
+
+# Do not use Count()/LongCount() when Any() can be used
+dotnet_diagnostic.CA1827.severity = warning
+
+# Do not use CountAsync/LongCountAsync when AnyAsync can be used
+dotnet_diagnostic.CA1828.severity = warning
 
 # Use Length/Count property instead of Enumerable.Count method
 dotnet_diagnostic.CA1829.severity = warning
@@ -388,8 +511,20 @@ dotnet_diagnostic.CA1829.severity = warning
 # Prefer strongly-typed Append and Insert method overloads on StringBuilder
 dotnet_diagnostic.CA1830.severity = warning
 
+# Use AsSpan instead of Range-based indexers for string when appropriate
+dotnet_diagnostic.CA1831.severity = warning
+
+# Use AsSpan or AsMemory instead of Range-based indexers for getting ReadOnlySpan or ReadOnlyMemory portion of an array
+dotnet_diagnostic.CA1832.severity = warning
+
+# Use AsSpan or AsMemory instead of Range-based indexers for getting Span or Memory portion of an array
+dotnet_diagnostic.CA1833.severity = warning
+
 # Use StringBuilder.Append(char) for single character strings
 dotnet_diagnostic.CA1834.severity = warning
+
+# Prefer the memory-based overloads of ReadAsync/WriteAsync methods in stream-based classes
+dotnet_diagnostic.CA1835.severity = warning
 
 # Prefer IsEmpty over Count when available
 dotnet_diagnostic.CA1836.severity = warning
@@ -415,14 +550,27 @@ dotnet_diagnostic.CA1843.severity = warning
 # Use string.Contains(char) instead of string.Contains(string) with single characters
 dotnet_diagnostic.CA1847.severity = warning
 
+# Call async methods when in an async method
+dotnet_diagnostic.CA1849.severity = warning
+
+# Prefer static HashData method over ComputeHash
+dotnet_diagnostic.CA1850.severity = warning
+
 # Possible multiple enumerations of IEnumerable collection
 dotnet_diagnostic.CA1851.severity = warning
+
+# Seal internal types
+dotnet_diagnostic.CA1852.severity = warning
+dotnet_code_quality.CA1852.ignore_internalsvisibleto = true
 
 # Unnecessary call to 'Dictionary.ContainsKey(key)'
 dotnet_diagnostic.CA1853.severity = warning
 
 # Prefer the IDictionary.TryGetValue(TKey, out TValue) method
 dotnet_diagnostic.CA1854.severity = warning
+
+# Use Span<T>.Clear() instead of Span<T>.Fill()
+dotnet_diagnostic.CA1855.severity = warning
 
 # Use StartsWith instead of IndexOf
 dotnet_diagnostic.CA1858.severity = warning
@@ -434,11 +582,19 @@ dotnet_code_quality.CA1859.api_surface = all
 # Avoid using 'Enumerable.Any()' extension method
 dotnet_diagnostic.CA1860.severity = warning
 
+# Avoid constant arrays as arguments
+dotnet_diagnostic.CA1861.severity = warning
+
 # Use the 'StringComparison' method overloads to perform case-insensitive string comparisons
 dotnet_diagnostic.CA1862.severity = warning
 
 # Prefer the 'IDictionary.TryAdd(TKey, TValue)' method
 dotnet_diagnostic.CA1864.severity = warning
+
+# Use 'string.Method(char)' instead of 'string.Method(string)' for string with single char
+dotnet_diagnostic.CA1865.severity = warning
+dotnet_diagnostic.CA1866.severity = warning
+dotnet_diagnostic.CA1867.severity = warning
 
 # Unnecessary call to 'Contains' for sets
 dotnet_diagnostic.CA1868.severity = warning
@@ -446,11 +602,32 @@ dotnet_diagnostic.CA1868.severity = warning
 # Cache and reuse 'JsonSerializerOptions' instances
 dotnet_diagnostic.CA1869.severity = warning
 
+# Use a cached 'SearchValues' instance
+dotnet_diagnostic.CA1870.severity = warning
+
+# Do not pass a nullable struct to 'ArgumentNullException.ThrowIfNull'
+dotnet_diagnostic.CA1871.severity = warning
+
+# Prefer 'Convert.ToHexString' and 'Convert.ToHexStringLower' over call chains based on 'BitConverter.ToString'
+dotnet_diagnostic.CA1872.severity = warning
+
 # Dispose objects before losing scope
 dotnet_diagnostic.CA2000.severity = warning
 
+# Do not lock on objects with weak identity
+dotnet_diagnostic.CA2002.severity = warning
+
 # Do not call ToImmutableCollection on an ImmutableCollection value
 dotnet_diagnostic.CA2009.severity = warning
+
+# Do not assign property within its setter
+dotnet_diagnostic.CA2011.severity = warning
+
+# Use ValueTasks correctly
+dotnet_diagnostic.CA2012.severity = warning
+
+# Do not use ReferenceEquals with value types
+dotnet_diagnostic.CA2013.severity = warning
 
 # Forward the CancellationToken parameter to methods that take one
 dotnet_diagnostic.CA2016.severity = warning
@@ -458,11 +635,38 @@ dotnet_diagnostic.CA2016.severity = warning
 # Specify marshalling for P/Invoke string arguments
 dotnet_diagnostic.CA2101.severity = warning
 
+# Rethrow to preserve stack details
+dotnet_diagnostic.CA2200.severity = warning
+
+# Do not raise reserved exception types
+dotnet_diagnostic.CA2201.severity = warning
+
+# Initialize value type static fields inline
+dotnet_diagnostic.CA2207.severity = warning
+
+# Instantiate argument exceptions correctly
+dotnet_diagnostic.CA2208.severity = warning
+
+# Non-constant fields should not be visible
+dotnet_diagnostic.CA2211.severity = warning
+
 # Disposable fields should be disposed
 dotnet_diagnostic.CA2213.severity = warning
 
+# Do not call overridable methods in constructors
+dotnet_diagnostic.CA2214.severity = warning
+
+# Dispose methods should call base class dispose
+dotnet_diagnostic.CA2215.severity = warning
+
 # Disposable types should declare finalizer
 dotnet_diagnostic.CA2216.severity = warning
+
+# Do not mark enums with FlagsAttribute
+dotnet_diagnostic.CA2217.severity = warning
+
+# Do not raise exceptions in exception clauses
+dotnet_diagnostic.CA2219.severity = warning
 
 # Operator overloads have named alternates
 dotnet_diagnostic.CA2225.severity = warning
@@ -471,6 +675,9 @@ dotnet_code_quality.CA2225.api_surface = all
 # Collection properties should be read only
 dotnet_diagnostic.CA2227.severity = warning
 
+# Overload operator equals on overriding ValueType.Equals
+dotnet_diagnostic.CA2231.severity = warning
+
 # Pass System.Uri objects instead of strings
 dotnet_diagnostic.CA2234.severity = warning
 dotnet_code_quality.CA2234.api_surface = all
@@ -478,11 +685,20 @@ dotnet_code_quality.CA2234.api_surface = all
 # Provide correct arguments to formatting methods
 dotnet_diagnostic.CA2241.severity = warning
 
+# Test for NaN correctly
+dotnet_diagnostic.CA2242.severity = warning
+
 # Attribute string literals should parse correctly
 dotnet_diagnostic.CA2243.severity = warning
 
 # Do not duplicate indexed element initializations
 dotnet_diagnostic.CA2244.severity = warning
+
+# Do not assign a property to itself
+dotnet_diagnostic.CA2245.severity = warning
+
+# Do not assign a symbol and its member in the same statement
+dotnet_diagnostic.CA2246.severity = warning
 
 # Provide correct enum argument to Enum.HasFlag
 dotnet_diagnostic.CA2248.severity = warning
@@ -495,6 +711,41 @@ dotnet_diagnostic.CA2250.severity = warning
 
 # Use String.Equals over String.Compare
 dotnet_diagnostic.CA2251.severity = warning
+
+# Named placeholders should not be numeric values
+dotnet_diagnostic.CA2253.severity = warning
+
+# Template should be a static expression
+dotnet_diagnostic.CA2254.severity = warning
+
+# Set 'MaxResponseHeadersLength' properly
+dotnet_diagnostic.CA2262.severity = warning
+
+# Prefer generic overload when type is known
+dotnet_diagnostic.CA2263.severity = warning
+
+# Do not pass a non-nullable value to 'ArgumentNullException.ThrowIfNull'
+dotnet_diagnostic.CA2264.severity = warning
+
+# Do not compare Span<T> to null or default
+dotnet_diagnostic.CA2265.severity = warning
+
+## Suggestions ##
+
+# Avoid excessive inheritance
+dotnet_diagnostic.CA1501.severity = suggestion
+
+# Avoid excessive complexity
+dotnet_diagnostic.CA1502.severity = suggestion
+
+# Avoid unmaintainable code
+dotnet_diagnostic.CA1505.severity = suggestion
+
+# Avoid excessive class coupling
+dotnet_diagnostic.CA1506.severity = suggestion
+
+# Consider making public types internal
+dotnet_diagnostic.CA1515.severity = suggestion
 
 ### SYSLIB ###
 
@@ -556,6 +807,9 @@ dotnet_diagnostic.rcs1042.severity = error
 # Declare each attribute separately
 dotnet_diagnostic.rcs1052.severity = error
 
+# Split variable declaration
+dotnet_diagnostic.rcs1081.severity = error
+
 ## Warnings ##
 
 # Merge 'else' with nested 'if'
@@ -579,9 +833,6 @@ dotnet_diagnostic.rcs1071.severity = warning
 
 # Remove redundant constructor
 dotnet_diagnostic.rcs1074.severity = warning
-
-# Split variable declaration
-dotnet_diagnostic.rcs1081.severity = warning
 
 # Constant values should be placed on right side of comparisons
 dotnet_diagnostic.rcs1098.severity = warning
@@ -722,6 +973,400 @@ dotnet_diagnostic.rcs1228.severity = none
 
 # Use async/await when necessary
 dotnet_diagnostic.rcs1229.severity = none
+
+### StyleCop ###
+
+## Settings ##
+
+stylecop.ordering.systemUsingDirectivesFirst = false
+stylecop.ordering.usingDirectivesPlacement = outsideNamespace
+stylecop.ordering.blankLinesBetweenUsingGroups = omit
+
+stylecop.layout.newlineAtEndOfFile = require
+stylecop.layout.allowDoWhileOnClosingBrace = true
+
+stylecop.documentation.documentInterfaces = false
+stylecop.documentation.documentInternalElements = false
+stylecop.documentation.fileNamingConvention = metadata
+
+## Errors ##
+
+# Keywords should be spaced correctly
+dotnet_diagnostic.SA1000.severity = error
+
+# Documentation lines should begin with single space
+dotnet_diagnostic.SA1004.severity = error
+
+# Single line comments should begin with single space
+dotnet_diagnostic.SA1005.severity = error
+
+# Operator keyword should be followed by space
+dotnet_diagnostic.SA1007.severity = error
+
+# Code should not contain trailing whitespace
+dotnet_diagnostic.SA1028.severity = error
+
+# Code should not contain empty statements
+dotnet_diagnostic.SA1106.severity = error
+
+# Code should not contain multiple statements on one line
+dotnet_diagnostic.SA1107.severity = error
+
+# Block statements should not contain embedded comments
+dotnet_diagnostic.SA1108.severity = error
+
+# Opening parenthesis or bracket should be on declaration line
+dotnet_diagnostic.SA1110.severity = error
+
+# Closing parenthesis should be on line of last parameter
+dotnet_diagnostic.SA1111.severity = error
+
+# Closing parenthesis should be on line of opening parenthesis
+dotnet_diagnostic.SA1112.severity = error
+
+# Comma should be on the same line as previous parameter
+dotnet_diagnostic.SA1113.severity = error
+
+# Parameter list should follow declaration
+dotnet_diagnostic.SA1114.severity = error
+
+# Parameter should follow comma
+dotnet_diagnostic.SA1115.severity = error
+
+# Comments should contain text
+dotnet_diagnostic.SA1120.severity = error
+
+# Use built-in type alias
+dotnet_diagnostic.SA1121.severity = error
+
+# Do not place regions within elements
+dotnet_diagnostic.SA1123.severity = error
+
+# Use shorthand for nullable types
+dotnet_diagnostic.SA1125.severity = error
+
+# Use readable conditions
+dotnet_diagnostic.SA1131.severity = error
+
+# Use tuple syntax
+dotnet_diagnostic.SA1141.severity = error
+
+# Using alias directives should be placed after other using directives
+dotnet_diagnostic.SA1209.severity = error
+
+# Using directives should be ordered alphabetically by namespace
+dotnet_diagnostic.SA1210.severity = error
+
+# Using alias directives should be ordered alphabetically by alias name
+dotnet_diagnostic.SA1211.severity = error
+
+# Property accessors should follow order
+dotnet_diagnostic.SA1212.severity = error
+
+# Event accessors should follow order
+dotnet_diagnostic.SA1213.severity = error
+
+# Using static directives should be placed at the correct location
+dotnet_diagnostic.SA1216.severity = error
+
+# Using static directives should be ordered alphabetically
+dotnet_diagnostic.SA1217.severity = error
+
+# Interface names should begin with I
+dotnet_diagnostic.SA1302.severity = error
+
+# Type parameter names should begin with T
+dotnet_diagnostic.SA1314.severity = error
+
+# Opening braces should not be followed by blank line
+dotnet_diagnostic.SA1505.severity = error
+
+# Element documentation headers should not be followed by blank line
+dotnet_diagnostic.SA1506.severity = error
+
+# Code should not contain multiple blank lines in a row
+dotnet_diagnostic.SA1507.severity = error
+
+# Closing braces should not be preceded by blank line
+dotnet_diagnostic.SA1508.severity = error
+
+# Single-line comments should not be followed by blank line
+dotnet_diagnostic.SA1512.severity = error
+
+# Element documentation header should be preceded by blank line
+dotnet_diagnostic.SA1514.severity = error
+
+# Single-line comment should be preceded by blank line
+dotnet_diagnostic.SA1515.severity = error
+
+# Elements should be separated by blank line
+dotnet_diagnostic.SA1516.severity = error
+
+# Code should not contain blank lines at start of file
+dotnet_diagnostic.SA1517.severity = error
+
+# Use line endings correctly at end of file
+dotnet_diagnostic.SA1518.severity = error
+
+# Element documentation should have summary
+dotnet_diagnostic.SA1604.severity = error
+
+# Partial element documentation should have summary
+dotnet_diagnostic.SA1605.severity = error
+
+# Element documentation should have summary text
+dotnet_diagnostic.SA1606.severity = error
+
+# Partial element documentation should have summary text
+dotnet_diagnostic.SA1607.severity = error
+
+# Property documentation should have value
+dotnet_diagnostic.SA1609.severity = error
+
+# Property documentation should have value text
+dotnet_diagnostic.SA1610.severity = error
+
+# Element parameters should be documented
+dotnet_diagnostic.SA1611.severity = error
+
+# Element parameter documentation should match element parameters
+dotnet_diagnostic.SA1612.severity = error
+
+# Element parameter documentation should declare parameter name
+dotnet_diagnostic.SA1613.severity = error
+
+# Element parameter documentation should have text
+dotnet_diagnostic.SA1614.severity = error
+
+# Element return value should be documented
+dotnet_diagnostic.SA1615.severity = error
+
+# Element return value documentation should have text
+dotnet_diagnostic.SA1616.severity = error
+
+# Void return value should not be documented
+dotnet_diagnostic.SA1617.severity = error
+
+# Generic type parameters should be documented
+dotnet_diagnostic.SA1618.severity = error
+
+# Generic type parameters should be documented partial class
+dotnet_diagnostic.SA1619.severity = error
+
+# Generic type parameter documentation should match type parameters
+dotnet_diagnostic.SA1620.severity = error
+
+# Generic type parameter documentation should declare parameter name
+dotnet_diagnostic.SA1621.severity = error
+
+# Generic type parameter documentation should have text
+dotnet_diagnostic.SA1622.severity = error
+
+# Element documentation should not be copied and pasted
+dotnet_diagnostic.SA1625.severity = error
+
+# Documentation text should not be empty
+dotnet_diagnostic.SA1627.severity = error
+
+# inheritdoc should be used with inheriting class
+dotnet_diagnostic.SA1648.severity = error
+
+# Do not prefix local calls with 'this.'
+dotnet_diagnostic.SX1101.severity = error
+
+## Nones ##
+
+# XML comment analysis disabled
+dotnet_diagnostic.SA0001.severity = none
+
+# Commas should be spaced correctly
+dotnet_diagnostic.SA1001.severity = none
+
+# Semicolons should be spaced correctly
+dotnet_diagnostic.SA1002.severity = none
+
+# Symbols should be spaced correctly
+dotnet_diagnostic.SA1003.severity = none
+
+# Preprocessor keywords should not be preceded by space
+dotnet_diagnostic.SA1006.severity = none
+
+# Opening parenthesis should be spaced correctly
+dotnet_diagnostic.SA1008.severity = none
+
+# Closing parenthesis should be spaced correctly
+dotnet_diagnostic.SA1009.severity = none
+
+# Opening square brackets should be spaced correctly
+dotnet_diagnostic.SA1010.severity = none
+
+# Closing square brackets should be spaced correctly
+dotnet_diagnostic.SA1011.severity = none
+
+# Opening braces should be spaced correctly
+dotnet_diagnostic.SA1012.severity = none
+
+# Closing braces should be spaced correctly
+dotnet_diagnostic.SA1013.severity = none
+
+# Opening generic brackets should be spaced correctly
+dotnet_diagnostic.SA1014.severity = none
+
+# Closing generic brackets should be spaced correctly
+dotnet_diagnostic.SA1015.severity = none
+
+# Opening attribute brackets should be spaced correctly
+dotnet_diagnostic.SA1016.severity = none
+
+# Closing attribute brackets should be spaced correctly
+dotnet_diagnostic.SA1017.severity = none
+
+# Nullable type symbols should be spaced correctly
+dotnet_diagnostic.SA1018.severity = none
+
+# Member access symbols should be spaced correctly
+dotnet_diagnostic.SA1019.severity = none
+
+# Increment decrement symbols should be spaced correctly
+dotnet_diagnostic.SA1020.severity = none
+
+# Negative signs should be spaced correctly
+dotnet_diagnostic.SA1021.severity = none
+
+# Positive signs should be spaced correctly
+dotnet_diagnostic.SA1022.severity = none
+
+# Dereference and access of symbols should be spaced correctly
+dotnet_diagnostic.SA1023.severity = none
+
+# Colons Should Be Spaced Correctly
+dotnet_diagnostic.SA1024.severity = none
+
+# Code should not contain multiple whitespace in a row
+dotnet_diagnostic.SA1025.severity = none
+
+# Code should not contain space after new or stackalloc keyword in implicitly typed array allocation
+dotnet_diagnostic.SA1026.severity = none
+
+# Use tabs correctly
+dotnet_diagnostic.SA1027.severity = none
+
+# Prefix local calls with this
+dotnet_diagnostic.SA1101.severity = none
+
+# Split parameters should start on line after declaration
+dotnet_diagnostic.SA1116.severity = none
+
+# Parameters should be on same line or separate lines
+dotnet_diagnostic.SA1117.severity = none
+
+# Parameter should not span multiple lines
+dotnet_diagnostic.SA1118.severity = none
+
+# Use string.Empty for empty strings
+dotnet_diagnostic.SA1122.severity = none
+
+# Do not use regions
+dotnet_diagnostic.SA1124.severity = none
+
+# Generic type constraints should be on their own line
+dotnet_diagnostic.SA1127.severity = none
+
+# Put constructor initializers on their own line
+dotnet_diagnostic.SA1128.severity = none
+
+# Do not combine fields
+dotnet_diagnostic.SA1132.severity = none
+
+# Do not combine attributes
+dotnet_diagnostic.SA1133.severity = none
+
+# Attributes should not share line
+dotnet_diagnostic.SA1134.severity = none
+
+# Enum values should be on separate lines
+dotnet_diagnostic.SA1136.severity = none
+
+# Elements should have the same indentation
+dotnet_diagnostic.SA1137.severity = none
+
+# Refer to tuple fields by name
+dotnet_diagnostic.SA1142.severity = none
+
+# Using directives should be placed correctly
+dotnet_diagnostic.SA1200.severity = none
+
+# Declaration keywords should follow order
+dotnet_diagnostic.SA1206.severity = none
+
+# Protected should come before internal
+dotnet_diagnostic.SA1207.severity = none
+
+# System using directives should be placed before other using directives
+dotnet_diagnostic.SA1208.severity = none
+
+# Element should begin with upper-case letter
+dotnet_diagnostic.SA1300.severity = none
+
+# Access modifier should be declared
+dotnet_diagnostic.SA1400.severity = none
+
+# Fields should be private
+dotnet_diagnostic.SA1401.severity = none
+
+# Attribute constructor should not use unnecessary parenthesis
+dotnet_diagnostic.SA1411.severity = none
+
+# Use trailing comma in multi-line initializers
+dotnet_diagnostic.SA1413.severity = none
+
+# Tuple types in signatures should have element names
+dotnet_diagnostic.SA1414.severity = none
+
+# Braces for multi-line statements should not share line
+dotnet_diagnostic.SA1500.severity = none
+
+# Statement should not be on a single line
+dotnet_diagnostic.SA1501.severity = none
+
+# Element should not be on a single line
+dotnet_diagnostic.SA1502.severity = none
+
+# Braces should not be omitted
+dotnet_diagnostic.SA1503.severity = none
+
+# Closing brace should be followed by blank line
+dotnet_diagnostic.SA1513.severity = none
+
+# Braces should not be omitted from multi-line child statement
+dotnet_diagnostic.SA1519.severity = none
+
+# Use braces consistently
+dotnet_diagnostic.SA1520.severity = none
+
+# Property summary documentation should match accessors
+dotnet_diagnostic.SA1623.severity = none
+
+# Property summary documentation should omit accessor with restricted access
+dotnet_diagnostic.SA1624.severity = none
+
+# Element documentation should not be copied and pasted
+dotnet_diagnostic.SA1625.severity = none
+
+# Documentation text should end with a period
+dotnet_diagnostic.SA1629.severity = none
+
+# File should have header
+dotnet_diagnostic.SA1633.severity = none
+
+# Constructor summary documentation should begin with standard text
+dotnet_diagnostic.SA1642.severity = none
+
+# Destructor summary documentation should begin with standard text
+dotnet_diagnostic.SA1643.severity = none
+
+# Do not use placeholder elements
+dotnet_diagnostic.SA1651.severity = none
 
 #### 코어 EditorConfig 옵션 ####
 

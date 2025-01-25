@@ -2,7 +2,7 @@
 
 namespace SimpleSixtarScorecard;
 
-public static class DlcExtensions {
+internal static class DlcExtensions {
     public static string ToName(this Dlc dlc) =>
         // Returns the DLC name from the Dlc value.
         dlc switch {

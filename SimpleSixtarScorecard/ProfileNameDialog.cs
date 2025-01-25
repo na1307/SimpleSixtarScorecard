@@ -2,7 +2,7 @@
 
 namespace SimpleSixtarScorecard;
 
-public sealed partial class ProfileNameDialog : LocalizableDialog {
+internal sealed partial class ProfileNameDialog : LocalizableDialog {
     public ProfileNameDialog(bool createNew) {
         InitializeComponent();
         label1.Text = createNew ? WhatsYourName + Environment.NewLine + Environment.NewLine + YouCanAlways : WhatsYourName;

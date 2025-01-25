@@ -3,7 +3,7 @@
 namespace SimpleSixtarScorecard;
 
 [JsonConverter(typeof(JsonStringEnumConverter<Dlc>))]
-public enum Dlc {
+internal enum Dlc {
     Base = 1,
     FlowerAndDestiny,
     Touhou01,

@@ -1,6 +1,6 @@
 ﻿namespace SimpleSixtarScorecard;
 
-public enum Mode {
+internal enum Mode {
     Solar,
     Lunar
 }

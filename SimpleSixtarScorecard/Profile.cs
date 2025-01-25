@@ -7,26 +7,26 @@ using System.Text.Json.Serialization;
 
 namespace SimpleSixtarScorecard;
 
-public sealed class Profile {
+internal sealed class Profile {
     public const string ProfileFile = "profile.json";
     public const string UserNamePropertyName = "username";
     public const string ResultsPropertyName = "results";
-    private static readonly ProfileConverter converter = new(ProfileFile);
-    private static readonly Lazy<Profile> instance = new(converter.Load);
-    private static readonly JsonWriterOptions indentedWriterOptions = new() { Indented = true };
-    private string? userName;
-    private ObservableCollection<Result> results = [];
+    private static readonly ProfileConverter Converter = new(ProfileFile);
+    private static readonly Lazy<Profile> InstanceField = new(Converter.Load);
+    private static readonly JsonWriterOptions IndentedWriterOptions = new() { Indented = true };
+    private string? userNameField;
+    private ObservableCollection<Result> resultsField = [];
 
     private Profile() { }
 
-    public static Profile Instance => instance.Value;
+    public static Profile Instance => InstanceField.Value;
 
     public string UserName {
-        get => userName!;
+        get => userNameField!;
         set {
-            if (userName != value) {
-                var oldValue = userName;
-                userName = value;
+            if (userNameField != value) {
+                var oldValue = userNameField;
+                userNameField = value;
 
                 if (oldValue != null) {
                     SaveProfile();
@@ -36,24 +36,24 @@ public sealed class Profile {
     }
 
     public ObservableCollection<Result> Results {
-        get => results;
+        get => resultsField;
         init {
-            results = value;
+            resultsField = value;
             value.ForEach(result => result.PropertyChanged += (_, _) => SaveProfile());
-            results.CollectionChanged += (_, e) => {
+            resultsField.CollectionChanged += (_, e) => {
                 e.NewItems?.Cast<INotifyPropertyChanged>().ForEach(inpc => inpc.PropertyChanged += (_, _) => SaveProfile());
                 SaveProfile();
             };
         }
     }
 
-    public void SaveProfile() => converter.Save(this);
+    public void SaveProfile() => Converter.Save(this);
 
     public override string ToString() {
         MemoryStream ms = new(10240);
 
-        using (Utf8JsonWriter writer = new(ms, indentedWriterOptions)) {
-            converter.Write(writer, this, new());
+        using (Utf8JsonWriter writer = new(ms, IndentedWriterOptions)) {
+            Converter.Write(writer, this, new());
         }
 
         return Encoding.UTF8.GetString(ms.ToArray());
@@ -68,7 +68,7 @@ public sealed class Profile {
 
         public void Save(Profile settings) {
             using FileStream fs = new(fileName, FileMode.Truncate, FileAccess.Write, FileShare.None);
-            using Utf8JsonWriter writer = new(fs, indentedWriterOptions);
+            using Utf8JsonWriter writer = new(fs, IndentedWriterOptions);
 
             Write(writer, settings, new());
         }

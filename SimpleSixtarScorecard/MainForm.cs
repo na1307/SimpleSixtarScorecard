@@ -2,7 +2,7 @@
 
 namespace SimpleSixtarScorecard;
 
-public sealed partial class MainForm : Form {
+internal sealed partial class MainForm : Form {
     private SortableBindingList<Song> songs = new(Song.SongList);
     private int dlc;
     private int category;
@@ -17,8 +17,8 @@ public sealed partial class MainForm : Form {
         label2.Text = string.Format(Strings.Songs, songs.Count);
 
         // ComboBoxes
-        comboBox1.DataSource = ((string[])([Strings.All])).Concat(Enum.GetValues(typeof(Dlc)).Cast<Dlc>().Select(dlc => dlc.ToName())).ToArray();
-        comboBox2.DataSource = ((string[])([Strings.All])).Concat(Enum.GetValues(typeof(Category)).Cast<Category>().Select(category => category.ToString())).ToArray();
+        comboBox1.DataSource = ((string[])[Strings.All]).Concat(Enum.GetValues(typeof(Dlc)).Cast<Dlc>().Select(dlc => dlc.ToName())).ToArray();
+        comboBox2.DataSource = ((string[])[Strings.All]).Concat(Enum.GetValues(typeof(Category)).Cast<Category>().Select(category => category.ToString())).ToArray();
     }
 
     private void button1_Click(object sender, EventArgs e) {
