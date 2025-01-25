@@ -12,6 +12,9 @@ on:
     branches:
       - main
       - release
+  release:
+    types:
+      - published
 
 jobs:
   build:
@@ -20,18 +23,52 @@ jobs:
     env:
       NUGET_PACKAGES: ${{ github.workspace }}/.nuget/packages
     steps:
-    - uses: actions/checkout@v4
-    - name: Setup .NET
-      uses: actions/setup-dotnet@v4
-    - name: MSBuild
-      uses: microsoft/setup-msbuild@v2
-      with:
-        msbuild-architecture: x64
-    - name: Cache NuGet
-      uses: actions/cache@v4
-      with:
-        path: ${{ github.workspace }}/.nuget/packages
-        key: ${{ runner.os }}-nuget-${{ hashFiles('Directory.Packages.props') }} #hash of project files
-        restore-keys: ${{ runner.os }}-nuget-
-    - name: Build
-      run: msbuild -r
+      - uses: actions/checkout@v4
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+      - name: MSBuild
+        uses: microsoft/setup-msbuild@v2
+        with:
+          msbuild-architecture: x64
+      - name: Cache NuGet
+        uses: actions/cache@v4
+        with:
+          path: ${{ github.workspace }}/.nuget/packages
+          key: ${{ runner.os }}-nuget-${{ hashFiles('Directory.Packages.props') }} #hash of project files
+          restore-keys: ${{ runner.os }}-nuget-
+      - name: Build (Debug)
+        run: msbuild -r -p:Configuration=Debug
+      - name: Build (Release)
+        run: msbuild -r -p:Configuration=Release
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: Release
+          path: SimpleSixtarScorecard/bin/Release/**/*
+
+  publish:
+    name: Publish
+    if: github.event_name == 'release'
+    needs: build
+    runs-on: windows-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download Package artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: Release
+      - name: Compress
+        shell: pwsh
+        run: |
+          cd net48
+          7z a -mx9 ..\SimpleSixtarScorecard_${{ github.event.release.tag_name }}_NETFramework.7z
+          cd ..
+          cd net9.0-windows
+          7z a -mx9 ..\SimpleSixtarScorecard_${{ github.event.release.tag_name }}_NET9.7z
+          cd ..
+      - name: Upload Release Assets
+        uses: softprops/action-gh-release@v2
+        with:
+          files: "*.7z"
