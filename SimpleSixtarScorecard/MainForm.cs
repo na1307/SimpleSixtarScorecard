@@ -3,7 +3,7 @@
 namespace SimpleSixtarScorecard;
 
 internal sealed partial class MainForm : Form {
-    private SortableBindingList<Song> songs = new(Song.SongList);
+    private SortableBindingList<Song> songs = [.. Song.SongList];
     private int dlc;
     private int category;
 
@@ -69,7 +69,7 @@ internal sealed partial class MainForm : Form {
             ? Song.SongList.Where(song => enumTest(song) && (song.Title.RemoveDiacritics().Contains(textBox1.Text.RemoveDiacritics().Trim(), StringComparison.OrdinalIgnoreCase) || song.Composer.RemoveDiacritics().Contains(textBox1.Text.RemoveDiacritics().Trim(), StringComparison.OrdinalIgnoreCase))).ToArray()
             : Song.SongList.Where(enumTest).ToArray();
 
-        songs = new(tmpSongs);
+        songs = [.. tmpSongs];
         dataGridView1.DataSource = songs;
         label2.Text = string.Format(Strings.Songs, songs.Count);
 
@@ -77,16 +77,20 @@ internal sealed partial class MainForm : Form {
             if (dlc == 0 && category == 0) {
                 // If DLC and Category are both "All"
                 return true;
-            } else if (dlc != 0 && category == 0) {
+            }
+
+            if (dlc != 0 && category == 0) {
                 // If DLC is specified
                 return dlcTest();
-            } else if (dlc == 0 && category != 0) {
+            }
+
+            if (dlc == 0 && category != 0) {
                 // If Category is specified
                 return categoryTest();
-            } else {
-                // If both are specified
-                return dlcTest() && categoryTest();
             }
+
+            // If both are specified
+            return dlcTest() && categoryTest();
 
             bool dlcTest() => song.Dlc == (Dlc)dlc;
             bool categoryTest() => song.Category == (Category)category;

@@ -8,8 +8,6 @@ internal sealed record class Result : INotifyPropertyChanged {
     public const string DifficultyPropertyName = "difficulty";
     public const string ScorePropertyName = "score";
     public const string FullComboPropertyName = "fullcombo";
-    private int scoreField;
-    private bool fullComboField;
 
     public event PropertyChangedEventHandler? PropertyChanged;
 
@@ -20,21 +18,21 @@ internal sealed record class Result : INotifyPropertyChanged {
     public required Difficulty Difficulty { get; init; }
 
     public int Score {
-        get => scoreField;
+        get;
         set {
-            if (scoreField != value) {
-                scoreField = value;
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(Score)));
+            if (field != value) {
+                field = value;
+                PropertyChanged?.Invoke(this, new(nameof(Score)));
             }
         }
     }
 
     public bool FullCombo {
-        get => fullComboField;
+        get;
         set {
-            if (fullComboField != value) {
-                fullComboField = value;
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(FullCombo)));
+            if (field != value) {
+                field = value;
+                PropertyChanged?.Invoke(this, new(nameof(FullCombo)));
             }
         }
     }

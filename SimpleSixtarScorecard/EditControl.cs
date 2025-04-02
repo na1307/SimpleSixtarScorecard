@@ -26,27 +26,45 @@ internal sealed partial class EditControl : UserControl {
         get {
             if (radioButtonSComet.Checked) {
                 return (Mode.Solar, Difficulty.Comet);
-            } else if (radioButtonSNova.Checked) {
-                return (Mode.Solar, Difficulty.Nova);
-            } else if (radioButtonSSupernova.Checked) {
-                return (Mode.Solar, Difficulty.Supernova);
-            } else if (radioButtonSQuasar.Checked) {
-                return (Mode.Solar, Difficulty.Quasar);
-            } else if (radioButtonSStarlight.Checked) {
-                return (Mode.Solar, Difficulty.Starlight);
-            } else if (radioButtonLComet.Checked) {
-                return (Mode.Lunar, Difficulty.Comet);
-            } else if (radioButtonLNova.Checked) {
-                return (Mode.Lunar, Difficulty.Nova);
-            } else if (radioButtonLSupernova.Checked) {
-                return (Mode.Lunar, Difficulty.Supernova);
-            } else if (radioButtonLQuasar.Checked) {
-                return (Mode.Lunar, Difficulty.Quasar);
-            } else if (radioButtonLStarlight.Checked) {
-                return (Mode.Lunar, Difficulty.Starlight);
-            } else {
-                throw new InvalidOperationException();
             }
+
+            if (radioButtonSNova.Checked) {
+                return (Mode.Solar, Difficulty.Nova);
+            }
+
+            if (radioButtonSSupernova.Checked) {
+                return (Mode.Solar, Difficulty.Supernova);
+            }
+
+            if (radioButtonSQuasar.Checked) {
+                return (Mode.Solar, Difficulty.Quasar);
+            }
+
+            if (radioButtonSStarlight.Checked) {
+                return (Mode.Solar, Difficulty.Starlight);
+            }
+
+            if (radioButtonLComet.Checked) {
+                return (Mode.Lunar, Difficulty.Comet);
+            }
+
+            if (radioButtonLNova.Checked) {
+                return (Mode.Lunar, Difficulty.Nova);
+            }
+
+            if (radioButtonLSupernova.Checked) {
+                return (Mode.Lunar, Difficulty.Supernova);
+            }
+
+            if (radioButtonLQuasar.Checked) {
+                return (Mode.Lunar, Difficulty.Quasar);
+            }
+
+            if (radioButtonLStarlight.Checked) {
+                return (Mode.Lunar, Difficulty.Starlight);
+            }
+
+            throw new InvalidOperationException();
         }
     }
 

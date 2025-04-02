@@ -1,5 +1,6 @@
 ﻿using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Diagnostics.CodeAnalysis;
 using System.Text;
 using System.Text.Json;
 using System.Text.Json.Nodes;
@@ -14,19 +15,19 @@ internal sealed class Profile {
     private static readonly ProfileConverter Converter = new(ProfileFile);
     private static readonly Lazy<Profile> InstanceField = new(Converter.Load);
     private static readonly JsonWriterOptions IndentedWriterOptions = new() { Indented = true };
-    private string? userNameField;
-    private ObservableCollection<Result> resultsField = [];
 
     private Profile() { }
 
     public static Profile Instance => InstanceField.Value;
 
+    [field: AllowNull]
+    [field: MaybeNull]
     public string UserName {
-        get => userNameField!;
+        get;
         set {
-            if (userNameField != value) {
-                var oldValue = userNameField;
-                userNameField = value;
+            if (field != value) {
+                var oldValue = field;
+                field = value;
 
                 if (oldValue != null) {
                     SaveProfile();
@@ -36,18 +37,17 @@ internal sealed class Profile {
     }
 
     public ObservableCollection<Result> Results {
-        get => resultsField;
-        init {
-            resultsField = value;
+        get;
+        private init {
+            field = value;
             value.ForEach(result => result.PropertyChanged += (_, _) => SaveProfile());
-            resultsField.CollectionChanged += (_, e) => {
+
+            field.CollectionChanged += (_, e) => {
                 e.NewItems?.Cast<INotifyPropertyChanged>().ForEach(inpc => inpc.PropertyChanged += (_, _) => SaveProfile());
                 SaveProfile();
             };
         }
-    }
-
-    public void SaveProfile() => Converter.Save(this);
+    } = [];
 
     public override string ToString() {
         MemoryStream ms = new(10240);
@@ -58,6 +58,8 @@ internal sealed class Profile {
 
         return Encoding.UTF8.GetString(ms.ToArray());
     }
+
+    private void SaveProfile() => Converter.Save(this);
 
     private sealed class ProfileConverter(string fileName) : JsonConverter<Profile> {
         public Profile Load() {
@@ -78,16 +80,16 @@ internal sealed class Profile {
 
             return new() {
                 UserName = jo[UserNamePropertyName]!.ToString(),
-                Results = new(jo[ResultsPropertyName]!.AsArray().Cast<JsonObject>().Select(obj => new Result {
+                Results = [.. jo[ResultsPropertyName]!.AsArray().Cast<JsonObject>().Select(obj => new Result {
                     SongId = obj[Result.SongIdPropertyName]!.ToString(),
                     Mode = parseEnum<Mode>(obj[Result.ModePropertyName]),
                     Difficulty = parseEnum<Difficulty>(obj[Result.DifficultyPropertyName]),
                     Score = int.Parse(obj[Result.ScorePropertyName]!.ToString()),
                     FullCombo = bool.Parse(obj[Result.FullComboPropertyName]!.ToString()),
-                })),
+                })],
             };
 
-            static TEnum parseEnum<TEnum>(JsonNode? node) where TEnum : struct, Enum => Enum.TryParse<TEnum>(node?.ToString(), true, out TEnum value) ? value : default;
+            static TEnum parseEnum<TEnum>(JsonNode? node) where TEnum : struct, Enum => Enum.TryParse<TEnum>(node?.ToString(), true, out var value) ? value : default;
         }
 
         public override void Write(Utf8JsonWriter writer, Profile value, JsonSerializerOptions options) {

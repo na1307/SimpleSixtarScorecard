@@ -12,13 +12,8 @@ internal static class StringExtensions {
         var normalizedString = text.Normalize(NormalizationForm.FormD);
         StringBuilder stringBuilder = new(capacity: normalizedString.Length);
 
-        for (var i = 0; i < normalizedString.Length; i++) {
-            var c = normalizedString[i];
-            var unicodeCategory = CharUnicodeInfo.GetUnicodeCategory(c);
-
-            if (unicodeCategory != UnicodeCategory.NonSpacingMark) {
-                stringBuilder.Append(c);
-            }
+        foreach (var c in normalizedString.Where(c => CharUnicodeInfo.GetUnicodeCategory(c) != UnicodeCategory.NonSpacingMark)) {
+            stringBuilder.Append(c);
         }
 
         return stringBuilder.ToString().Normalize(NormalizationForm.FormC);
