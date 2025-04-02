@@ -4326,6 +4326,84 @@
     }
   },
   {
+    "id": "newrefresh",
+    "title": "New Refresh",
+    "composer": "ESPITZ Gt.NeLiME (Original. Shin Yongbin)",
+    "dlc": "base",
+    "category": "Variety",
+    "difficultys": {
+      "comet": 3,
+      "nova": 6,
+      "supernova": 10,
+      "quasar": 13
+    },
+    "difficultyl": {
+      "comet": 3,
+      "nova": 6,
+      "supernova": 11,
+      "quasar": 14
+    }
+  },
+  {
+    "id": "jsmi",
+    "title": "점, 선, 면, 입체 (Elements of Dimensions)",
+    "composer": "sound piercer",
+    "dlc": "base",
+    "category": "Variety",
+    "difficultys": {
+      "comet": 2,
+      "nova": 5,
+      "supernova": 9,
+      "quasar": 12,
+      "starlight": 15
+    },
+    "difficultyl": {
+      "comet": 2,
+      "nova": 5,
+      "supernova": 9,
+      "quasar": 12,
+      "starlight": 16
+    }
+  },
+  {
+    "id": "starlightserenade",
+    "title": "별빛 세레나데 (Starlight Serenade)",
+    "composer": "50mang쏘망",
+    "dlc": "base",
+    "category": "Variety",
+    "difficultys": {
+      "comet": 2,
+      "nova": 5,
+      "supernova": 8,
+      "quasar": 11
+    },
+    "difficultyl": {
+      "comet": 1,
+      "nova": 5,
+      "supernova": 8,
+      "quasar": 11
+    }
+  },
+  {
+    "id": "overthedream",
+    "title": "꿈을 넘어서 (Over the Dream)",
+    "composer": "WyvernP",
+    "dlc": "base",
+    "category": "Variety",
+    "difficultys": {
+      "comet": 3,
+      "nova": 6,
+      "supernova": 10,
+      "quasar": 13
+    },
+    "difficultyl": {
+      "comet": 3,
+      "nova": 6,
+      "supernova": 10,
+      "quasar": 12
+    }
+  },
+  {
     "id": "zantetsuken",
     "title": "斬鉄剣 (Zantetsuken)",
     "composer": "黒沢ダイスケ feat.よしださくら",
