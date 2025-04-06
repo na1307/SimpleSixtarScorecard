@@ -4404,6 +4404,63 @@
     }
   },
   {
+    "id": "carpediem",
+    "title": "Carpe Diem!",
+    "composer": "Compass Cat",
+    "dlc": "base",
+    "category": "Variety",
+    "difficultys": {
+      "comet": 2,
+      "nova": 5,
+      "supernova": 8,
+      "quasar": 11
+    },
+    "difficultyl": {
+      "comet": 2,
+      "nova": 5,
+      "supernova": 8,
+      "quasar": 10
+    }
+  },
+  {
+    "id": "loveisstrawberry",
+    "title": "사랑은 딸기 합성착향료 (Love Is a Synthetic Strawberry Flavoring)",
+    "composer": "Maro Note",
+    "dlc": "base",
+    "category": "Variety",
+    "difficultys": {
+      "comet": 4,
+      "nova": 7,
+      "supernova": 11,
+      "quasar": 14
+    },
+    "difficultyl": {
+      "comet": 4,
+      "nova": 7,
+      "supernova": 11,
+      "quasar": 14
+    }
+  },
+  {
+    "id": "doremedeup",
+    "title": "도래매듭 (Dorae Knot)",
+    "composer": "WyvernP",
+    "dlc": "base",
+    "category": "Variety",
+    "difficultys": {
+      "comet": 1,
+      "nova": 4,
+      "supernova": 8,
+      "quasar": 11
+    },
+    "difficultyl": {
+      "comet": 1,
+      "nova": 4,
+      "supernova": 8,
+      "quasar": 11
+    }
+  },
+  {
     "id": "zantetsuken",
     "title": "斬鉄剣 (Zantetsuken)",
     "composer": "黒沢ダイスケ feat.よしださくら",
