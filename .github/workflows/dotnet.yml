@@ -70,5 +70,5 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           files: |
-            "*.7z"
+            *.7z
             net48/songdata.json
