@@ -4461,6 +4461,44 @@
     }
   },
   {
+    "id": "deltatouhou",
+    "title": "Δ (Delta)",
+    "composer": "ぱらどっと vs. uma vs. モリモリあつし",
+    "dlc": "base",
+    "category": "touhou",
+    "difficultys": {
+      "comet": 3,
+      "nova": 7,
+      "supernova": 10,
+      "quasar": 13
+    },
+    "difficultyl": {
+      "comet": 3,
+      "nova": 7,
+      "supernova": 10,
+      "quasar": 13
+    }
+  },
+  {
+    "id": "armageddon",
+    "title": "Armageddon",
+    "composer": "LeaF",
+    "dlc": "base",
+    "category": "touhou",
+    "difficultys": {
+      "comet": 5,
+      "nova": 8,
+      "supernova": 11,
+      "quasar": 15
+    },
+    "difficultyl": {
+      "comet": 4,
+      "nova": 8,
+      "supernova": 11,
+      "quasar": 15
+    }
+  },
+  {
     "id": "zantetsuken",
     "title": "斬鉄剣 (Zantetsuken)",
     "composer": "黒沢ダイスケ feat.よしださくら",
