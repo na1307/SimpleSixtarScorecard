@@ -549,7 +549,8 @@
       "comet": 3,
       "nova": 6,
       "supernova": 11,
-      "quasar": 14
+      "quasar": 14,
+      "starlight": 17
     },
     "difficultyl": {
       "comet": 3,
