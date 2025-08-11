@@ -180,4 +180,7 @@
   <data name="DlcUnitedNetwalk" xml:space="preserve">
     <value>UNITED NETWALK</value>
   </data>
+  <data name="DlcKalpa" xml:space="preserve">
+    <value>KALPA</value>
+  </data>
 </root>

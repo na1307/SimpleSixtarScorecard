@@ -13,5 +13,6 @@ internal enum Dlc {
     Wacca,
     Oshiribeat,
     Dystopia,
-    UnitedNetwalk
+    UnitedNetwalk,
+    Kalpa
 }

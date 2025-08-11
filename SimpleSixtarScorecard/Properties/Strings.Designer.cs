@@ -106,6 +106,15 @@ namespace SimpleSixtarScorecard.Properties {
         }
         
         /// <summary>
+        ///   KALPA과(와) 유사한 지역화된 문자열을 찾습니다.
+        /// </summary>
+        internal static string DlcKalpa {
+            get {
+                return ResourceManager.GetString("DlcKalpa", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Luminous &amp; Darkness과(와) 유사한 지역화된 문자열을 찾습니다.
         /// </summary>
         internal static string DlcLuminousAndDarkness {

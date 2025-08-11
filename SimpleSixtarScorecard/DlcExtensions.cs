@@ -16,6 +16,7 @@ internal static class DlcExtensions {
             Dlc.Oshiribeat => DlcOshiribeat,
             Dlc.Dystopia => DlcDystopia,
             Dlc.UnitedNetwalk => DlcUnitedNetwalk,
+            Dlc.Kalpa => DlcKalpa,
             _ => throw new NotImplementedException(),
         };
 }
