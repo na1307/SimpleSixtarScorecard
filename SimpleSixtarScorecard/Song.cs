@@ -12,7 +12,7 @@ internal sealed record class Song(
     [property: JsonPropertyName("category")] Category Category,
     [property: JsonPropertyName("difficultys")] SongDifficulty DifficultySolar,
     [property: JsonPropertyName("difficultyl")] SongDifficulty DifficultyLunar) {
-    public static ReadOnlyCollection<Song> SongList { get; } = new(JsonSerializer.Deserialize<Song[]>(File.ReadAllBytes("songdata.json"))!);
+    public static ReadOnlyCollection<Song> SongList { get; } = new(Program.Json.Deserialize<Song[]>()!);
 
     public int SolarQuasar => DifficultySolar.Quasar;
 
