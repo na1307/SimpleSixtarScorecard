@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <TargetFramework>net9.0-windows</TargetFramework>
@@ -6,6 +6,10 @@
     <NoWarn>$(NoWarn);SA1600;SA1601</NoWarn>
     <UseWPF>true</UseWPF>
   </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="CommunityToolkit.Mvvm" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebView.Wpf" />
+  </ItemGroup>
   <ItemGroup>
     <AssemblyAttribute Include="System.Windows.ThemeInfoAttribute">
       <_Parameter1>System.Windows.ResourceDictionaryLocation.None</_Parameter1>

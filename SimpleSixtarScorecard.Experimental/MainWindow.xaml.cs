@@ -1,5 +1,10 @@
-﻿namespace SimpleSixtarScorecard.Experimental;
+﻿using CommunityToolkit.Mvvm.DependencyInjection;
+
+namespace SimpleSixtarScorecard.Experimental;
 
 public sealed partial class MainWindow {
-    public MainWindow() => InitializeComponent();
+    public MainWindow() {
+        InitializeComponent();
+        bw.Services = Ioc.Default;
+    }
 }
