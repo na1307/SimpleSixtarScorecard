@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net9.0-windows</TargetFramework>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <NoWarn>$(NoWarn);SA1600;SA1601</NoWarn>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+  <ItemGroup>
+    <AssemblyAttribute Include="System.Windows.ThemeInfoAttribute">
+      <_Parameter1>System.Windows.ResourceDictionaryLocation.None</_Parameter1>
+      <_Parameter1_IsLiteral>true</_Parameter1_IsLiteral>
+      <_Parameter2>System.Windows.ResourceDictionaryLocation.SourceAssembly</_Parameter2>
+      <_Parameter2_IsLiteral>true</_Parameter2_IsLiteral>
+    </AssemblyAttribute>
+  </ItemGroup>
+</Project>
