@@ -1,9 +1,9 @@
-﻿<Application x:Class="SimpleSixtarScorecard.Experimental.App"
+﻿<Application x:Class="SimpleSixtarScorecard.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:SimpleSixtarScorecard.Experimental"
+             xmlns:local="clr-namespace:SimpleSixtarScorecard"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+
     </Application.Resources>
 </Application>

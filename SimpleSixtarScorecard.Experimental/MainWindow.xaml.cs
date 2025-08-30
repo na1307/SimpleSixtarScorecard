@@ -1,6 +1,6 @@
 ﻿using CommunityToolkit.Mvvm.DependencyInjection;
 
-namespace SimpleSixtarScorecard.Experimental;
+namespace SimpleSixtarScorecard;
 
 public sealed partial class MainWindow {
     public MainWindow() {

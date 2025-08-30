@@ -1,7 +1,7 @@
 ﻿using CommunityToolkit.Mvvm.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace SimpleSixtarScorecard.Experimental;
+namespace SimpleSixtarScorecard;
 
 public sealed partial class App {
     public App() {
