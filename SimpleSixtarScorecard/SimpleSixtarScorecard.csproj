@@ -1,51 +1,29 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFrameworks>net48;net9.0-windows</TargetFrameworks>
+    <TargetFramework>net9.0-windows</TargetFramework>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
+    <RestoreLockedMode Condition="'$(ContinuousIntegrationBuild)' == 'true'">true</RestoreLockedMode>
     <LangVersion>preview</LangVersion>
-    <UseWindowsForms>true</UseWindowsForms>
-    <AssemblyTitle>초간단 식스타 게이트: 스타트레일 점수표 프로그램</AssemblyTitle>
-    <AssemblyVersion>0</AssemblyVersion>
-    <FileVersion>0.7.0</FileVersion>
-    <Version>0.7</Version>
-    <NeutralLanguage>en</NeutralLanguage>
-    <ApplicationIcon>Blue.ico</ApplicationIcon>
+    <NoWarn>$(NoWarn);SA1600;SA1601;SA1602</NoWarn>
+    <UseWPF>true</UseWPF>
+    <PublishSingleFile>true</PublishSingleFile>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+    <EnableCompressionInSingleFile>true</EnableCompressionInSingleFile>
   </PropertyGroup>
   <ItemGroup>
-    <Content Include="Blue.ico" />
+    <PackageReference Include="CommunityToolkit.Mvvm" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebView.Wpf" />
+    <PackageReference Include="MudBlazor" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="songdata.schema.json" />
+    <AssemblyAttribute Include="System.Windows.ThemeInfoAttribute">
+      <_Parameter1>System.Windows.ResourceDictionaryLocation.None</_Parameter1>
+      <_Parameter1_IsLiteral>true</_Parameter1_IsLiteral>
+      <_Parameter2>System.Windows.ResourceDictionaryLocation.SourceAssembly</_Parameter2>
+      <_Parameter2_IsLiteral>true</_Parameter2_IsLiteral>
+    </AssemblyAttribute>
   </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="Bluehill.Forms" />
-    <PackageReference Include="Bluehill.CompilerServices" />
-    <PackageReference Include="JsonSchema.Net" />
-  </ItemGroup>
-  <ItemGroup>
-    <Reference Include="System.Net.Http" Condition="'$(TargetFramework)' == 'net48'" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Update="Properties\Strings.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Strings.resx</DependentUpon>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Update="Properties\Strings.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Strings.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <None Update="songdata.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
-  <ProjectExtensions>
-    <VisualStudio>
-      <UserProperties songdata_1json__JsonSchema="songdata.schema.json" />
-    </VisualStudio>
-  </ProjectExtensions>
 </Project>

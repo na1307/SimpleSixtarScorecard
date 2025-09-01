@@ -15,7 +15,7 @@ internal sealed record class Result : INotifyPropertyChanged {
 
     public required Mode Mode { get; init; }
 
-    public required DifficultyType Difficulty { get; init; }
+    public required Difficulty Difficulty { get; init; }
 
     public int Score {
         get;

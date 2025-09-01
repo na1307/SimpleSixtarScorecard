@@ -3,8 +3,9 @@
 namespace SimpleSixtarScorecard;
 
 [JsonConverter(typeof(JsonStringEnumConverter<Category>))]
-internal enum Category {
-    Original = 1,
+public enum Category {
+    All,
+    Original,
     Variety,
     Remix,
     Touhou,

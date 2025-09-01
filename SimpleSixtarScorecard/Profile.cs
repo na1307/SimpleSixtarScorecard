@@ -1,6 +1,7 @@
 ﻿using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Diagnostics.CodeAnalysis;
+using System.IO;
 using System.Text;
 using System.Text.Json;
 using System.Text.Json.Nodes;
@@ -8,13 +9,24 @@ using System.Text.Json.Serialization;
 
 namespace SimpleSixtarScorecard;
 
+internal static class Test {
+    public static void ForEach<T>(this IEnumerable<T> source, Action<T> action) {
+        foreach (var item in source) {
+            action(item);
+        }
+    }
+}
+
 internal sealed class Profile {
     public const string ProfileFile = "profile.json";
     public const string UserNamePropertyName = "username";
     public const string ResultsPropertyName = "results";
     private static readonly ProfileConverter Converter = new(ProfileFile);
     private static readonly Lazy<Profile> InstanceField = new(Converter.Load);
-    private static readonly JsonWriterOptions IndentedWriterOptions = new() { Indented = true };
+
+    private static readonly JsonWriterOptions IndentedWriterOptions = new() {
+        Indented = true
+    };
 
     private Profile() { }
 
@@ -80,16 +92,19 @@ internal sealed class Profile {
 
             return new() {
                 UserName = jo[UserNamePropertyName]!.ToString(),
-                Results = [.. jo[ResultsPropertyName]!.AsArray().Cast<JsonObject>().Select(obj => new Result {
-                    SongId = obj[Result.SongIdPropertyName]!.ToString(),
-                    Mode = parseEnum<Mode>(obj[Result.ModePropertyName]),
-                    Difficulty = parseEnum<Difficulty>(obj[Result.DifficultyPropertyName]),
-                    Score = int.Parse(obj[Result.ScorePropertyName]!.ToString()),
-                    FullCombo = bool.Parse(obj[Result.FullComboPropertyName]!.ToString()),
-                })],
+                Results = [
+                    .. jo[ResultsPropertyName]!.AsArray().Cast<JsonObject>().Select(obj => new Result {
+                        SongId = obj[Result.SongIdPropertyName]!.ToString(),
+                        Mode = parseEnum<Mode>(obj[Result.ModePropertyName]),
+                        Difficulty = parseEnum<DifficultyType>(obj[Result.DifficultyPropertyName]),
+                        Score = int.Parse(obj[Result.ScorePropertyName]!.ToString()),
+                        FullCombo = bool.Parse(obj[Result.FullComboPropertyName]!.ToString()),
+                    })
+                ],
             };
 
-            static TEnum parseEnum<TEnum>(JsonNode? node) where TEnum : struct, Enum => Enum.TryParse<TEnum>(node?.ToString(), true, out var value) ? value : default;
+            static TEnum parseEnum<TEnum>(JsonNode? node) where TEnum : struct, Enum
+                => Enum.TryParse<TEnum>(node?.ToString(), true, out var value) ? value : default;
         }
 
         public override void Write(Utf8JsonWriter writer, Profile value, JsonSerializerOptions options) {
