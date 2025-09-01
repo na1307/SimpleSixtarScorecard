@@ -20,10 +20,18 @@
     </MudStack>
     <MudDataGrid @bind-SelectedItem="selectedSong" Items="filter(Song.SongList)" Hover="true" Striped="true" Bordered="true" Dense="true" FixedHeader="true" Height="550px" RowStyleFunc="GetRowStyle">
         <Columns>
-            <PropertyColumn Property="s => s!.Dlc.ToName()" Title="DLC" HeaderStyle="min-width: 180px" />
-            <PropertyColumn Property="s => s!.Category" Title="카테고리" HeaderStyle="min-width: 160px" />
-            <PropertyColumn Property="s => s!.Title" Title="제목" />
-            <PropertyColumn Property="s => s!.Composer" Title="작곡가" />
+            <PropertyColumn Property="s => s!.Dlc.ToName()" Title="DLC" HeaderStyle="min-width: 180px"/>
+            <PropertyColumn Property="s => s!.Category" Title="카테고리" HeaderStyle="min-width: 160px"/>
+            <TemplateColumn Title="제목">
+                <CellTemplate>
+                    <MudHighlighter Text="@context.Item.Title" HighlightedText="@searchTerm" />
+                </CellTemplate>
+            </TemplateColumn>
+            <TemplateColumn Title="작곡가">
+                <CellTemplate>
+                    <MudHighlighter Text="@context.Item.Composer" HighlightedText="@searchTerm" />
+                </CellTemplate>
+            </TemplateColumn>
         </Columns>
     </MudDataGrid>
 </MudStack>
