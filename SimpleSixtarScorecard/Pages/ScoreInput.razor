@@ -1,13 +1,13 @@
 ﻿<MudPaper Outlined="true">
     <MudStack>
         <MudSpacer />
-        <MudText Typo="Typo.body2" Align="Align.Center">@DifficultyName - @Difficulty.ToString("D2")</MudText>
+        <MudText Typo="Typo.body2" Align="Align.Center">@DifficultyName@(Difficulty is not null ? " - " + Difficulty.Value.ToString("D2") : string.Empty)</MudText>
         <MudStack Row="true">
             <MudSpacer />
-            <MudNumericField @bind-Value="Score" Label="점수" Variant="Variant.Outlined" Margin="Margin.Dense" HideSpinButtons="true" Disabled="Difficulty == 0" Min="0" Max="1000000" Immediate="true" />
+            <MudNumericField @bind-Value="Score" Label="점수" Variant="Variant.Outlined" Margin="Margin.Dense" HideSpinButtons="true" Disabled="Difficulty is null" Min="0" Max="1000000" Immediate="true" />
             <MudSpacer />
         </MudStack>
-        <MudCheckBox @bind-Value="FullCombo" Label="풀 콤보" Color="Color.Primary" Dense="true" Style="display: flex; justify-content: center; align-self: center;" Disabled="Difficulty == 0" />
+        <MudCheckBox @bind-Value="FullCombo" Label="풀 콤보" Color="Color.Primary" Dense="true" Style="display: flex; justify-content: center; align-self: center;" Disabled="Difficulty is null" />
         <MudSpacer />
     </MudStack>
 </MudPaper>
@@ -36,24 +36,24 @@
             _ => throw new ArgumentOutOfRangeException()
         };
 
-    private int Difficulty => Mode switch
+    private int? Difficulty => Mode switch
     {
         Mode.Solar => DifficultyType switch
         {
-            DifficultyType.Comet => Song.DifficultySolar.Comet,
-            DifficultyType.Nova => Song.DifficultySolar.Nova,
-            DifficultyType.Supernova => Song.DifficultySolar.Supernova,
-            DifficultyType.Quasar => Song.DifficultySolar.Quasar,
-            DifficultyType.Starlight => Song.DifficultySolar.Starlight,
+            DifficultyType.Comet => Song.SolarComet,
+            DifficultyType.Nova => Song.SolarNova,
+            DifficultyType.Supernova => Song.SolarSupernova,
+            DifficultyType.Quasar => Song.SolarQuasar,
+            DifficultyType.Starlight => Song.SolarStarlight,
             _ => throw new ArgumentOutOfRangeException()
         },
         Mode.Lunar => DifficultyType switch
         {
-            DifficultyType.Comet => Song.DifficultyLunar.Comet,
-            DifficultyType.Nova => Song.DifficultyLunar.Nova,
-            DifficultyType.Supernova => Song.DifficultyLunar.Supernova,
-            DifficultyType.Quasar => Song.DifficultyLunar.Quasar,
-            DifficultyType.Starlight => Song.DifficultyLunar.Starlight,
+            DifficultyType.Comet => Song.LunarComet,
+            DifficultyType.Nova => Song.LunarNova,
+            DifficultyType.Supernova => Song.LunarSupernova,
+            DifficultyType.Quasar => Song.LunarQuasar,
+            DifficultyType.Starlight => Song.LunarStarlight,
             _ => throw new ArgumentOutOfRangeException()
         },
         _ => throw new ArgumentOutOfRangeException()

@@ -10,6 +10,7 @@ public sealed partial class App {
     public App() {
         ServiceCollection sc = new();
 
+        sc.AddSqlite<SongContext>(null);
         sc.AddWpfBlazorWebView();
 #if DEBUG
         sc.AddBlazorWebViewDeveloperTools();
