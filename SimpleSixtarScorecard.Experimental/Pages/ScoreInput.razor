@@ -1,0 +1,65 @@
+﻿<MudPaper Outlined="true">
+    <MudStack>
+        <MudSpacer />
+        <MudText Typo="Typo.body2" Align="Align.Center">@DifficultyName - @Difficulty.ToString("D2")</MudText>
+        <MudStack Row="true">
+            <MudSpacer />
+            <MudNumericField @bind-Value="score" Label="점수" Variant="Variant.Outlined" Margin="Margin.Dense" HideSpinButtons="true" Disabled="Difficulty == 0" Min="0" Max="1000000" Immediate="true" />
+            <MudSpacer />
+        </MudStack>
+        <MudCheckBox @bind-Value="fullCombo" Label="풀 콤보" Color="Color.Primary" Dense="true" Style="display: flex; justify-content: center; align-self: center;" Disabled="Difficulty == 0" />
+        <MudSpacer />
+    </MudStack>
+</MudPaper>
+
+@code {
+    private int score;
+    private bool fullCombo;
+
+    [Parameter]
+    [EditorRequired]
+    public required Song Song { get; init; }
+
+    [Parameter]
+    [EditorRequired]
+    public Mode Mode { get; init; }
+
+    [Parameter]
+    [EditorRequired]
+    public DifficultyType DifficultyType { get; init; }
+
+    private string DifficultyName =>
+        DifficultyType switch
+        {
+            DifficultyType.Comet => "코멧",
+            DifficultyType.Nova => "노바",
+            DifficultyType.Supernova => "슈퍼노바",
+            DifficultyType.Quasar => "퀘이사",
+            DifficultyType.Starlight => "스타라이트",
+            _ => throw new ArgumentOutOfRangeException()
+        };
+
+    private int Difficulty => Mode switch
+    {
+        Mode.Solar => DifficultyType switch
+        {
+            DifficultyType.Comet => Song.DifficultySolar.Comet,
+            DifficultyType.Nova => Song.DifficultySolar.Nova,
+            DifficultyType.Supernova => Song.DifficultySolar.Supernova,
+            DifficultyType.Quasar => Song.DifficultySolar.Quasar,
+            DifficultyType.Starlight => Song.DifficultySolar.Starlight,
+            _ => throw new ArgumentOutOfRangeException()
+        },
+        Mode.Lunar => DifficultyType switch
+        {
+            DifficultyType.Comet => Song.DifficultyLunar.Comet,
+            DifficultyType.Nova => Song.DifficultyLunar.Nova,
+            DifficultyType.Supernova => Song.DifficultyLunar.Supernova,
+            DifficultyType.Quasar => Song.DifficultyLunar.Quasar,
+            DifficultyType.Starlight => Song.DifficultyLunar.Starlight,
+            _ => throw new ArgumentOutOfRangeException()
+        },
+        _ => throw new ArgumentOutOfRangeException()
+    };
+
+}

@@ -1,0 +1,33 @@
+<MudPaper Outlined="true" Style="display: flex; justify-content: center; align-self: center; width: 97.5vw;">
+    <MudStack>
+        <MudSpacer />
+        <MudText Typo="Typo.body2" Align="Align.Center">@ModeName</MudText>
+        <MudStack Row="true">
+            <MudSpacer />
+            @foreach (var difficulty in Enum.GetValues<DifficultyType>())
+            {
+                <ScoreInput @key="Song.Id + Mode + difficulty" Song="Song" Mode="Mode" DifficultyType="difficulty" />
+            }
+            <MudSpacer />
+        </MudStack>
+        <MudSpacer />
+    </MudStack>
+</MudPaper>
+
+@code
+{
+    [Parameter]
+    [EditorRequired]
+    public required Song Song { get; init; }
+
+    [Parameter]
+    [EditorRequired]
+    public Mode Mode { get; init; }
+
+    private string ModeName => Mode switch
+    {
+        Mode.Solar => "솔라 모드",
+        Mode.Lunar => "루나 모드",
+        _ => throw new ArgumentOutOfRangeException()
+    };
+}
