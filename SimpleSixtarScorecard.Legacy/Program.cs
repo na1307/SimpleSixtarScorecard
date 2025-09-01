@@ -1,4 +1,5 @@
 ﻿////#define USE_LOCAL
+
 using Json.Schema;
 #if NET48
 using System.Net.Http;
@@ -38,7 +39,7 @@ internal static class Program {
                 if (await IsInternetConnected(hc)) {
                     try {
                         const string url
-                            = "https://raw.githubusercontent.com/na1307/SimpleSixtarScorecard/refs/heads/main/SimpleSixtarScorecard/songdata.json";
+                            = "https://raw.githubusercontent.com/na1307/SimpleSixtarScorecard/refs/heads/main/SimpleSixtarScorecard.Legacy/songdata.json";
 
                         songdataStream = await hc.GetStreamAsync(new Uri(url));
                     } catch (HttpRequestException) {
