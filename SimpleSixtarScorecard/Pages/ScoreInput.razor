@@ -1,10 +1,13 @@
-﻿<MudPaper Outlined="true">
+﻿@using CommunityToolkit.Mvvm.DependencyInjection
+@using Microsoft.EntityFrameworkCore
+
+<MudPaper Outlined="true">
     <MudStack>
         <MudSpacer />
         <MudText Typo="Typo.body2" Align="Align.Center">@DifficultyName@(Difficulty is not null ? " - " + Difficulty.Value.ToString("D2") : string.Empty)</MudText>
         <MudStack Row="true">
             <MudSpacer />
-            <MudNumericField @bind-Value="Score" Label="점수" Variant="Variant.Outlined" Margin="Margin.Dense" HideSpinButtons="true" Disabled="Difficulty is null" Min="0" Max="1000000" Immediate="true" />
+            <MudNumericField @bind-Value="Score" Label="점수" Variant="Variant.Outlined" Margin="Margin.Dense" HideSpinButtons="true" Disabled="Difficulty is null" Min="0" Max="1000000" />
             <MudSpacer />
         </MudStack>
         <MudCheckBox @bind-Value="FullCombo" Label="풀 콤보" Color="Color.Primary" Dense="true" Style="display: flex; justify-content: center; align-self: center;" Disabled="Difficulty is null" />
@@ -13,6 +16,9 @@
 </MudPaper>
 
 @code {
+    private static readonly ResultContext Context = Ioc.Default.GetRequiredService<ResultContext>();
+    private static readonly DbSet<Result> Results = Context.Results;
+
     [Parameter]
     [EditorRequired]
     public required Song Song { get; init; }
@@ -65,24 +71,18 @@
         set
         {
             field = value;
-            var existingResult = Profile.Instance.Results.SingleOrDefault(r => r.SongId == Song.Id && r.Mode == Mode && r.Difficulty == DifficultyType);
+            var existingResult = Results.Find(Song.Id, Mode, DifficultyType);
 
             if (existingResult is null)
             {
-                Profile.Instance.Results.Add(
-                    new()
-                    {
-                        SongId = Song.Id,
-                        Mode = Mode,
-                        Difficulty = DifficultyType,
-                        Score = value,
-                        FullCombo = FullCombo
-                    });
+                Results.Add(new(Song.Id, Mode, DifficultyType, value, FullCombo));
             }
             else
             {
-                existingResult.Score = value;
+                Results.Entry(existingResult).CurrentValues.SetValues(existingResult with { Score = value });
             }
+
+            Context.SaveChanges();
         }
     }
 
@@ -92,30 +92,24 @@
         set
         {
             field = value;
-            var existingResult = Profile.Instance.Results.SingleOrDefault(r => r.SongId == Song.Id && r.Mode == Mode && r.Difficulty == DifficultyType);
+            var existingResult = Results.Find(Song.Id, Mode, DifficultyType);
 
             if (existingResult is null)
             {
-                Profile.Instance.Results.Add(
-                    new()
-                    {
-                        SongId = Song.Id,
-                        Mode = Mode,
-                        Difficulty = DifficultyType,
-                        Score = Score,
-                        FullCombo = value
-                    });
+                Results.Add(new(Song.Id, Mode, DifficultyType, Score, value));
             }
             else
             {
-                existingResult.FullCombo = value;
+                Results.Entry(existingResult).CurrentValues.SetValues(existingResult with { FullCombo = value });
             }
+
+            Context.SaveChanges();
         }
     }
 
     protected override void OnInitialized()
     {
-        var existingResult = Profile.Instance.Results.SingleOrDefault(r => r.SongId == Song.Id && r.Mode == Mode && r.Difficulty == DifficultyType);
+        var existingResult = Results.Find(Song.Id, Mode, DifficultyType);
 
         if (existingResult is null)
         {

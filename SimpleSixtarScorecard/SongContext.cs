@@ -15,11 +15,11 @@ internal sealed class SongContext : DbContext {
     protected override void OnModelCreating(ModelBuilder modelBuilder)
         => modelBuilder.Entity<Song>(entity => {
             entity.HasNoKey().ToTable("Song");
-            entity.Property(e => e.Id).HasColumnName("id");
-            entity.Property(e => e.Title).HasColumnName("title");
-            entity.Property(e => e.Composer).HasColumnName("composer");
-            entity.Property(e => e.Dlc).HasColumnName("dlc").HasConversion<EnumToStringConverter<Dlc>>();
-            entity.Property(e => e.Category).HasColumnName("category").HasConversion<EnumToStringConverter<Category>>();
+            entity.Property(e => e.Id).HasColumnName("id").IsRequired();
+            entity.Property(e => e.Title).HasColumnName("title").IsRequired();
+            entity.Property(e => e.Composer).HasColumnName("composer").IsRequired();
+            entity.Property(e => e.Dlc).HasColumnName("dlc").HasConversion<EnumToStringConverter<Dlc>>().IsRequired();
+            entity.Property(e => e.Category).HasColumnName("category").HasConversion<EnumToStringConverter<Category>>().IsRequired();
             entity.Property(e => e.SolarComet).HasColumnName("solar_comet");
             entity.Property(e => e.SolarNova).HasColumnName("solar_nova");
             entity.Property(e => e.SolarSupernova).HasColumnName("solar_supernova");

@@ -1,8 +1,7 @@
 ﻿using CommunityToolkit.Mvvm.DependencyInjection;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using MudBlazor.Services;
-using System.IO;
-using System.Text.Json;
 
 namespace SimpleSixtarScorecard;
 
@@ -11,23 +10,14 @@ public sealed partial class App {
         ServiceCollection sc = new();
 
         sc.AddSqlite<SongContext>(null);
+        sc.AddSqlite<ResultContext>(null);
         sc.AddWpfBlazorWebView();
 #if DEBUG
         sc.AddBlazorWebViewDeveloperTools();
 #endif
         sc.AddMudServices();
         Ioc.Default.ConfigureServices(sc.BuildServiceProvider());
+        Ioc.Default.GetRequiredService<ResultContext>().Database.Migrate();
         InitializeComponent();
-
-        if (!File.Exists(Profile.ProfileFile)) {
-            using FileStream fs = new(Profile.ProfileFile, FileMode.CreateNew, FileAccess.Write);
-            using Utf8JsonWriter writer = new(fs);
-
-            writer.WriteStartObject();
-            writer.WriteString(Profile.UserNamePropertyName, string.Empty);
-            writer.WriteStartArray(Profile.ResultsPropertyName);
-            writer.WriteEndArray();
-            writer.WriteEndObject();
-        }
     }
 }
