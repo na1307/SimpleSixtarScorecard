@@ -1,5 +1,8 @@
-﻿namespace SimpleSixtarScorecard;
+﻿using System.Text.Json.Serialization;
 
+namespace SimpleSixtarScorecard;
+
+[JsonConverter(typeof(JsonStringEnumConverter<Mode>))]
 public enum Mode {
     Solar,
     Lunar

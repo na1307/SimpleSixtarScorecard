@@ -1,5 +1,4 @@
 ﻿@using CommunityToolkit.Mvvm.DependencyInjection
-@using Microsoft.EntityFrameworkCore
 
 <MudPaper Outlined="true">
     <MudStack>
@@ -17,7 +16,6 @@
 
 @code {
     private static readonly ResultContext Context = Ioc.Default.GetRequiredService<ResultContext>();
-    private static readonly DbSet<Result> Results = Context.Results;
 
     [Parameter]
     [EditorRequired]
@@ -71,15 +69,15 @@
         set
         {
             field = value;
-            var existingResult = Results.Find(Song.Id, Mode, DifficultyType);
+            var existingResult = Context.Results.Find(Song.Id, Mode, DifficultyType);
 
             if (existingResult is null)
             {
-                Results.Add(new(Song.Id, Mode, DifficultyType, value, FullCombo));
+                Context.Results.Add(new(Song.Id, Mode, DifficultyType, value, FullCombo));
             }
             else
             {
-                Results.Entry(existingResult).CurrentValues.SetValues(existingResult with { Score = value });
+                Context.Results.Entry(existingResult).CurrentValues.SetValues(existingResult with { Score = value });
             }
 
             Context.SaveChanges();
@@ -92,15 +90,15 @@
         set
         {
             field = value;
-            var existingResult = Results.Find(Song.Id, Mode, DifficultyType);
+            var existingResult = Context.Results.Find(Song.Id, Mode, DifficultyType);
 
             if (existingResult is null)
             {
-                Results.Add(new(Song.Id, Mode, DifficultyType, Score, value));
+                Context.Results.Add(new(Song.Id, Mode, DifficultyType, Score, value));
             }
             else
             {
-                Results.Entry(existingResult).CurrentValues.SetValues(existingResult with { FullCombo = value });
+                Context.Results.Entry(existingResult).CurrentValues.SetValues(existingResult with { FullCombo = value });
             }
 
             Context.SaveChanges();
@@ -109,7 +107,7 @@
 
     protected override void OnInitialized()
     {
-        var existingResult = Results.Find(Song.Id, Mode, DifficultyType);
+        var existingResult = Context.Results.Find(Song.Id, Mode, DifficultyType);
 
         if (existingResult is null)
         {
