@@ -4,8 +4,12 @@
     <TargetFramework>net9.0-windows</TargetFramework>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
     <RootNamespace>SimpleSixtarScorecard</RootNamespace>
-    <NoWarn>$(NoWarn);SA1600;SA1601</NoWarn>
+    <NoWarn>$(NoWarn);SA1600;SA1601;SA1602</NoWarn>
     <UseWPF>true</UseWPF>
+    <PublishSingleFile>true</PublishSingleFile>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+    <EnableCompressionInSingleFile>true</EnableCompressionInSingleFile>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="CommunityToolkit.Mvvm" />
