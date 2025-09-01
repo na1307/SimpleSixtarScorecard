@@ -8,6 +8,9 @@
     <LangVersion>preview</LangVersion>
     <NoWarn>$(NoWarn);SA1600;SA1601;SA1602</NoWarn>
     <UseWPF>true</UseWPF>
+    <AssemblyVersion>1</AssemblyVersion>
+    <FileVersion>1.0.0</FileVersion>
+    <Version>1.0-beta</Version>
     <PublishSingleFile>true</PublishSingleFile>
     <RuntimeIdentifier>win-x64</RuntimeIdentifier>
     <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
