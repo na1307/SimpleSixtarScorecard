@@ -3,6 +3,7 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>net9.0-windows</TargetFramework>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <LangVersion>preview</LangVersion>
     <RootNamespace>SimpleSixtarScorecard</RootNamespace>
     <NoWarn>$(NoWarn);SA1600;SA1601;SA1602</NoWarn>
     <UseWPF>true</UseWPF>

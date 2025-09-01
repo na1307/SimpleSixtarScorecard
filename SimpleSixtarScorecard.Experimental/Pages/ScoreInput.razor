@@ -4,18 +4,15 @@
         <MudText Typo="Typo.body2" Align="Align.Center">@DifficultyName - @Difficulty.ToString("D2")</MudText>
         <MudStack Row="true">
             <MudSpacer />
-            <MudNumericField @bind-Value="score" Label="점수" Variant="Variant.Outlined" Margin="Margin.Dense" HideSpinButtons="true" Disabled="Difficulty == 0" Min="0" Max="1000000" Immediate="true" />
+            <MudNumericField @bind-Value="Score" Label="점수" Variant="Variant.Outlined" Margin="Margin.Dense" HideSpinButtons="true" Disabled="Difficulty == 0" Min="0" Max="1000000" Immediate="true" />
             <MudSpacer />
         </MudStack>
-        <MudCheckBox @bind-Value="fullCombo" Label="풀 콤보" Color="Color.Primary" Dense="true" Style="display: flex; justify-content: center; align-self: center;" Disabled="Difficulty == 0" />
+        <MudCheckBox @bind-Value="FullCombo" Label="풀 콤보" Color="Color.Primary" Dense="true" Style="display: flex; justify-content: center; align-self: center;" Disabled="Difficulty == 0" />
         <MudSpacer />
     </MudStack>
 </MudPaper>
 
 @code {
-    private int score;
-    private bool fullCombo;
-
     [Parameter]
     [EditorRequired]
     public required Song Song { get; init; }
@@ -62,4 +59,70 @@
         _ => throw new ArgumentOutOfRangeException()
     };
 
+    private int Score
+    {
+        get;
+        set
+        {
+            field = value;
+            var existingResult = Profile.Instance.Results.SingleOrDefault(r => r.SongId == Song.Id && r.Mode == Mode && r.Difficulty == DifficultyType);
+
+            if (existingResult is null)
+            {
+                Profile.Instance.Results.Add(
+                    new()
+                    {
+                        SongId = Song.Id,
+                        Mode = Mode,
+                        Difficulty = DifficultyType,
+                        Score = value,
+                        FullCombo = FullCombo
+                    });
+            }
+            else
+            {
+                existingResult.Score = value;
+            }
+        }
+    }
+
+    private bool FullCombo
+    {
+        get;
+        set
+        {
+            field = value;
+            var existingResult = Profile.Instance.Results.SingleOrDefault(r => r.SongId == Song.Id && r.Mode == Mode && r.Difficulty == DifficultyType);
+
+            if (existingResult is null)
+            {
+                Profile.Instance.Results.Add(
+                    new()
+                    {
+                        SongId = Song.Id,
+                        Mode = Mode,
+                        Difficulty = DifficultyType,
+                        Score = Score,
+                        FullCombo = value
+                    });
+            }
+            else
+            {
+                existingResult.FullCombo = value;
+            }
+        }
+    }
+
+    protected override void OnInitialized()
+    {
+        var existingResult = Profile.Instance.Results.SingleOrDefault(r => r.SongId == Song.Id && r.Mode == Mode && r.Difficulty == DifficultyType);
+
+        if (existingResult is null)
+        {
+            return;
+        }
+
+        Score = existingResult.Score;
+        FullCombo = existingResult.FullCombo;
+    }
 }
