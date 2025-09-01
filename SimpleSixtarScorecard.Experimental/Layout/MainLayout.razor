@@ -1,8 +1,12 @@
 ﻿@inherits LayoutComponentBase
-<div class="page">
-    <main>
-        <article class="content px-4">
-            @Body
-        </article>
-    </main>
-</div>
+
+<MudThemeProvider />
+<MudPopoverProvider />
+<MudDialogProvider />
+<MudSnackbarProvider />
+
+<MudLayout>
+    <MudMainContent Style="padding-top: 0;">
+        @Body
+    </MudMainContent>
+</MudLayout>

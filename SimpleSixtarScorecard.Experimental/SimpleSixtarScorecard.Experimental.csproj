@@ -10,6 +10,7 @@
   <ItemGroup>
     <PackageReference Include="CommunityToolkit.Mvvm" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebView.Wpf" />
+    <PackageReference Include="MudBlazor" />
   </ItemGroup>
   <ItemGroup>
     <AssemblyAttribute Include="System.Windows.ThemeInfoAttribute">

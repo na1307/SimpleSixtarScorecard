@@ -1,7 +1,41 @@
 ﻿@page "/"
 
-<PageTitle>Home</PageTitle>
+<PageTitle>SimpleSixtarScorecard</PageTitle>
 
-<h1>Hello, world!</h1>
+<MudStack>
+    <MudStack Row="true">
+        <MudSelect @bind-Value="selectedCategory" Label="카테고리" Variant="Variant.Outlined" Margin="Margin.Dense" FitContent="true" Immediate="true">
+            @foreach (var category in Enum.GetValues<Category>())
+            {
+                <MudSelectItem Value="category">@category.ToString()</MudSelectItem>
+            }
+        </MudSelect>
+        <MudSelect @bind-Value="selectedDlc" Label="DLC" Variant="Variant.Outlined" Margin="Margin.Dense" FitContent="true" Immediate="true">
+            @foreach (var dlc in Enum.GetValues<Dlc>())
+            {
+                <MudSelectItem Value="dlc">@dlc.ToName()</MudSelectItem>
+            }
+        </MudSelect>
+        <MudTextField @bind-Value="searchTerm" Placeholder="검색" Adornment="Adornment.Start" AdornmentIcon="@Icons.Material.Filled.Search" IconSize="Size.Medium" Variant="Variant.Outlined" Margin="Margin.Dense" Clearable="true" Immediate="true" />
+    </MudStack>
+    <MudDataGrid @bind-SelectedItem="selectedSong" Items="filter(Song.SongList)" Hover="true" Striped="true" Bordered="true" Dense="true" FixedHeader="true" Height="550px" RowStyleFunc="GetRowStyle">
+        <Columns>
+            <PropertyColumn Property="s => s!.Dlc.ToName()" Title="DLC" HeaderStyle="min-width: 180px" />
+            <PropertyColumn Property="s => s!.Category" Title="카테고리" HeaderStyle="min-width: 160px" />
+            <PropertyColumn Property="s => s!.Title" Title="제목" />
+            <PropertyColumn Property="s => s!.Composer" Title="작곡가" />
+        </Columns>
+    </MudDataGrid>
+</MudStack>
 
-Welcome to your new app.
+@code
+{
+    private Category selectedCategory = Category.All;
+    private Dlc selectedDlc = Dlc.All;
+    private string searchTerm = string.Empty;
+    private Song? selectedSong;
+
+    private IEnumerable<Song> filter(IEnumerable<Song> songs) => songs.Where(s => (selectedCategory == Category.All || s.Category == selectedCategory) && (selectedDlc == Dlc.All || s.Dlc == selectedDlc) && (string.IsNullOrWhiteSpace(searchTerm) || s.Title.Contains(searchTerm.Trim(), StringComparison.OrdinalIgnoreCase) || s.Composer.Contains(searchTerm.Trim(), StringComparison.OrdinalIgnoreCase)));
+
+    private string GetRowStyle(Song? song, int index) => song == selectedSong ? "background-color: #01D9FF;" : string.Empty;
+}

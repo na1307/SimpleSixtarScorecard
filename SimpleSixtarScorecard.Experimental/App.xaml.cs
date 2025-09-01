@@ -1,5 +1,6 @@
 ﻿using CommunityToolkit.Mvvm.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection;
+using MudBlazor.Services;
 
 namespace SimpleSixtarScorecard;
 
@@ -11,6 +12,7 @@ public sealed partial class App {
 #if DEBUG
         sc.AddBlazorWebViewDeveloperTools();
 #endif
+        sc.AddMudServices();
         Ioc.Default.ConfigureServices(sc.BuildServiceProvider());
         InitializeComponent();
     }
