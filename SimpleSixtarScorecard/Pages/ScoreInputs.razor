@@ -1,7 +1,7 @@
 ﻿<MudPaper Outlined="true" Style="display: flex; justify-content: center; align-self: center; width: 97.5vw;">
     <MudStack>
         <MudSpacer />
-        <MudText Typo="Typo.body2" Align="Align.Center">@ModeName</MudText>
+        <MudImage Src="@ImageName" Width="217" Height="34" Style="display: flex; justify-content: center; align-self: center;" />
         <MudStack Row="true">
             <MudSpacer />
             @foreach (var difficulty in Enum.GetValues<DifficultyType>())
@@ -24,10 +24,10 @@
     [EditorRequired]
     public Mode Mode { get; init; }
 
-    private string ModeName => Mode switch
+    private string ImageName => Mode switch
     {
-        Mode.Solar => "솔라 모드",
-        Mode.Lunar => "루나 모드",
+        Mode.Solar => "images/Solar.png",
+        Mode.Lunar => "images/Lunar.png",
         _ => throw new ArgumentOutOfRangeException()
     };
 }

@@ -1,18 +1,18 @@
 ﻿@using CommunityToolkit.Mvvm.DependencyInjection
 
-<MudPaper Outlined="true">
-    <MudStack>
+<MudStack>
+    <MudStack Row="true">
+        <MudImage Src="@ImageName" Width="204" Height="32" Style="display: flex; justify-content: center; align-self: center;" />
+        <MudText Typo="Typo.h6" Inline="true" Class="difficulty-number" Style="color: white; font-family: Montserrat; margin-left: -50px;">@(Difficulty?.ToString("D2") ?? string.Empty)</MudText>
+    </MudStack>
+    <MudStack Row="true">
         <MudSpacer />
-        <MudText Typo="Typo.body2" Align="Align.Center">@DifficultyName@(Difficulty is not null ? " - " + Difficulty.Value.ToString("D2") : string.Empty)</MudText>
-        <MudStack Row="true">
-            <MudSpacer />
-            <MudNumericField @bind-Value="Score" Label="점수" Variant="Variant.Outlined" Margin="Margin.Dense" HideSpinButtons="true" Disabled="Difficulty is null" Min="0" Max="1000000" />
-            <MudSpacer />
-        </MudStack>
-        <MudCheckBox @bind-Value="FullCombo" Label="풀 콤보" Color="Color.Primary" Dense="true" Style="display: flex; justify-content: center; align-self: center;" Disabled="Difficulty is null" />
+        <MudNumericField @bind-Value="Score" Label="점수" Variant="Variant.Outlined" Margin="Margin.Dense" HideSpinButtons="true" Disabled="Difficulty is null" Min="0" Max="1000000" />
+        <MudImage Src="@RankImageName" Width="50" Height="50" />
         <MudSpacer />
     </MudStack>
-</MudPaper>
+    <MudCheckBox @bind-Value="FullCombo" Label="풀 콤보" Color="Color.Primary" Dense="true" Style="display: flex; justify-content: center; align-self: center;" Disabled="Difficulty is null" />
+</MudStack>
 
 @code {
     private static readonly ResultContext Context = Ioc.Default.GetRequiredService<ResultContext>();
@@ -29,14 +29,14 @@
     [EditorRequired]
     public DifficultyType DifficultyType { get; init; }
 
-    private string DifficultyName =>
+    private string ImageName =>
         DifficultyType switch
         {
-            DifficultyType.Comet => "코멧",
-            DifficultyType.Nova => "노바",
-            DifficultyType.Supernova => "슈퍼노바",
-            DifficultyType.Quasar => "퀘이사",
-            DifficultyType.Starlight => "스타라이트",
+            DifficultyType.Comet => "images/Comet.png",
+            DifficultyType.Nova => "images/Nova.png",
+            DifficultyType.Supernova => "images/Supernova.png",
+            DifficultyType.Quasar => "images/Quasar.png",
+            DifficultyType.Starlight => "images/Starlight.png",
             _ => throw new ArgumentOutOfRangeException()
         };
 
@@ -83,6 +83,20 @@
             Context.SaveChanges();
         }
     }
+
+    private string RankImageName =>
+        Score switch
+        {
+            1000000 => "images/Rank_PB.png",
+            >= 980000 => "images/Rank_SS.png",
+            >= 950000 => "images/Rank_S.png",
+            >= 900000 => "images/Rank_APlus.png",
+            >= 850000 => "images/Rank_A.png",
+            >= 800000 => "images/Rank_BPlus.png",
+            >= 700000 => "images/Rank_B.png",
+            0 => "images/Rank_Invisible.png",
+            _ => "images/Rank_F.png"
+        };
 
     private bool FullCombo
     {

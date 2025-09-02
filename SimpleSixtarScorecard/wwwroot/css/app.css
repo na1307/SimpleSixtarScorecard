@@ -1,5 +1,21 @@
-html, body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+@font-face {
+    font-family: NanumSquareRound;
+    src: url('../fonts/NanumSquareRoundR.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: Montserrat;
+    font-weight: bold;
+    src: url('../fonts/Montserrat-Bold.otf') format('opentype');
+}
+
+html, body, * {
+    font-family: Calibri, NanumSquareRound !important;
+}
+
+.difficulty-number {
+    font-family: Montserrat !important;
+    font-weight: bold !important;
 }
 
 h1:focus {
