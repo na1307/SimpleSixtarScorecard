@@ -35,14 +35,14 @@ jobs:
           key: ${{ runner.os }}-nuget-${{ hashFiles('Directory.Packages.props') }} #hash of project files
           restore-keys: ${{ runner.os }}-nuget-
       - name: Build (Debug)
-        run: msbuild -r -p:Configuration=Debug
+        run: msbuild SimpleSixtarScorecard.Legacy\SimpleSixtarScorecard.Legacy.csproj -r -p:Configuration=Debug
       - name: Build (Release)
-        run: msbuild -r -p:Configuration=Release
+        run: msbuild SimpleSixtarScorecard.Legacy\SimpleSixtarScorecard.Legacy.csproj -r -p:Configuration=Release
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
           name: Release
-          path: SimpleSixtarScorecard/bin/Release/**/*
+          path: SimpleSixtarScorecard.Legacy/bin/Release/**/*
 
   publish:
     name: Publish
