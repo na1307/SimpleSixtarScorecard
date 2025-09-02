@@ -14,7 +14,8 @@ internal sealed class SongContext : DbContext {
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
         => modelBuilder.Entity<Song>(entity => {
-            entity.HasNoKey().ToTable("Song");
+            entity.HasKey(e => e.Id);
+            entity.ToTable("Song");
             entity.Property(e => e.Id).HasColumnName("id").IsRequired();
             entity.Property(e => e.Title).HasColumnName("title").IsRequired();
             entity.Property(e => e.Composer).HasColumnName("composer").IsRequired();

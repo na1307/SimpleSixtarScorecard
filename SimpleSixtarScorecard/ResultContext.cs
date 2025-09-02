@@ -10,10 +10,12 @@ internal sealed class ResultContext : DbContext {
 
     public DbSet<Result> Results { get; set; }
 
+    public DbSet<ReleasesEtag> ReleasesEtagSingle { get; set; }
+
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) => optionsBuilder.UseSqlite("Data Source=Results.db");
 
-    protected override void OnModelCreating(ModelBuilder modelBuilder)
-        => modelBuilder.Entity<Result>(entity => {
+    protected override void OnModelCreating(ModelBuilder modelBuilder) {
+        modelBuilder.Entity<Result>(entity => {
             entity.HasKey(e => new {
                 e.SongId,
                 e.Mode,
@@ -26,4 +28,11 @@ internal sealed class ResultContext : DbContext {
             entity.Property(e => e.Score).HasColumnName("score").IsRequired();
             entity.Property(e => e.FullCombo).HasColumnName("full_combo").IsRequired();
         });
+
+        modelBuilder.Entity<ReleasesEtag>(entity => {
+            entity.HasKey(e => e.Etag);
+            entity.ToTable("ReleasesEtag");
+            entity.Property(e => e.Etag).HasColumnName("etag").IsRequired();
+        });
+    }
 }

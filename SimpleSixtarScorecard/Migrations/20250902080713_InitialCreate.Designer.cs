@@ -10,7 +10,7 @@ using SimpleSixtarScorecard;
 namespace SimpleSixtarScorecard.Migrations
 {
     [DbContext(typeof(ResultContext))]
-    [Migration("20250901205214_InitialCreate")]
+    [Migration("20250902080713_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -18,6 +18,17 @@ namespace SimpleSixtarScorecard.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "9.0.8");
+
+            modelBuilder.Entity("SimpleSixtarScorecard.ReleasesEtag", b =>
+                {
+                    b.Property<string>("Etag")
+                        .HasColumnType("TEXT")
+                        .HasColumnName("etag");
+
+                    b.HasKey("Etag");
+
+                    b.ToTable("ReleasesEtag", (string)null);
+                });
 
             modelBuilder.Entity("SimpleSixtarScorecard.Result", b =>
                 {
