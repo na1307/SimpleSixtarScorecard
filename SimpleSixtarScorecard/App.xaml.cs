@@ -11,7 +11,15 @@ using System.Windows;
 namespace SimpleSixtarScorecard;
 
 public sealed partial class App {
+    private static readonly Mutex SingleInstanceMutex = new(true, "Global\\SimpleSixtarScorecard");
+
     public App() {
+        if (!SingleInstanceMutex.WaitOne(TimeSpan.Zero, true)) {
+            Process.GetCurrentProcess().Kill();
+
+            return;
+        }
+
         ServiceCollection sc = new();
 
         sc.AddSqlite<SongContext>(null);
@@ -34,10 +42,12 @@ public sealed partial class App {
 
                 context.Database.Migrate();
 
+#pragma warning disable CA1869 // 'JsonSerializerOptions' 인스턴스 캐시 및 다시 사용
                 var results = JsonNode.Parse(File.ReadAllBytes("profile.json"))!.AsObject()["results"].Deserialize<Result[]>(
                     new JsonSerializerOptions {
                         PropertyNameCaseInsensitive = true
                     })!;
+#pragma warning restore CA1869 // 'JsonSerializerOptions' 인스턴스 캐시 및 다시 사용
 
                 context.Results.AddRange(results);
                 context.SaveChanges();

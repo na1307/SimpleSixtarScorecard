@@ -6,7 +6,7 @@
     <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
     <RestoreLockedMode Condition="'$(ContinuousIntegrationBuild)' == 'true'">true</RestoreLockedMode>
     <LangVersion>preview</LangVersion>
-    <NoWarn>$(NoWarn);SA1600;SA1601;SA1602</NoWarn>
+    <NoWarn>$(NoWarn);SA1600;SA1601;SA1602;S3928</NoWarn>
     <UseWPF>true</UseWPF>
     <AssemblyVersion>1</AssemblyVersion>
     <FileVersion>1.0.0</FileVersion>
