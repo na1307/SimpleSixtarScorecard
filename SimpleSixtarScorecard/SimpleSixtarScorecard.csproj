@@ -17,10 +17,11 @@
   </PropertyGroup>
   <ItemGroup>
     <None Update="Song.db">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Bluehill.Features" />
     <PackageReference Include="CommunityToolkit.Mvvm" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebView.Wpf" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design">

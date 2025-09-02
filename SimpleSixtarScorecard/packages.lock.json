@@ -2,6 +2,12 @@
   "version": 2,
   "dependencies": {
     "net9.0-windows7.0": {
+      "Bluehill.Features": {
+        "type": "Direct",
+        "requested": "[0.12.0, )",
+        "resolved": "0.12.0",
+        "contentHash": "7IxchfGXLkP1O+A0DXw85GBJcJA5G2FLNCWwKRS3EM8yO/Xf5Dj5n7nH9rNXJLPlfvxhpgkUxNNyqQHW2YDbag=="
+      },
       "Bluehill.Imports": {
         "type": "Direct",
         "requested": "[1.0.20, )",

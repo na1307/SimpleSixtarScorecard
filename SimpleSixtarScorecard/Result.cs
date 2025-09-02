@@ -1,3 +1,12 @@
-﻿namespace SimpleSixtarScorecard;
+﻿using System.Text.Json.Serialization;
 
-internal sealed record class Result(string SongId, Mode Mode, DifficultyType Difficulty, int Score, bool FullCombo);
+namespace SimpleSixtarScorecard;
+
+internal sealed record class Result(
+    [property: JsonPropertyName("songid")] string SongId,
+    [property: JsonPropertyName("mode")] Mode Mode,
+    [property: JsonPropertyName("difficulty")]
+    DifficultyType Difficulty,
+    [property: JsonPropertyName("score")] int Score,
+    [property: JsonPropertyName("fullcombo")]
+    bool FullCombo);
