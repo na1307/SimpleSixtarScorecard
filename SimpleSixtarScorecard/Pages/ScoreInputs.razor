@@ -26,8 +26,8 @@
 
     private string ImageName => Mode switch
     {
-        Mode.Solar => "images/Solar.png",
         Mode.Lunar => "images/Lunar.png",
+        Mode.Solar => "images/Solar.png",
         _ => throw new ArgumentOutOfRangeException()
     };
 }

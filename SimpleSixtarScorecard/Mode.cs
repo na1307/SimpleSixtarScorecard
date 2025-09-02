@@ -4,6 +4,6 @@ namespace SimpleSixtarScorecard;
 
 [JsonConverter(typeof(JsonStringEnumConverter<Mode>))]
 public enum Mode {
-    Solar,
-    Lunar
+    Lunar,
+    Solar
 }

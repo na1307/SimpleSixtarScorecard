@@ -39,8 +39,8 @@
     @if (selectedSong is not null)
     {
         <MudText Typo="Typo.body1" Align="Align.Center">@selectedSong.Composer - @selectedSong.Title</MudText>
-        <ScoreInputs Song="selectedSong" Mode="Mode.Solar" />
         <ScoreInputs Song="selectedSong" Mode="Mode.Lunar" />
+        <ScoreInputs Song="selectedSong" Mode="Mode.Solar" />
     }
     else
     {

@@ -106,16 +106,16 @@ public sealed partial class App {
                                                                 	"composer"	TEXT NOT NULL,
                                                                 	"dlc"	TEXT NOT NULL,
                                                                 	"category"	TEXT NOT NULL,
+                                                                	"lunar_comet"	INTEGER,
+                                                                    "lunar_nova"	INTEGER,
+                                                                    "lunar_supernova"	INTEGER,
+                                                                    "lunar_quasar"	INTEGER,
+                                                                    "lunar_starlight"	INTEGER,
                                                                 	"solar_comet"	INTEGER,
                                                                 	"solar_nova"	INTEGER,
                                                                 	"solar_supernova"	INTEGER,
                                                                 	"solar_quasar"	INTEGER,
                                                                 	"solar_starlight"	INTEGER,
-                                                                	"lunar_comet"	INTEGER,
-                                                                	"lunar_nova"	INTEGER,
-                                                                	"lunar_supernova"	INTEGER,
-                                                                	"lunar_quasar"	INTEGER,
-                                                                	"lunar_starlight"	INTEGER,
                                                                 	PRIMARY KEY("id")
                                                                 );
                                                                 """);
@@ -128,16 +128,16 @@ public sealed partial class App {
                                                                     composer,
                                                                     dlc,
                                                                     category,
-                                                                    solar_comet,
-                                                                    solar_nova,
-                                                                    solar_supernova,
-                                                                    solar_quasar,
-                                                                    solar_starlight,
                                                                     lunar_comet,
                                                                     lunar_nova,
                                                                     lunar_supernova,
                                                                     lunar_quasar,
-                                                                    lunar_starlight
+                                                                    lunar_starlight,
+                                                                    solar_comet,
+                                                                    solar_nova,
+                                                                    solar_supernova,
+                                                                    solar_quasar,
+                                                                    solar_starlight
                                                                 )
                                                                 SELECT order_number,
                                                                        id,
@@ -145,16 +145,16 @@ public sealed partial class App {
                                                                        composer,
                                                                        dlc,
                                                                        category,
-                                                                       solar_comet,
-                                                                       solar_nova,
-                                                                       solar_supernova,
-                                                                       solar_quasar,
-                                                                       solar_starlight,
                                                                        lunar_comet,
                                                                        lunar_nova,
                                                                        lunar_supernova,
                                                                        lunar_quasar,
-                                                                       lunar_starlight
+                                                                       lunar_starlight,
+                                                                       solar_comet,
+                                                                       solar_nova,
+                                                                       solar_supernova,
+                                                                       solar_quasar,
+                                                                       solar_starlight
                                                                 FROM Song
                                                                 ORDER BY order_number ASC;
                                                                 """);
@@ -179,16 +179,16 @@ public sealed partial class App {
                     Composer = updated.Composer ?? existing.Composer,
                     Dlc = updated.Dlc != Dlc.All ? updated.Dlc : existing.Dlc,
                     Category = updated.Category != Category.All ? updated.Category : existing.Category,
-                    SolarComet = updated.SolarComet ?? existing.SolarComet,
-                    SolarNova = updated.SolarNova ?? existing.SolarNova,
-                    SolarSupernova = updated.SolarSupernova ?? existing.SolarSupernova,
-                    SolarQuasar = updated.SolarQuasar ?? existing.SolarQuasar,
-                    SolarStarlight = updated.SolarStarlight ?? existing.SolarStarlight,
                     LunarComet = updated.LunarComet ?? existing.LunarComet,
                     LunarNova = updated.LunarNova ?? existing.LunarNova,
                     LunarSupernova = updated.LunarSupernova ?? existing.LunarSupernova,
                     LunarQuasar = updated.LunarQuasar ?? existing.LunarQuasar,
-                    LunarStarlight = updated.LunarStarlight ?? existing.LunarStarlight
+                    LunarStarlight = updated.LunarStarlight ?? existing.LunarStarlight,
+                    SolarComet = updated.SolarComet ?? existing.SolarComet,
+                    SolarNova = updated.SolarNova ?? existing.SolarNova,
+                    SolarSupernova = updated.SolarSupernova ?? existing.SolarSupernova,
+                    SolarQuasar = updated.SolarQuasar ?? existing.SolarQuasar,
+                    SolarStarlight = updated.SolarStarlight ?? existing.SolarStarlight
                 });
             }
 

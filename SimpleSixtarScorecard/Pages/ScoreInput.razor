@@ -42,15 +42,6 @@
 
     private int? Difficulty => Mode switch
     {
-        Mode.Solar => DifficultyType switch
-        {
-            DifficultyType.Comet => Song.SolarComet,
-            DifficultyType.Nova => Song.SolarNova,
-            DifficultyType.Supernova => Song.SolarSupernova,
-            DifficultyType.Quasar => Song.SolarQuasar,
-            DifficultyType.Starlight => Song.SolarStarlight,
-            _ => throw new ArgumentOutOfRangeException()
-        },
         Mode.Lunar => DifficultyType switch
         {
             DifficultyType.Comet => Song.LunarComet,
@@ -58,6 +49,15 @@
             DifficultyType.Supernova => Song.LunarSupernova,
             DifficultyType.Quasar => Song.LunarQuasar,
             DifficultyType.Starlight => Song.LunarStarlight,
+            _ => throw new ArgumentOutOfRangeException()
+        },
+        Mode.Solar => DifficultyType switch
+        {
+            DifficultyType.Comet => Song.SolarComet,
+            DifficultyType.Nova => Song.SolarNova,
+            DifficultyType.Supernova => Song.SolarSupernova,
+            DifficultyType.Quasar => Song.SolarQuasar,
+            DifficultyType.Starlight => Song.SolarStarlight,
             _ => throw new ArgumentOutOfRangeException()
         },
         _ => throw new ArgumentOutOfRangeException()
