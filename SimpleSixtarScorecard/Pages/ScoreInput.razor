@@ -1,4 +1,4 @@
-﻿@implements IDisposable
+﻿@using CommunityToolkit.Mvvm.DependencyInjection
 
 <MudStack>
     <MudStack Row="true">
@@ -14,9 +14,8 @@
     <MudCheckBox @bind-Value="FullCombo" Label="풀 콤보" Color="Color.Primary" Dense="true" Style="display: flex; justify-content: center; align-self: center;" Disabled="Difficulty is null" />
 </MudStack>
 
-@code
-{
-    private readonly ResultContext context = Ioc.Default.GetRequiredService<IDbContextFactory<ResultContext>>().CreateDbContext();
+@code {
+    private static readonly ResultContext Context = Ioc.Default.GetRequiredService<ResultContext>();
 
     [Parameter]
     [EditorRequired]
@@ -70,18 +69,18 @@
         set
         {
             field = value;
-            var existingResult = context.Results.Find(Song.Id, Mode, DifficultyType);
+            var existingResult = Context.Results.Find(Song.Id, Mode, DifficultyType);
 
             if (existingResult is null)
             {
-                context.Results.Add(new(Song.Id, Mode, DifficultyType, value, FullCombo));
+                Context.Results.Add(new(Song.Id, Mode, DifficultyType, value, FullCombo));
             }
             else
             {
-                context.Results.Entry(existingResult).CurrentValues.SetValues(existingResult with { Score = value });
+                Context.Results.Entry(existingResult).CurrentValues.SetValues(existingResult with { Score = value });
             }
 
-            context.SaveChanges();
+            Context.SaveChanges();
         }
     }
 
@@ -105,26 +104,24 @@
         set
         {
             field = value;
-            var existingResult = context.Results.Find(Song.Id, Mode, DifficultyType);
+            var existingResult = Context.Results.Find(Song.Id, Mode, DifficultyType);
 
             if (existingResult is null)
             {
-                context.Results.Add(new(Song.Id, Mode, DifficultyType, Score, value));
+                Context.Results.Add(new(Song.Id, Mode, DifficultyType, Score, value));
             }
             else
             {
-                context.Results.Entry(existingResult).CurrentValues.SetValues(existingResult with { FullCombo = value });
+                Context.Results.Entry(existingResult).CurrentValues.SetValues(existingResult with { FullCombo = value });
             }
 
-            context.SaveChanges();
+            Context.SaveChanges();
         }
     }
 
-    public void Dispose() => context.Dispose();
-
     protected override void OnInitialized()
     {
-        var existingResult = context.Results.Find(Song.Id, Mode, DifficultyType);
+        var existingResult = Context.Results.Find(Song.Id, Mode, DifficultyType);
 
         if (existingResult is null)
         {
