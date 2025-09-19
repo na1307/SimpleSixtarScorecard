@@ -24,15 +24,18 @@ public sealed partial class App {
 
         ServiceCollection sc = new();
 
-        sc.AddSqlite<SongContext>(null);
-        sc.AddSqlite<ResultContext>(null);
+        sc.AddDbContextFactory<SongContext>();
+        sc.AddDbContextFactory<ResultContext>();
         sc.AddWpfBlazorWebView();
 #if DEBUG
         sc.AddBlazorWebViewDeveloperTools();
 #endif
         sc.AddMudServices();
         Ioc.Default.ConfigureServices(sc.BuildServiceProvider());
-        Ioc.Default.GetRequiredService<ResultContext>().Database.Migrate();
+
+        using (var rc = Ioc.Default.GetRequiredService<IDbContextFactory<ResultContext>>().CreateDbContext()) {
+            rc.Database.Migrate();
+        }
 
         if (File.Exists("profile.json")) {
             if (MessageBox.Show(
@@ -40,7 +43,7 @@ public sealed partial class App {
                     "알림", MessageBoxButton.YesNo, MessageBoxImage.Information) == MessageBoxResult.Yes) {
                 File.Delete("Result.db");
 
-                var context = Ioc.Default.GetRequiredService<ResultContext>();
+                using var context = Ioc.Default.GetRequiredService<IDbContextFactory<ResultContext>>().CreateDbContext();
 
                 context.Database.Migrate();
 
@@ -76,7 +79,7 @@ public sealed partial class App {
             return;
         }
 
-        var context = Ioc.Default.GetRequiredService<SongContext>();
+        await using var context = await Ioc.Default.GetRequiredService<IDbContextFactory<SongContext>>().CreateDbContextAsync();
         var suo = JsonNode.Parse(sdu)!.AsObject();
         var newSongs = suo["new_songs"]?.AsArray().Deserialize<Song[]>();
 
