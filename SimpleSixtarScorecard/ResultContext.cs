@@ -22,17 +22,17 @@ internal sealed class ResultContext : DbContext {
                 e.Difficulty
             });
             entity.ToTable("Result");
-            entity.Property(e => e.SongId).HasColumnName("song_id").IsRequired();
-            entity.Property(e => e.Mode).HasColumnName("mode").HasConversion<EnumToStringConverter<Mode>>().IsRequired();
-            entity.Property(e => e.Difficulty).HasColumnName("difficulty").HasConversion<EnumToStringConverter<DifficultyType>>().IsRequired();
-            entity.Property(e => e.Score).HasColumnName("score").IsRequired();
-            entity.Property(e => e.FullCombo).HasColumnName("full_combo").IsRequired();
+            entity.Property(e => e.SongId).HasColumnName("SongId").IsRequired();
+            entity.Property(e => e.Mode).HasColumnName("Mode").HasConversion<EnumToStringConverter<Mode>>().IsRequired();
+            entity.Property(e => e.Difficulty).HasColumnName("Difficulty").HasConversion<EnumToStringConverter<DifficultyType>>().IsRequired();
+            entity.Property(e => e.Score).HasColumnName("Score").IsRequired();
+            entity.Property(e => e.FullCombo).HasColumnName("FullCombo").IsRequired();
         });
 
         modelBuilder.Entity<ReleasesEtag>(entity => {
             entity.HasKey(e => e.Etag);
-            entity.ToTable("ReleasesEtag");
-            entity.Property(e => e.Etag).HasColumnName("etag").IsRequired();
+            entity.ToTable("EtagSingle");
+            entity.Property(e => e.Etag).HasColumnName("Etag").IsRequired();
         });
     }
 }

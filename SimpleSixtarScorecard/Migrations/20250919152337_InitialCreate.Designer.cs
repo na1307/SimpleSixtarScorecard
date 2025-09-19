@@ -10,47 +10,52 @@ using SimpleSixtarScorecard;
 namespace SimpleSixtarScorecard.Migrations
 {
     [DbContext(typeof(ResultContext))]
-    [Migration("20250902080713_InitialCreate")]
+    [Migration("20250919152337_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
-            modelBuilder.HasAnnotation("ProductVersion", "9.0.8");
+            modelBuilder.HasAnnotation("ProductVersion", "10.0.0-rc.1.25451.107");
 
             modelBuilder.Entity("SimpleSixtarScorecard.ReleasesEtag", b =>
                 {
                     b.Property<string>("Etag")
                         .HasColumnType("TEXT")
-                        .HasColumnName("etag");
+                        .HasColumnName("Etag");
 
                     b.HasKey("Etag");
 
-                    b.ToTable("ReleasesEtag", (string)null);
+                    b.ToTable("EtagSingle", (string)null);
                 });
 
             modelBuilder.Entity("SimpleSixtarScorecard.Result", b =>
                 {
                     b.Property<string>("SongId")
                         .HasColumnType("TEXT")
-                        .HasColumnName("song_id");
+                        .HasColumnName("SongId")
+                        .HasJsonPropertyName("songid");
 
                     b.Property<string>("Mode")
                         .HasColumnType("TEXT")
-                        .HasColumnName("mode");
+                        .HasColumnName("Mode")
+                        .HasJsonPropertyName("mode");
 
                     b.Property<string>("Difficulty")
                         .HasColumnType("TEXT")
-                        .HasColumnName("difficulty");
+                        .HasColumnName("Difficulty")
+                        .HasJsonPropertyName("difficulty");
 
                     b.Property<bool>("FullCombo")
                         .HasColumnType("INTEGER")
-                        .HasColumnName("full_combo");
+                        .HasColumnName("FullCombo")
+                        .HasJsonPropertyName("fullcombo");
 
                     b.Property<int>("Score")
                         .HasColumnType("INTEGER")
-                        .HasColumnName("score");
+                        .HasColumnName("Score")
+                        .HasJsonPropertyName("score");
 
                     b.HasKey("SongId", "Mode", "Difficulty");
 

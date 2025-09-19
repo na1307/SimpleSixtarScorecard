@@ -1,79 +1,66 @@
 ﻿@page "/"
-@using CommunityToolkit.Mvvm.DependencyInjection
-@using System.IO
-@using System.Text.Json
-@inject IDialogService DialogService
 
 <PageTitle>SimpleSixtarScorecard</PageTitle>
 
 <MudStack Style="padding-top: 12.5px; height: 100vh;">
-    <MudStack Row="true" Style="display: flex; justify-content: center; align-self: center; width: 97.5vw;">
-        <MudSelect @bind-Value="selectedCategory" Label="카테고리" Variant="Variant.Outlined" Margin="Margin.Dense" FitContent="true" Immediate="true">
-            @foreach (var category in Enum.GetValues<Category>())
-            {
-                <MudSelectItem Value="category">@category.ToString()</MudSelectItem>
-            }
-        </MudSelect>
-        <MudSelect @bind-Value="selectedDlc" Label="DLC" Variant="Variant.Outlined" Margin="Margin.Dense" FitContent="true" Immediate="true">
-            @foreach (var dlc in Enum.GetValues<Dlc>())
-            {
-                <MudSelectItem Value="dlc">@dlc.ToName()</MudSelectItem>
-            }
-        </MudSelect>
-        <MudTextField @bind-Value="searchTerm" Placeholder="검색" Adornment="Adornment.Start" AdornmentIcon="@Icons.Material.Filled.Search" IconSize="Size.Medium" Variant="Variant.Outlined" Margin="Margin.Dense" Clearable="true" Immediate="true" />
-        <MudText Typo="Typo.body1" Align="Align.Center">총 @FilteredSongs.Count() 곡</MudText>
-        <MudButton Variant="Variant.Filled" OnClick="exportButton">내보내기</MudButton>
-    </MudStack>
-    <MudDataGrid @bind-SelectedItem="selectedSong" Items="FilteredSongs" Hover="true" Striped="true" Bordered="true" Dense="true" FixedHeader="true" Style="display: flex; justify-content: center; align-self: center; width: 97.5vw; height: calc(100% - 567.5px)" RowStyleFunc="getRowStyle">
-        <Columns>
-            <PropertyColumn Property="s => s!.Dlc.ToName()" Title="DLC" HeaderStyle="min-width: 180px" />
-            <PropertyColumn Property="s => s!.Category" Title="카테고리" HeaderStyle="min-width: 160px" />
-            <TemplateColumn Title="제목">
-                <CellTemplate>
-                    <MudHighlighter Text="@context.Item!.Title" HighlightedText="@searchTerm" />
-                </CellTemplate>
-            </TemplateColumn>
-            <TemplateColumn Title="작곡가">
-                <CellTemplate>
-                    <MudHighlighter Text="@context.Item!.Composer" HighlightedText="@searchTerm" />
-                </CellTemplate>
-            </TemplateColumn>
-        </Columns>
-    </MudDataGrid>
-    @if (selectedSong is not null)
-    {
-        <MudText Typo="Typo.body1" Align="Align.Center">@selectedSong.Composer - @selectedSong.Title</MudText>
-        <ScoreInputs Song="selectedSong" Mode="Mode.Lunar" />
-        <ScoreInputs Song="selectedSong" Mode="Mode.Solar" />
-    }
-    else
-    {
-        <MudText Typo="Typo.body1" Align="Align.Center">곡을 선택해주세요</MudText>
-    }
+	<MudStack Row="true" Style="display: flex; justify-content: center; align-self: center; width: 97.5vw;">
+		<MudSelect @bind-Value="selectedCategory" Label="카테고리" Variant="Variant.Outlined" Margin="Margin.Dense" FitContent="true" Immediate="true">
+			@foreach (var category in Enum.GetValues<Category>())
+			{
+				<MudSelectItem Value="category">@category.ToString()</MudSelectItem>
+			}
+		</MudSelect>
+		<MudSelect @bind-Value="selectedDlc" Label="DLC" Variant="Variant.Outlined" Margin="Margin.Dense" FitContent="true" Immediate="true">
+			@foreach (var dlc in Enum.GetValues<Dlc>())
+			{
+				<MudSelectItem Value="dlc">@dlc.ToName()</MudSelectItem>
+			}
+		</MudSelect>
+		<MudTextField @bind-Value="searchTerm" Placeholder="검색" Adornment="Adornment.Start" AdornmentIcon="@Icons.Material.Filled.Search" IconSize="Size.Medium" Variant="Variant.Outlined" Margin="Margin.Dense" Clearable="true" Immediate="true" />
+		<MudText Typo="Typo.body1" Align="Align.Center">총 @FilteredSongs.Count() 곡</MudText>
+	</MudStack>
+	<MudDataGrid @bind-SelectedItem="selectedSong" Items="FilteredSongs" Hover="true" Striped="true" Bordered="true" Dense="true" FixedHeader="true" Style="display: flex; justify-content: center; align-self: center; width: 97.5vw; height: calc(100% - 567.5px)" RowStyleFunc="getRowStyle">
+		<Columns>
+			<PropertyColumn Property="s => s!.Dlc.ToName()" Title="DLC" HeaderStyle="min-width: 180px" />
+			<PropertyColumn Property="s => s!.Category" Title="카테고리" HeaderStyle="min-width: 160px" />
+			<TemplateColumn Title="제목">
+				<CellTemplate>
+					<MudHighlighter Text="@context.Item!.Title" HighlightedText="@searchTerm" />
+				</CellTemplate>
+			</TemplateColumn>
+			<TemplateColumn Title="작곡가">
+				<CellTemplate>
+					<MudHighlighter Text="@context.Item!.Composer" HighlightedText="@searchTerm" />
+				</CellTemplate>
+			</TemplateColumn>
+		</Columns>
+	</MudDataGrid>
+	@if (selectedSong is not null)
+	{
+		<MudText Typo="Typo.body1" Align="Align.Center">@selectedSong.Composer - @selectedSong.Title</MudText>
+		<ScoreInputs Song="selectedSong" Mode="Mode.Lunar" />
+		<ScoreInputs Song="selectedSong" Mode="Mode.Solar" />
+	}
+	else
+	{
+		<MudText Typo="Typo.body1" Align="Align.Center">곡을 선택해주세요</MudText>
+	}
 </MudStack>
 
 @code
 {
-    private Category selectedCategory = Category.All;
-    private Dlc selectedDlc = Dlc.All;
-    private string searchTerm = string.Empty;
-    private Song? selectedSong;
+	private Category selectedCategory = Category.All;
+	private Dlc selectedDlc = Dlc.All;
+	private string searchTerm = string.Empty;
+	private Song? selectedSong;
 
-    private IEnumerable<Song> FilteredSongs => Ioc.Default.GetRequiredService<SongContext>().Songs.AsEnumerable().Where(s => (selectedCategory == Category.All || s.Category == selectedCategory) && (selectedDlc == Dlc.All || s.Dlc == selectedDlc) && (string.IsNullOrWhiteSpace(searchTerm) || s.Title.Contains(searchTerm.Trim(), StringComparison.OrdinalIgnoreCase) || s.Composer.Contains(searchTerm.Trim(), StringComparison.OrdinalIgnoreCase)));
+	private IEnumerable<Song> FilteredSongs =>
+		Ioc.Default.GetRequiredService<IDbContextFactory<SongContext>>().CreateDbContext().Songs.AsEnumerable().Where(s
+			=> (selectedCategory == Category.All || s.Category == selectedCategory) &&
+			   (selectedDlc == Dlc.All || s.Dlc == selectedDlc) &&
+			   (string.IsNullOrWhiteSpace(searchTerm) ||
+			    s.Title.Contains(searchTerm.Trim(), StringComparison.OrdinalIgnoreCase) ||
+			    s.Composer.Contains(searchTerm.Trim(), StringComparison.OrdinalIgnoreCase)));
 
-    private string getRowStyle(Song? song, int index) => song == selectedSong ? "background-color: #01D9FF;" : string.Empty;
-
-    private async void exportButton()
-    {
-        if (await DialogService.ShowMessageBox("내보내기", "베타 2에서 가져올 수 있도록 기록들을 내보냅니다. exported.json 파일을 베타 2 폴더로 복사하고 가져오기 버튼을 누르세요.", "확인", cancelText: "취소") != true)
-        {
-            return;
-        }
-
-        var jd = JsonSerializer.SerializeToDocument(Ioc.Default.GetRequiredService<ResultContext>().Results);
-        await using var fs = File.Create(Path.Combine(AppContext.BaseDirectory, "exported.json"));
-        await using Utf8JsonWriter jw = new(fs);
-
-        jd.WriteTo(jw);
-    }
+	private string getRowStyle(Song? song, int index) => song == selectedSong ? "background-color: #01D9FF;" : string.Empty;
 }
