@@ -1,5 +1,8 @@
 ﻿@page "/"
 @using CommunityToolkit.Mvvm.DependencyInjection
+@using System.IO
+@using System.Text.Json
+@inject IDialogService DialogService
 
 <PageTitle>SimpleSixtarScorecard</PageTitle>
 
@@ -19,6 +22,7 @@
         </MudSelect>
         <MudTextField @bind-Value="searchTerm" Placeholder="검색" Adornment="Adornment.Start" AdornmentIcon="@Icons.Material.Filled.Search" IconSize="Size.Medium" Variant="Variant.Outlined" Margin="Margin.Dense" Clearable="true" Immediate="true" />
         <MudText Typo="Typo.body1" Align="Align.Center">총 @FilteredSongs.Count() 곡</MudText>
+        <MudButton Variant="Variant.Filled" OnClick="exportButton">내보내기</MudButton>
     </MudStack>
     <MudDataGrid @bind-SelectedItem="selectedSong" Items="FilteredSongs" Hover="true" Striped="true" Bordered="true" Dense="true" FixedHeader="true" Style="display: flex; justify-content: center; align-self: center; width: 97.5vw; height: calc(100% - 567.5px)" RowStyleFunc="getRowStyle">
         <Columns>
@@ -58,4 +62,18 @@
     private IEnumerable<Song> FilteredSongs => Ioc.Default.GetRequiredService<SongContext>().Songs.AsEnumerable().Where(s => (selectedCategory == Category.All || s.Category == selectedCategory) && (selectedDlc == Dlc.All || s.Dlc == selectedDlc) && (string.IsNullOrWhiteSpace(searchTerm) || s.Title.Contains(searchTerm.Trim(), StringComparison.OrdinalIgnoreCase) || s.Composer.Contains(searchTerm.Trim(), StringComparison.OrdinalIgnoreCase)));
 
     private string getRowStyle(Song? song, int index) => song == selectedSong ? "background-color: #01D9FF;" : string.Empty;
+
+    private async void exportButton()
+    {
+        if (await DialogService.ShowMessageBox("내보내기", "베타 2에서 가져올 수 있도록 기록들을 내보냅니다. exported.json 파일을 베타 2 폴더로 복사하고 가져오기 버튼을 누르세요.", "확인", cancelText: "취소") != true)
+        {
+            return;
+        }
+
+        var jd = JsonSerializer.SerializeToDocument(Ioc.Default.GetRequiredService<ResultContext>().Results);
+        await using var fs = File.Create(Path.Combine(AppContext.BaseDirectory, "exported.json"));
+        await using Utf8JsonWriter jw = new(fs);
+
+        jd.WriteTo(jw);
+    }
 }
