@@ -1,0 +1,9 @@
+<Solution>
+  <Folder Name="/솔루션 항목/">
+    <File Path=".editorconfig" />
+    <File Path="Directory.Packages.props" />
+    <File Path="Readme.md" />
+  </Folder>
+  <Project Path="SimpleSixtarScorecard.Legacy/SimpleSixtarScorecard.Legacy.csproj" />
+  <Project Path="SimpleSixtarScorecard/SimpleSixtarScorecard.csproj" />
+</Solution>
