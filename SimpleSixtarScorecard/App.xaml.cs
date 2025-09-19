@@ -100,68 +100,67 @@ public sealed partial class App {
 
             await context.Database.ExecuteSqlInterpolatedAsync($"""
                                                                 CREATE TABLE OrderedSong (
-                                                                	"order_number"	INTEGER NOT NULL UNIQUE,
-                                                                	"id"	TEXT NOT NULL UNIQUE,
-                                                                	"title"	TEXT NOT NULL,
-                                                                	"composer"	TEXT NOT NULL,
-                                                                	"dlc"	TEXT NOT NULL,
-                                                                	"category"	TEXT NOT NULL,
-                                                                	"lunar_comet"	INTEGER,
-                                                                    "lunar_nova"	INTEGER,
-                                                                    "lunar_supernova"	INTEGER,
-                                                                    "lunar_quasar"	INTEGER,
-                                                                    "lunar_starlight"	INTEGER,
-                                                                	"solar_comet"	INTEGER,
-                                                                	"solar_nova"	INTEGER,
-                                                                	"solar_supernova"	INTEGER,
-                                                                	"solar_quasar"	INTEGER,
-                                                                	"solar_starlight"	INTEGER,
-                                                                	PRIMARY KEY("id")
+                                                                	"OrderNumber"	INTEGER NOT NULL UNIQUE,
+                                                                	"Id"	TEXT NOT NULL UNIQUE,
+                                                                	"Title"	TEXT NOT NULL,
+                                                                	"Composer"	TEXT NOT NULL,
+                                                                	"Dlc"	TEXT NOT NULL,
+                                                                	"Category"	TEXT NOT NULL,
+                                                                	"LunarComet"	INTEGER,
+                                                                    "LunarNova"	INTEGER,
+                                                                    "LunarSupernova"	INTEGER,
+                                                                    "LunarQuasar"	INTEGER,
+                                                                    "LunarStarlight"	INTEGER,
+                                                                	"SolarComet"	INTEGER,
+                                                                	"SolarNova"	INTEGER,
+                                                                	"SolarSupernova"	INTEGER,
+                                                                	"SolarQuasar"	INTEGER,
+                                                                	"SolarStarlight"	INTEGER,
+                                                                	PRIMARY KEY("Id")
                                                                 );
                                                                 """);
 
             await context.Database.ExecuteSqlInterpolatedAsync($"""
                                                                 INSERT INTO OrderedSong (
-                                                                    order_number,
-                                                                    id,
-                                                                    title,
-                                                                    composer,
-                                                                    dlc,
-                                                                    category,
-                                                                    lunar_comet,
-                                                                    lunar_nova,
-                                                                    lunar_supernova,
-                                                                    lunar_quasar,
-                                                                    lunar_starlight,
-                                                                    solar_comet,
-                                                                    solar_nova,
-                                                                    solar_supernova,
-                                                                    solar_quasar,
-                                                                    solar_starlight
+                                                                    OrderNumber,
+                                                                    Id,
+                                                                    Title,
+                                                                    Composer,
+                                                                    Dlc,
+                                                                    Category,
+                                                                    LunarComet,
+                                                                    LunarNova,
+                                                                    LunarSupernova,
+                                                                    LunarQuasar,
+                                                                    LunarStarlight,
+                                                                    SolarComet,
+                                                                    SolarNova,
+                                                                    SolarSupernova,
+                                                                    SolarQuasar,
+                                                                    SolarStarlight
                                                                 )
-                                                                SELECT order_number,
-                                                                       id,
-                                                                       title,
-                                                                       composer,
-                                                                       dlc,
-                                                                       category,
-                                                                       lunar_comet,
-                                                                       lunar_nova,
-                                                                       lunar_supernova,
-                                                                       lunar_quasar,
-                                                                       lunar_starlight,
-                                                                       solar_comet,
-                                                                       solar_nova,
-                                                                       solar_supernova,
-                                                                       solar_quasar,
-                                                                       solar_starlight
+                                                                SELECT OrderNumber,
+                                                                       Id,
+                                                                       Title,
+                                                                       Composer,
+                                                                       Dlc,
+                                                                       Category,
+                                                                       LunarComet,
+                                                                       LunarNova,
+                                                                       LunarSupernova,
+                                                                       LunarQuasar,
+                                                                       LunarStarlight,
+                                                                       SolarComet,
+                                                                       SolarNova,
+                                                                       SolarSupernova,
+                                                                       SolarQuasar,
+                                                                       SolarStarlight
                                                                 FROM Song
-                                                                ORDER BY order_number ASC;
+                                                                ORDER BY OrderNumber ASC;
                                                                 """);
 
             await context.Database.ExecuteSqlInterpolatedAsync($"DROP TABLE Song;");
             await context.Database.ExecuteSqlInterpolatedAsync($"ALTER TABLE OrderedSong RENAME TO Song;");
-            await context.Database.ExecuteSqlInterpolatedAsync($"VACUUM;");
         }
 
         var updatedSongs = suo["updated_songs"]?.AsArray().Deserialize<Song[]>();
@@ -193,7 +192,8 @@ public sealed partial class App {
             }
 
             await context.SaveChangesAsync();
-            await context.Database.ExecuteSqlInterpolatedAsync($"VACUUM;");
         }
+
+        await context.Database.ExecuteSqlInterpolatedAsync($"VACUUM;");
     }
 }
