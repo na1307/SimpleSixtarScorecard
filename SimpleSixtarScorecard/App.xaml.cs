@@ -8,6 +8,7 @@ using System.Net.Http;
 using System.Text.Json;
 using System.Text.Json.Nodes;
 using System.Windows;
+using System.Windows.Threading;
 
 namespace SimpleSixtarScorecard;
 
@@ -195,5 +196,21 @@ public sealed partial class App {
         }
 
         await context.Database.ExecuteSqlInterpolatedAsync($"VACUUM;");
+    }
+
+    private void App_OnDispatcherUnhandledException(object sender, DispatcherUnhandledExceptionEventArgs e) {
+#if !DEBUG
+        e.Handled = true;
+#endif
+
+#pragma warning disable SA1113, SA1114, SA1115
+        MessageBox.Show(e.Exception.
+#if DEBUG
+                ToString()
+#else
+                Message
+#endif
+            , null, MessageBoxButton.OK, MessageBoxImage.Error);
+#pragma warning restore SA1114
     }
 }
