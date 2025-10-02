@@ -10,12 +10,11 @@ internal sealed class SongContext : DbContext {
 
     public DbSet<Song> Songs { get; set; }
 
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) => optionsBuilder.UseSqlite("Data Source=Song.db");
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) => optionsBuilder.UseSqlite("Data Source=Songs.db");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
         => modelBuilder.Entity<Song>(entity => {
             entity.HasKey(e => e.Id);
-            entity.ToTable("Song");
             entity.Property(e => e.OrderNumber).HasColumnName("OrderNumber").IsRequired();
             entity.Property(e => e.Id).HasColumnName("Id").IsRequired();
             entity.Property(e => e.Title).HasColumnName("Title").IsRequired();

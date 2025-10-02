@@ -103,7 +103,7 @@ public sealed partial class App {
             await context.SaveChangesAsync();
 
             await context.Database.ExecuteSqlInterpolatedAsync($"""
-                                                                CREATE TABLE OrderedSong (
+                                                                CREATE TABLE OrderedSongs (
                                                                 	"OrderNumber"	INTEGER NOT NULL UNIQUE,
                                                                 	"Id"	TEXT NOT NULL UNIQUE,
                                                                 	"Title"	TEXT NOT NULL,
@@ -125,7 +125,7 @@ public sealed partial class App {
                                                                 """);
 
             await context.Database.ExecuteSqlInterpolatedAsync($"""
-                                                                INSERT INTO OrderedSong (
+                                                                INSERT INTO OrderedSongs (
                                                                     OrderNumber,
                                                                     Id,
                                                                     Title,
@@ -159,12 +159,12 @@ public sealed partial class App {
                                                                        SolarSupernova,
                                                                        SolarQuasar,
                                                                        SolarStarlight
-                                                                FROM Song
+                                                                FROM Songs
                                                                 ORDER BY OrderNumber ASC;
                                                                 """);
 
-            await context.Database.ExecuteSqlInterpolatedAsync($"DROP TABLE Song;");
-            await context.Database.ExecuteSqlInterpolatedAsync($"ALTER TABLE OrderedSong RENAME TO Song;");
+            await context.Database.ExecuteSqlInterpolatedAsync($"DROP TABLE Songs;");
+            await context.Database.ExecuteSqlInterpolatedAsync($"ALTER TABLE OrderedSongs RENAME TO Songs;");
         }
 
         var updatedSongs = suo["updated_songs"]?.AsArray().Deserialize<Song[]>();

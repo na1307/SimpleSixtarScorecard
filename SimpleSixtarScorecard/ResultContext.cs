@@ -21,7 +21,6 @@ internal sealed class ResultContext : DbContext {
                 e.Mode,
                 e.Difficulty
             });
-            entity.ToTable("Result");
             entity.Property(e => e.SongId).HasColumnName("SongId").IsRequired();
             entity.Property(e => e.Mode).HasColumnName("Mode").HasConversion<EnumToStringConverter<Mode>>().IsRequired();
             entity.Property(e => e.Difficulty).HasColumnName("Difficulty").HasConversion<EnumToStringConverter<DifficultyType>>().IsRequired();
