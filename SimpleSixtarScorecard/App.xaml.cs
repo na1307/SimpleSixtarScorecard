@@ -41,7 +41,7 @@ public sealed partial class App {
             if (MessageBox.Show(
                     "이전 버전의 profile.json 파일이 있습니다. 이 파일을 새로운 저장 형식으로 업그레이드할까요? 업그레이드 후 프로그램을 다시 시작해야 합니다.\r\n\r\nprofile.json파일은 백업됩니다. 현재 저장 방식에 저장된 기록은 전부 삭제됩니다. 동의하지 않을 경우 프로그램을 사용할 수 없습니다.",
                     "알림", MessageBoxButton.YesNo, MessageBoxImage.Information) == MessageBoxResult.Yes) {
-                File.Delete("Result.db");
+                File.Delete("Results.db");
 
                 using var context = Ioc.Default.GetRequiredService<IDbContextFactory<ResultContext>>().CreateDbContext();
 
