@@ -5,6 +5,7 @@
     <File Path="Readme.md" />
   </Folder>
   <Project Path="SimpleSixtarScorecard.Legacy/SimpleSixtarScorecard.Legacy.csproj" />
+  <Project Path="SimpleSixtarScorecard.Shared/SimpleSixtarScorecard.Shared.csproj" />
   <Project Path="SimpleSixtarScorecard.Updater/SimpleSixtarScorecard.Updater.csproj" />
   <Project Path="SimpleSixtarScorecard/SimpleSixtarScorecard.csproj" />
 </Solution>
