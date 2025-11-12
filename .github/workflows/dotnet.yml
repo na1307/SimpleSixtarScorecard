@@ -37,7 +37,7 @@ jobs:
       - name: Build (Release)
         run: dotnet build -c Release --no-restore
       - name: Publish (Release)
-        run: dotnet publish -c Release -o _out --no-build
+        run: dotnet publish SimpleSixtarScorecard -c Release -o _out --no-build
       - name: Upload artifact
         uses: actions/upload-artifact@v5
         with:
