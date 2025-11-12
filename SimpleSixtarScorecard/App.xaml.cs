@@ -119,8 +119,13 @@ public sealed partial class App {
             var zantetsuken = await context.Songs.FindAsync("zantetsuken") ?? throw new InvalidOperationException("Something went wrong");
             var targetOrder = zantetsuken.OrderNumber;
 
-            await context.Songs.Where(s => s.OrderNumber >= targetOrder)
-                .ExecuteUpdateAsync(s => s.SetProperty(b => b.OrderNumber, b => b.OrderNumber + newSongs.Length));
+            foreach (var song in context.Songs.Where(s => s.OrderNumber >= targetOrder).AsEnumerable().Reverse()) {
+                context.Songs.Remove(song);
+
+                context.Songs.Add(song with {
+                    OrderNumber = song.OrderNumber + newSongs.Length
+                });
+            }
 
             foreach (var newSong in newSongs) {
                 if (await context.Songs.AnyAsync(s => s.Id == newSong.Id)) {
