@@ -31,7 +31,7 @@ jobs:
           key: ${{ runner.os }}-nuget-${{ hashFiles('Directory.Packages.props') }} #hash of project files
           restore-keys: ${{ runner.os }}-nuget-
       - name: Restore
-        run: dotnet restore
+        run: dotnet restore -r win-x64
       - name: Build (Debug)
         run: dotnet build -c Debug --no-restore
       - name: Build (Release)
