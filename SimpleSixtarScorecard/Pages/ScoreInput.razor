@@ -16,7 +16,7 @@
 
 @code
 {
-    private readonly ResultContext context = Ioc.Default.GetRequiredService<IDbContextFactory<ResultContext>>().CreateDbContext();
+    private readonly ResultsContext context = Ioc.Default.GetRequiredService<IDbContextFactory<ResultsContext>>().CreateDbContext();
 
     [Parameter]
     [EditorRequired]

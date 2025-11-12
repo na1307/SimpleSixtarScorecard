@@ -55,7 +55,7 @@
 	private Song? selectedSong;
 
 	private IEnumerable<Song> FilteredSongs =>
-		Ioc.Default.GetRequiredService<IDbContextFactory<SongContext>>().CreateDbContext().Songs.AsEnumerable().Where(s
+		Ioc.Default.GetRequiredService<IDbContextFactory<SongsContext>>().CreateDbContext().Songs.AsEnumerable().Where(s
 			=> (selectedCategory == Category.All || s.Category == selectedCategory) &&
 			   (selectedDlc == Dlc.All || s.Dlc == selectedDlc) &&
 			   (string.IsNullOrWhiteSpace(searchTerm) ||

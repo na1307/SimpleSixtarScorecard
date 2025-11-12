@@ -3,11 +3,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace SimpleSixtarScorecard;
 
-internal sealed class SongContext : DbContext {
-    public SongContext() { }
-
-    public SongContext(DbContextOptions<SongContext> options) : base(options) { }
-
+internal sealed class SongsContext : DbContext {
     public DbSet<Song> Songs { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) => optionsBuilder.UseSqlite("Data Source=Songs.db");

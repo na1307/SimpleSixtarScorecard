@@ -24,8 +24,8 @@ public sealed partial class App {
 
         ServiceCollection sc = new();
 
-        sc.AddDbContextFactory<SongContext>();
-        sc.AddDbContextFactory<ResultContext>();
+        sc.AddDbContextFactory<SongsContext>();
+        sc.AddDbContextFactory<ResultsContext>();
         sc.AddWpfBlazorWebView();
 #if DEBUG
         sc.AddBlazorWebViewDeveloperTools();
@@ -33,7 +33,7 @@ public sealed partial class App {
         sc.AddMudServices();
         Ioc.Default.ConfigureServices(sc.BuildServiceProvider());
 
-        using (var rc = Ioc.Default.GetRequiredService<IDbContextFactory<ResultContext>>().CreateDbContext()) {
+        using (var rc = Ioc.Default.GetRequiredService<IDbContextFactory<ResultsContext>>().CreateDbContext()) {
             rc.Database.Migrate();
         }
 
@@ -43,7 +43,7 @@ public sealed partial class App {
                     "알림", MessageBoxButton.YesNo, MessageBoxImage.Information) == MessageBoxResult.Yes) {
                 File.Delete("Results.db");
 
-                using var context = Ioc.Default.GetRequiredService<IDbContextFactory<ResultContext>>().CreateDbContext();
+                using var context = Ioc.Default.GetRequiredService<IDbContextFactory<ResultsContext>>().CreateDbContext();
 
                 context.Database.Migrate();
 
@@ -79,7 +79,7 @@ public sealed partial class App {
             return;
         }
 
-        await using var context = await Ioc.Default.GetRequiredService<IDbContextFactory<SongContext>>().CreateDbContextAsync();
+        await using var context = await Ioc.Default.GetRequiredService<IDbContextFactory<SongsContext>>().CreateDbContextAsync();
         var suo = JsonNode.Parse(sdu)!.AsObject();
         var newSongs = suo["new_songs"]?.AsArray().Deserialize<Song[]>();
 
