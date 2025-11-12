@@ -1,0 +1,8 @@
+<Project>
+  <PropertyGroup>
+    <NoWarn>$(NoWarn);SA1600;SA1601;SA1602;S3928</NoWarn>
+    <AssemblyVersion>1</AssemblyVersion>
+    <FileVersion>1.0.0</FileVersion>
+    <Version>1.0-beta.3</Version>
+  </PropertyGroup>
+</Project>
