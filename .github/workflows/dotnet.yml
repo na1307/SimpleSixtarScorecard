@@ -1,0 +1,66 @@
+# This workflow will build a .NET project
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-net
+
+name: .NET
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  release:
+    types:
+      - published
+
+jobs:
+  build:
+    name: .NET
+    runs-on: windows-latest
+    env:
+      NUGET_PACKAGES: ${{ github.workspace }}/.nuget/packages
+    steps:
+      - uses: actions/checkout@v5
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v5
+      - name: Cache NuGet
+        uses: actions/cache@v4
+        with:
+          path: ${{ github.workspace }}/.nuget/packages
+          key: ${{ runner.os }}-nuget-${{ hashFiles('Directory.Packages.props') }} #hash of project files
+          restore-keys: ${{ runner.os }}-nuget-
+      - name: Restore
+        run: dotnet restore
+      - name: Build (Debug)
+        run: dotnet build -c Debug --no-restore
+      - name: Build (Release)
+        run: dotnet build -c Release --no-restore
+      - name: Publish (Release)
+        run: dotnet publish -c Release -o _out --no-build
+      - name: Upload artifact
+        uses: actions/upload-artifact@v5
+        with:
+          name: Release
+          path: _out
+
+  publish:
+    name: Publish
+    if: github.event_name == 'release'
+    needs: build
+    runs-on: windows-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v5
+      - name: Download Package artifact
+        uses: actions/download-artifact@v6
+        with:
+          name: Release
+      - name: Compress
+        shell: pwsh
+        run: 7z a -mx9 SimpleSixtarScorecard_${{ github.event.release.tag_name }}.7z
+      - name: Upload Release Assets
+        uses: softprops/action-gh-release@v2
+        with:
+          files: '*.7z'
