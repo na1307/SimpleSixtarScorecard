@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using MudBlazor.Services;
+using System.Data;
 using System.Diagnostics;
 using System.IO;
 using System.Net.Http;
@@ -35,6 +36,7 @@ public sealed partial class App {
 
         using (var rc = Ioc.Default.GetRequiredService<IDbContextFactory<ResultsContext>>().CreateDbContext()) {
             rc.Database.Migrate();
+            ResultsPluralMigration(rc);
         }
 
         if (File.Exists("profile.json")) {
@@ -61,6 +63,36 @@ public sealed partial class App {
 
         GetSongDataUpdate().GetAwaiter().GetResult();
         InitializeComponent();
+    }
+
+    private static void ResultsPluralMigration(ResultsContext rc) {
+        var dc = rc.Database.GetDbConnection();
+
+        if (!dc.State.HasFlag(ConnectionState.Open)) {
+            dc.Open();
+        }
+
+        bool exists;
+
+        using (var cmd = dc.CreateCommand()) {
+            cmd.CommandText = "SELECT COUNT(*) FROM sqlite_master WHERE type='table' AND name=@name;";
+            var param = cmd.CreateParameter();
+            param.ParameterName = "@name";
+            param.Value = "Result";
+
+            cmd.Parameters.Add(param);
+
+            exists = Convert.ToInt32(cmd.ExecuteScalar()) == 1;
+        }
+
+        if (!exists) {
+            return;
+        }
+
+        rc.Database.ExecuteSqlInterpolated($"DROP TABLE EtagSingle;");
+        rc.Database.ExecuteSqlInterpolated($"DROP TABLE Results;");
+        rc.Database.ExecuteSqlInterpolated($"ALTER TABLE Result RENAME TO Results;");
+        rc.Database.ExecuteSqlInterpolated($"VACUUM;");
     }
 
     private static async Task GetSongDataUpdate() {
