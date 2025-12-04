@@ -1,6 +1,6 @@
 @font-face {
-    font-family: NanumSquareRound;
-    src: url('../fonts/NanumSquareRoundR.ttf') format('truetype');
+    font-family: NanumSquareNeo;
+    src: url('../fonts/NanumSquareNeo-Variable.ttf') format('truetype');
 }
 
 @font-face {
@@ -10,7 +10,7 @@
 }
 
 html, body, * {
-    font-family: Calibri, NanumSquareRound !important;
+    font-family: Calibri, NanumSquareNeo !important;
 }
 
 .difficulty-number {

@@ -7,6 +7,6 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-
+        <TextBlock>준비 중입니다. 많은 기대 바랍니다.</TextBlock>
     </Grid>
 </Window>
