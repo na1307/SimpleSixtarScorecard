@@ -3,15 +3,18 @@
 <MudStack>
     <MudStack Row="true" Style="position: relative;">
         <MudImage Src="@ImageName" Width="204" Height="32" Style="margin: auto;"/>
-        <MudText Typo="Typo.h6" Inline="true" Class="difficulty-number" Style="color: white; font-family: Montserrat; position: absolute; margin-left: calc(140px + 3vw);">@(Difficulty?.ToString("D2") ?? string.Empty)</MudText>
+        <MudText Typo="Typo.h6" Inline="true" Class="difficulty-number"
+                 Style="color: white; font-family: Montserrat; position: absolute; margin-left: calc(140px + 3vw);">@(Difficulty?.ToString("D2") ?? string.Empty)</MudText>
     </MudStack>
     <MudStack Row="true">
-        <MudSpacer />
-        <MudNumericField @bind-Value="Score" Label="점수" Variant="Variant.Outlined" Margin="Margin.Dense" HideSpinButtons="true" Disabled="Difficulty is null" Min="0" Max="1000000" />
-        <MudImage Src="@RankImageName" Width="50" Height="50" />
-        <MudSpacer />
+        <MudSpacer/>
+        <MudNumericField @bind-Value="Score" Label="점수" Variant="Variant.Outlined" Margin="Margin.Dense"
+                         HideSpinButtons="true" Disabled="Difficulty is null" Min="0" Max="1000000"/>
+        <MudImage Src="@RankImageName" Width="50" Height="50"/>
+        <MudSpacer/>
     </MudStack>
-    <MudCheckBox @bind-Value="FullCombo" Label="풀 콤보" Color="Color.Primary" Dense="true" Style="display: flex; justify-content: center; align-self: center;" Disabled="Difficulty is null" />
+    <MudCheckBox @bind-Value="FullCombo" Label="풀 콤보" Color="Color.Primary" Dense="true"
+                 Style="display: flex; justify-content: center; align-self: center;" Disabled="Difficulty is null"/>
 </MudStack>
 
 @code
@@ -30,9 +33,8 @@
     [EditorRequired]
     public DifficultyType DifficultyType { get; init; }
 
-    private string ImageName =>
-        DifficultyType switch
-        {
+    private string ImageName
+        => DifficultyType switch {
             DifficultyType.Comet => "images/Comet.png",
             DifficultyType.Nova => "images/Nova.png",
             DifficultyType.Supernova => "images/Supernova.png",
@@ -41,53 +43,47 @@
             _ => throw new ArgumentOutOfRangeException()
         };
 
-    private int? Difficulty => Mode switch
-    {
-        Mode.Lunar => DifficultyType switch
-        {
-            DifficultyType.Comet => Song.LunarComet,
-            DifficultyType.Nova => Song.LunarNova,
-            DifficultyType.Supernova => Song.LunarSupernova,
-            DifficultyType.Quasar => Song.LunarQuasar,
-            DifficultyType.Starlight => Song.LunarStarlight,
+    private int? Difficulty
+        => Mode switch {
+            Mode.Lunar => DifficultyType switch {
+                DifficultyType.Comet => Song.LunarComet,
+                DifficultyType.Nova => Song.LunarNova,
+                DifficultyType.Supernova => Song.LunarSupernova,
+                DifficultyType.Quasar => Song.LunarQuasar,
+                DifficultyType.Starlight => Song.LunarStarlight,
+                _ => throw new ArgumentOutOfRangeException()
+            },
+            Mode.Solar => DifficultyType switch {
+                DifficultyType.Comet => Song.SolarComet,
+                DifficultyType.Nova => Song.SolarNova,
+                DifficultyType.Supernova => Song.SolarSupernova,
+                DifficultyType.Quasar => Song.SolarQuasar,
+                DifficultyType.Starlight => Song.SolarStarlight,
+                _ => throw new ArgumentOutOfRangeException()
+            },
             _ => throw new ArgumentOutOfRangeException()
-        },
-        Mode.Solar => DifficultyType switch
-        {
-            DifficultyType.Comet => Song.SolarComet,
-            DifficultyType.Nova => Song.SolarNova,
-            DifficultyType.Supernova => Song.SolarSupernova,
-            DifficultyType.Quasar => Song.SolarQuasar,
-            DifficultyType.Starlight => Song.SolarStarlight,
-            _ => throw new ArgumentOutOfRangeException()
-        },
-        _ => throw new ArgumentOutOfRangeException()
-    };
+        };
 
-    private int Score
-    {
+    private int Score {
         get;
-        set
-        {
+        set {
             field = value;
             var existingResult = context.Results.Find(Song.Id, Mode, DifficultyType);
 
-            if (existingResult is null)
-            {
+            if (existingResult is null) {
                 context.Results.Add(new(Song.Id, Mode, DifficultyType, value, FullCombo));
-            }
-            else
-            {
-                context.Results.Entry(existingResult).CurrentValues.SetValues(existingResult with { Score = value });
+            } else {
+                context.Results.Entry(existingResult).CurrentValues.SetValues(existingResult with {
+                    Score = value
+                });
             }
 
             context.SaveChanges();
         }
     }
 
-    private string RankImageName =>
-        Score switch
-        {
+    private string RankImageName
+        => Score switch {
             1000000 => "images/Rank_PB.png",
             >= 980000 => "images/Rank_SS.png",
             >= 950000 => "images/Rank_S.png",
@@ -99,21 +95,18 @@
             _ => "images/Rank_F.png"
         };
 
-    private bool FullCombo
-    {
+    private bool FullCombo {
         get;
-        set
-        {
+        set {
             field = value;
             var existingResult = context.Results.Find(Song.Id, Mode, DifficultyType);
 
-            if (existingResult is null)
-            {
+            if (existingResult is null) {
                 context.Results.Add(new(Song.Id, Mode, DifficultyType, Score, value));
-            }
-            else
-            {
-                context.Results.Entry(existingResult).CurrentValues.SetValues(existingResult with { FullCombo = value });
+            } else {
+                context.Results.Entry(existingResult).CurrentValues.SetValues(existingResult with {
+                    FullCombo = value
+                });
             }
 
             context.SaveChanges();
@@ -122,12 +115,10 @@
 
     public void Dispose() => context.Dispose();
 
-    protected override void OnInitialized()
-    {
+    protected override void OnInitialized() {
         var existingResult = context.Results.Find(Song.Id, Mode, DifficultyType);
 
-        if (existingResult is null)
-        {
+        if (existingResult is null) {
             return;
         }
 

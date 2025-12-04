@@ -1,7 +1,6 @@
 root = true
 
-# C# 파일
-[*.cs]
+[*.{cs,c++,cc,cpp,cppm,cxx,h,h++,hh,hpp,hxx,inl,ipp,ixx,tlh,tli,xaml,razor}]
 
 #### Bluehill's config ####
 
@@ -1606,7 +1605,6 @@ dotnet_naming_style.begins_with_i.required_suffix =
 dotnet_naming_style.begins_with_i.word_separator = 
 dotnet_naming_style.begins_with_i.capitalization = pascal_case
 
-[*.{cs,c++,cc,cpp,cppm,cxx,h,h++,hh,hpp,hxx,inl,ipp,ixx,tlh,tli}]
 # ReSharper properties
 resharper_accessor_owner_body = expression_body
 resharper_add_imports_to_deepest_scope = false

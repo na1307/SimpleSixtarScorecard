@@ -1,16 +1,16 @@
 ﻿<MudPaper Outlined="true" Style="display: flex; justify-content: center; align-self: center; width: 97.5vw;">
     <MudStack>
-        <MudSpacer />
-        <MudImage Src="@ImageName" Width="217" Height="34" Style="display: flex; justify-content: center; align-self: center;" />
+        <MudSpacer/>
+        <MudImage Src="@ImageName" Width="217" Height="34"
+                  Style="display: flex; justify-content: center; align-self: center;"/>
         <MudStack Row="true">
-            <MudSpacer />
-            @foreach (var difficulty in Enum.GetValues<DifficultyType>())
-            {
-                <ScoreInput @key="Song.Id + Mode + difficulty" Song="Song" Mode="Mode" DifficultyType="difficulty" />
+            <MudSpacer/>
+            @foreach (var difficulty in Enum.GetValues<DifficultyType>()) {
+                <ScoreInput @key="Song.Id + Mode + difficulty" Song="Song" Mode="Mode" DifficultyType="difficulty"/>
             }
-            <MudSpacer />
+            <MudSpacer/>
         </MudStack>
-        <MudSpacer />
+        <MudSpacer/>
     </MudStack>
 </MudPaper>
 
@@ -24,10 +24,10 @@
     [EditorRequired]
     public Mode Mode { get; init; }
 
-    private string ImageName => Mode switch
-    {
-        Mode.Lunar => "images/Lunar.png",
-        Mode.Solar => "images/Solar.png",
-        _ => throw new ArgumentOutOfRangeException()
-    };
+    private string ImageName
+        => Mode switch {
+            Mode.Lunar => "images/Lunar.png",
+            Mode.Solar => "images/Solar.png",
+            _ => throw new ArgumentOutOfRangeException()
+        };
 }
