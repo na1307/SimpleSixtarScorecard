@@ -59,9 +59,13 @@ jobs:
         uses: actions/download-artifact@v6
         with:
           name: Release
+          path: _out
       - name: Compress
         shell: pwsh
-        run: 7z a -mx9 SimpleSixtarScorecard_${{ github.event.release.tag_name }}.7z
+        run: |
+          cd _out
+          7z a -mx9 ..\SimpleSixtarScorecard_${{ github.event.release.tag_name }}.7z
+          cd ..
       - name: Upload Release Assets
         uses: softprops/action-gh-release@v2
         with:
