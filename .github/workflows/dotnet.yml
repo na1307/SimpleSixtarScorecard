@@ -34,12 +34,10 @@ jobs:
         run: dotnet restore -r win-x64
       - name: Build (Debug)
         run: dotnet build -c Debug --no-restore
-      - name: Build (Release)
-        run: dotnet build -c Release --no-restore
       - name: Publish (Release)
         run: |
-          dotnet publish SimpleSixtarScorecard -c Release -o _out --no-build
-          dotnet publish SimpleSixtarScorecard.Updater -c Release -o _out --no-build
+          dotnet publish SimpleSixtarScorecard -c Release -o _out
+          dotnet publish SimpleSixtarScorecard.Updater -c Release -o _out
       - name: Upload artifact
         uses: actions/upload-artifact@v5
         with:
