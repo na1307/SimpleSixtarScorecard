@@ -39,7 +39,7 @@ jobs:
           dotnet publish SimpleSixtarScorecard -c Release -o _out
           dotnet publish SimpleSixtarScorecard.Updater -c Release -o _out
       - name: Upload artifact
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v6
         with:
           name: Release
           path: _out
