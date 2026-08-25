@@ -15,5 +15,6 @@ public enum Dlc {
     Oshiribeat,
     Dystopia,
     UnitedNetwalk,
-    Kalpa
+    Kalpa,
+    BerryMelody
 }

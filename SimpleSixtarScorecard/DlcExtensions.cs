@@ -15,6 +15,7 @@ internal static class DlcExtensions {
             Dlc.Dystopia => "디스토피아",
             Dlc.UnitedNetwalk => "UNITED NETWALK",
             Dlc.Kalpa => "KALPA 콜라보레이션",
+            Dlc.BerryMelody => "Berry Melody 콜라보레이션",
             _ => throw new NotImplementedException(),
         };
 }
