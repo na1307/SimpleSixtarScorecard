@@ -36,8 +36,8 @@ jobs:
         run: dotnet build -c Debug --no-restore
       - name: Publish (Release)
         run: |
-          dotnet publish SimpleSixtarScorecard -c Release -o _out
-          dotnet publish SimpleSixtarScorecard.Updater -c Release -o _out
+          dotnet publish SimpleSixtarScorecard -c Release --no-restore -o _out
+          dotnet publish SimpleSixtarScorecard.Updater -c Release --no-restore -o _out
       - name: Upload artifact
         uses: actions/upload-artifact@v6
         with:
