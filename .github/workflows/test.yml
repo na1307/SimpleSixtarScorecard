@@ -1,0 +1,14 @@
+name: Test
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  symbols:
+    name: Publish Symbols
+    uses: na1307/bluehillsymbols/.github/workflows/publish-symbols.yml@main
+    with:
+      artifact_id: 0
