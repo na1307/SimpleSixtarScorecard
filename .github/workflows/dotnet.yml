@@ -53,7 +53,7 @@ jobs:
       contents: write
     steps:
       - uses: actions/checkout@v7
-      - name: Download Package artifact
+      - name: Download artifact
         uses: actions/download-artifact@v8
         with:
           name: Release
@@ -69,3 +69,9 @@ jobs:
         uses: softprops/action-gh-release@v3
         with:
           files: '*.7z'
+
+  symbols:
+    name: Publish Symbols
+    uses: na1307/bluehillsymbols/.github/workflows/publish-symbols.yml@main
+    with:
+      artifact_name: Release
