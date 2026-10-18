@@ -14,6 +14,9 @@ on:
     types:
       - published
 
+env:
+  ARTIFACT_NAME: Release
+
 jobs:
   build:
     name: .NET
@@ -44,7 +47,7 @@ jobs:
         uses: actions/upload-artifact@v7
         id: upload-artifact
         with:
-          name: Release
+          name: ${{ env.ARTIFACT_NAME }}
           path: _out
 
   publish:
@@ -59,7 +62,7 @@ jobs:
       - name: Download artifact
         uses: actions/download-artifact@v8
         with:
-          name: Release
+          name: ${{ env.ARTIFACT_NAME }}
           path: _out
       - name: Compress
         shell: pwsh
@@ -73,6 +76,6 @@ jobs:
         with:
           files: '*.7z'
       - name: Dispatch Publish Symbols Event
-        run: gh workflow run publish-symbols.yml -f artifact_id=${{ needs.build.outputs.artifact_id }} -f product_name=${{ github.event.repository.name }} -f version=${{ github.ref_name }} -r main -R na1307/bluehillsymbols
+        run: gh workflow run publish-symbols.yml -f repository=${{ github.repository }} -f run_id=${{ github.run_id }} -f artifact_name=${{ env.ARTIFACT_NAME }} -f product_name=${{ github.event.repository.name }} -f version=${{ github.ref_name }} -r main -R na1307/bluehillsymbols
         env:
           GH_TOKEN: ${{ secrets.BS_PAT }}
