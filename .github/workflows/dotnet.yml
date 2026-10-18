@@ -62,9 +62,18 @@ jobs:
         shell: pwsh
         run: |
           cd _out
+          del *.pdb
           7z a -mx9 ..\SimpleSixtarScorecard_${{ github.event.release.tag_name }}.7z
           cd ..
       - name: Upload Release Assets
         uses: softprops/action-gh-release@v3
         with:
           files: '*.7z'
+
+  symbols:
+    name: Publish Symbols
+    uses: na1307/bluehillsymbols/.github/workflows/publish-symbols.yml@main
+    with:
+      artifact_id: 0
+      product_name: Name
+      version: v1.0
