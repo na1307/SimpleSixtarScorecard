@@ -74,8 +74,8 @@ jobs:
     name: Publish Symbols
     if: github.event_name == 'release'
     needs: publish
-    permissions:
-      contents: write
     uses: na1307/bluehillsymbols/.github/workflows/publish-symbols.yml@main
     with:
       artifact_name: Release
+    secrets:
+      BS_PAT: ${{ secrets.BS_PAT }}
