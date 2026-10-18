@@ -72,7 +72,8 @@ jobs:
 
   symbols:
     name: Publish Symbols
-    needs: build
+    if: github.event_name == 'release'
+    needs: publish
     uses: na1307/bluehillsymbols/.github/workflows/publish-symbols.yml@main
     with:
       artifact_name: Release
