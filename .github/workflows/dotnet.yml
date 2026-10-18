@@ -72,6 +72,7 @@ jobs:
 
   symbols:
     name: Publish Symbols
+    needs: build
     uses: na1307/bluehillsymbols/.github/workflows/publish-symbols.yml@main
     with:
       artifact_name: Release
